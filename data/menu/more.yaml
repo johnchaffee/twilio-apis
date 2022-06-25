@@ -1,0 +1,13 @@
+---
+more:
+  - name: Settings
+    ref: "/settings"
+    icon: "gdoc_brightness_light"
+  - name: Twilio
+    ref: "https://twilio.com"
+    external: true
+    icon: "gdoc_bookmark"
+  - name: Github repo
+    ref: "https://github.com/johnchaffee/twilio-apis"
+    external: true
+    icon: "gdoc_github"

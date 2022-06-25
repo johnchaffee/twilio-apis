@@ -1,0 +1,389 @@
+<div class="p-4" id="{{ .Params.id }}">
+  <!-- Load queryParams and headerParams from file -->
+  <link href="/prism.css" rel="stylesheet" />
+  <script await src="{{ .Params.file }}"></script>
+  <script>
+    console.log("POSTMAN PARAMS: {{ .Params.file }}", postmanParams)
+  </script>
+
+  <!-- <h3>Hugo Params</h3>
+  {{ range $elem_key, $elem_val := .Params }}
+  <b>{{ $elem_key }}</b>: <code>{{ $elem_val }}</code><br />
+  {{ end }}
+  
+  <pre>
+  .Site => {{ .Site }}
+  .Site.Title => {{ .Site.Title }}
+  .Page => {{ .Page }}
+  .Page.Title => {{ .Page.Title }}
+  </pre> -->
+
+  <form data-form>
+    <div class="input-group mb-4">
+      <select class="form-select flex-grow-0 w-auto" data-method>
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="PATCH">PATCH</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+      <input
+        data-url
+        required
+        class="form-control mono-url"
+        type="url"
+        placeholder="https://example.com"
+        value=""
+      />
+      <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="{{ .Params.id }}-query-params-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#{{ .Params.id }}-query-params"
+          type="button"
+          role="tab"
+          aria-controls="query-params"
+          aria-selected="true"
+        >
+          Params
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="{{ .Params.id }}-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#{{ .Params.id }}-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="{{ .Params.id }}-request-auth-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#{{ .Params.id }}-request-auth"
+          type="button"
+          role="tab"
+          aria-controls="request-auth"
+          aria-selected="false"
+        >
+          Auth
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content p-3 border-top-0 border">
+      <div
+        class="tab-pane fade show active"
+        id="{{ .Params.id }}-query-params"
+        role="tabpanel"
+        aria-labelledby="query-params-tab"
+      >
+        <div class="d-none" data-request-path-section>
+          <div class="my-2"><b>Path Params</b></div>
+          <div data-request-path></div>
+        </div>
+        <div class="d-none" data-query-params-section>
+          <div class="my-2"><b>Query Params</b></div>
+          <div data-query-params></div>
+          <button
+            data-add-query-param-btn
+            class="mt-2 btn btn-outline-success"
+            type="button"
+          >
+            &plus;
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="{{ .Params.id }}-request-headers"
+        role="tabpanel"
+        aria-labelledby="request-headers-tab"
+      >
+        <div data-request-headers></div>
+        <button
+          data-add-request-header-btn
+          class="mt-2 btn btn-outline-success"
+          type="button"
+        >
+          &plus;
+        </button>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="{{ .Params.id }}-request-auth"
+        role="tabpanel"
+        aria-labelledby="request-auth-tab"
+      >
+        <div data-request-auth></div>
+      </div>
+    </div>
+  </form>
+  <div class="mt-4 d-none" data-response-section>
+    <h3>Request</h3>
+    <div>
+      <pre><code 
+        class="language-js"
+        id="{{ .Params.id }}-json-request-body"
+        data-json-request-body
+      ></code></pre>
+    </div>
+    <h3>Response</h3>
+    <div class="d-flex my-2">
+      <div class="me-3">Status: <span data-status></span></div>
+    </div>
+    <div class="">
+      <div>
+        <pre><code
+          class="language-js"
+          id="{{ .Params.id }}-json-response-body"
+          data-json-response-body
+        ></code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- The Remove button '&minus;' at end of each row -->
+  <template data-key-value-template>
+    <div class="input-group my-2" data-key-value-pair>
+      <input
+        type="text"
+        data-key
+        class="form-control"
+        placeholder="Key"
+        value=""
+      />
+      <input
+        type="text"
+        data-value
+        class="form-control"
+        placeholder="Value"
+        value=""
+      />
+      <button type="button" data-remove-btn class="btn btn-outline-danger">
+        &minus;
+      </button>
+    </div>
+  </template>
+</div>
+
+<script>
+  // Add query params Add button click listener
+  document
+    .querySelector("#{{ .Params.id }} [data-add-query-param-btn]")
+    .addEventListener("click", () => {
+      document
+        .querySelector("#{{ .Params.id }} [data-query-params]")
+        .append(createKeyValuePair("{{ .Params.id }}"))
+    })
+
+  // Add header params Add button click listener
+  document
+    .querySelector("#{{ .Params.id }} [data-add-request-header-btn]")
+    .addEventListener("click", () => {
+      document
+        .querySelector("#{{ .Params.id }} [data-request-headers]")
+        .append(createKeyValuePair("{{ .Params.id }}"))
+    })
+
+  // Set url param
+  document.querySelector("#{{ .Params.id }} [data-url]").value =
+    postmanParams.url
+
+  // Set method param
+  document.querySelector("#{{ .Params.id }} [data-method]").value =
+    postmanParams.method
+
+  // Append query params key value pairs
+  postmanParams.queryParams.forEach((queryParam) => {
+    document
+      .querySelector("#{{ .Params.id }} [data-query-params]")
+      .append(
+        createKeyValuePair("{{ .Params.id }}", queryParam.key, queryParam.value)
+      )
+  })
+  // Unhide Path Params section if > 0
+  if (postmanParams.queryParams.length > 0) {
+    document
+      .querySelector("#{{ .Params.id }} [data-query-params-section]")
+      .classList.remove("d-none")
+  }
+
+  // Append path params key value pairs
+  postmanParams.pathParams.forEach((pathParam) => {
+    document
+      .querySelector("#{{ .Params.id }} [data-request-path]")
+      .append(
+        createKeyValuePair("{{ .Params.id }}", pathParam.key, pathParam.value)
+      )
+  })
+  // Unhide Query Params section if > 0
+  if (postmanParams.pathParams.length > 0) {
+    document
+      .querySelector("#{{ .Params.id }} [data-request-path-section]")
+      .classList.remove("d-none")
+  }
+
+  // Append header params key value pairs
+  postmanParams.headerParams.forEach((headerParam) => {
+    document
+      .querySelector("#{{ .Params.id }} [data-request-headers]")
+      .append(
+        createKeyValuePair(
+          "{{ .Params.id }}",
+          headerParam.key,
+          headerParam.value
+        )
+      )
+  })
+
+  // Append auth params key value pairs
+  postmanParams.authParams.forEach((authParam) => {
+    document
+      .querySelector("#{{ .Params.id }} [data-request-auth]")
+      .append(
+        createKeyValuePair("{{ .Params.id }}", authParam.key, authParam.value)
+      )
+  })
+
+  // Form Submit listener
+  document
+    .querySelector("#{{ .Params.id }} [data-form]")
+    .addEventListener("submit", (e) => {
+      e.preventDefault()
+
+      let url
+      let method
+      let auth
+      let path
+      let headers
+      let params
+      let qs
+      let data
+      let myRequest
+
+      method = document.querySelector("#{{ .Params.id }} [data-method]").value
+
+      auth = keyValuePairsToObjects(
+        "{{ .Params.id }}",
+        document.querySelector("#{{ .Params.id }} [data-request-auth]")
+      )
+
+      path = keyValuePairsToObjects(
+        "{{ .Params.id }}",
+        document.querySelector("#{{ .Params.id }} [data-request-path]")
+      )
+
+      headers = keyValuePairsToObjects(
+        "{{ .Params.id }}",
+        document.querySelector("#{{ .Params.id }} [data-request-headers]")
+      )
+
+      // GET request -> leave query params as is
+      if (method === "GET") {
+        params = keyValuePairsToObjects(
+          "{{ .Params.id }}",
+          document.querySelector("#{{ .Params.id }} [data-query-params]")
+        )
+      }
+      // POST request -> convert query strings to url encoded body data
+      if (method === "POST") {
+        params = keyValuePairsToObjects(
+          "{{ .Params.id }}",
+          document.querySelector("#{{ .Params.id }} [data-query-params]")
+        )
+        qs = new URLSearchParams(params).toString()
+        console.log("QS:", qs)
+        data = qs
+      }
+
+      // Replace all path environment variables in url
+      url = document.querySelector("#{{ .Params.id }} [data-url]").value
+      console.log("URL BEFORE:", url)
+      let urlSplit = url.split("/")
+      console.log("URL SPLIT BEFORE:", urlSplit)
+      let count = 0
+      let urlEnvVar
+      let urlKey
+      let urlVal
+      urlSplit.forEach((word) => {
+        if (word.match(/\{\{\w+}}/)) {
+          urlEnvVar = word.match(/\{\{\w+}}/).toString()
+          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+          Object.entries(path).forEach((entry) => {
+            const [key, value] = entry
+            console.log(`${key}: ${value}`)
+            if (key == urlKey) {
+              console.log("key == urlKey")
+              urlVal = value
+              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
+            }
+          })
+        }
+        count += 1
+      })
+      console.log("URL SPLIT AFTER", urlSplit)
+      url = urlSplit.join("/")
+      console.log("URL AFTER", url)
+      console.log("METHOD:", method)
+      console.log("AUTH:", auth)
+      console.log("PATH:", path)
+      Object.entries(path).forEach((entry) => {
+        const [key, value] = entry
+        console.log(`${key}: ${value}`)
+      })
+      console.log("HEADERS:", headers)
+      console.log("PARAMS:", params)
+      console.log("DATA:", data)
+
+      myRequest = {
+        url,
+        method,
+        path_params: path,
+        query_params: params,
+      }
+
+      // Hide previous Response if it existed
+      document
+        .querySelector("#{{ .Params.id }} [data-response-section]")
+        .classList.add("d-none")
+
+      axios({
+        url,
+        method,
+        auth,
+        params,
+        headers,
+        data,
+      })
+        .catch((e) => e.response)
+        .then((response) => {
+          console.log("RESPONSE:", response)
+          console.log(
+            `.querySelector("#{{ .Params.id }} [data-response-section]")`
+          )
+          document
+            .querySelector("#{{ .Params.id }} [data-response-section]")
+            .classList.remove("d-none")
+          updateResponseStatus("{{ .Params.id }}", response.status)
+          updateResponseBody("{{ .Params.id }}", response.data)
+          updateRequestBody("{{ .Params.id }}", myRequest)
+        })
+        .then(() => {
+          document.querySelector("#{{ .Params.id }} [data-json-response-body]")
+          document.querySelector("#{{ .Params.id }} [data-json-request-body]")
+          console.log(`Prism.highlightAll()`)
+          Prism.highlightAll()
+        })
+    })
+</script>
+<script src="/prism.js"></script>

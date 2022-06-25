@@ -1,0 +1,228 @@
+<div class="" id="{{ .Params.id }}">
+  <!-- <script>
+    // Fetch localStorage objects and convert to envVars array
+    const keys = Object.keys(localStorage)
+    let envVars = []
+    let envObj = {}
+    keys.forEach((key) => {
+      envObj = {}
+      envObj.key = key
+      envObj.value = localStorage[key]
+      envVars.push(envObj)
+    })
+  </script> -->
+
+  <!-- <h3>Hugo Params</h3>
+  {{ range $elem_key, $elem_val := .Params }}
+  <b>{{ $elem_key }}</b>: <code>{{ $elem_val }}</code><br />
+  {{ end }}
+
+  <pre>
+  .Site => {{ .Site }}
+  .Site.Title => {{ .Site.Title }}
+  .Page => {{ .Page }}
+  .Page.Title => {{ .Page.Title }}
+  </pre> -->
+
+  <dialog id="newEnvVarDialog">
+    <form method="dialog">
+      <div class="input-group my-2" data-key-value-pair>
+        <input
+          modal-data-key
+          type="text"
+          data-key
+          class="form-control"
+          placeholder="Key"
+          value=""
+        />
+        <input
+          modal-data-value
+          type="text"
+          data-value
+          class="form-control"
+          placeholder="Value"
+          value=""
+        />
+      </div>
+      <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+      <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+    </form>
+  </dialog>
+
+  <form data-form>
+    <div id="required" class="">
+      <h2>Required Environment Variables</h2>
+      <div id="acctSid" class="">
+        <button
+          id="addAcctSidBtn"
+          data-add-query-param-btn
+          class="mt-2 btn btn-outline-success"
+          type="button"
+        >
+          Add Account SID Variable</button
+        ><br />
+      </div>
+      <div id="authToken" class="">
+        <button
+          id="addAuthTokenBtn"
+          data-add-query-param-btn
+          class="mt-2 btn btn-outline-success"
+          type="button"
+        >
+          Add Auth Token Variable</button
+        ><br />
+      </div>
+      <div id="username" class="">
+        <button
+          id="addUsernameBtn"
+          data-add-query-param-btn
+          class="mt-2 btn btn-outline-success"
+          type="button"
+        >
+          Add Username Variable</button
+        ><br />
+      </div>
+      <div id="password" class="">
+        <button
+          id="addPasswordBtn"
+          data-add-query-param-btn
+          class="mt-2 btn btn-outline-success"
+          type="button"
+        >
+          Add Password Variable</button
+        ><br />
+      </div>
+    </div>
+    <div>
+      <h2>Custom Environment Variables</h2>
+      <button
+        id="newEnvVarBtn"
+        data-add-query-param-btn
+        class="mt-2 btn btn-outline-success"
+        type="button"
+      >
+        Add Custom Environment Variable
+      </button>
+      <div id="{{ .Params.id }}-query-params">
+        <div data-query-params></div>
+      </div>
+    </div>
+  </form>
+  <template data-key-value-template>
+    <div class="input-group my-2" data-key-value-pair>
+      <input
+        type="text"
+        data-key
+        class="form-control"
+        placeholder="Key"
+        value=""
+        disabled
+      />
+      <input
+        type="text"
+        data-value
+        class="form-control"
+        placeholder="Value"
+        value=""
+        disabled
+      />
+      <button type="button" data-remove-btn class="btn btn-outline-danger">
+        Delete
+      </button>
+    </div>
+  </template>
+</div>
+
+<script>
+  const newEnvVarDialog = document.getElementById("newEnvVarDialog")
+  let keyElement = newEnvVarDialog.querySelector("[modal-data-key]")
+  let valueElement = newEnvVarDialog.querySelector("[modal-data-value]")
+  // let saveBtn = newEnvVarDialog.querySelector("#saveBtn")
+
+  // Fetch localStorage objects and convert to envVars array
+  const keys = Object.keys(localStorage)
+  let envVars = []
+  let envObj = {}
+  keys.forEach((key) => {
+    envObj = {}
+    envObj.key = key
+    envObj.value = localStorage[key]
+    envVars.push(envObj)
+  })
+  // console.log("ENV VARS:")
+  // console.table(envVars)
+
+  // Make sure reguired env vars are present
+  if (keys.includes("AccountSid")) {
+    document.querySelector("#acctSid").classList.add("d-none")
+  }
+  if (keys.includes("AuthToken")) {
+    document.querySelector("#authToken").classList.add("d-none")
+  }
+  if (keys.includes("Username")) {
+    document.querySelector("#username").classList.add("d-none")
+  }
+  if (keys.includes("Password")) {
+    document.querySelector("#password").classList.add("d-none")
+  }
+
+  // On load -> append query params key value pairs
+  // An eventListener will be added to each Delete button
+  envVars.forEach((envVar) => {
+    document
+      .querySelector("#{{ .Params.id }} [data-query-params]")
+      .append(createKeyValuePair("{{ .Params.id }}", envVar.key, envVar.value))
+  })
+
+  // New Env Var button click -> "data-add-query-param-btn" button opens the <dialog> modally
+  document
+    .querySelectorAll("#{{ .Params.id }} [data-add-query-param-btn]")
+    .forEach((btn) => {
+      btn.addEventListener("click", function onOpen() {
+        if (typeof newEnvVarDialog.showModal === "function") {
+          newEnvVarDialog.showModal()
+          if (btn.id === "addAcctSidBtn") {
+            keyElement.value = "AccountSid"
+            keyElement.disabled = true
+          } else if (btn.id === "addAuthTokenBtn") {
+            keyElement.value = "AuthToken"
+            keyElement.disabled = true
+          } else if (btn.id === "addUsernameBtn") {
+            keyElement.value = "Username"
+            keyElement.disabled = true
+          } else if (btn.id === "addPasswordBtn") {
+            keyElement.value = "Password"
+            keyElement.disabled = true
+          }
+        } else {
+          outputBox.value =
+            "Sorry, the <dialog> API is not supported by this browser."
+        }
+      })
+    })
+
+  // Enter key listener -> Listen for the "Enter" key in modal
+  newEnvVarDialog.addEventListener("keydown", (e) => {
+    // console.log(`${e.code}`)
+    if (e.code === "Enter") {
+      console.log("${e.code} === Enter")
+      setLocalStorage()
+    }
+  })
+
+  // Save listener -> On dialog "close" because of [method="dialog"]
+  // Triggered via Cancel & Save buttons or Enter keypress
+  newEnvVarDialog.addEventListener("close", function onClose() {
+    if (newEnvVarDialog.returnValue !== "cancel") {
+      setLocalStorage()
+    }
+  })
+
+  // Store item in localStorage and refresh window
+  function setLocalStorage() {
+    if (keyElement.value !== "" && valueElement.value !== "") {
+      localStorage.setItem(keyElement.value, valueElement.value)
+      window.location = window.location.href
+    }
+  }
+</script>
