@@ -5,7 +5,7 @@ postmanParams = {
   queryParams: [{ key: "PhoneNumber", value: "+14155551234" }],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{Username}}" },
-    { key: "password", value: "{{Password}}" },
+    { key: "username", value: "{{AccountSid}}" },
+    { key: "password", value: "{{AuthToken}}" },
   ],
 }
