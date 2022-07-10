@@ -1,7 +1,6 @@
 baseURL = "http://localhost"
 title = "Twilio API Explorer"
 theme = "hugo-geekdoc"
-publishDir = "docs"
 
 # Required to get well formatted code blocks
 pygmentsUseClasses = true
