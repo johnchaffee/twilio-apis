@@ -72,26 +72,6 @@
           Add Auth Token Variable</button
         ><br />
       </div>
-      <div id="username" class="">
-        <button
-          id="addUsernameBtn"
-          data-add-query-param-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
-          Add Username Variable</button
-        ><br />
-      </div>
-      <div id="password" class="">
-        <button
-          id="addPasswordBtn"
-          data-add-query-param-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
-          Add Password Variable</button
-        ><br />
-      </div>
     </div>
     <div>
       <h2>Custom Environment Variables</h2>
@@ -159,12 +139,6 @@
   if (keys.includes("AuthToken")) {
     document.querySelector("#authToken").classList.add("d-none")
   }
-  if (keys.includes("Username")) {
-    document.querySelector("#username").classList.add("d-none")
-  }
-  if (keys.includes("Password")) {
-    document.querySelector("#password").classList.add("d-none")
-  }
 
   // On load -> append query params key value pairs
   // An eventListener will be added to each Delete button
@@ -186,12 +160,6 @@
             keyElement.disabled = true
           } else if (btn.id === "addAuthTokenBtn") {
             keyElement.value = "AuthToken"
-            keyElement.disabled = true
-          } else if (btn.id === "addUsernameBtn") {
-            keyElement.value = "Username"
-            keyElement.disabled = true
-          } else if (btn.id === "addPasswordBtn") {
-            keyElement.value = "Password"
             keyElement.disabled = true
           }
         } else {
