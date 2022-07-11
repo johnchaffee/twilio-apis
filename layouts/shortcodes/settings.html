@@ -51,38 +51,39 @@
 
   <form data-form>
     <div id="required" class="">
-      <h2>Required Environment Variables</h2>
-      <div id="acctSid" class="">
-        <button
-          id="addAcctSidBtn"
-          data-add-query-param-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
-          Add Account SID Variable</button
-        ><br />
+      <div id="envVarButtons" class="mb-4">
+        <div id="acctSid" class="">
+          <button
+            id="addAcctSidBtn"
+            data-add-query-param-btn
+            class="mt-2 btn btn-outline-success"
+            type="button"
+          >
+            Add Account SID Variable</button
+          ><br />
+        </div>
+        <div id="authToken" class="">
+          <button
+            id="addAuthTokenBtn"
+            data-add-query-param-btn
+            class="mt-2 btn btn-outline-success"
+            type="button"
+          >
+            Add Auth Token Variable</button
+          ><br />
+        </div>
+        <div id="envVar">
+          <button
+            id="newEnvVarBtn"
+            data-add-query-param-btn
+            class="mt-2 btn btn-outline-success"
+            type="button"
+          >
+            Add Custom Environment Variable
+          </button>
+        </div>
       </div>
-      <div id="authToken" class="">
-        <button
-          id="addAuthTokenBtn"
-          data-add-query-param-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
-          Add Auth Token Variable</button
-        ><br />
-      </div>
-    </div>
-    <div>
-      <h2>Custom Environment Variables</h2>
-      <button
-        id="newEnvVarBtn"
-        data-add-query-param-btn
-        class="mt-2 btn btn-outline-success"
-        type="button"
-      >
-        Add Custom Environment Variable
-      </button>
+      <h2>Environment Variables</h2>
       <div id="{{ .Params.id }}-query-params">
         <div data-query-params></div>
       </div>
