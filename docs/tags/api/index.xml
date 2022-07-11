@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>api on Twilio API Explorer</title>
+    <link>https://johnchaffee.wiki/twilio-apis/docs/tags/api/</link>
+    <description>Recent content in api on Twilio API Explorer</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/docs/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conversations</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/conversations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/conversations/</guid>
+      <description>Create and manage conversations.
+Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/_includes\/conversations\/create-conversation.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Lookup v1</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/api/lookup/lookup-v1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/lookup/lookup-v1/</guid>
+      <description>The Lookup API provides a way to retrieve additional information about a phone number.
+NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/_includes\/lookup\/number.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Numbers v1</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/phone-numbers-v1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/phone-numbers-v1/</guid>
+      <description>Phone Numbers API lets you search for available numbers, purchase and manage numbers.
+ACTIVE  List all active phone numbers.
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/_includes\/phone-numbers\/incoming.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Lookup v2</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/api/lookup/lookup-v2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/lookup/lookup-v2/</guid>
+      <description>The Lookup v2 API provides a way to retrieve additional information about a phone number.
+NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/_includes\/lookup-v2\/number.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Numbers v2 - Available</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/available-numbers-v2-available/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/available-numbers-v2-available/</guid>
+      <description>The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
+TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/_includes\/phone-numbers-v2\/available-type.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Participants</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/participants/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/participants/</guid>
+      <description>Add/remove participants to/from a conversation.
+Add SMS Participant    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/_includes\/conversations\/create-sms-participant.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Messages</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/messages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/messages/</guid>
+      <description>Add messages to a conversation.
+Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/_includes\/conversations\/create-message.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Numbers v2 - Active</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/phone-numbers-v2-active/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/phone-numbers-v2-active/</guid>
+      <description>The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
+LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography, and Type (e.g. local, mobile, tollfree, shortcode.)
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/_includes\/phone-numbers-v2\/active-list.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Participant Conversations</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/participant-conversations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/participant-conversations/</guid>
+      <description>Fetch conversations by participant.
+Fetch SMS Conversations    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/_includes\/conversations\/fetch-sms-conversations.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Feedback</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/api/feedback/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/feedback/</guid>
+      <description>How to send and fetch messages with the Twilio Messaging API.
+PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/_includes\/feedback\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Messages</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/api/messages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/messages/</guid>
+      <description>How to send and fetch messages with the Twilio Messaging API.
+SMS    console.log(&#34;POSTMAN PARAMS: ..\/..\/_includes\/messages\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Test Credentials</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/api/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/test/</guid>
+      <description>How to send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.
+SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/_includes\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cli on Twilio API Explorer</title>
+    <link>https://johnchaffee.wiki/twilio-apis/docs/tags/cli/</link>
+    <description>Recent content in cli on Twilio API Explorer</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/docs/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Send Message</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/sdk/send-message/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/sdk/send-message/</guid>
+      <description>How to send messages with the Twilio Messaging API.
+CLI  twilio api:core:messages:create \ --to=$MOBILE_NUMBER \ --from=$TWILIO_NUMBER \ --body=&amp;#34;This is the ship that made the Kessel Run in fourteen parsecs?&amp;#34; \ --media-url=&amp;#34;https://c1.staticflickr.com/3/2899/14341091933_1e92e62d12_b.jpg&amp;#34; \ -o json | jq  Curl  curl -X POST &amp;#34;https://api.twilio.com/2010-04-01/Accounts/$TWILIO_ACCOUNT_SID/Messages.json&amp;#34; \ -d &amp;#34;To=$MOBILE_NUMBER&amp;#34; \ -d &amp;#34;From=$TWILIO_NUMBER&amp;#34; \ -d &amp;#34;Body=This is the ship that made the Kessel Run in fourteen parsecs?&amp;#34; \ -d &amp;#34;MediaUrl=https://c1.staticflickr.com/3/2899/14341091933_1e92e62d12_b.jpg&amp;#34; \ -u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \ | jq   Node  // Twilio Credentials // To set up environmental variables, see http://twil.</description>
+    </item>
+    
+  </channel>
+</rss>

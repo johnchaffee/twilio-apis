@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Twilio API Explorer</title>
+    <link>https://johnchaffee.wiki/twilio-apis/docs/tags/</link>
+    <description>Recent content in Tags on Twilio API Explorer</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/docs/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>api</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cli</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conversations</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/conversations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/conversations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>curl</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/curl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/curl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>environment</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/environment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/environment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>feedback</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/feedback/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/feedback/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lookup</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/lookup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/lookup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>messaging</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/messaging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/messaging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phone-numbers</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/phone-numbers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/phone-numbers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postman</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/postman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/postman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>preferences</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/preferences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/preferences/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sdk</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/sdk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/sdk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>settings</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/settings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/settings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twilio</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/twilio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/twilio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>variables</title>
+      <link>https://johnchaffee.wiki/twilio-apis/docs/tags/variables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/docs/tags/variables/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
