@@ -1,6 +1,6 @@
 ---
 title: "Send Message"
-draft: true
+draft: false
 weight: 100
 tags:
   - sdk

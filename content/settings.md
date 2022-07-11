@@ -1,6 +1,6 @@
 ---
 title: "Settings"
-draft: true
+draft: false
 tags:
   - settings
   - preferences

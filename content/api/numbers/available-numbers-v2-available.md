@@ -1,6 +1,6 @@
 ---
 title: "Numbers v2 - Available"
-draft: true
+draft: false
 weight: 200
 tags:
   - api
