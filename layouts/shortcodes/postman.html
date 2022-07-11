@@ -1,6 +1,5 @@
 <div class="p-4" id="{{ .Params.id }}">
   <!-- Load queryParams and headerParams from file -->
-  <link href="/prism.css" rel="stylesheet" />
   <script await src="{{ .Params.file }}"></script>
   <script>
     console.log("POSTMAN PARAMS: {{ .Params.file }}", postmanParams)
@@ -386,4 +385,3 @@
         })
     })
 </script>
-<script src="/prism.js"></script>
