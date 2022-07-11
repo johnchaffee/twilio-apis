@@ -22,7 +22,7 @@ SMS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/messages\/create
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/test/</guid>
       <description>How to send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.
-SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/_includes\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
   </channel>
