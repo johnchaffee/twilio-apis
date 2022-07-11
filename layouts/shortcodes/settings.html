@@ -140,7 +140,7 @@
   // let saveBtn = newEnvVarDialog.querySelector("#saveBtn")
 
   // Fetch localStorage objects and convert to envVars array
-  const keys = Object.keys(localStorage)
+  const keys = Object.keys(localStorage).sort()
   let envVars = []
   let envObj = {}
   keys.forEach((key) => {
