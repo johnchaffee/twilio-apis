@@ -1,4 +1,4 @@
-baseURL = "https://johnchaffee.wiki/twilio-apis/docs/"
+baseURL = "https://johnchaffee.wiki/twilio-apis/"
 title = "Twilio API Explorer"
 theme = "hugo-geekdoc"
 publishDir = "docs"

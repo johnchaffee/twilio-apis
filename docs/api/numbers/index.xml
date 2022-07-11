@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Numbers on Twilio API Explorer</title>
-    <link>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/</link>
+    <link>https://johnchaffee.wiki/twilio-apis/api/numbers/</link>
     <description>Recent content in Numbers on Twilio API Explorer</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/docs/api/numbers/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/api/numbers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Numbers v1</title>
-      <link>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/phone-numbers-v1/</link>
+      <link>https://johnchaffee.wiki/twilio-apis/api/numbers/phone-numbers-v1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/phone-numbers-v1/</guid>
+      <guid>https://johnchaffee.wiki/twilio-apis/api/numbers/phone-numbers-v1/</guid>
       <description>Phone Numbers API lets you search for available numbers, purchase and manage numbers.
 ACTIVE  List all active phone numbers.
   console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/_includes\/phone-numbers\/incoming.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
@@ -18,10 +18,10 @@ ACTIVE  List all active phone numbers.
     
     <item>
       <title>Numbers v2 - Available</title>
-      <link>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/available-numbers-v2-available/</link>
+      <link>https://johnchaffee.wiki/twilio-apis/api/numbers/available-numbers-v2-available/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/available-numbers-v2-available/</guid>
+      <guid>https://johnchaffee.wiki/twilio-apis/api/numbers/available-numbers-v2-available/</guid>
       <description>The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
 TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
   console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/_includes\/phone-numbers-v2\/available-type.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
@@ -29,10 +29,10 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
     
     <item>
       <title>Numbers v2 - Active</title>
-      <link>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/phone-numbers-v2-active/</link>
+      <link>https://johnchaffee.wiki/twilio-apis/api/numbers/phone-numbers-v2-active/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/phone-numbers-v2-active/</guid>
+      <guid>https://johnchaffee.wiki/twilio-apis/api/numbers/phone-numbers-v2-active/</guid>
       <description>The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
 LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography, and Type (e.g. local, mobile, tollfree, shortcode.)
   console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/_includes\/phone-numbers-v2\/active-list.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>

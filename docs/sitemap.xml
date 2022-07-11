@@ -2,90 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/conversations/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/conversations/conversations/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/sdk/curl/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/sdk/curl/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/lookup/lookup-v1/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/lookup/lookup-v1/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/phone-numbers-v1/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/numbers/phone-numbers-v1/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/sdk/send-message/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/sdk/send-message/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/lookup/lookup-v2/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/lookup/lookup-v2/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/available-numbers-v2-available/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/numbers/available-numbers-v2-available/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/participants/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/conversations/participants/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/messages/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/conversations/messages/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/phone-numbers-v2-active/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/numbers/phone-numbers-v2-active/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/participant-conversations/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/conversations/participant-conversations/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/api/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/api/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/cli/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/cli/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/conversations/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/conversations/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/conversations/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/conversations/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/curl/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/curl/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/environment/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/environment/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/feedback/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/feedback/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/feedback/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/feedback/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/lookup/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/lookup/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/lookup/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/lookup/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/messages/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/messages/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/messaging/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/messaging/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/numbers/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/numbers/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/phone-numbers/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/phone-numbers/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/postman/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/postman/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/preferences/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/preferences/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/sdk/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/sdk/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/sdk/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/sdk/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/settings/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/settings/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/settings/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/settings/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/api/test/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/test/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/twilio/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/twilio/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/tags/variables/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/variables/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/webhook/event-streams/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/webhook/event-streams/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/webhook/flex/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/webhook/flex/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/webhook/incoming-msg/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/webhook/incoming-msg/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/webhook/outgoing-msg/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/webhook/outgoing-msg/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/webhook/voice/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/webhook/voice/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/docs/webhook/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/webhook/</loc>
   </url>
 </urlset>

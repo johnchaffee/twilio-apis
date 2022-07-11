@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>environment on Twilio API Explorer</title>
-    <link>https://johnchaffee.wiki/twilio-apis/docs/tags/environment/</link>
+    <link>https://johnchaffee.wiki/twilio-apis/tags/environment/</link>
     <description>Recent content in environment on Twilio API Explorer</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/docs/tags/environment/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/tags/environment/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Settings</title>
-      <link>https://johnchaffee.wiki/twilio-apis/docs/settings/</link>
+      <link>https://johnchaffee.wiki/twilio-apis/settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://johnchaffee.wiki/twilio-apis/docs/settings/</guid>
+      <guid>https://johnchaffee.wiki/twilio-apis/settings/</guid>
       <description>Enter key/value environment variables to use in Postman API requests.
  Cancel Save   Required Environment Variables Add Account SID Variable Add Auth Token Variable Add Username Variable Add Password Variable   Custom Environment Variables Add Custom Environment Variable      Delete      const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.keys(localStorage) let envVars = [] let envObj = {} keys.</description>
     </item>

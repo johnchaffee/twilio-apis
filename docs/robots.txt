@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /tags/*
 
-Sitemap: https://johnchaffee.wiki/twilio-apis/docs/sitemap.xml
+Sitemap: https://johnchaffee.wiki/twilio-apis/sitemap.xml

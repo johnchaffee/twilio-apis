@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>API on Twilio API Explorer</title>
-    <link>https://johnchaffee.wiki/twilio-apis/docs/api/</link>
+    <link>https://johnchaffee.wiki/twilio-apis/api/</link>
     <description>Recent content in API on Twilio API Explorer</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/docs/api/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Feedback</title>
-      <link>https://johnchaffee.wiki/twilio-apis/docs/api/feedback/</link>
+      <link>https://johnchaffee.wiki/twilio-apis/api/feedback/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/feedback/</guid>
+      <guid>https://johnchaffee.wiki/twilio-apis/api/feedback/</guid>
       <description>How to send and fetch messages with the Twilio Messaging API.
 PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
   console.log(&#34;POSTMAN PARAMS: ..\/..\/_includes\/feedback\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
@@ -18,20 +18,20 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
     
     <item>
       <title>Messages</title>
-      <link>https://johnchaffee.wiki/twilio-apis/docs/api/messages/</link>
+      <link>https://johnchaffee.wiki/twilio-apis/api/messages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/messages/</guid>
+      <guid>https://johnchaffee.wiki/twilio-apis/api/messages/</guid>
       <description>How to send and fetch messages with the Twilio Messaging API.
 SMS    console.log(&#34;POSTMAN PARAMS: ..\/..\/_includes\/messages\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
     <item>
       <title>Test Credentials</title>
-      <link>https://johnchaffee.wiki/twilio-apis/docs/api/test/</link>
+      <link>https://johnchaffee.wiki/twilio-apis/api/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://johnchaffee.wiki/twilio-apis/docs/api/test/</guid>
+      <guid>https://johnchaffee.wiki/twilio-apis/api/test/</guid>
       <description>How to send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.
 SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/_includes\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
