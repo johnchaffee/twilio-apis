@@ -118,7 +118,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messages/</guid>
       <description>How to send and fetch messages with the Twilio Messaging API.
-SMS    console.log(&#34;POSTMAN PARAMS: \/postman-params\/messages\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+SMS    console.log(&#34;POSTMAN PARAMS: .\/postman-params\/messages\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
     <item>
