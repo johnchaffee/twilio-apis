@@ -13,7 +13,7 @@
 
 
   <meta name="description" content="Enter key/value environment variables to use in Postman API requests.
- Cancel Save   Required Environment Variables Add Account SID Variable Add Auth Token Variable Add Username Variable Add Password Variable   Custom Environment Variables Add Custom Environment Variable      Delete      const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.keys(localStorage) let envVars = [] let envObj = {} keys." />
+ Cancel Save    Cancel Save   Login Add Custom Environment Variable    Environment Variables    Delete      const loginDialog = document.getElementById(&#34;loginDialog&#34;) let accountSidKeyElement = loginDialog.querySelector( &#34;[modal-account-sid-key]&#34; ) let accountSidValueElement = loginDialog.querySelector( &#34;[modal-account-sid-value]&#34; ) let authTokenKeyElement = loginDialog.querySelector(&#34;[modal-auth-token-key]&#34;) let authTokenValueElement = loginDialog.querySelector( &#34;[modal-auth-token-value]&#34; ) const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog." />
 
     <title>Settings | Twilio API Explorer</title>
 
@@ -40,7 +40,7 @@
   />
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="Enter key/value environment variables to use in Postman API requests.
- Cancel Save   Required Environment Variables Add Account SID Variable Add Auth Token Variable Add Username Variable Add Password Variable   Custom Environment Variables Add Custom Environment Variable      Delete      const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.keys(localStorage) let envVars = [] let envObj = {} keys." />
+ Cancel Save    Cancel Save   Login Add Custom Environment Variable    Environment Variables    Delete      const loginDialog = document.getElementById(&#34;loginDialog&#34;) let accountSidKeyElement = loginDialog.querySelector( &#34;[modal-account-sid-key]&#34; ) let accountSidValueElement = loginDialog.querySelector( &#34;[modal-account-sid-value]&#34; ) let authTokenKeyElement = loginDialog.querySelector(&#34;[modal-auth-token-key]&#34;) let authTokenValueElement = loginDialog.querySelector( &#34;[modal-auth-token-value]&#34; ) const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/settings/" />
 
@@ -50,7 +50,7 @@
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Settings" />
   <meta name="twitter:description" content="Enter key/value environment variables to use in Postman API requests.
- Cancel Save   Required Environment Variables Add Account SID Variable Add Auth Token Variable Add Username Variable Add Password Variable   Custom Environment Variables Add Custom Environment Variable      Delete      const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.keys(localStorage) let envVars = [] let envObj = {} keys." />
+ Cancel Save    Cancel Save   Login Add Custom Environment Variable    Environment Variables    Delete      const loginDialog = document.getElementById(&#34;loginDialog&#34;) let accountSidKeyElement = loginDialog.querySelector( &#34;[modal-account-sid-key]&#34; ) let accountSidValueElement = loginDialog.querySelector( &#34;[modal-account-sid-value]&#34; ) let authTokenKeyElement = loginDialog.querySelector(&#34;[modal-auth-token-key]&#34;) let authTokenValueElement = loginDialog.querySelector( &#34;[modal-auth-token-value]&#34; ) const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog." />
 
 
   <script type="application/ld+json">
@@ -61,8 +61,8 @@
       "name": "Settings",
       "url" : "https://johnchaffee.wiki/twilio-apis/settings/",
       "headline": "Settings",
-      "description": "Enter key\/value environment variables to use in Postman API requests.\n Cancel Save   Required Environment Variables Add Account SID Variable Add Auth Token Variable Add Username Variable Add Password Variable   Custom Environment Variables Add Custom Environment Variable      Delete      const newEnvVarDialog = document.getElementById(\u0022newEnvVarDialog\u0022) let keyElement = newEnvVarDialog.querySelector(\u0022[modal-data-key]\u0022) let valueElement = newEnvVarDialog.querySelector(\u0022[modal-data-value]\u0022) const keys = Object.keys(localStorage) let envVars = [] let envObj = {} keys.",
-      "wordCount" : "236",
+      "description": "Enter key\/value environment variables to use in Postman API requests.\n Cancel Save    Cancel Save   Login Add Custom Environment Variable    Environment Variables    Delete      const loginDialog = document.getElementById(\u0022loginDialog\u0022) let accountSidKeyElement = loginDialog.querySelector( \u0022[modal-account-sid-key]\u0022 ) let accountSidValueElement = loginDialog.querySelector( \u0022[modal-account-sid-value]\u0022 ) let authTokenKeyElement = loginDialog.querySelector(\u0022[modal-auth-token-key]\u0022) let authTokenValueElement = loginDialog.querySelector( \u0022[modal-auth-token-value]\u0022 ) const newEnvVarDialog = document.getElementById(\u0022newEnvVarDialog\u0022) let keyElement = newEnvVarDialog.",
+      "wordCount" : "248",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1396,6 +1396,50 @@
 
   
 
+  <dialog id="loginDialog">
+    <form method="dialog">
+      <div class="my-2" data-key-value-pair>
+        <input
+          modal-account-sid-key
+          type="text"
+          data-key
+          class="form-control"
+          placeholder="Key"
+          value="AccountSid"
+          disabled
+        />
+        <input
+          modal-account-sid-value
+          type="text"
+          data-value
+          class="form-control"
+          placeholder="Value"
+          value=""
+        />
+        <hr />
+        <input
+          modal-auth-token-key
+          type="text"
+          data-key
+          class="form-control"
+          placeholder="Key"
+          value="AuthToken"
+          disabled
+        />
+        <input
+          modal-auth-token-value
+          type="text"
+          data-value
+          class="form-control"
+          placeholder="Value"
+          value=""
+        />
+      </div>
+      <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+      <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+    </form>
+  </dialog>
+
   <dialog id="newEnvVarDialog">
     <form method="dialog">
       <div class="input-group my-2" data-key-value-pair>
@@ -1422,62 +1466,31 @@
   </dialog>
 
   <form data-form>
-    <div id="required" class="">
-      <h2>Required Environment Variables</h2>
-      <div id="acctSid" class="">
+    <div id="envVarButtons" class="mb-4">
+      <div id="login" class="">
         <button
-          id="addAcctSidBtn"
+          id="loginBtn"
           data-add-query-param-btn
           class="mt-2 btn btn-outline-success"
           type="button"
         >
-          Add Account SID Variable</button
+          Login</button
         ><br />
       </div>
-      <div id="authToken" class="">
+      <div id="envVar">
         <button
-          id="addAuthTokenBtn"
+          id="newEnvVarBtn"
           data-add-query-param-btn
           class="mt-2 btn btn-outline-success"
           type="button"
         >
-          Add Auth Token Variable</button
-        ><br />
-      </div>
-      <div id="username" class="">
-        <button
-          id="addUsernameBtn"
-          data-add-query-param-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
-          Add Username Variable</button
-        ><br />
-      </div>
-      <div id="password" class="">
-        <button
-          id="addPasswordBtn"
-          data-add-query-param-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
-          Add Password Variable</button
-        ><br />
+          Add Custom Environment Variable
+        </button>
       </div>
     </div>
-    <div>
-      <h2>Custom Environment Variables</h2>
-      <button
-        id="newEnvVarBtn"
-        data-add-query-param-btn
-        class="mt-2 btn btn-outline-success"
-        type="button"
-      >
-        Add Custom Environment Variable
-      </button>
-      <div id="settings-query-params">
-        <div data-query-params></div>
-      </div>
+    <h2>Environment Variables</h2>
+    <div id="settings-query-params">
+      <div data-query-params></div>
     </div>
   </form>
   <template data-key-value-template>
@@ -1506,13 +1519,25 @@
 </div>
 
 <script>
+  const loginDialog = document.getElementById("loginDialog")
+  let accountSidKeyElement = loginDialog.querySelector(
+    "[modal-account-sid-key]"
+  )
+  let accountSidValueElement = loginDialog.querySelector(
+    "[modal-account-sid-value]"
+  )
+  let authTokenKeyElement = loginDialog.querySelector("[modal-auth-token-key]")
+  let authTokenValueElement = loginDialog.querySelector(
+    "[modal-auth-token-value]"
+  )
+
   const newEnvVarDialog = document.getElementById("newEnvVarDialog")
   let keyElement = newEnvVarDialog.querySelector("[modal-data-key]")
   let valueElement = newEnvVarDialog.querySelector("[modal-data-value]")
   
 
   
-  const keys = Object.keys(localStorage)
+  const keys = Object.keys(localStorage).sort()
   let envVars = []
   let envObj = {}
   keys.forEach((key) => {
@@ -1521,21 +1546,10 @@
     envObj.value = localStorage[key]
     envVars.push(envObj)
   })
-  
-  
 
   
-  if (keys.includes("AccountSid")) {
-    document.querySelector("#acctSid").classList.add("d-none")
-  }
-  if (keys.includes("AuthToken")) {
-    document.querySelector("#authToken").classList.add("d-none")
-  }
-  if (keys.includes("Username")) {
-    document.querySelector("#username").classList.add("d-none")
-  }
-  if (keys.includes("Password")) {
-    document.querySelector("#password").classList.add("d-none")
+  if (keys.includes("AccountSid") && keys.includes("AuthToken")) {
+    document.querySelector("#login").classList.add("d-none")
   }
 
   
@@ -1551,33 +1565,24 @@
     .querySelectorAll("#settings [data-add-query-param-btn]")
     .forEach((btn) => {
       btn.addEventListener("click", function onOpen() {
-        if (typeof newEnvVarDialog.showModal === "function") {
+        if (
+          btn.id === "loginBtn" &&
+          typeof loginDialog.showModal === "function"
+        ) {
+          loginDialog.showModal()
+        }
+        if (
+          btn.id === "newEnvVarBtn" &&
+          typeof newEnvVarDialog.showModal === "function"
+        ) {
           newEnvVarDialog.showModal()
-          if (btn.id === "addAcctSidBtn") {
-            keyElement.value = "AccountSid"
-            keyElement.disabled = true
-          } else if (btn.id === "addAuthTokenBtn") {
-            keyElement.value = "AuthToken"
-            keyElement.disabled = true
-          } else if (btn.id === "addUsernameBtn") {
-            keyElement.value = "Username"
-            keyElement.disabled = true
-          } else if (btn.id === "addPasswordBtn") {
-            keyElement.value = "Password"
-            keyElement.disabled = true
-          }
-        } else {
-          outputBox.value =
-            "Sorry, the <dialog> API is not supported by this browser."
         }
       })
     })
 
   
   newEnvVarDialog.addEventListener("keydown", (e) => {
-    
     if (e.code === "Enter") {
-      console.log("${e.code} === Enter")
       setLocalStorage()
     }
   })
@@ -1591,9 +1596,44 @@
   })
 
   
+  loginDialog.addEventListener("keydown", (e) => {
+    if (e.code === "Enter") {
+      setLocalStorage()
+    }
+  })
+
+  
+  
+  loginDialog.addEventListener("close", function onClose() {
+    if (loginDialog.returnValue !== "cancel") {
+      setLocalStorage()
+    }
+  })
+
+  
   function setLocalStorage() {
     if (keyElement.value !== "" && valueElement.value !== "") {
       localStorage.setItem(keyElement.value, valueElement.value)
+      window.location = window.location.href
+    }
+    if (
+      accountSidKeyElement.value !== "" &&
+      accountSidValueElement.value !== ""
+    ) {
+      localStorage.setItem(
+        accountSidKeyElement.value,
+        accountSidValueElement.value
+      )
+      window.location = window.location.href
+    }
+    if (
+      authTokenKeyElement.value !== "" &&
+      authTokenValueElement.value !== ""
+    ) {
+      localStorage.setItem(
+        authTokenKeyElement.value,
+        authTokenValueElement.value
+      )
       window.location = window.location.href
     }
   }
