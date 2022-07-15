@@ -1,17 +1,4 @@
 <div class="" id="{{ .Params.id }}">
-  <!-- <script>
-    // Fetch localStorage objects and convert to envVars array
-    const keys = Object.keys(localStorage)
-    let envVars = []
-    let envObj = {}
-    keys.forEach((key) => {
-      envObj = {}
-      envObj.key = key
-      envObj.value = localStorage[key]
-      envVars.push(envObj)
-    })
-  </script> -->
-
   <!-- <h3>Hugo Params</h3>
   {{ range $elem_key, $elem_val := .Params }}
   <b>{{ $elem_key }}</b>: <code>{{ $elem_val }}</code><br />
@@ -23,50 +10,6 @@
   .Page => {{ .Page }}
   .Page.Title => {{ .Page.Title }}
   </pre> -->
-
-  <dialog id="loginDialog">
-    <form method="dialog">
-      <div class="my-2" data-key-value-pair>
-        <input
-          modal-account-sid-key
-          type="text"
-          data-key
-          class="form-control"
-          placeholder="Key"
-          value="AccountSid"
-          disabled
-        />
-        <input
-          modal-account-sid-value
-          type="text"
-          data-value
-          class="form-control"
-          placeholder="Value"
-          value=""
-        />
-        <hr />
-        <input
-          modal-auth-token-key
-          type="text"
-          data-key
-          class="form-control"
-          placeholder="Key"
-          value="AuthToken"
-          disabled
-        />
-        <input
-          modal-auth-token-value
-          type="text"
-          data-value
-          class="form-control"
-          placeholder="Value"
-          value=""
-        />
-      </div>
-      <button class="btn btn-outline-danger" value="cancel">Cancel</button>
-      <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
-    </form>
-  </dialog>
 
   <dialog id="newEnvVarDialog">
     <form method="dialog">
@@ -95,16 +38,6 @@
 
   <form data-form>
     <div id="envVarButtons" class="mb-4">
-      <div id="login" class="">
-        <button
-          id="loginBtn"
-          data-add-query-param-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
-          Login</button
-        ><br />
-      </div>
       <div id="envVar">
         <button
           id="newEnvVarBtn"
@@ -148,15 +81,13 @@
 
 <script>
   const loginDialog = document.getElementById("loginDialog")
-  let accountSidKeyElement = loginDialog.querySelector(
-    "[modal-account-sid-key]"
-  )
+  let accountSidKeyElement = loginDialog.querySelector("#modal-account-sid-key")
   let accountSidValueElement = loginDialog.querySelector(
-    "[modal-account-sid-value]"
+    "#modal-account-sid-value"
   )
-  let authTokenKeyElement = loginDialog.querySelector("[modal-auth-token-key]")
+  let authTokenKeyElement = loginDialog.querySelector("#modal-auth-token-key")
   let authTokenValueElement = loginDialog.querySelector(
-    "[modal-auth-token-value]"
+    "#modal-auth-token-value"
   )
 
   const newEnvVarDialog = document.getElementById("newEnvVarDialog")
@@ -177,7 +108,11 @@
 
   // Make sure reguired env vars are present
   if (keys.includes("AccountSid") && keys.includes("AuthToken")) {
-    document.querySelector("#login").classList.add("d-none")
+    document.querySelector("#loginBtn").classList.add("d-none")
+    document.querySelector("#logoutBtn").classList.remove("d-none")
+  } else {
+    document.querySelector("#loginBtn").classList.remove("d-none")
+    document.querySelector("#logoutBtn").classList.add("d-none")
   }
 
   // On load -> append query params key value pairs
@@ -190,22 +125,31 @@
 
   // New Env Var button click -> "data-add-query-param-btn" button opens the <dialog> modally
   document
-    .querySelectorAll("#{{ .Params.id }} [data-add-query-param-btn]")
-    .forEach((btn) => {
-      btn.addEventListener("click", function onOpen() {
-        if (
-          btn.id === "loginBtn" &&
-          typeof loginDialog.showModal === "function"
-        ) {
-          loginDialog.showModal()
-        }
-        if (
-          btn.id === "newEnvVarBtn" &&
-          typeof newEnvVarDialog.showModal === "function"
-        ) {
-          newEnvVarDialog.showModal()
-        }
-      })
+    .querySelector("#newEnvVarBtn")
+    .addEventListener("click", function onOpen() {
+      console.log("CLICK ENV VAR BTN")
+      if (typeof newEnvVarDialog.showModal === "function") {
+        newEnvVarDialog.showModal()
+      }
+    })
+
+  // Login button click -> "data-add-query-param-btn" button opens the <dialog> modally
+  document
+    .querySelector("#loginBtn")
+    .addEventListener("click", function onOpen() {
+      console.log("CLICK LOGIN BTN")
+      if (typeof loginDialog.showModal === "function") {
+        loginDialog.showModal()
+      }
+    })
+
+  // Login button click -> "data-add-query-param-btn" button opens the <dialog> modally
+  document
+    .querySelector("#logoutBtn")
+    .addEventListener("click", function onOpen() {
+      console.log("CLICK LOGOUT BTN")
+      localStorage.removeItem("AuthToken")
+      window.location = window.location.href
     })
 
   // Enter key listener -> Listen for the "Enter" key in newEnvVar modal

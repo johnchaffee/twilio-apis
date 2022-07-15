@@ -29,7 +29,7 @@ function createKeyValuePair(id, key, value) {
     .content.cloneNode(true)
   element.querySelector("[data-key]").value = key || null
   element.querySelector("[data-value]").value = value || null
-  // Mask sensitive fields
+  // Mask sensitive password fields
   if (
     element.querySelector("[data-key]").value === "AuthToken" ||
     element.querySelector("[data-key]").value === "Authorization" ||
