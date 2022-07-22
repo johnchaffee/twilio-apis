@@ -13,7 +13,7 @@ postmanParams = {
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
   ],
   authParams: [
-    { key: "username", value: "{{FrontlineAcctSid}}" },
-    { key: "password", value: "{{FrontlineAuthToken}}" },
+    { key: "username", value: "{{ConversationAccountSid}}" },
+    { key: "password", value: "{{ConversationAuthToken}}" },
   ],
 }

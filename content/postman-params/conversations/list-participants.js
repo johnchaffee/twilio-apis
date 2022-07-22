@@ -5,7 +5,7 @@ postmanParams = {
   queryParams: [{ key: "PageSize", value: "10" }],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{FrontlineAcctSid}}" },
-    { key: "password", value: "{{FrontlineAuthToken}}" },
+    { key: "username", value: "{{ConversationAccountSid}}" },
+    { key: "password", value: "{{ConversationAuthToken}}" },
   ],
 }

@@ -7,6 +7,7 @@ postmanParams = {
   queryParams: [
     { key: "To", value: "+12063996576" },
     { key: "Channel", value: "sms" },
+    { key: "Locale", value: "" },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
