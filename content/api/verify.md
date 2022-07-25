@@ -12,6 +12,8 @@ tags:
 
 How to add user verification to your web application with Twilio Verify.
 
+Create a Verification Service (once), Send OTP, Check OTP.
+
 {{< tabs "verify" >}}
 
 {{< tab "CREATE" >}}
@@ -30,12 +32,12 @@ How to add user verification to your web application with Twilio Verify.
 {{< postman id=`delete` file=`../../postman-params/verify/delete.js` >}}
 {{< /tab >}}
 
-{{< tab "SEND" >}}
+{{< tab "SEND OTP" >}}
 Channel options include `sms`, `whatsapp`, `call`, and `email`.
 {{< postman id=`send` file=`../../postman-params/verify/send.js` >}}
 {{< /tab >}}
 
-{{< tab "CHECK" >}}
+{{< tab "CHECK OTP" >}}
 {{< postman id=`check` file=`../../postman-params/verify/check.js` >}}
 {{< /tab >}}
 
