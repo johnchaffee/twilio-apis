@@ -16,17 +16,17 @@ The [Lookup API](https://www.twilio.com/docs/lookup/api) provides a way to retri
 
 {{< tab "NUMBER" >}}
 Performs basic phone number validation and conversion from **regional formatting** to **E.164** (free).
-{{< postman id=`number` file=`../../../postman-params/lookup/number.js` >}}
+{{< postman id=`number` file=`../../../api-params/lookup/number.js` >}}
 {{< /tab >}}
 
 {{< tab "CARRIER" >}}
 Provides carrier info and type (`mobile`, `landline` or `voip`). Costs $0.005 per lookup.
-{{< postman id=`carrier` file=`../../../postman-params/lookup/carrier.js` >}}
+{{< postman id=`carrier` file=`../../../api-params/lookup/carrier.js` >}}
 {{< /tab >}}
 
 {{< tab "CALLER NAME" >}}
 Provides Caller Name and type (`BUSINESS` or `CONSUMER`). Currently available only in the US and costs $0.01 per lookup.
-{{< postman id=`caller-name` file=`../../../postman-params/lookup/caller-name.js` >}}
+{{< postman id=`caller-name` file=`../../../api-params/lookup/caller-name.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

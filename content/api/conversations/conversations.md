@@ -15,23 +15,23 @@ Create and manage conversations.
 {{< tabs "conversations" >}}
 
 {{< tab "Create" >}}
-{{< postman id=`create-conversation` file=`../../../postman-params/conversations/create-conversation.js` >}}
+{{< postman id=`create-conversation` file=`../../../api-params/conversations/create-conversation.js` >}}
 {{< /tab >}}
 
 {{< tab "List" >}}
-{{< postman id=`list-conversations` file=`../../../postman-params/conversations/list-conversations.js` >}}
+{{< postman id=`list-conversations` file=`../../../api-params/conversations/list-conversations.js` >}}
 {{< /tab >}}
 
 {{< tab "Fetch" >}}
-{{< postman id=`fetch-conversation` file=`../../../postman-params/conversations/fetch-conversation.js` >}}
+{{< postman id=`fetch-conversation` file=`../../../api-params/conversations/fetch-conversation.js` >}}
 {{< /tab >}}
 
 {{< tab "Update" >}}
-{{< postman id=`update-conversation` file=`../../../postman-params/conversations/update-conversation.js` >}}
+{{< postman id=`update-conversation` file=`../../../api-params/conversations/update-conversation.js` >}}
 {{< /tab >}}
 
 {{< tab "Delete" >}}
-{{< postman id=`delete-conversation` file=`../../../postman-params/conversations/delete-conversation.js` >}}
+{{< postman id=`delete-conversation` file=`../../../api-params/conversations/delete-conversation.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

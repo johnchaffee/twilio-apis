@@ -17,28 +17,28 @@ Create a Verification Service (once), Send OTP, Check OTP.
 {{< tabs "verify" >}}
 
 {{< tab "CREATE" >}}
-{{< postman id=`create` file=`../../postman-params/verify/create.js` >}}
+{{< postman id=`create` file=`../../api-params/verify/create.js` >}}
 {{< /tab >}}
 
 {{< tab "LIST" >}}
-{{< postman id=`list` file=`../../postman-params/verify/list.js` >}}
+{{< postman id=`list` file=`../../api-params/verify/list.js` >}}
 {{< /tab >}}
 
 {{< tab "GET" >}}
-{{< postman id=`get` file=`../../postman-params/verify/get.js` >}}
+{{< postman id=`get` file=`../../api-params/verify/get.js` >}}
 {{< /tab >}}
 
 {{< tab "DELETE" >}}
-{{< postman id=`delete` file=`../../postman-params/verify/delete.js` >}}
+{{< postman id=`delete` file=`../../api-params/verify/delete.js` >}}
 {{< /tab >}}
 
 {{< tab "SEND OTP" >}}
 Channel options include `sms`, `whatsapp`, `call`, and `email`.
-{{< postman id=`send` file=`../../postman-params/verify/send.js` >}}
+{{< postman id=`send` file=`../../api-params/verify/send.js` >}}
 {{< /tab >}}
 
 {{< tab "CHECK OTP" >}}
-{{< postman id=`check` file=`../../postman-params/verify/check.js` >}}
+{{< postman id=`check` file=`../../api-params/verify/check.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}
