@@ -11,7 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://johnchaffee.wiki/twilio-apis/</guid>
-      <description>    API      Conversations      Conversations      Participants      Messages      Participant Conversations        Feedback      Lookup      Lookup v1      Lookup v2        Messages      Numbers      Numbers v1      Numbers v2 - Available      Numbers v2 - Active        Test Credentials        SDKs      curl      Send Message        </description>
+      <description>    API      Conversations      Conversations      Participants      Messages      Participant Conversations        Feedback      Lookup      Lookup v1      Lookup v2        Messages      Messaging Services      Services      Senders        Numbers      Numbers v1      Numbers v2 - Available      Numbers v2 - Active        Test Credentials      Verify        SDKs      curl      Send Message        </description>
     </item>
     
   </channel>

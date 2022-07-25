@@ -162,6 +162,7 @@ CLI  twilio api:core:messages:create \ --to=$MOBILE_NUMBER \ --from=$TWILIO_NUMB
   crossorigin="anonymous"
 ></script>
 <script await src="https://johnchaffee.wiki/twilio-apis//postman.js"></script>
+<script await src="https://johnchaffee.wiki/twilio-apis//auth.js"></script>
 <link href="https://johnchaffee.wiki/twilio-apis//postman.css" rel="stylesheet" />
 <script src="https://johnchaffee.wiki/twilio-apis//prism.js"></script>
 <link href="https://johnchaffee.wiki/twilio-apis//prism.css" rel="stylesheet" />
@@ -206,6 +207,27 @@ CLI  twilio api:core:messages:create \ --to=$MOBILE_NUMBER \ --from=$TWILIO_NUMB
     </div>
     <div class="gdoc-menu-header">
       <span class="gdoc-menu-header__items">
+        <span>
+          <div id="login" class="">
+            <button
+              id="loginBtn"
+              data-add-query-param-btn
+              class="mt-2 btn btn-outline-success"
+              type="button"
+            >
+              Login
+            </button>
+            <button
+              id="logoutBtn"
+              data-add-query-param-btn
+              class="mt-2 btn btn-outline-success d-none"
+              type="button"
+            >
+              Logout
+            </button>
+          </div>
+        </span>
+
          
 
   
@@ -835,6 +857,140 @@ CLI  twilio api:core:messages:create \ --to=$MOBILE_NUMBER \ --from=$TWILIO_NUMB
               
                 <span class="flex">
                   <a
+                    href="/twilio-apis/api/messaging-services/"
+                    class="gdoc-nav__entry"
+                  >
+                    Messaging Services
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+              
+  
+
+
+  <ul class="gdoc-nav__list">
+    
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/messaging-services/services/"
+                    class="gdoc-nav__entry"
+                  >
+                    Services
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/messaging-services/senders/"
+                    class="gdoc-nav__entry"
+                  >
+                    Senders
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+  </ul>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
                     href="/twilio-apis/api/numbers/"
                     class="gdoc-nav__entry"
                   >
@@ -1017,6 +1173,42 @@ CLI  twilio api:core:messages:create \ --to=$MOBILE_NUMBER \ --from=$TWILIO_NUMB
                     class="gdoc-nav__entry"
                   >
                     Test Credentials
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/verify/"
+                    class="gdoc-nav__entry"
+                  >
+                    Verify
                   </a>
                 </span>
               
@@ -1398,6 +1590,49 @@ CLI  twilio api:core:messages:create \ --to=$MOBILE_NUMBER \ --from=$TWILIO_NUMB
     class="gdoc-markdown gdoc-markdown__align--left"
   >
     <h1>Send Message</h1>
+    <dialog id="loginDialog">
+      <form method="dialog">
+        <div class="my-2" data-key-value-pair>
+          <input
+            id="modal-account-sid-key"
+            type="text"
+            data-key
+            class="form-control"
+            placeholder="Key"
+            value="AccountSid"
+            disabled
+          />
+          <input
+            id="modal-account-sid-value"
+            type="text"
+            data-value
+            class="form-control"
+            placeholder="Value"
+            value=""
+          />
+          <hr />
+          <input
+            id="modal-auth-token-key"
+            type="text"
+            data-key
+            class="form-control"
+            placeholder="Key"
+            value="AuthToken"
+            disabled
+          />
+          <input
+            id="modal-auth-token-value"
+            type="text"
+            data-value
+            class="form-control"
+            placeholder="Value"
+            value=""
+          />
+        </div>
+        <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+        <button class="btn btn-primary" value="save">Save</button>
+      </form>
+    </dialog>
     <p>How to send messages with the Twilio Messaging API.</p>
 
 

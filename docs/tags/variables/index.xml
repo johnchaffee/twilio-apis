@@ -12,7 +12,7 @@
       
       <guid>https://johnchaffee.wiki/twilio-apis/settings/</guid>
       <description>Enter key/value environment variables to use in Postman API requests.
- Cancel Save    Cancel Save   Login Add Custom Environment Variable    Environment Variables    Delete      const loginDialog = document.getElementById(&#34;loginDialog&#34;) let accountSidKeyElement = loginDialog.querySelector( &#34;[modal-account-sid-key]&#34; ) let accountSidValueElement = loginDialog.querySelector( &#34;[modal-account-sid-value]&#34; ) let authTokenKeyElement = loginDialog.querySelector(&#34;[modal-auth-token-key]&#34;) let authTokenValueElement = loginDialog.querySelector( &#34;[modal-auth-token-value]&#34; ) const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.</description>
+ Cancel Save   Add Custom Environment Variable    Environment Variables    Delete      const loginDialog = document.getElementById(&#34;loginDialog&#34;) let accountSidKeyElement = loginDialog.querySelector(&#34;#modal-account-sid-key&#34;) let accountSidValueElement = loginDialog.querySelector( &#34;#modal-account-sid-value&#34; ) let authTokenKeyElement = loginDialog.querySelector(&#34;#modal-auth-token-key&#34;) let authTokenValueElement = loginDialog.querySelector( &#34;#modal-auth-token-value&#34; ) const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.</description>
     </item>
     
   </channel>

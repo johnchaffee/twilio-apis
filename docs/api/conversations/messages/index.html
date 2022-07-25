@@ -13,7 +13,7 @@
 
 
   <meta name="description" content="Add messages to a conversation.
-Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversations\/create-message.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request    Response Status:        &minus;      document ." />
+Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/conversations\/create-message.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request    Response Status:        &minus;      document ." />
 
     <title>Messages | Twilio API Explorer</title>
 
@@ -40,7 +40,7 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
   />
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="Add messages to a conversation.
-Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversations\/create-message.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        −      document ." />
+Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/conversations\/create-message.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        −      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/conversations/messages/" />
 
@@ -50,7 +50,7 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Messages" />
   <meta name="twitter:description" content="Add messages to a conversation.
-Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversations\/create-message.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        −      document ." />
+Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/conversations\/create-message.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        −      document ." />
 
 
   <script type="application/ld+json">
@@ -61,7 +61,7 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
       "name": "Messages",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/conversations/messages/",
       "headline": "Messages",
-      "description": "Add messages to a conversation.\nCreate    console.log(\u0022POSTMAN PARAMS: ..\\\/..\\\/..\\\/postman-params\\\/conversations\\\/create-message.js\u0022, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request    Response Status:        −      document .",
+      "description": "Add messages to a conversation.\nCreate    console.log(\u0022POSTMAN PARAMS: ..\\\/..\\\/..\\\/api-params\\\/conversations\\\/create-message.js\u0022, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request    Response Status:        −      document .",
       "wordCount" : "1850",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -162,6 +162,7 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
   crossorigin="anonymous"
 ></script>
 <script await src="https://johnchaffee.wiki/twilio-apis//postman.js"></script>
+<script await src="https://johnchaffee.wiki/twilio-apis//auth.js"></script>
 <link href="https://johnchaffee.wiki/twilio-apis//postman.css" rel="stylesheet" />
 <script src="https://johnchaffee.wiki/twilio-apis//prism.js"></script>
 <link href="https://johnchaffee.wiki/twilio-apis//prism.css" rel="stylesheet" />
@@ -206,6 +207,27 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
     </div>
     <div class="gdoc-menu-header">
       <span class="gdoc-menu-header__items">
+        <span>
+          <div id="login" class="">
+            <button
+              id="loginBtn"
+              data-add-query-param-btn
+              class="mt-2 btn btn-outline-success"
+              type="button"
+            >
+              Login
+            </button>
+            <button
+              id="logoutBtn"
+              data-add-query-param-btn
+              class="mt-2 btn btn-outline-success d-none"
+              type="button"
+            >
+              Logout
+            </button>
+          </div>
+        </span>
+
          
 
   
@@ -835,6 +857,140 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
               
                 <span class="flex">
                   <a
+                    href="/twilio-apis/api/messaging-services/"
+                    class="gdoc-nav__entry"
+                  >
+                    Messaging Services
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+              
+  
+
+
+  <ul class="gdoc-nav__list">
+    
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/messaging-services/services/"
+                    class="gdoc-nav__entry"
+                  >
+                    Services
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/messaging-services/senders/"
+                    class="gdoc-nav__entry"
+                  >
+                    Senders
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+  </ul>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
                     href="/twilio-apis/api/numbers/"
                     class="gdoc-nav__entry"
                   >
@@ -1017,6 +1173,42 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
                     class="gdoc-nav__entry"
                   >
                     Test Credentials
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/verify/"
+                    class="gdoc-nav__entry"
+                  >
+                    Verify
                   </a>
                 </span>
               
@@ -1406,6 +1598,49 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
     class="gdoc-markdown gdoc-markdown__align--left"
   >
     <h1>Messages</h1>
+    <dialog id="loginDialog">
+      <form method="dialog">
+        <div class="my-2" data-key-value-pair>
+          <input
+            id="modal-account-sid-key"
+            type="text"
+            data-key
+            class="form-control"
+            placeholder="Key"
+            value="AccountSid"
+            disabled
+          />
+          <input
+            id="modal-account-sid-value"
+            type="text"
+            data-value
+            class="form-control"
+            placeholder="Value"
+            value=""
+          />
+          <hr />
+          <input
+            id="modal-auth-token-key"
+            type="text"
+            data-key
+            class="form-control"
+            placeholder="Key"
+            value="AuthToken"
+            disabled
+          />
+          <input
+            id="modal-auth-token-value"
+            type="text"
+            data-value
+            class="form-control"
+            placeholder="Value"
+            value=""
+          />
+        </div>
+        <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+        <button class="btn btn-primary" value="save">Save</button>
+      </form>
+    </dialog>
     <p>Add messages to a conversation.</p>
 
 
@@ -1426,9 +1661,9 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <div class="p-4" id="create-message">
-  <script await src="../../../postman-params/conversations/create-message.js"></script>
+  <script await src="../../../api-params/conversations/create-message.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversations\/create-message.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/..\/api-params\/conversations\/create-message.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">
@@ -1811,9 +2046,9 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <div class="p-4" id="list-messages">
-  <script await src="../../../postman-params/conversations/list-messages.js"></script>
+  <script await src="../../../api-params/conversations/list-messages.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversations\/list-messages.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/..\/api-params\/conversations\/list-messages.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">
@@ -2196,9 +2431,9 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <div class="p-4" id="fetch-message">
-  <script await src="../../../postman-params/conversations/fetch-message.js"></script>
+  <script await src="../../../api-params/conversations/fetch-message.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversations\/fetch-message.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/..\/api-params\/conversations\/fetch-message.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">
@@ -2581,9 +2816,9 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <div class="p-4" id="update-message">
-  <script await src="../../../postman-params/conversations/update-message.js"></script>
+  <script await src="../../../api-params/conversations/update-message.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversations\/update-message.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/..\/api-params\/conversations\/update-message.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">
@@ -2966,9 +3201,9 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <div class="p-4" id="delete-message">
-  <script await src="../../../postman-params/conversations/delete-message.js"></script>
+  <script await src="../../../api-params/conversations/delete-message.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversations\/delete-message.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/..\/api-params\/conversations\/delete-message.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">

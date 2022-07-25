@@ -13,7 +13,7 @@
       <guid>https://johnchaffee.wiki/twilio-apis/api/feedback/</guid>
       <description>How to send and fetch messages with the Twilio Messaging API.
 PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
-  console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/feedback\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/api-params\/feedback\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
   </channel>

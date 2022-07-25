@@ -14,7 +14,7 @@
 
   <meta name="description" content="The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
 TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
-  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/phone-numbers-v2\/available-type.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request    Response Status:        &minus;      document ." />
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/phone-numbers-v2\/available-type.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request    Response Status:        &minus;      document ." />
 
     <title>Numbers v2 - Available | Twilio API Explorer</title>
 
@@ -42,7 +42,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
 TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
-  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/phone-numbers-v2\/available-type.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        −      document ." />
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/phone-numbers-v2\/available-type.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        −      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/numbers/available-numbers-v2-available/" />
 
@@ -53,7 +53,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
 <meta name="twitter:title" content="Numbers v2 - Available" />
   <meta name="twitter:description" content="The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
 TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
-  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/phone-numbers-v2\/available-type.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        −      document ." />
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/phone-numbers-v2\/available-type.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        −      document ." />
 
 
   <script type="application/ld+json">
@@ -64,7 +64,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
       "name": "Numbers v2 - Available",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/numbers/available-numbers-v2-available/",
       "headline": "Numbers v2 - Available",
-      "description": "The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.\nTYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)\n  console.log(\u0022POSTMAN PARAMS: ..\\\/..\\\/..\\\/postman-params\\\/phone-numbers-v2\\\/available-type.js\u0022, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request    Response Status:        −      document .",
+      "description": "The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.\nTYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)\n  console.log(\u0022POSTMAN PARAMS: ..\\\/..\\\/..\\\/api-params\\\/phone-numbers-v2\\\/available-type.js\u0022, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request    Response Status:        −      document .",
       "wordCount" : "1154",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -165,6 +165,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   crossorigin="anonymous"
 ></script>
 <script await src="https://johnchaffee.wiki/twilio-apis//postman.js"></script>
+<script await src="https://johnchaffee.wiki/twilio-apis//auth.js"></script>
 <link href="https://johnchaffee.wiki/twilio-apis//postman.css" rel="stylesheet" />
 <script src="https://johnchaffee.wiki/twilio-apis//prism.js"></script>
 <link href="https://johnchaffee.wiki/twilio-apis//prism.css" rel="stylesheet" />
@@ -209,6 +210,27 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
     </div>
     <div class="gdoc-menu-header">
       <span class="gdoc-menu-header__items">
+        <span>
+          <div id="login" class="">
+            <button
+              id="loginBtn"
+              data-add-query-param-btn
+              class="mt-2 btn btn-outline-success"
+              type="button"
+            >
+              Login
+            </button>
+            <button
+              id="logoutBtn"
+              data-add-query-param-btn
+              class="mt-2 btn btn-outline-success d-none"
+              type="button"
+            >
+              Logout
+            </button>
+          </div>
+        </span>
+
          
 
   
@@ -838,6 +860,140 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
               
                 <span class="flex">
                   <a
+                    href="/twilio-apis/api/messaging-services/"
+                    class="gdoc-nav__entry"
+                  >
+                    Messaging Services
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+              
+  
+
+
+  <ul class="gdoc-nav__list">
+    
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/messaging-services/services/"
+                    class="gdoc-nav__entry"
+                  >
+                    Services
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/messaging-services/senders/"
+                    class="gdoc-nav__entry"
+                  >
+                    Senders
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+  </ul>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
                     href="/twilio-apis/api/numbers/"
                     class="gdoc-nav__entry"
                   >
@@ -1020,6 +1176,42 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
                     class="gdoc-nav__entry"
                   >
                     Test Credentials
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/verify/"
+                    class="gdoc-nav__entry"
+                  >
+                    Verify
                   </a>
                 </span>
               
@@ -1409,6 +1601,49 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
     class="gdoc-markdown gdoc-markdown__align--left"
   >
     <h1>Numbers v2 - Available</h1>
+    <dialog id="loginDialog">
+      <form method="dialog">
+        <div class="my-2" data-key-value-pair>
+          <input
+            id="modal-account-sid-key"
+            type="text"
+            data-key
+            class="form-control"
+            placeholder="Key"
+            value="AccountSid"
+            disabled
+          />
+          <input
+            id="modal-account-sid-value"
+            type="text"
+            data-value
+            class="form-control"
+            placeholder="Value"
+            value=""
+          />
+          <hr />
+          <input
+            id="modal-auth-token-key"
+            type="text"
+            data-key
+            class="form-control"
+            placeholder="Key"
+            value="AuthToken"
+            disabled
+          />
+          <input
+            id="modal-auth-token-value"
+            type="text"
+            data-value
+            class="form-control"
+            placeholder="Value"
+            value=""
+          />
+        </div>
+        <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+        <button class="btn btn-primary" value="save">Save</button>
+      </form>
+    </dialog>
     <p>The new <a
   class="gdoc-markdown__link"
   href="https://www.twilio.com/docs/phone-numbers/global-catalog"
@@ -1434,9 +1669,9 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>Search for available phone numbers by type (e.g. <code>local</code>, <code>mobile</code>, <code>tollfree</code>, <code>shortcode</code>.)</p>
 <div class="p-4" id="available-type">
-  <script await src="../../../postman-params/phone-numbers-v2/available-type.js"></script>
+  <script await src="../../../api-params/phone-numbers-v2/available-type.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/..\/postman-params\/phone-numbers-v2\/available-type.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/..\/api-params\/phone-numbers-v2\/available-type.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">
@@ -1820,9 +2055,9 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>Search for available phone numbers by use case (e.g. <code>twilio.use-case.conversations.sms</code>, <code>twilio.use-case.marketing.sms</code>, <code>twilio.use-case.notifications.sms</code>, <code>twilio.use-case.verifications.sms</code>, <code>twilio.use-case.contact-centers.sms</code>.)</p>
 <div class="p-4" id="available-use-case">
-  <script await src="../../../postman-params/phone-numbers-v2/available-use-case.js"></script>
+  <script await src="../../../api-params/phone-numbers-v2/available-use-case.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/..\/postman-params\/phone-numbers-v2\/available-use-case.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/..\/api-params\/phone-numbers-v2\/available-use-case.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">
@@ -2205,9 +2440,9 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <div class="p-4" id="available-capabilities">
-  <script await src="../../../postman-params/phone-numbers-v2/available-capabilities.js"></script>
+  <script await src="../../../api-params/phone-numbers-v2/available-capabilities.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/..\/postman-params\/phone-numbers-v2\/available-capabilities.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/..\/api-params\/phone-numbers-v2\/available-capabilities.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">

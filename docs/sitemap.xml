@@ -12,11 +12,15 @@
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/sdk/send-message/</loc>
   </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/messaging-services/services/</loc>
+  </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/lookup/lookup-v2/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/numbers/available-numbers-v2-available/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/conversations/participants/</loc>
+  </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/messaging-services/senders/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/conversations/messages/</loc>
   </url><url>
@@ -50,6 +54,10 @@
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/messaging/</loc>
   </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/messaging-services/</loc>
+  </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/messaging-services/</loc>
+  </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/numbers/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/phone-numbers/</loc>
@@ -75,6 +83,10 @@
     <loc>https://johnchaffee.wiki/twilio-apis/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/variables/</loc>
+  </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/verify/</loc>
+  </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/verify/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/webhook/event-streams/</loc>
   </url><url>

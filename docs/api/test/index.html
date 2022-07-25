@@ -13,7 +13,7 @@
 
 
   <meta name="description" content="How to send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.
-SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request    Response Status:        &minus;      document ." />
+SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/api-params\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request    Response Status:        &minus;      document ." />
 
     <title>Test Credentials | Twilio API Explorer</title>
 
@@ -40,7 +40,7 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
   />
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="How to send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.
-SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        −      document ." />
+SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/api-params\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        −      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/test/" />
 
@@ -50,7 +50,7 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Test Credentials" />
   <meta name="twitter:description" content="How to send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.
-SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        −      document ." />
+SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/api-params\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        −      document ." />
 
 
   <script type="application/ld+json">
@@ -61,7 +61,7 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
       "name": "Test Credentials",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/test/",
       "headline": "Test Credentials",
-      "description": "How to send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.\nSUCCESS    console.log(\u0022POSTMAN PARAMS: ..\\\/..\\\/postman-params\\\/test\\\/success.js\u0022, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request    Response Status:        −      document .",
+      "description": "How to send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.\nSUCCESS    console.log(\u0022POSTMAN PARAMS: ..\\\/..\\\/api-params\\\/test\\\/success.js\u0022, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request    Response Status:        −      document .",
       "wordCount" : "1928",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -162,6 +162,7 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
   crossorigin="anonymous"
 ></script>
 <script await src="https://johnchaffee.wiki/twilio-apis//postman.js"></script>
+<script await src="https://johnchaffee.wiki/twilio-apis//auth.js"></script>
 <link href="https://johnchaffee.wiki/twilio-apis//postman.css" rel="stylesheet" />
 <script src="https://johnchaffee.wiki/twilio-apis//prism.js"></script>
 <link href="https://johnchaffee.wiki/twilio-apis//prism.css" rel="stylesheet" />
@@ -206,6 +207,27 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
     </div>
     <div class="gdoc-menu-header">
       <span class="gdoc-menu-header__items">
+        <span>
+          <div id="login" class="">
+            <button
+              id="loginBtn"
+              data-add-query-param-btn
+              class="mt-2 btn btn-outline-success"
+              type="button"
+            >
+              Login
+            </button>
+            <button
+              id="logoutBtn"
+              data-add-query-param-btn
+              class="mt-2 btn btn-outline-success d-none"
+              type="button"
+            >
+              Logout
+            </button>
+          </div>
+        </span>
+
          
 
   
@@ -835,6 +857,140 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
               
                 <span class="flex">
                   <a
+                    href="/twilio-apis/api/messaging-services/"
+                    class="gdoc-nav__entry"
+                  >
+                    Messaging Services
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+              
+  
+
+
+  <ul class="gdoc-nav__list">
+    
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/messaging-services/services/"
+                    class="gdoc-nav__entry"
+                  >
+                    Services
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/messaging-services/senders/"
+                    class="gdoc-nav__entry"
+                  >
+                    Senders
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+  </ul>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
                     href="/twilio-apis/api/numbers/"
                     class="gdoc-nav__entry"
                   >
@@ -1017,6 +1173,42 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
                     class="gdoc-nav__entry is-active"
                   >
                     Test Credentials
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/verify/"
+                    class="gdoc-nav__entry"
+                  >
+                    Verify
                   </a>
                 </span>
               
@@ -1398,6 +1590,49 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
     class="gdoc-markdown gdoc-markdown__align--left"
   >
     <h1>Test Credentials</h1>
+    <dialog id="loginDialog">
+      <form method="dialog">
+        <div class="my-2" data-key-value-pair>
+          <input
+            id="modal-account-sid-key"
+            type="text"
+            data-key
+            class="form-control"
+            placeholder="Key"
+            value="AccountSid"
+            disabled
+          />
+          <input
+            id="modal-account-sid-value"
+            type="text"
+            data-value
+            class="form-control"
+            placeholder="Value"
+            value=""
+          />
+          <hr />
+          <input
+            id="modal-auth-token-key"
+            type="text"
+            data-key
+            class="form-control"
+            placeholder="Key"
+            value="AuthToken"
+            disabled
+          />
+          <input
+            id="modal-auth-token-value"
+            type="text"
+            data-value
+            class="form-control"
+            placeholder="Value"
+            value=""
+          />
+        </div>
+        <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+        <button class="btn btn-primary" value="save">Save</button>
+      </form>
+    </dialog>
     <p>How to send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described <a
   class="gdoc-markdown__link"
   href="/messaging/test-credentials/"
@@ -1422,9 +1657,9 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <div class="p-4" id="success">
-  <script await src="../../postman-params/test/success.js"></script>
+  <script await src="../../api-params/test/success.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/postman-params\/test\/success.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/api-params\/test\/success.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">
@@ -1808,9 +2043,9 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>Error Code <code>21610</code> - The <code>To</code> phone number is blocked (opted-out) for your account.</p>
 <div class="p-4" id="unsubscribed">
-  <script await src="../../postman-params/test/unsubscribed.js"></script>
+  <script await src="../../api-params/test/unsubscribed.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/postman-params\/test\/unsubscribed.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/api-params\/test\/unsubscribed.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">
@@ -2194,9 +2429,9 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>Error Code <code>21212</code> - The <code>To</code> phone number is invalid.</p>
 <div class="p-4" id="invalid-to">
-  <script await src="../../postman-params/test/invalid-to.js"></script>
+  <script await src="../../api-params/test/invalid-to.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/postman-params\/test\/invalid-to.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/api-params\/test\/invalid-to.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">
@@ -2580,9 +2815,9 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>Error Code <code>21408</code> - Your account doesn’t have the international permissions necessary to SMS this number.</p>
 <div class="p-4" id="invalid-region">
-  <script await src="../../postman-params/test/invalid-region.js"></script>
+  <script await src="../../api-params/test/invalid-region.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/postman-params\/test\/invalid-region.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/api-params\/test\/invalid-region.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">
@@ -2966,9 +3201,9 @@ SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/succes
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>Status Code <code>429</code>, Error Code <code>21611</code> - This number has an SMS message queue that is full.</p>
 <div class="p-4" id="queue-full">
-  <script await src="../../postman-params/test/queue-full.js"></script>
+  <script await src="../../api-params/test/queue-full.js"></script>
   <script>
-    console.log("POSTMAN PARAMS: ..\/..\/postman-params\/test\/queue-full.js", postmanParams)
+    console.log("POSTMAN PARAMS: ..\/..\/api-params\/test\/queue-full.js", postmanParams)
   </script>
   <form data-form>
     <div class="input-group mb-4">

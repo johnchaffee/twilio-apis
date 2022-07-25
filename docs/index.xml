@@ -12,7 +12,7 @@
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/conversations/conversations/</guid>
       <description>Create and manage conversations.
-Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversations\/create-conversation.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/conversations\/create-conversation.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
       <guid>https://johnchaffee.wiki/twilio-apis/api/lookup/lookup-v1/</guid>
       <description>The Lookup API provides a way to retrieve additional information about a phone number.
 NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
-  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/lookup\/number.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/lookup\/number.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       <guid>https://johnchaffee.wiki/twilio-apis/api/numbers/phone-numbers-v1/</guid>
       <description>Phone Numbers API lets you search for available numbers, purchase and manage numbers.
 ACTIVE  List all active phone numbers.
-  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/phone-numbers\/incoming.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/phone-numbers\/incoming.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
     <item>
@@ -57,6 +57,15 @@ CLI  twilio api:core:messages:create \ --to=$MOBILE_NUMBER \ --from=$TWILIO_NUMB
     </item>
     
     <item>
+      <title>Services</title>
+      <link>https://johnchaffee.wiki/twilio-apis/api/messaging-services/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/api/messaging-services/services/</guid>
+      <description>CREATE    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/messaging-services\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .querySelector(&#34;#create [data-add-query-param-btn]&#34;) .addEventListener(&#34;click&#34;, () = { document .</description>
+    </item>
+    
+    <item>
       <title>Lookup v2</title>
       <link>https://johnchaffee.wiki/twilio-apis/api/lookup/lookup-v2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -64,7 +73,7 @@ CLI  twilio api:core:messages:create \ --to=$MOBILE_NUMBER \ --from=$TWILIO_NUMB
       <guid>https://johnchaffee.wiki/twilio-apis/api/lookup/lookup-v2/</guid>
       <description>The Lookup v2 API provides a way to retrieve additional information about a phone number.
 NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
-  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/lookup-v2\/number.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/lookup-v2\/number.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
     <item>
@@ -75,7 +84,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       <guid>https://johnchaffee.wiki/twilio-apis/api/numbers/available-numbers-v2-available/</guid>
       <description>The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
 TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
-  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/phone-numbers-v2\/available-type.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/phone-numbers-v2\/available-type.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
     <item>
@@ -85,7 +94,16 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/conversations/participants/</guid>
       <description>Add/remove participants to/from a conversation.
-Add SMS Participant    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversations\/create-sms-participant.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+Add SMS Participant    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/conversations\/create-sms-participant.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Senders</title>
+      <link>https://johnchaffee.wiki/twilio-apis/api/messaging-services/senders/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/api/messaging-services/senders/</guid>
+      <description>LIST A2P    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/messaging-services\/a2p.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .querySelector(&#34;#create [data-add-query-param-btn]&#34;) .</description>
     </item>
     
     <item>
@@ -95,7 +113,7 @@ Add SMS Participant    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-para
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/conversations/messages/</guid>
       <description>Add messages to a conversation.
-Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversations\/create-message.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/conversations\/create-message.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
     <item>
@@ -106,7 +124,7 @@ Create    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversat
       <guid>https://johnchaffee.wiki/twilio-apis/api/numbers/phone-numbers-v2-active/</guid>
       <description>The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
 LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography, and Type (e.g. local, mobile, tollfree, shortcode.)
-  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/phone-numbers-v2\/active-list.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/phone-numbers-v2\/active-list.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
     <item>
@@ -116,7 +134,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/conversations/participant-conversations/</guid>
       <description>Fetch conversations by participant.
-Fetch SMS Conversations    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-params\/conversations\/fetch-sms-conversations.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+Fetch SMS Conversations    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/api-params\/conversations\/fetch-sms-conversations.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
     <item>
@@ -127,7 +145,7 @@ Fetch SMS Conversations    console.log(&#34;POSTMAN PARAMS: ..\/..\/..\/postman-
       <guid>https://johnchaffee.wiki/twilio-apis/api/feedback/</guid>
       <description>How to send and fetch messages with the Twilio Messaging API.
 PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
-  console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/feedback\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+  console.log(&#34;POSTMAN PARAMS: ..\/..\/api-params\/feedback\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
     <item>
@@ -137,7 +155,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messages/</guid>
       <description>How to send and fetch messages with the Twilio Messaging API.
-SMS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/messages\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+SMS    console.log(&#34;POSTMAN PARAMS: ..\/..\/api-params\/messages\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
     <item>
@@ -147,7 +165,7 @@ SMS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/messages\/create
       
       <guid>https://johnchaffee.wiki/twilio-apis/settings/</guid>
       <description>Enter key/value environment variables to use in Postman API requests.
- Cancel Save    Cancel Save   Login Add Custom Environment Variable    Environment Variables    Delete      const loginDialog = document.getElementById(&#34;loginDialog&#34;) let accountSidKeyElement = loginDialog.querySelector( &#34;[modal-account-sid-key]&#34; ) let accountSidValueElement = loginDialog.querySelector( &#34;[modal-account-sid-value]&#34; ) let authTokenKeyElement = loginDialog.querySelector(&#34;[modal-auth-token-key]&#34;) let authTokenValueElement = loginDialog.querySelector( &#34;[modal-auth-token-value]&#34; ) const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.</description>
+ Cancel Save   Add Custom Environment Variable    Environment Variables    Delete      const loginDialog = document.getElementById(&#34;loginDialog&#34;) let accountSidKeyElement = loginDialog.querySelector(&#34;#modal-account-sid-key&#34;) let accountSidValueElement = loginDialog.querySelector( &#34;#modal-account-sid-value&#34; ) let authTokenKeyElement = loginDialog.querySelector(&#34;#modal-auth-token-key&#34;) let authTokenValueElement = loginDialog.querySelector( &#34;#modal-auth-token-value&#34; ) const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.</description>
     </item>
     
     <item>
@@ -157,7 +175,18 @@ SMS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/messages\/create
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/test/</guid>
       <description>How to send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.
-SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/postman-params\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/api-params\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+    </item>
+    
+    <item>
+      <title>Verify</title>
+      <link>https://johnchaffee.wiki/twilio-apis/api/verify/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/api/verify/</guid>
+      <description>How to add user verification to your web application with Twilio Verify.
+Create a Verification Service (once), Send OTP, Check OTP.
+CREATE    console.log(&#34;POSTMAN PARAMS: ..\/..\/api-params\/verify\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
     </item>
     
   </channel>
