@@ -18,6 +18,10 @@ How to send and fetch messages with the Twilio Messaging API.
 {{< postman id=`create` file=`../../api-params/messages/create.js` >}}
 {{< /tab >}}
 
+{{< tab "SCHEDULED" >}}
+{{< postman id=`scheduled` file=`../../api-params/messages/scheduled.js` >}}
+{{< /tab >}}
+
 {{< tab "WHATSAPP" >}}
 {{< postman id=`whatsapp` file=`../../api-params/messages/whatsapp.js` >}}
 {{< /tab >}}
