@@ -1,54 +1,35 @@
 {{ define "main" }}
   {{ partial "page-header" . }}
 
+  <dialog id="newEnvVarDialog">
+    <form method="dialog">
+      <div class="input-group my-2" data-key-value-pair>
+        <input
+          modal-data-key
+          type="text"
+          data-key
+          class="form-control"
+          placeholder="Key"
+          value=""
+        />
+        <input
+          modal-data-value
+          type="text"
+          data-value
+          class="form-control"
+          placeholder="Value"
+          value=""
+        />
+      </div>
+      <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+      <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+    </form>
+  </dialog>
 
   <article
     class="gdoc-markdown gdoc-markdown__align--{{ default "left" (.Page.Params.GeekdocAlign | lower) }}"
   >
     <h1>{{ partial "utils/title" . }}</h1>
-    <dialog id="loginDialog">
-      <form method="dialog">
-        <div class="my-2" data-key-value-pair>
-          <input
-            id="modal-account-sid-key"
-            type="text"
-            data-key
-            class="form-control"
-            placeholder="Key"
-            value="AccountSid"
-            disabled
-          />
-          <input
-            id="modal-account-sid-value"
-            type="text"
-            data-value
-            class="form-control"
-            placeholder="Value"
-            value=""
-          />
-          <hr />
-          <input
-            id="modal-auth-token-key"
-            type="text"
-            data-key
-            class="form-control"
-            placeholder="Key"
-            value="AuthToken"
-            disabled
-          />
-          <input
-            id="modal-auth-token-value"
-            type="text"
-            data-value
-            class="form-control"
-            placeholder="Value"
-            value=""
-          />
-        </div>
-        <button class="btn btn-outline-danger" value="cancel">Cancel</button>
-        <button class="btn btn-primary" value="save">Save</button>
-      </form>
-    </dialog>
     {{ partial "utils/content" . }}
   </article>
 {{ end }}

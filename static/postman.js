@@ -37,6 +37,58 @@ function createKeyValuePair(id, key, value) {
   ) {
     element.querySelector("[data-value]").type = "password"
   }
+  // Update button
+  element.querySelector("[data-update-btn]").addEventListener("click", (e) => {
+    let closest = e.target.closest("[data-key-value-pair]")
+    console.log("UPDATE CLOSEST", closest)
+    if (typeof newEnvVarDialog.showModal === "function") {
+      console.log("NEW ENV VAR DIALOG", newEnvVarDialog)
+      let updatedKey = closest.querySelector("[data-key]").value
+      console.log("UPDATED KEY", updatedKey)
+      if (updatedKey === "username") {
+        updatedKey = "AccountSid"
+        console.log("UPDATED KEY = username", updatedKey)
+      } 
+      if (updatedKey === "password") {
+        updatedKey = "AuthToken"
+        console.log("UPDATED KEY = password", updatedKey)
+      }
+      newEnvVarDialog.querySelector("[data-key]").value = updatedKey
+      newEnvVarDialog.querySelector("[data-value]").value =
+        localStorage.getItem(updatedKey)
+      newEnvVarDialog.showModal()
+
+      // Enter key listener -> Listen for the "Enter" key in newEnvVar modal
+      newEnvVarDialog.addEventListener("keydown", (e) => {
+        if (e.code === "Enter") {
+          setLocalStorage()
+        }
+      })
+
+      // Save listener -> On newEnvVar dialog "close" because of [method="dialog"]
+      // Triggered via Cancel & Save buttons or Enter keypress
+      newEnvVarDialog.addEventListener("close", function onClose() {
+        if (newEnvVarDialog.returnValue !== "cancel") {
+          setLocalStorage()
+        }
+      })
+
+      // Store item in localStorage and refresh window
+      function setLocalStorage() {
+        if (
+          newEnvVarDialog.querySelector("[data-key]").value !== "" &&
+          newEnvVarDialog.querySelector("[data-value]").value !== ""
+        ) {
+          localStorage.setItem(
+            updatedKey,
+            newEnvVarDialog.querySelector("[data-value]").value
+          )
+          // window.location = window.location.href
+        }
+      }
+    }
+  })
+  // Remove button
   element.querySelector("[data-remove-btn]").addEventListener("click", (e) => {
     let closest = e.target.closest("[data-key-value-pair]")
     closest.remove()

@@ -11,31 +11,6 @@
   .Page.Title => {{ .Page.Title }}
   </pre> -->
 
-  <dialog id="newEnvVarDialog">
-    <form method="dialog">
-      <div class="input-group my-2" data-key-value-pair>
-        <input
-          modal-data-key
-          type="text"
-          data-key
-          class="form-control"
-          placeholder="Key"
-          value=""
-        />
-        <input
-          modal-data-value
-          type="text"
-          data-value
-          class="form-control"
-          placeholder="Value"
-          value=""
-        />
-      </div>
-      <button class="btn btn-outline-danger" value="cancel">Cancel</button>
-      <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
-    </form>
-  </dialog>
-
   <form data-form>
     <div id="envVarButtons" class="mb-4">
       <div id="envVar">
@@ -72,6 +47,9 @@
         value=""
         disabled
       />
+      <button type="button" data-update-btn class="btn btn-outline-success">
+        Update
+      </button>
       <button type="button" data-remove-btn class="btn btn-outline-danger">
         Delete
       </button>
@@ -108,15 +86,17 @@
       .append(createKeyValuePair("{{ .Params.id }}", envVar.key, envVar.value))
   })
 
-  // New Env Var button click -> "data-add-query-param-btn" button opens the <dialog> modally
+  // New Env Var button click -> "#newEnvVarBtn" button opens the <dialog> modally
   document
     .querySelector("#newEnvVarBtn")
     .addEventListener("click", function onOpen() {
       console.log("CLICK ENV VAR BTN")
       if (typeof newEnvVarDialog.showModal === "function") {
+        console.log("NEW ENV VAR DIALOG", newEnvVarDialog)
         newEnvVarDialog.showModal()
       }
     })
+
 
   // Enter key listener -> Listen for the "Enter" key in newEnvVar modal
   newEnvVarDialog.addEventListener("keydown", (e) => {
@@ -137,26 +117,6 @@
   function setLocalStorage() {
     if (keyElement.value !== "" && valueElement.value !== "") {
       localStorage.setItem(keyElement.value, valueElement.value)
-      window.location = window.location.href
-    }
-    if (
-      accountSidKeyElement.value !== "" &&
-      accountSidValueElement.value !== ""
-    ) {
-      localStorage.setItem(
-        accountSidKeyElement.value,
-        accountSidValueElement.value
-      )
-      window.location = window.location.href
-    }
-    if (
-      authTokenKeyElement.value !== "" &&
-      authTokenValueElement.value !== ""
-    ) {
-      localStorage.setItem(
-        authTokenKeyElement.value,
-        authTokenValueElement.value
-      )
       window.location = window.location.href
     }
   }
