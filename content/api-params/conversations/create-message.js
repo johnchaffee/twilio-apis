@@ -3,7 +3,7 @@ postmanParams = {
   method: "POST",
   pathParams: [{ key: "ConversationSid", value: "{{ConversationSid}}" }],
   queryParams: [
-    { key: "Author", value: "jchaffee+worker1@twilio.com" },
+    { key: "Author", value: "{{Author}}" },
     { key: "Body", value: "Hello there" },
   ],
   headerParams: [

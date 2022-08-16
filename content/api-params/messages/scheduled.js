@@ -6,7 +6,7 @@ postmanParams = {
   ],
   queryParams: [
     { key: "To", value: "+12063996576" },
-    { key: "From", value: "+18336451195" },
+    { key: "From", value: "{{From}}" },
     { key: "Body", value: "This is a scheduled message" },
     { key: "SendAt", value: "2022-07-31T12:00:00Z" },
     { key: "ScheduleType", value: "fixed" },

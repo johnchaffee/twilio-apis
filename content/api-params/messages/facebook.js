@@ -5,9 +5,9 @@ postmanParams = {
     { key: "AccountSid", value: "{{AccountSid}}" },
   ],
   queryParams: [
-    { key: "To", value: "+12063996576" },
-    { key: "From", value: "+18336451195" },
-    { key: "Body", value: "Ahoy there!" },
+    { key: "To", value: "whatsapp:+12063996576" },
+    { key: "From", value: "whatsapp:+14155238886" },
+    { key: "Body", value: "Hello from WhatsApp!" },
     { key: "StatusCallback", value: "{{StatusCallback}}" },
     { key: "MessagingServiceSid", value: "" },
   ],

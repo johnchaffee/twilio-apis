@@ -1,14 +1,15 @@
 postmanParams = {
-  url: "https://api.twilio.com/2010-04-01/Accounts/{{AccountSid}}/Messages.json",
+  url: "https://studio.twilio.com/v2/Flows/{{FlowSid}}/Executions",
   method: "POST",
-  pathParams: [
-    { key: "AccountSid", value: "{{AccountSid}}" },
-  ],
+  pathParams: [{ key: "FlowSid", value: "{{FlowSid}}" }],
   queryParams: [
     { key: "To", value: "+12063996576" },
     { key: "From", value: "{{From}}" },
-    { key: "Body", value: "Ahoy there!" },
-    { key: "ProvideFeedback", value: "true" },
+    {
+      key: "Parameters",
+      value: `{"applicant":"Fred","job":"ACME","recruiter":"John"}
+    `,
+    },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },

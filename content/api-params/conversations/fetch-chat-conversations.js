@@ -4,7 +4,7 @@ postmanParams = {
   pathParams: [],
   queryParams: [
     { key: "PageSize", value: "10" },
-    { key: "Identity", value: "jchaffee+worker1@twilio.com" },
+    { key: "Identity", value: "{{Identity}}" },
   ],
   headerParams: [],
   authParams: [

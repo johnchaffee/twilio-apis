@@ -2,7 +2,7 @@ postmanParams = {
   url: "https://conversations.twilio.com/v1/Conversations/{{ConversationSid}}/Participants",
   method: "POST",
   pathParams: [{ key: "ConversationSid", value: "{{ConversationSid}}" }],
-  queryParams: [{ key: "Identity", value: "jchaffee+worker1@twilio.com" }],
+  queryParams: [{ key: "Identity", value: "{{Identity}}" }],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
   ],

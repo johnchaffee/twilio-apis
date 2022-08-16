@@ -4,8 +4,8 @@ postmanParams = {
   pathParams: [],
   queryParams: [
     { key: "FriendlyName", value: "My Conversation" },
-    { key: "Timers.Inactive", value: "PT1M" },
-    { key: "Timers.Closed", value: "PT10M" },
+    { key: "Timers.Inactive", value: "PT10M" },
+    { key: "Timers.Closed", value: "PT1H" },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },

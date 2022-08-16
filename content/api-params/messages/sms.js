@@ -8,7 +8,8 @@ postmanParams = {
     { key: "To", value: "+12063996576" },
     { key: "From", value: "{{From}}" },
     { key: "Body", value: "Ahoy there!" },
-    { key: "ProvideFeedback", value: "true" },
+    { key: "StatusCallback", value: "{{StatusCallback}}" },
+    { key: "MessagingServiceSid", value: "" },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },

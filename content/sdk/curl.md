@@ -1,7 +1,7 @@
 ---
 title: "curl"
-draft: false
-weight: 100
+draft: true
+weight: 200
 tags:
   - sdk
   - curl
