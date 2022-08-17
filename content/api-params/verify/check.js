@@ -5,7 +5,7 @@ postmanParams = {
     { key: "VerificationServiceSid", value: "{{VerificationServiceSid}}" },
   ],
   queryParams: [
-    { key: "To", value: "+12063996576" },
+    { key: "To", value: "{{To}}" },
     { key: "Code", value: "123456" },
   ],
   headerParams: [

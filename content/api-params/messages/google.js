@@ -5,11 +5,11 @@ postmanParams = {
     { key: "AccountSid", value: "{{AccountSid}}" },
   ],
   queryParams: [
-    { key: "To", value: "whatsapp:+12063996576" },
-    { key: "From", value: "whatsapp:+14155238886" },
-    { key: "Body", value: "Hello from WhatsApp!" },
+    { key: "To", value: "{{GoogleTo}}" },
+    { key: "From", value: "{{GoogleFrom}}" },
+    { key: "Body", value: "Hello from Google Business Messages + Twilio API!" },
     { key: "StatusCallback", value: "{{StatusCallback}}" },
-    { key: "MessagingServiceSid", value: "" },
+    { key: "MessagingServiceSid", value: "{{MessagingServiceSid}}" },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },

@@ -3,7 +3,7 @@ postmanParams = {
   method: "POST",
   pathParams: [{ key: "ConversationSid", value: "{{ConversationSid}}" }],
   queryParams: [
-    { key: "MessagingBinding.Address", value: "+12063996576" },
+    { key: "MessagingBinding.Address", value: "{{To}}" },
     { key: "MessagingBinding.ProxyAddress", value: "{{FrontlineNumber}}" },
   ],
   headerParams: [

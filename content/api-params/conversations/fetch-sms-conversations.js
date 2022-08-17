@@ -4,7 +4,7 @@ postmanParams = {
   pathParams: [],
   queryParams: [
     { key: "PageSize", value: "10" },
-    { key: "Address", value: "+12063996576" },
+    { key: "Address", value: "{{To}}" },
   ],
   headerParams: [],
   authParams: [

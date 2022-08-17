@@ -5,11 +5,11 @@ postmanParams = {
     { key: "AccountSid", value: "{{AccountSid}}" },
   ],
   queryParams: [
-    { key: "To", value: "+12063996576" },
+    { key: "To", value: "{{To}}" },
     { key: "From", value: "{{From}}" },
     { key: "Body", value: "Ahoy there!" },
     { key: "StatusCallback", value: "{{StatusCallback}}" },
-    { key: "MessagingServiceSid", value: "" },
+    { key: "MessagingServiceSid", value: "{{MessagingServiceSid}}" },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },

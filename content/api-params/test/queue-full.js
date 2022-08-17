@@ -5,7 +5,7 @@ postmanParams = {
     { key: "TestAccountSid", value: "{{TestAccountSid}}" },
   ],
   queryParams: [
-    { key: "To", value: "+12063996576" },
+    { key: "To", value: "{{To}}" },
     { key: "From", value: "+15005550008" },
     { key: "Body", value: "Ahoy there!" },
   ],

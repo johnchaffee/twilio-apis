@@ -3,7 +3,7 @@ postmanParams = {
   method: "POST",
   pathParams: [{ key: "FlowSid", value: "{{FlowSid}}" }],
   queryParams: [
-    { key: "To", value: "+12063996576" },
+    { key: "To", value: "{{To}}" },
     { key: "From", value: "{{From}}" },
     {
       key: "Parameters",
