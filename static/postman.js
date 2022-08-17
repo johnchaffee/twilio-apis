@@ -27,16 +27,29 @@ function createKeyValuePair(id, key, value) {
   const element = document
     .querySelector(`#${id} [data-key-value-template]`)
     .content.cloneNode(true)
-  element.querySelector("[data-key]").value = key || null
-  element.querySelector("[data-value]").value = value || null
-  // Mask sensitive password fields
-  if (
-    element.querySelector("[data-key]").value === "AuthToken" ||
-    element.querySelector("[data-key]").value === "Authorization" ||
-    element.querySelector("[data-key]").value === "BasicAuth"
-  ) {
-    element.querySelector("[data-value]").type = "password"
+  let thisKey = element.querySelector("[data-key]")
+  thisKey.value = key || null
+  let thisValue = element.querySelector("[data-value]")
+  thisValue.value = value || null
+
+  // Show tooltip if value is env var with curly braces
+  let curlyBraces
+  let curlyBraceKey
+  if (thisValue.value.match(/\{\{\w+}}/)) {
+    curlyBraces = thisValue.value.match(/\{\{\w+}}/).toString()
+    curlyBraceKey = curlyBraces.replaceAll(/[{}]/g, "")
+    thisValue.title = localStorage.getItem(curlyBraceKey)
   }
+
+  // Mask passwords and sensitive values
+  if (
+    thisKey.value === "AuthToken" ||
+    thisKey.value === "Authorization" ||
+    thisKey.value === "BasicAuth"
+  ) {
+    thisValue.type = "password"
+  }
+
   // Update button
   element.querySelector("[data-update-btn]").addEventListener("click", (e) => {
     let closest = e.target.closest("[data-key-value-pair]")
@@ -48,7 +61,7 @@ function createKeyValuePair(id, key, value) {
       if (updatedKey === "username") {
         updatedKey = "AccountSid"
         console.log("UPDATED KEY = username", updatedKey)
-      } 
+      }
       if (updatedKey === "password") {
         updatedKey = "AuthToken"
         console.log("UPDATED KEY = password", updatedKey)
@@ -88,6 +101,7 @@ function createKeyValuePair(id, key, value) {
       }
     }
   })
+  
   // Remove button
   element.querySelector("[data-remove-btn]").addEventListener("click", (e) => {
     let closest = e.target.closest("[data-key-value-pair]")
