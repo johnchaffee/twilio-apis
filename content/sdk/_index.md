@@ -1,6 +1,6 @@
 ---
 title: "SDKs"
-draft: true
+draft: false
 tags:
 # geekdocCollapseSection: true
 ---
@@ -15,7 +15,7 @@ tags:
   - node, python, ruby, java, c#, php
 - [Twilio CLI](https://www.twilio.com/docs/twilio-cli/quickstart)
   - Provides access to all APIs from the command line
-- [Open API](/swagger/twilio/)
+- [Open API]([/swagger/twilio/](https://github.com/twilio/twilio-oai))
   - Swagger Spec
 - [Postman](https://www.twilio.com/docs/openapi/using-twilio-postman-collections)
   - Beta. Limited methods: find phone number, buy phone number, send message, fetch message.
