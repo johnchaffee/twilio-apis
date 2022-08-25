@@ -1,4 +1,4 @@
-postmanParams = {
+apiParams = {
   url: "https://conversations.twilio.com/v1/Conversations/{{ConversationSid}}",
   method: "DELETE",
   pathParams: [{ key: "ConversationSid", value: "{{ConversationSid}}" }],

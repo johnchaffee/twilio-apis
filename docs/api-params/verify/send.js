@@ -1,11 +1,11 @@
-postmanParams = {
+apiParams = {
   url: "https://verify.twilio.com/v2/Services/{{VerificationServiceSid}}/Verifications",
   method: "POST",
   pathParams: [
     { key: "VerificationServiceSid", value: "{{VerificationServiceSid}}" },
   ],
   queryParams: [
-    { key: "To", value: "+12063996576" },
+    { key: "To", value: "{{To}}" },
     { key: "Channel", value: "sms" },
     { key: "Locale", value: "" },
   ],

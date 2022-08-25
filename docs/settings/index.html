@@ -13,7 +13,7 @@
 
 
   <meta name="description" content="Enter key/value environment variables to use in Postman API requests.
- Cancel Save   Add Custom Environment Variable    Environment Variables    Delete      const loginDialog = document.getElementById(&#34;loginDialog&#34;) let accountSidKeyElement = loginDialog.querySelector(&#34;#modal-account-sid-key&#34;) let accountSidValueElement = loginDialog.querySelector( &#34;#modal-account-sid-value&#34; ) let authTokenKeyElement = loginDialog.querySelector(&#34;#modal-auth-token-key&#34;) let authTokenValueElement = loginDialog.querySelector( &#34;#modal-auth-token-value&#34; ) const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object." />
+Add Custom Environment Variable    Environment Variables    Edit  Delete      const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.keys(localStorage).sort(function (a, b) { return a.toLowerCase().localeCompare(b.toLowerCase()) }) let envVars = [] let envObj = {} keys.forEach((key) = { envObj = {} envObj.key = key envObj.value = localStorage[key] envVars." />
 
     <title>Settings | Twilio API Explorer</title>
 
@@ -40,7 +40,7 @@
   />
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="Enter key/value environment variables to use in Postman API requests.
- Cancel Save   Add Custom Environment Variable    Environment Variables    Delete      const loginDialog = document.getElementById(&#34;loginDialog&#34;) let accountSidKeyElement = loginDialog.querySelector(&#34;#modal-account-sid-key&#34;) let accountSidValueElement = loginDialog.querySelector( &#34;#modal-account-sid-value&#34; ) let authTokenKeyElement = loginDialog.querySelector(&#34;#modal-auth-token-key&#34;) let authTokenValueElement = loginDialog.querySelector( &#34;#modal-auth-token-value&#34; ) const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object." />
+Add Custom Environment Variable    Environment Variables    Edit  Delete      const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.keys(localStorage).sort(function (a, b) { return a.toLowerCase().localeCompare(b.toLowerCase()) }) let envVars = [] let envObj = {} keys.forEach((key) = { envObj = {} envObj.key = key envObj.value = localStorage[key] envVars." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/settings/" />
 
@@ -50,7 +50,7 @@
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Settings" />
   <meta name="twitter:description" content="Enter key/value environment variables to use in Postman API requests.
- Cancel Save   Add Custom Environment Variable    Environment Variables    Delete      const loginDialog = document.getElementById(&#34;loginDialog&#34;) let accountSidKeyElement = loginDialog.querySelector(&#34;#modal-account-sid-key&#34;) let accountSidValueElement = loginDialog.querySelector( &#34;#modal-account-sid-value&#34; ) let authTokenKeyElement = loginDialog.querySelector(&#34;#modal-auth-token-key&#34;) let authTokenValueElement = loginDialog.querySelector( &#34;#modal-auth-token-value&#34; ) const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object." />
+Add Custom Environment Variable    Environment Variables    Edit  Delete      const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.keys(localStorage).sort(function (a, b) { return a.toLowerCase().localeCompare(b.toLowerCase()) }) let envVars = [] let envObj = {} keys.forEach((key) = { envObj = {} envObj.key = key envObj.value = localStorage[key] envVars." />
 
 
   <script type="application/ld+json">
@@ -61,8 +61,8 @@
       "name": "Settings",
       "url" : "https://johnchaffee.wiki/twilio-apis/settings/",
       "headline": "Settings",
-      "description": "Enter key\/value environment variables to use in Postman API requests.\n Cancel Save   Add Custom Environment Variable    Environment Variables    Delete      const loginDialog = document.getElementById(\u0022loginDialog\u0022) let accountSidKeyElement = loginDialog.querySelector(\u0022#modal-account-sid-key\u0022) let accountSidValueElement = loginDialog.querySelector( \u0022#modal-account-sid-value\u0022 ) let authTokenKeyElement = loginDialog.querySelector(\u0022#modal-auth-token-key\u0022) let authTokenValueElement = loginDialog.querySelector( \u0022#modal-auth-token-value\u0022 ) const newEnvVarDialog = document.getElementById(\u0022newEnvVarDialog\u0022) let keyElement = newEnvVarDialog.querySelector(\u0022[modal-data-key]\u0022) let valueElement = newEnvVarDialog.querySelector(\u0022[modal-data-value]\u0022) const keys = Object.",
-      "wordCount" : "260",
+      "description": "Enter key\/value environment variables to use in Postman API requests.\nAdd Custom Environment Variable    Environment Variables    Edit  Delete      const newEnvVarDialog = document.getElementById(\u0022newEnvVarDialog\u0022) let keyElement = newEnvVarDialog.querySelector(\u0022[modal-data-key]\u0022) let valueElement = newEnvVarDialog.querySelector(\u0022[modal-data-value]\u0022) const keys = Object.keys(localStorage).sort(function (a, b) { return a.toLowerCase().localeCompare(b.toLowerCase()) }) let envVars = [] let envObj = {} keys.forEach((key) = { envObj = {} envObj.key = key envObj.value = localStorage[key] envVars.",
+      "wordCount" : "139",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -161,9 +161,8 @@
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
   crossorigin="anonymous"
 ></script>
-<script await src="https://johnchaffee.wiki/twilio-apis//postman.js"></script>
-<script await src="https://johnchaffee.wiki/twilio-apis//auth.js"></script>
-<link href="https://johnchaffee.wiki/twilio-apis//postman.css" rel="stylesheet" />
+<script await src="https://johnchaffee.wiki/twilio-apis//api-explorer.js"></script>
+<link href="https://johnchaffee.wiki/twilio-apis//api-explorer.css" rel="stylesheet" />
 <script src="https://johnchaffee.wiki/twilio-apis//prism.js"></script>
 <link href="https://johnchaffee.wiki/twilio-apis//prism.css" rel="stylesheet" />
 
@@ -207,26 +206,7 @@
     </div>
     <div class="gdoc-menu-header">
       <span class="gdoc-menu-header__items">
-        <span>
-          <div id="login" class="">
-            <button
-              id="loginBtn"
-              data-add-query-param-btn
-              class="mt-2 btn btn-outline-success"
-              type="button"
-            >
-              Login
-            </button>
-            <button
-              id="logoutBtn"
-              data-add-query-param-btn
-              class="mt-2 btn btn-outline-success d-none"
-              type="button"
-            >
-              Logout
-            </button>
-          </div>
-        </span>
+        
 
          
 
@@ -385,7 +365,7 @@
                     href="/twilio-apis/api/"
                     class="gdoc-nav__entry"
                   >
-                    API
+                    API Explorer
                   </a>
                 </span>
               
@@ -399,6 +379,558 @@
 
   <ul class="gdoc-nav__list">
     
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/accounts/"
+                    class="gdoc-nav__entry"
+                  >
+                    Accounts
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+              
+  
+
+
+  <ul class="gdoc-nav__list">
+    
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/accounts/accounts/"
+                    class="gdoc-nav__entry"
+                  >
+                    Accounts
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/accounts/addresses/"
+                    class="gdoc-nav__entry"
+                  >
+                    Addresses
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+  </ul>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/messaging/"
+                    class="gdoc-nav__entry"
+                  >
+                    Messaging
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+              
+  
+
+
+  <ul class="gdoc-nav__list">
+    
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/messaging/send/"
+                    class="gdoc-nav__entry"
+                  >
+                    Send Message
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/messaging/crud/"
+                    class="gdoc-nav__entry"
+                  >
+                    Read, Update, Delete
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+  </ul>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/lookup/"
+                    class="gdoc-nav__entry"
+                  >
+                    Lookup
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+              
+  
+
+
+  <ul class="gdoc-nav__list">
+    
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/lookup/lookup-v1/"
+                    class="gdoc-nav__entry"
+                  >
+                    Lookup v1
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/lookup/lookup-v2/"
+                    class="gdoc-nav__entry"
+                  >
+                    Lookup v2
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+  </ul>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/verify/"
+                    class="gdoc-nav__entry"
+                  >
+                    Verify
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+              
+  
+
+
+  <ul class="gdoc-nav__list">
+    
+    
+      
+
+      
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/verify/service/"
+                    class="gdoc-nav__entry"
+                  >
+                    Service
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/api/verify/verify/"
+                    class="gdoc-nav__entry"
+                  >
+                    Verify
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+  </ul>
+
+            
+          </li>
+        
+      
     
       
 
@@ -629,81 +1161,6 @@
           </li>
         
       
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/twilio-apis/api/feedback/"
-                    class="gdoc-nav__entry"
-                  >
-                    Feedback
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/twilio-apis/api/lookup/"
-                    class="gdoc-nav__entry"
-                  >
-                    Lookup
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-              
-  
-
-
-  <ul class="gdoc-nav__list">
-    
     
       
 
@@ -711,129 +1168,6 @@
         
       
 
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/twilio-apis/api/lookup/lookup-v1/"
-                    class="gdoc-nav__entry"
-                  >
-                    Lookup v1
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/twilio-apis/api/lookup/lookup-v2/"
-                    class="gdoc-nav__entry"
-                  >
-                    Lookup v2
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-  </ul>
-
-            
-          </li>
-        
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/twilio-apis/api/messages/"
-                    class="gdoc-nav__entry"
-                  >
-                    Messages
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
       
         
           
@@ -1141,11 +1475,12 @@
         
       
     
-  </ul>
+      
 
-            
-          </li>
+      
         
+      
+
       
         
           
@@ -1169,46 +1504,10 @@
               
                 <span class="flex">
                   <a
-                    href="/twilio-apis/api/test/"
+                    href="/twilio-apis/api/numbers/hosted-numbers/"
                     class="gdoc-nav__entry"
                   >
-                    Test Credentials
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/twilio-apis/api/verify/"
-                    class="gdoc-nav__entry"
-                  >
-                    Verify
+                    Hosted Numbers
                   </a>
                 </span>
               
@@ -1226,6 +1525,14 @@
           </li>
         
       
+    
+      
+
+      
+        
+      
+
+      
         
           
           
@@ -1248,10 +1555,10 @@
               
                 <span class="flex">
                   <a
-                    href="/twilio-apis/sdk/"
+                    href="/twilio-apis/api/other/"
                     class="gdoc-nav__entry"
                   >
-                    SDKs
+                    Other
                   </a>
                 </span>
               
@@ -1295,10 +1602,10 @@
               
                 <span class="flex">
                   <a
-                    href="/twilio-apis/sdk/curl/"
+                    href="/twilio-apis/api/other/feedback/"
                     class="gdoc-nav__entry"
                   >
-                    curl
+                    Feedback
                   </a>
                 </span>
               
@@ -1331,10 +1638,10 @@
               
                 <span class="flex">
                   <a
-                    href="/twilio-apis/sdk/send-message/"
+                    href="/twilio-apis/api/other/test/"
                     class="gdoc-nav__entry"
                   >
-                    Send Message
+                    Test Credentials
                   </a>
                 </span>
               
@@ -1347,6 +1654,85 @@
       
     
   </ul>
+
+            
+          </li>
+        
+      
+    
+  </ul>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/open-api/"
+                    class="gdoc-nav__entry"
+                  >
+                    Open API
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/twilio-apis/sdk/"
+                    class="gdoc-nav__entry"
+                  >
+                    SDKs
+                  </a>
+                </span>
+              
+              
+            </label>
 
             
           </li>
@@ -1577,60 +1963,8 @@
 </div>
 
 
-
-  <article
-    class="gdoc-markdown gdoc-markdown__align--left"
-  >
-    <h1>Settings</h1>
-    <dialog id="loginDialog">
-      <form method="dialog">
-        <div class="my-2" data-key-value-pair>
-          <input
-            id="modal-account-sid-key"
-            type="text"
-            data-key
-            class="form-control"
-            placeholder="Key"
-            value="AccountSid"
-            disabled
-          />
-          <input
-            id="modal-account-sid-value"
-            type="text"
-            data-value
-            class="form-control"
-            placeholder="Value"
-            value=""
-          />
-          <hr />
-          <input
-            id="modal-auth-token-key"
-            type="text"
-            data-key
-            class="form-control"
-            placeholder="Key"
-            value="AuthToken"
-            disabled
-          />
-          <input
-            id="modal-auth-token-value"
-            type="text"
-            data-value
-            class="form-control"
-            placeholder="Value"
-            value=""
-          />
-        </div>
-        <button class="btn btn-outline-danger" value="cancel">Cancel</button>
-        <button class="btn btn-primary" value="save">Save</button>
-      </form>
-    </dialog>
-    <p>Enter key/value environment variables to use in Postman API requests.</p>
-<div class="" id="settings">
-  
-
   <dialog id="newEnvVarDialog">
-    <form method="dialog">
+    <form method="dialog" class="newEnvVarDialog">
       <div class="input-group my-2" data-key-value-pair>
         <input
           modal-data-key
@@ -1653,6 +1987,14 @@
       <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
     </form>
   </dialog>
+
+  <article
+    class="gdoc-markdown gdoc-markdown__align--left"
+  >
+    <h1>Settings</h1>
+    <p>Enter key/value environment variables to use in Postman API requests.</p>
+<div class="" id="settings">
+  
 
   <form data-form>
     <div id="envVarButtons" class="mb-4">
@@ -1690,6 +2032,9 @@
         value=""
         disabled
       />
+      <button type="button" data-update-btn class="btn btn-outline-success">
+        Edit
+      </button>
       <button type="button" data-remove-btn class="btn btn-outline-danger">
         Delete
       </button>
@@ -1698,23 +2043,17 @@
 </div>
 
 <script>
-  const loginDialog = document.getElementById("loginDialog")
-  let accountSidKeyElement = loginDialog.querySelector("#modal-account-sid-key")
-  let accountSidValueElement = loginDialog.querySelector(
-    "#modal-account-sid-value"
-  )
-  let authTokenKeyElement = loginDialog.querySelector("#modal-auth-token-key")
-  let authTokenValueElement = loginDialog.querySelector(
-    "#modal-auth-token-value"
-  )
-
   const newEnvVarDialog = document.getElementById("newEnvVarDialog")
   let keyElement = newEnvVarDialog.querySelector("[modal-data-key]")
   let valueElement = newEnvVarDialog.querySelector("[modal-data-value]")
   
 
   
-  const keys = Object.keys(localStorage).sort()
+  
+  const keys = Object.keys(localStorage).sort(function (a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase())
+  })
+
   let envVars = []
   let envObj = {}
   keys.forEach((key) => {
@@ -1723,15 +2062,6 @@
     envObj.value = localStorage[key]
     envVars.push(envObj)
   })
-
-  
-  if (keys.includes("AccountSid") && keys.includes("AuthToken")) {
-    document.querySelector("#loginBtn").classList.add("d-none")
-    document.querySelector("#logoutBtn").classList.remove("d-none")
-  } else {
-    document.querySelector("#loginBtn").classList.remove("d-none")
-    document.querySelector("#logoutBtn").classList.add("d-none")
-  }
 
   
   
@@ -1747,28 +2077,11 @@
     .addEventListener("click", function onOpen() {
       console.log("CLICK ENV VAR BTN")
       if (typeof newEnvVarDialog.showModal === "function") {
+        console.log("NEW ENV VAR DIALOG", newEnvVarDialog)
         newEnvVarDialog.showModal()
       }
     })
 
-  
-  document
-    .querySelector("#loginBtn")
-    .addEventListener("click", function onOpen() {
-      console.log("CLICK LOGIN BTN")
-      if (typeof loginDialog.showModal === "function") {
-        loginDialog.showModal()
-      }
-    })
-
-  
-  document
-    .querySelector("#logoutBtn")
-    .addEventListener("click", function onOpen() {
-      console.log("CLICK LOGOUT BTN")
-      localStorage.removeItem("AuthToken")
-      window.location = window.location.href
-    })
 
   
   newEnvVarDialog.addEventListener("keydown", (e) => {
@@ -1786,44 +2099,9 @@
   })
 
   
-  loginDialog.addEventListener("keydown", (e) => {
-    if (e.code === "Enter") {
-      setLocalStorage()
-    }
-  })
-
-  
-  
-  loginDialog.addEventListener("close", function onClose() {
-    if (loginDialog.returnValue !== "cancel") {
-      setLocalStorage()
-    }
-  })
-
-  
   function setLocalStorage() {
     if (keyElement.value !== "" && valueElement.value !== "") {
       localStorage.setItem(keyElement.value, valueElement.value)
-      window.location = window.location.href
-    }
-    if (
-      accountSidKeyElement.value !== "" &&
-      accountSidValueElement.value !== ""
-    ) {
-      localStorage.setItem(
-        accountSidKeyElement.value,
-        accountSidValueElement.value
-      )
-      window.location = window.location.href
-    }
-    if (
-      authTokenKeyElement.value !== "" &&
-      authTokenValueElement.value !== ""
-    ) {
-      localStorage.setItem(
-        authTokenKeyElement.value,
-        authTokenValueElement.value
-      )
       window.location = window.location.href
     }
   }

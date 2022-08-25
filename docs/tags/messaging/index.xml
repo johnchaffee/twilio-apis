@@ -6,23 +6,33 @@
     <description>Recent content in messaging on Twilio API Explorer</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/tags/messaging/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Messages</title>
-      <link>https://johnchaffee.wiki/twilio-apis/api/messages/</link>
+      <title>Send Message</title>
+      <link>https://johnchaffee.wiki/twilio-apis/api/messaging/send/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://johnchaffee.wiki/twilio-apis/api/messages/</guid>
+      <guid>https://johnchaffee.wiki/twilio-apis/api/messaging/send/</guid>
       <description>How to send and fetch messages with the Twilio Messaging API.
-SMS    console.log(&#34;POSTMAN PARAMS: ..\/..\/api-params\/messages\/create.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+SMS    console.log(&#34;API PARAMS: ..\/..\/..\/api-params\/messages\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+    </item>
+    
+    <item>
+      <title>Read, Update, Delete</title>
+      <link>https://johnchaffee.wiki/twilio-apis/api/messaging/crud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/api/messaging/crud/</guid>
+      <description>How to send and fetch messages with the Twilio Messaging API.
+LIST    console.log(&#34;API PARAMS: ..\/..\/..\/api-params\/messages\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
     <item>
       <title>Test Credentials</title>
-      <link>https://johnchaffee.wiki/twilio-apis/api/test/</link>
+      <link>https://johnchaffee.wiki/twilio-apis/api/other/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://johnchaffee.wiki/twilio-apis/api/test/</guid>
+      <guid>https://johnchaffee.wiki/twilio-apis/api/other/test/</guid>
       <description>How to send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.
-SUCCESS    console.log(&#34;POSTMAN PARAMS: ..\/..\/api-params\/test\/success.js&#34;, postmanParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;minus;      document .</description>
+SUCCESS    console.log(&#34;API PARAMS: ..\/..\/..\/api-params\/test\/success.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
   </channel>

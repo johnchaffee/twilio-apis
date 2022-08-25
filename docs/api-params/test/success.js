@@ -1,11 +1,11 @@
-postmanParams = {
+apiParams = {
   url: "https://api.twilio.com/2010-04-01/Accounts/{{TestAccountSid}}/Messages.json",
   method: "POST",
   pathParams: [
     { key: "TestAccountSid", value: "{{TestAccountSid}}" },
   ],
   queryParams: [
-    { key: "To", value: "+12063996576" },
+    { key: "To", value: "{{To}}" },
     { key: "From", value: "+15005550006" },
     { key: "Body", value: "Ahoy there!" },
   ],

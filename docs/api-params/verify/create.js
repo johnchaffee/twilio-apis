@@ -1,4 +1,4 @@
-postmanParams = {
+apiParams = {
   url: "https://verify.twilio.com/v2/Services",
   method: "POST",
   pathParams: [],

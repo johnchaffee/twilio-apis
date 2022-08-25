@@ -1,4 +1,4 @@
-postmanParams = {
+apiParams = {
   url: "https://messaging.twilio.com/v1/Services/{{MessagingServiceSid}}/AlphaSenders",
   method: "GET",
   pathParams: [

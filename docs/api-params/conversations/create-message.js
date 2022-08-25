@@ -1,9 +1,9 @@
-postmanParams = {
+apiParams = {
   url: "https://conversations.twilio.com/v1/Conversations/{{ConversationSid}}/Messages",
   method: "POST",
   pathParams: [{ key: "ConversationSid", value: "{{ConversationSid}}" }],
   queryParams: [
-    { key: "Author", value: "jchaffee+worker1@twilio.com" },
+    { key: "Author", value: "{{Author}}" },
     { key: "Body", value: "Hello there" },
   ],
   headerParams: [

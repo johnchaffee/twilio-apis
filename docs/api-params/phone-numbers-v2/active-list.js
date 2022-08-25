@@ -1,4 +1,4 @@
-postmanParams = {
+apiParams = {
   url: "https://preview.twilio.com/Numbers/ActiveNumbers/",
   method: "GET",
   pathParams: [],
