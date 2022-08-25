@@ -1,5 +1,5 @@
 ---
-title: "Swagger"
+title: "Open API"
 draft: false
 # weight: 300
 tags:
@@ -7,7 +7,11 @@ tags:
 geekdocBreadcrumb: true
 ---
 
-Put Swagger links here
+Put links to Open API Docs here.
+
+- Twilio Open API docs
+- Swagger UI
+- Postman Collections
 
 {{< toc-tree >}}
 
