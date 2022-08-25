@@ -1,4 +1,5 @@
 let apiParams
+let updatedKey
 
 function updateResponseStatus(id, status) {
   console.log(`updateResponseStatus: .querySelector(#${id} [data-status])`)
@@ -56,7 +57,7 @@ function createKeyValuePair(id, key, value) {
     console.log("UPDATE CLOSEST", closest)
     if (typeof newEnvVarDialog.showModal === "function") {
       console.log("NEW ENV VAR DIALOG", newEnvVarDialog)
-      let updatedKey = closest.querySelector("[data-key]").value
+      updatedKey = closest.querySelector("[data-key]").value
       console.log("UPDATED KEY", updatedKey)
       if (updatedKey === "username") {
         updatedKey = "AccountSid"
@@ -101,7 +102,7 @@ function createKeyValuePair(id, key, value) {
       }
     }
   })
-  
+
   // Remove button
   element.querySelector("[data-remove-btn]").addEventListener("click", (e) => {
     let closest = e.target.closest("[data-key-value-pair]")
