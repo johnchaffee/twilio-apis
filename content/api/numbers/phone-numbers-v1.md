@@ -16,27 +16,27 @@ tags:
 
 {{< tab "ACTIVE" >}}
 List all active phone numbers.
-{{< postman id=`active` file=`../../../api-params/phone-numbers/incoming.js` >}}
+{{< api-explorer id=`active` file=`../../../api-params/phone-numbers/incoming.js` >}}
 {{< /tab >}}
 
 {{< tab "TYPES" >}}
 List available phone number types by country.
-{{< postman id=`country` file=`../../../api-params/phone-numbers/available-country.js` >}}
+{{< api-explorer id=`country` file=`../../../api-params/phone-numbers/available-country.js` >}}
 {{< /tab >}}
 
 {{< tab "LOCAL" >}}
 List available local phone numbers by country.
-{{< postman id=`local` file=`../../../api-params/phone-numbers/available-local.js` >}}
+{{< api-explorer id=`local` file=`../../../api-params/phone-numbers/available-local.js` >}}
 {{< /tab >}}
 
 {{< tab "TOLL FREE" >}}
 List available toll-free phone numbers by country.
-{{< postman id=`tollfree` file=`../../../api-params/phone-numbers/available-tollfree.js` >}}
+{{< api-explorer id=`tollfree` file=`../../../api-params/phone-numbers/available-tollfree.js` >}}
 {{< /tab >}}
 
 {{< tab "MOBILE" >}}
 List available mobile phone numbers by country.
-{{< postman id=`mobile` file=`../../../api-params/phone-numbers/available-mobile.js` >}}
+{{< api-explorer id=`mobile` file=`../../../api-params/phone-numbers/available-mobile.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

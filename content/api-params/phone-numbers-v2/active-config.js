@@ -1,4 +1,4 @@
-postmanParams = {
+apiParams = {
   url: "https://preview.twilio.com/Numbers/ActiveNumbers/{{PhoneNumberSid}}",
   method: "POST",
   pathParams: [{ key: "PhoneNumberSid", value: "{{PhoneNumberSid}}" }],

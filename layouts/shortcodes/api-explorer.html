@@ -2,7 +2,7 @@
   <!-- Load queryParams and headerParams from file -->
   <script await src="{{ .Params.file }}"></script>
   <script>
-    console.log("POSTMAN PARAMS: {{ .Params.file }}", postmanParams)
+    console.log("API PARAMS: {{ .Params.file }}", apiParams)
   </script>
 
   <!-- <h3>Hugo Params</h3>
@@ -199,14 +199,14 @@
 
   // Set url param
   document.querySelector("#{{ .Params.id }} [data-url]").value =
-    postmanParams.url
+    apiParams.url
 
   // Set method param
   document.querySelector("#{{ .Params.id }} [data-method]").value =
-    postmanParams.method
+    apiParams.method
 
   // Append query params key value pairs
-  postmanParams.queryParams.forEach((queryParam) => {
+  apiParams.queryParams.forEach((queryParam) => {
     document
       .querySelector("#{{ .Params.id }} [data-query-params]")
       .append(
@@ -214,14 +214,14 @@
       )
   })
   // Unhide Path Params section if > 0
-  if (postmanParams.queryParams.length > 0) {
+  if (apiParams.queryParams.length > 0) {
     document
       .querySelector("#{{ .Params.id }} [data-query-params-section]")
       .classList.remove("d-none")
   }
 
   // Append path params key value pairs
-  postmanParams.pathParams.forEach((pathParam) => {
+  apiParams.pathParams.forEach((pathParam) => {
     document
       .querySelector("#{{ .Params.id }} [data-request-path]")
       .append(
@@ -229,14 +229,14 @@
       )
   })
   // Unhide Query Params section if > 0
-  if (postmanParams.pathParams.length > 0) {
+  if (apiParams.pathParams.length > 0) {
     document
       .querySelector("#{{ .Params.id }} [data-request-path-section]")
       .classList.remove("d-none")
   }
 
   // Append header params key value pairs
-  postmanParams.headerParams.forEach((headerParam) => {
+  apiParams.headerParams.forEach((headerParam) => {
     document
       .querySelector("#{{ .Params.id }} [data-request-headers]")
       .append(
@@ -249,7 +249,7 @@
   })
 
   // Append auth params key value pairs
-  postmanParams.authParams.forEach((authParam) => {
+  apiParams.authParams.forEach((authParam) => {
     document
       .querySelector("#{{ .Params.id }} [data-request-auth]")
       .append(

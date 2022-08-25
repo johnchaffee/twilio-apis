@@ -18,11 +18,11 @@ Send OTP, Check OTP.
 
 {{< tab "SEND OTP" >}}
 Channel options include `sms`, `whatsapp`, `call`, and `email`.
-{{< postman id=`send` file=`../../../api-params/verify/send.js` >}}
+{{< api-explorer id=`send` file=`../../../api-params/verify/send.js` >}}
 {{< /tab >}}
 
 {{< tab "CHECK OTP" >}}
-{{< postman id=`check` file=`../../../api-params/verify/check.js` >}}
+{{< api-explorer id=`check` file=`../../../api-params/verify/check.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

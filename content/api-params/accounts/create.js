@@ -1,0 +1,13 @@
+apiParams = {
+  url: "https://api.twilio.com/2010-04-01/Accounts.json",
+  method: "POST",
+  pathParams: [{ key: "AccountSid", value: "{{AccountSid}}" }],
+  queryParams: [{ key: "FriendlyName", value: "My Subaccount" }],
+  headerParams: [
+    { key: "Content-Type", value: "application/x-www-form-urlencoded" },
+  ],
+  authParams: [
+    { key: "username", value: "{{AccountSid}}" },
+    { key: "password", value: "{{AuthToken}}" },
+  ],
+}

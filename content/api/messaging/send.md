@@ -15,34 +15,34 @@ How to send and fetch messages with the Twilio Messaging API.
 {{< tabs "send" >}}
 
 {{< tab "SMS" >}}
-{{< postman id=`sms` file=`../../../api-params/messages/sms.js` >}}
+{{< api-explorer id=`sms` file=`../../../api-params/messages/sms.js` >}}
 {{< /tab >}}
 
 {{< tab "STUDIO" >}}
 Send an HTTP request to a Studio Flow, which sends an outgoing message to the recipient and Waits for a Reply to generate an auto-response. 
-{{< postman id=`studio` file=`../../../api-params/messages/studio.js` >}}
+{{< api-explorer id=`studio` file=`../../../api-params/messages/studio.js` >}}
 {{< /tab >}}
 
 {{< tab "SCHEDULED" >}}
-{{< postman id=`scheduled` file=`../../../api-params/messages/scheduled.js` >}}
+{{< api-explorer id=`scheduled` file=`../../../api-params/messages/scheduled.js` >}}
 {{< /tab >}}
 
 {{< tab "MMS" >}}
-{{< postman id=`mms` file=`../../../api-params/messages/mms.js` >}}
+{{< api-explorer id=`mms` file=`../../../api-params/messages/mms.js` >}}
 {{< /tab >}}
 
 {{< tab "WHATSAPP" >}}
 The mobile customer must send a WhatsApp message to `+14155238886` with a message body of  `join immediately-finger` to opt-in to receiving WhatsApp messages.
-{{< postman id=`whatsapp` file=`../../../api-params/messages/whatsapp.js` >}}
+{{< api-explorer id=`whatsapp` file=`../../../api-params/messages/whatsapp.js` >}}
 {{< /tab >}}
 
 {{< tab "FACEBOOK" >}}
 The mobile customer must initiate a conversation with the business by sending a Facebook Messenger message to Owl-Taxis at `https://www.facebook.com/Owl-Taxis-100633889146611`.
-{{< postman id=`facebook` file=`../../../api-params/messages/facebook.js` >}}
+{{< api-explorer id=`facebook` file=`../../../api-params/messages/facebook.js` >}}
 {{< /tab >}}
 
 {{< tab "GOOGLE" >}}
-{{< postman id=`google` file=`../../../api-params/messages/google.js` >}}
+{{< api-explorer id=`google` file=`../../../api-params/messages/google.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

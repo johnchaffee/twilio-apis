@@ -15,20 +15,20 @@ How to send and fetch messages with the Twilio Messaging API.
 {{< tabs "other" >}}
 
 {{< tab "LIST" >}}
-{{< postman id=`list` file=`../../../api-params/messages/list.js` >}}
+{{< api-explorer id=`list` file=`../../../api-params/messages/list.js` >}}
 {{< /tab >}}
 
 {{< tab "READ" >}}
-{{< postman id=`read` file=`../../../api-params/messages/read.js` >}}
+{{< api-explorer id=`read` file=`../../../api-params/messages/read.js` >}}
 {{< /tab >}}
 
 {{< tab "UPDATE" >}}
 To redact a message-body from a post-flight message, post an empty body to the message instance resource.
-{{< postman id=`update` file=`../../../api-params/messages/update.js` >}}
+{{< api-explorer id=`update` file=`../../../api-params/messages/update.js` >}}
 {{< /tab >}}
 
 {{< tab "DELETE" >}}
-{{< postman id=`delete` file=`../../../api-params/messages/delete.js` >}}
+{{< api-explorer id=`delete` file=`../../../api-params/messages/delete.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

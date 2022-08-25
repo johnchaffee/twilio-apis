@@ -1,4 +1,4 @@
-postmanParams = {
+apiParams = {
   url: "https://api.twilio.com/2010-04-01/Accounts/{{AccountSid}}/AvailablePhoneNumbers/{{CountryCode}}/Local.json",
   method: "GET",
   pathParams: [

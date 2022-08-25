@@ -1,4 +1,4 @@
-let postmanParams
+let apiParams
 
 function updateResponseStatus(id, status) {
   console.log(`updateResponseStatus: .querySelector(#${id} [data-status])`)

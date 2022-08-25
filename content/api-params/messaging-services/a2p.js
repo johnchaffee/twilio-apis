@@ -1,4 +1,4 @@
-postmanParams = {
+apiParams = {
   url: "https://messaging.twilio.com/v1/Services/{{MessagingServiceSid}}/Compliance/Usa2p",
   method: "GET",
   pathParams: [

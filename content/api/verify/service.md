@@ -17,19 +17,19 @@ Create a Verification Service (once).
 {{< tabs "service" >}}
 
 {{< tab "CREATE" >}}
-{{< postman id=`create` file=`../../../api-params/verify/create.js` >}}
+{{< api-explorer id=`create` file=`../../../api-params/verify/create.js` >}}
 {{< /tab >}}
 
 {{< tab "LIST" >}}
-{{< postman id=`list` file=`../../../api-params/verify/list.js` >}}
+{{< api-explorer id=`list` file=`../../../api-params/verify/list.js` >}}
 {{< /tab >}}
 
 {{< tab "GET" >}}
-{{< postman id=`get` file=`../../../api-params/verify/get.js` >}}
+{{< api-explorer id=`get` file=`../../../api-params/verify/get.js` >}}
 {{< /tab >}}
 
 {{< tab "DELETE" >}}
-{{< postman id=`delete` file=`../../../api-params/verify/delete.js` >}}
+{{< api-explorer id=`delete` file=`../../../api-params/verify/delete.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

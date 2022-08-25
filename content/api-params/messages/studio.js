@@ -1,4 +1,4 @@
-postmanParams = {
+apiParams = {
   url: "https://studio.twilio.com/v2/Flows/{{FlowSid}}/Executions",
   method: "POST",
   pathParams: [{ key: "FlowSid", value: "{{FlowSid}}" }],

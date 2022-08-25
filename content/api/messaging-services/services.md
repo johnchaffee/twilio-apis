@@ -13,23 +13,23 @@ tags:
 {{< tabs "messaging-servicess" >}}
 
 {{< tab "CREATE" >}}
-{{< postman id=`create` file=`../../../api-params/messaging-services/create.js` >}}
+{{< api-explorer id=`create` file=`../../../api-params/messaging-services/create.js` >}}
 {{< /tab >}}
 
 {{< tab "LIST" >}}
-{{< postman id=`list` file=`../../../api-params/messaging-services/list.js` >}}
+{{< api-explorer id=`list` file=`../../../api-params/messaging-services/list.js` >}}
 {{< /tab >}}
 
 {{< tab "GET" >}}
-{{< postman id=`get` file=`../../../api-params/messaging-services/get.js` >}}
+{{< api-explorer id=`get` file=`../../../api-params/messaging-services/get.js` >}}
 {{< /tab >}}
 
 {{< tab "UPDATE" >}}
-{{< postman id=`update` file=`../../../api-params/messaging-services/update.js` >}}
+{{< api-explorer id=`update` file=`../../../api-params/messaging-services/update.js` >}}
 {{< /tab >}}
 
 {{< tab "DELETE" >}}
-{{< postman id=`delete` file=`../../../api-params/messaging-services/delete.js` >}}
+{{< api-explorer id=`delete` file=`../../../api-params/messaging-services/delete.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

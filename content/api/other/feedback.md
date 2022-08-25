@@ -16,12 +16,12 @@ How to send and fetch messages with the Twilio Messaging API.
 
 {{< tab "PROVIDE FEEDABACK" >}}
 Send an SMS for which to provide feedback with `ProvideFeedback=true` param. 
-{{< postman id=`create` file=`../../../api-params/feedback/create.js` >}}
+{{< api-explorer id=`create` file=`../../../api-params/feedback/create.js` >}}
 {{< /tab >}}
 
 {{< tab "CONFIRM FEEDBACK" >}}
 Send Delivery Confirmation Feedack with with `MessageSid` + `Outcome=confirmed` params.
-{{< postman id=`confirm` file=`../../../api-params/feedback/confirm.js` >}}
+{{< api-explorer id=`confirm` file=`../../../api-params/feedback/confirm.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

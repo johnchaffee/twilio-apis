@@ -15,11 +15,11 @@ Fetch conversations by participant.
 {{< tabs "conversations" >}}
 
 {{< tab "Fetch SMS Conversations" >}}
-{{< postman id=`fetch-sms-conversations` file=`../../../api-params/conversations/fetch-sms-conversations.js` >}}
+{{< api-explorer id=`fetch-sms-conversations` file=`../../../api-params/conversations/fetch-sms-conversations.js` >}}
 {{< /tab >}}
 
 {{< tab "Fetch Chat Conversations" >}}
-{{< postman id=`fetch-chat-conversations` file=`../../../api-params/conversations/fetch-chat-conversations.js` >}}
+{{< api-explorer id=`fetch-chat-conversations` file=`../../../api-params/conversations/fetch-chat-conversations.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}
