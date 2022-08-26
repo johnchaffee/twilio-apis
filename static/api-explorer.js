@@ -33,13 +33,15 @@ function createKeyValuePair(id, key, value) {
   let thisValue = element.querySelector("[data-value]")
   thisValue.value = value || null
 
-  // Show tooltip if value is env var with curly braces
+  // Show EnvVar values
   let curlyBraces
+  let nonCurlyBraces
   let curlyBraceKey
   if (thisValue.value.match(/\{\{\w+}}/)) {
     curlyBraces = thisValue.value.match(/\{\{\w+}}/).toString()
+    nonCurlyBraces = thisValue.value.replace(curlyBraces, "")
     curlyBraceKey = curlyBraces.replaceAll(/[{}]/g, "")
-    thisValue.title = localStorage.getItem(curlyBraceKey)
+    thisValue.value = nonCurlyBraces + localStorage.getItem(curlyBraceKey)
   }
 
   // Mask passwords and sensitive values
