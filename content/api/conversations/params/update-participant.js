@@ -6,8 +6,8 @@ apiParams = {
     { key: "ParticipantSid", value: "" },
   ],
   queryParams: [
-    { key: "DateUpdated", value: "2019-05-15T13:37:35Z" },
-    { key: "Attributes", value: `{"role":"driver"}` },
+    { key: "DateUpdated", value: "", placeholder: "2019-05-15T13:37:35Z" },
+    { key: "Attributes", value: "", placeholder: `{"role":"driver"}` },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },

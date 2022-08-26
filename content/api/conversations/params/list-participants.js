@@ -2,7 +2,7 @@ apiParams = {
   url: "https://conversations.twilio.com/v1/Conversations/{{ConversationSid}}/Participants",
   method: "GET",
   pathParams: [{ key: "ConversationSid", value: "" }],
-  queryParams: [{ key: "PageSize", value: "10" }],
+  queryParams: [{ key: "PageSize", value: "" }],
   headerParams: [],
   authParams: [
     { key: "username", value: "", placeholder: "Enter AccountSID or API Key SID" },

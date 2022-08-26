@@ -211,7 +211,12 @@
     document
       .querySelector("#{{ .Params.id }} [data-query-params]")
       .append(
-        createKeyValuePair("{{ .Params.id }}", queryParam.key, queryParam.value, queryParam.placeholder)
+        createKeyValuePair(
+          "{{ .Params.id }}",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   // Unhide Path Params section if > 0
@@ -226,7 +231,12 @@
     document
       .querySelector("#{{ .Params.id }} [data-request-path]")
       .append(
-        createKeyValuePair("{{ .Params.id }}", pathParam.key, pathParam.value, pathParam.placeholder)
+        createKeyValuePair(
+          "{{ .Params.id }}",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   // Unhide Query Params section if > 0
@@ -255,7 +265,12 @@
     document
       .querySelector("#{{ .Params.id }} [data-request-auth]")
       .append(
-        createKeyValuePair("{{ .Params.id }}", authParam.key, authParam.value, authParam.placeholder)
+        createKeyValuePair(
+          "{{ .Params.id }}",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -376,10 +391,12 @@
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"

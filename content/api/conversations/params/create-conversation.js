@@ -4,8 +4,8 @@ apiParams = {
   pathParams: [],
   queryParams: [
     { key: "FriendlyName", value: "My Conversation" },
-    { key: "Timers.Inactive", value: "PT10M" },
-    { key: "Timers.Closed", value: "PT1H" },
+    { key: "Timers.Inactive", value: "", placeholder: "PT10M, PT1H" },
+    { key: "Timers.Closed", value: "", placeholder: "PT1H, PT4H" },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },

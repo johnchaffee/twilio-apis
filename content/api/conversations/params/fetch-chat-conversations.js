@@ -3,7 +3,7 @@ apiParams = {
   method: "GET",
   pathParams: [],
   queryParams: [
-    { key: "PageSize", value: "10" },
+    { key: "PageSize", value: "" },
     { key: "Identity", value: "" },
   ],
   headerParams: [],

@@ -4,7 +4,7 @@ apiParams = {
   pathParams: [{ key: "ConversationSid", value: "" }],
   queryParams: [
     { key: "Author", value: "" },
-    { key: "Body", value: "Hello there" },
+    { key: "Body", value: "" },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
