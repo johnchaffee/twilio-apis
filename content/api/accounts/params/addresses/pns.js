@@ -2,13 +2,13 @@ apiParams = {
   url: "https://api.twilio.com/2010-04-01/Accounts/{{AccountSid}}/Addresses/{{AddressSid}}/DependentPhoneNumbers.json",
   method: "GET",
   pathParams: [
-    { key: "AccountSid", value: "{{AccountSid}}" },
-    { key: "AddressSid", value: "{{AddressSid}}" },
+    { key: "AccountSid", value: "" },
+    { key: "AddressSid", value: "" },
   ],
-  queryParams: [{ key: "PageSize", value: "20" }],
+  queryParams: [{ key: "PageSize", value: "" }],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

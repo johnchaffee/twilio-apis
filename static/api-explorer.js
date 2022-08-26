@@ -44,6 +44,7 @@ function createKeyValuePair(id, key, value) {
     thisKey.value === "password" ||
     thisKey.value === "AuthToken" ||
     thisKey.value === "StatusCallback" ||
+    thisKey.value === "StatusCallbackUrl" ||
     thisKey.value === "Authorization" ||
     thisKey.value === "BasicAuth"
   ) {

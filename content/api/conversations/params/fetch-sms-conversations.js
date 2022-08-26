@@ -4,11 +4,11 @@ apiParams = {
   pathParams: [],
   queryParams: [
     { key: "PageSize", value: "10" },
-    { key: "Address", value: "{{To}}" },
+    { key: "Address", value: "" },
   ],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

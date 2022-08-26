@@ -150,8 +150,3 @@
   background-color: #f5f6f8;
   color: rgb(95, 95, 95);
 }
-
-/* newEnvVarDialog */
-.newEnvVarDialog {
-  min-width: 500px;
-}

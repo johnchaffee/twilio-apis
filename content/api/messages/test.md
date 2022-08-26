@@ -8,7 +8,7 @@ tags:
 # geekdocBreadcrumb: false
 ---
 
-Send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described [here](/messaging/test-credentials/).
+Send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described [here](https://www.twilio.com/docs/iam/test-credentials).
 
 
 {{< tabs "test" >}}

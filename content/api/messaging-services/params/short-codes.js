@@ -2,14 +2,14 @@ apiParams = {
   url: "https://messaging.twilio.com/v1/Services/{{MessagingServiceSid}}/ShortCodes",
   method: "GET",
   pathParams: [
-    { key: "MessagingServiceSid", value: "{{MessagingServiceSid}}" },
+    { key: "MessagingServiceSid", value: "" },
   ],
-  queryParams: [{ key: "PageSize", value: "20" }],
+  queryParams: [{ key: "PageSize", value: "" }],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
   ],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

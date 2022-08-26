@@ -1,19 +1,19 @@
 apiParams = {
-  url: "https://api.twilio.com/2010-04-01/Accounts/{{TestAccountSid}}/Messages.json",
+  url: "https://api.twilio.com/2010-04-01/Accounts/{{AccountSid}}/Messages.json",
   method: "POST",
   pathParams: [
-    { key: "TestAccountSid", value: "{{TestAccountSid}}" },
+    { key: "AccountSid", value: "" },
   ],
   queryParams: [
-    { key: "To", value: "{{To}}" },
+    { key: "To", value: "" },
     { key: "From", value: "+15005550006" },
-    { key: "Body", value: "Ahoy there!" },
+    { key: "Body", value: "" },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
   ],
   authParams: [
-    { key: "username", value: "{{TestUsername}}" },
-    { key: "password", value: "{{TestPassword}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

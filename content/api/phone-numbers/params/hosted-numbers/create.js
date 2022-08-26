@@ -6,12 +6,12 @@ apiParams = {
     { key: "PhoneNumber", value: "" },
     { key: "SmsCapability", value: "true" },
     { key: "FriendlyName", value: "My Hosted Phone Number" },
-    { key: "StatusCallbackUrl", value: "{{StatusCallback}}" },
+    { key: "StatusCallbackUrl", value: "" },
     { key: "StatusCallbackMethod", value: "POST" },
   ],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

@@ -2,13 +2,13 @@ apiParams = {
   url: "https://conversations.twilio.com/v1/Conversations/{{ConversationSid}}/Messages/{{MessageSid}}",
   method: "GET",
   pathParams: [
-    { key: "ConversationSid", value: "{{ConversationSid}}" },
-    { key: "MessageSid", value: "{{MessageSid}}" },
+    { key: "ConversationSid", value: "" },
+    { key: "MessageSid", value: "" },
   ],
   queryParams: [],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }
