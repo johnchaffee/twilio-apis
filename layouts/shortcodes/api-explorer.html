@@ -202,10 +202,10 @@
 
   // Set method param
   document.querySelector("#{{ .Params.id }} [data-method]").value =
-    apiParams.method
+    apiParams?.method || "GET"
 
   // Append query params key value pairs
-  apiParams.queryParams.forEach((queryParam) => {
+  apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#{{ .Params.id }} [data-query-params]")
       .append(
@@ -213,14 +213,14 @@
       )
   })
   // Unhide Path Params section if > 0
-  if (apiParams.queryParams.length > 0) {
+  if (apiParams.queryParams?.length > 0) {
     document
       .querySelector("#{{ .Params.id }} [data-query-params-section]")
       .classList.remove("d-none")
   }
 
   // Append path params key value pairs
-  apiParams.pathParams.forEach((pathParam) => {
+  apiParams.pathParams?.forEach((pathParam) => {
     document
       .querySelector("#{{ .Params.id }} [data-request-path]")
       .append(
@@ -228,14 +228,14 @@
       )
   })
   // Unhide Query Params section if > 0
-  if (apiParams.pathParams.length > 0) {
+  if (apiParams.pathParams?.length > 0) {
     document
       .querySelector("#{{ .Params.id }} [data-request-path-section]")
       .classList.remove("d-none")
   }
 
   // Append header params key value pairs
-  apiParams.headerParams.forEach((headerParam) => {
+  apiParams.headerParams?.forEach((headerParam) => {
     document
       .querySelector("#{{ .Params.id }} [data-request-headers]")
       .append(
@@ -248,7 +248,7 @@
   })
 
   // Append auth params key value pairs
-  apiParams.authParams.forEach((authParam) => {
+  apiParams.authParams?.forEach((authParam) => {
     document
       .querySelector("#{{ .Params.id }} [data-request-auth]")
       .append(
@@ -349,9 +349,17 @@
       myRequest = {
         url,
         method,
-        auth: { AccountSid: auth.username, AuthToken: "*****" },
-        path_params: path,
-        query_params: params,
+      }
+      if (Object.entries(auth).length > 0) {
+        myRequest.auth = {}
+        myRequest.auth.username = auth.username
+        myRequest.auth.password = auth.password.slice(0, 5) + "*****"
+      }
+      if (Object.entries(path).length > 0) {
+        myRequest.path_params = path
+      }
+      if (Object.entries(params).length > 0) {
+        myRequest.query_params = params
       }
       console.log("MY REQUEST", myRequest)
 
