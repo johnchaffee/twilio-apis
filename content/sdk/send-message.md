@@ -7,7 +7,7 @@ tags:
   - cli
 ---
 
-How to send messages with the Twilio Messaging API.
+Sending messages with the Twilio Messaging API.
 
 {{< tabs "send-message" >}}
 

@@ -8,7 +8,7 @@ tags:
 # geekdocBreadcrumb: false
 ---
 
-How to manage Accounts and Subaccounts.
+Manage Accounts and Subaccounts.
 
 {{< tabs "accounts" >}}
 

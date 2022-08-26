@@ -1,7 +1,7 @@
 ---
 title: "Other"
 draft: false
-weight: 700
+# weight: 700
 tags:
 # geekdocCollapseSection: true
 geekdocBreadcrumb: true

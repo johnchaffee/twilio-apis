@@ -10,7 +10,7 @@ tags:
 # geekdocBreadcrumb: false
 ---
 
-How to add user verification to your web application with Twilio Verify.
+Sending and verifying One-Time-Passcodes (OTPs) with Twilio Verify.
 
 Send OTP, Check OTP.
 

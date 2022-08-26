@@ -8,7 +8,7 @@ tags:
 # geekdocBreadcrumb: false
 ---
 
-How to create and manage Hosted Numbers.
+Create and manage Hosted Numbers.
 
 {{< tabs "HostedNumbers" >}}
 

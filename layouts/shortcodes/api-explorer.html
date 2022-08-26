@@ -198,8 +198,7 @@
     })
 
   // Set url param
-  document.querySelector("#{{ .Params.id }} [data-url]").value =
-    apiParams.url
+  document.querySelector("#{{ .Params.id }} [data-url]").value = apiParams.url
 
   // Set method param
   document.querySelector("#{{ .Params.id }} [data-method]").value =
@@ -350,9 +349,11 @@
       myRequest = {
         url,
         method,
+        auth: { AccountSid: auth.username, AuthToken: "*****" },
         path_params: path,
         query_params: params,
       }
+      console.log("MY REQUEST", myRequest)
 
       // Hide previous Response if it existed
       document

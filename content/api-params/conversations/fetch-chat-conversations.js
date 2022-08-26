@@ -8,7 +8,7 @@ apiParams = {
   ],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{ConversationAccountSid}}" },
-    { key: "password", value: "{{ConversationAuthToken}}" },
+    { key: "username", value: "{{AccountSid}}" },
+    { key: "password", value: "{{AuthToken}}" },
   ],
 }

@@ -10,7 +10,7 @@ tags:
 # geekdocBreadcrumb: false
 ---
 
-How to send and fetch messages with the Twilio Messaging API.
+Provide feedback to Twilio on the deliverability of messages through different messaging channels.
 
 {{< tabs "feedback" >}}
 

@@ -10,7 +10,7 @@ tags:
 # geekdocBreadcrumb: false
 ---
 
-How to send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described [here](/messaging/test-credentials/).
+Send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described [here](/messaging/test-credentials/).
 
 
 {{< tabs "test" >}}

@@ -10,7 +10,7 @@ tags:
 # geekdocBreadcrumb: false
 ---
 
-How to add user verification to your web application with Twilio Verify.
+Create and manage Twilio Verify services.
 
 Create a Verification Service (once).
 

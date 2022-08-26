@@ -8,7 +8,7 @@ tags:
 # geekdocBreadcrumb: false
 ---
 
-How to create and manage addresses.
+Create and manage addresses.
 
 {{< tabs "addresses" >}}
 
