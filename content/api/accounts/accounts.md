@@ -17,19 +17,14 @@ Create a new Account instance resource as a subaccount of the one used to make t
 {{< api-explorer id=`create` file=`../../../api-params/accounts/create.js` >}}
 {{< /tab >}}
 
-{{< tab "FETCH" >}}
-Fetch an Account.
-{{< api-explorer id=`fetch` file=`../../../api-params/accounts/fetch.js` >}}
-{{< /tab >}}
-
 {{< tab "LIST" >}}
 Show all accounts.
 {{< api-explorer id=`list` file=`../../../api-params/accounts/list.js` >}}
 {{< /tab >}}
 
-{{< tab "QUERY" >}}
-Show all `query` accounts.
-{{< api-explorer id=`query` file=`../../../api-params/accounts/query.js` >}}
+{{< tab "FETCH" >}}
+Fetch an Account.
+{{< api-explorer id=`fetch` file=`../../../api-params/accounts/fetch.js` >}}
 {{< /tab >}}
 
 {{< tab "SUSPEND" >}}
