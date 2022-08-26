@@ -16,27 +16,27 @@ The new [Global Phone Numbers Catalog API](https://www.twilio.com/docs/phone-num
 
 {{< tab "LIST" >}}
 List all active phone numbers. Optionally filter by `PhoneNumber`, `Geography`, and `Type` (e.g. `local`, `mobile`, `tollfree`, `shortcode`.)
-{{< api-explorer id=`active-list` file=`../../../api-params/phone-numbers-v2/active-list.js` >}}
+{{< api-explorer id=`active-list` file=`../params/phone-numbers-v2/active-list.js` >}}
 {{< /tab >}}
 
 {{< tab "GET" >}}
-{{< api-explorer id=`active-get` file=`../../../api-params/phone-numbers-v2/active-get.js` >}}
+{{< api-explorer id=`active-get` file=`../params/phone-numbers-v2/active-get.js` >}}
 {{< /tab >}}
 
 {{< tab "PURCHASE" >}}
-{{< api-explorer id=`active-purchase` file=`../../../api-params/phone-numbers-v2/active-purchase.js` >}}
+{{< api-explorer id=`active-purchase` file=`../params/phone-numbers-v2/active-purchase.js` >}}
 {{< /tab >}}
 
 {{< tab "CONFIG" >}}
-{{< api-explorer id=`active-config` file=`../../../api-params/phone-numbers-v2/active-config.js` >}}
+{{< api-explorer id=`active-config` file=`../params/phone-numbers-v2/active-config.js` >}}
 {{< /tab >}}
 
 {{< tab "TRANSFER" >}}
-{{< api-explorer id=`active-transfer` file=`../../../api-params/phone-numbers-v2/active-transfer.js` >}}
+{{< api-explorer id=`active-transfer` file=`../params/phone-numbers-v2/active-transfer.js` >}}
 {{< /tab >}}
 
 {{< tab "DELETE" >}}
-{{< api-explorer id=`active-delete` file=`../../../api-params/phone-numbers-v2/active-delete.js` >}}
+{{< api-explorer id=`active-delete` file=`../params/phone-numbers-v2/active-delete.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

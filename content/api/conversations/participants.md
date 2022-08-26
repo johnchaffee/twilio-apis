@@ -15,27 +15,27 @@ Add/remove participants to/from a conversation.
 {{< tabs "participants" >}}
 
 {{< tab "Add SMS Participant" >}}
-{{< api-explorer id=`create-sms-participant` file=`../../../api-params/conversations/create-sms-participant.js` >}}
+{{< api-explorer id=`create-sms-participant` file=`../params/create-sms-participant.js` >}}
 {{< /tab >}}
 
 {{< tab "Add Chat Participant" >}}
-{{< api-explorer id=`create-chat-participant` file=`../../../api-params/conversations/create-chat-participant.js` >}}
+{{< api-explorer id=`create-chat-participant` file=`../params/create-chat-participant.js` >}}
 {{< /tab >}}
 
 {{< tab "List" >}}
-{{< api-explorer id=`list-participants` file=`../../../api-params/conversations/list-participants.js` >}}
+{{< api-explorer id=`list-participants` file=`../params/list-participants.js` >}}
 {{< /tab >}}
 
 {{< tab "Fetch" >}}
-{{< api-explorer id=`fetch-participant` file=`../../../api-params/conversations/fetch-participant.js` >}}
+{{< api-explorer id=`fetch-participant` file=`../params/fetch-participant.js` >}}
 {{< /tab >}}
 
 {{< tab "Update" >}}
-{{< api-explorer id=`update-participant` file=`../../../api-params/conversations/update-participant.js` >}}
+{{< api-explorer id=`update-participant` file=`../params/update-participant.js` >}}
 {{< /tab >}}
 
 {{< tab "Delete" >}}
-{{< api-explorer id=`delete-participant` file=`../../../api-params/conversations/delete-participant.js` >}}
+{{< api-explorer id=`delete-participant` file=`../params/delete-participant.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

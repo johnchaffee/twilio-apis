@@ -16,16 +16,16 @@ The new [Global Phone Numbers Catalog API](https://www.twilio.com/docs/phone-num
 
 {{< tab "TYPE" >}}
 Search for available phone numbers by type (e.g. `local`, `mobile`, `tollfree`, `shortcode`.)
-{{< api-explorer id=`available-type` file=`../../../api-params/phone-numbers-v2/available-type.js` >}}
+{{< api-explorer id=`available-type` file=`../params/phone-numbers-v2/available-type.js` >}}
 {{< /tab >}}
 
 {{< tab "USE CASE" >}}
 Search for available phone numbers by use case (e.g. `twilio.use-case.conversations.sms`, `twilio.use-case.marketing.sms`, `twilio.use-case.notifications.sms`, `twilio.use-case.verifications.sms`, `twilio.use-case.contact-centers.sms`.)
-{{< api-explorer id=`available-use-case` file=`../../../api-params/phone-numbers-v2/available-use-case.js` >}}
+{{< api-explorer id=`available-use-case` file=`../params/phone-numbers-v2/available-use-case.js` >}}
 {{< /tab >}}
 
 {{< tab "CAPABILITIES" >}}
-{{< api-explorer id=`available-capabilities` file=`../../../api-params/phone-numbers-v2/available-capabilities.js` >}}
+{{< api-explorer id=`available-capabilities` file=`../params/phone-numbers-v2/available-capabilities.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

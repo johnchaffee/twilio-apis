@@ -15,23 +15,23 @@ Add messages to a conversation.
 {{< tabs "messages" >}}
 
 {{< tab "Create" >}}
-{{< api-explorer id=`create-message` file=`../../../api-params/conversations/create-message.js` >}}
+{{< api-explorer id=`create-message` file=`../params/create-message.js` >}}
 {{< /tab >}}
 
 {{< tab "List" >}}
-{{< api-explorer id=`list-messages` file=`../../../api-params/conversations/list-messages.js` >}}
+{{< api-explorer id=`list-messages` file=`../params/list-messages.js` >}}
 {{< /tab >}}
 
 {{< tab "Fetch" >}}
-{{< api-explorer id=`fetch-message` file=`../../../api-params/conversations/fetch-message.js` >}}
+{{< api-explorer id=`fetch-message` file=`../params/fetch-message.js` >}}
 {{< /tab >}}
 
 {{< tab "Update" >}}
-{{< api-explorer id=`update-message` file=`../../../api-params/conversations/update-message.js` >}}
+{{< api-explorer id=`update-message` file=`../params/update-message.js` >}}
 {{< /tab >}}
 
 {{< tab "Delete" >}}
-{{< api-explorer id=`delete-message` file=`../../../api-params/conversations/delete-message.js` >}}
+{{< api-explorer id=`delete-message` file=`../params/delete-message.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}
