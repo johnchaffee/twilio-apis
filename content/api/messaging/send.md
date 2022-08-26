@@ -10,17 +10,12 @@ tags:
 # geekdocBreadcrumb: false
 ---
 
-How to send and fetch messages with the Twilio Messaging API.
+Send messages with the Twilio Messaging API.
 
 {{< tabs "send" >}}
 
 {{< tab "SMS" >}}
 {{< api-explorer id=`sms` file=`../../../api-params/messages/sms.js` >}}
-{{< /tab >}}
-
-{{< tab "STUDIO" >}}
-Send an HTTP request to a Studio Flow, which sends an outgoing message to the recipient and Waits for a Reply to generate an auto-response. 
-{{< api-explorer id=`studio` file=`../../../api-params/messages/studio.js` >}}
 {{< /tab >}}
 
 {{< tab "SCHEDULED" >}}
