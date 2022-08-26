@@ -1,5 +1,6 @@
 let apiParams
 let updatedKey
+let closest
 
 function updateResponseStatus(id, status) {
   console.log(`updateResponseStatus: .querySelector(#${id} [data-status])`)
@@ -34,19 +35,15 @@ function createKeyValuePair(id, key, value) {
   thisValue.value = value || null
 
   // Show EnvVar values
-  let curlyBraces
-  let nonCurlyBraces
-  let curlyBraceKey
-  if (thisValue.value.match(/\{\{\w+}}/)) {
-    curlyBraces = thisValue.value.match(/\{\{\w+}}/).toString()
-    nonCurlyBraces = thisValue.value.replace(curlyBraces, "")
-    curlyBraceKey = curlyBraces.replaceAll(/[{}]/g, "")
-    thisValue.value = nonCurlyBraces + localStorage.getItem(curlyBraceKey)
+  if (thisValue.value === "") {
+    thisValue.value = localStorage.getItem(key)
   }
 
   // Mask passwords and sensitive values
   if (
+    thisKey.value === "password" ||
     thisKey.value === "AuthToken" ||
+    thisKey.value === "StatusCallback" ||
     thisKey.value === "Authorization" ||
     thisKey.value === "BasicAuth"
   ) {
@@ -55,20 +52,12 @@ function createKeyValuePair(id, key, value) {
 
   // Update button
   element.querySelector("[data-update-btn]").addEventListener("click", (e) => {
-    let closest = e.target.closest("[data-key-value-pair]")
+    closest = e.target.closest("[data-key-value-pair]")
     console.log("UPDATE CLOSEST", closest)
     if (typeof newEnvVarDialog.showModal === "function") {
       console.log("NEW ENV VAR DIALOG", newEnvVarDialog)
       updatedKey = closest.querySelector("[data-key]").value
       console.log("UPDATED KEY", updatedKey)
-      if (updatedKey === "username") {
-        updatedKey = "AccountSid"
-        console.log("UPDATED KEY = username", updatedKey)
-      }
-      if (updatedKey === "password") {
-        updatedKey = "AuthToken"
-        console.log("UPDATED KEY = password", updatedKey)
-      }
       newEnvVarDialog.querySelector("[data-key]").value = updatedKey
       newEnvVarDialog.querySelector("[data-value]").value =
         localStorage.getItem(updatedKey)
@@ -78,6 +67,7 @@ function createKeyValuePair(id, key, value) {
       newEnvVarDialog.addEventListener("keydown", (e) => {
         if (e.code === "Enter") {
           setLocalStorage()
+          thisValue.value = localStorage.getItem(thisKey.value)
         }
       })
 
@@ -86,6 +76,7 @@ function createKeyValuePair(id, key, value) {
       newEnvVarDialog.addEventListener("close", function onClose() {
         if (newEnvVarDialog.returnValue !== "cancel") {
           setLocalStorage()
+          thisValue.value = localStorage.getItem(thisKey.value)
         }
       })
 
@@ -107,7 +98,7 @@ function createKeyValuePair(id, key, value) {
 
   // Remove button
   element.querySelector("[data-remove-btn]").addEventListener("click", (e) => {
-    let closest = e.target.closest("[data-key-value-pair]")
+    closest = e.target.closest("[data-key-value-pair]")
     closest.remove()
     if (id === "settings") {
       let localStorageKey = closest.querySelector("[data-key]").value

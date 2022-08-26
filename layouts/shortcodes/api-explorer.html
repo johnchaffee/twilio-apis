@@ -348,23 +348,6 @@
       console.log("PARAMS:", params)
       console.log("DATA:", data)
 
-      myRequest = {
-        url,
-        method,
-      }
-      if (Object.entries(auth).length > 0) {
-        myRequest.auth = {}
-        myRequest.auth.username = auth.username
-        myRequest.auth.password = auth.password.slice(0, 5) + "*****"
-      }
-      if (Object.entries(path).length > 0) {
-        myRequest.path_params = path
-      }
-      if (Object.entries(params).length > 0) {
-        myRequest.query_params = params
-      }
-      console.log("MY REQUEST", myRequest)
-
       // Hide previous Response if it existed
       document
         .querySelector("#{{ .Params.id }} [data-response-section]")
@@ -384,6 +367,24 @@
           console.log(
             `.querySelector("#{{ .Params.id }} [data-response-section]")`
           )
+          myRequest = {
+            url,
+            method,
+            auth,
+          }
+          if (auth.password) {
+            myRequest.auth.password = "**********"
+          }
+          if (Object.entries(path).length > 0) {
+            myRequest.path_params = path
+          }
+          if (Object.entries(params).length > 0) {
+            myRequest.query_params = params
+            if (params.StatusCallback) {
+              myRequest.query_params.StatusCallback = "**********"
+            }
+          }
+          console.log("MY REQUEST", myRequest)
           document
             .querySelector("#{{ .Params.id }} [data-response-section]")
             .classList.remove("d-none")
