@@ -25,7 +25,7 @@ function updateRequestBody(id, myRequest) {
     jsonReq
 }
 
-function createKeyValuePair(id, key, value) {
+function createKeyValuePair(id, key, value, placeholder) {
   const element = document
     .querySelector(`#${id} [data-key-value-template]`)
     .content.cloneNode(true)
@@ -33,6 +33,7 @@ function createKeyValuePair(id, key, value) {
   thisKey.value = key || null
   let thisValue = element.querySelector("[data-value]")
   thisValue.value = value || null
+  thisValue.placeholder = placeholder || "Value"
 
   // Show EnvVar values
   if (thisValue.value === "") {

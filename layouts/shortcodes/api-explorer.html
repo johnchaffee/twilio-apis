@@ -211,7 +211,7 @@
     document
       .querySelector("#{{ .Params.id }} [data-query-params]")
       .append(
-        createKeyValuePair("{{ .Params.id }}", queryParam.key, queryParam.value)
+        createKeyValuePair("{{ .Params.id }}", queryParam.key, queryParam.value, queryParam.placeholder)
       )
   })
   // Unhide Path Params section if > 0
@@ -226,7 +226,7 @@
     document
       .querySelector("#{{ .Params.id }} [data-request-path]")
       .append(
-        createKeyValuePair("{{ .Params.id }}", pathParam.key, pathParam.value)
+        createKeyValuePair("{{ .Params.id }}", pathParam.key, pathParam.value, pathParam.placeholder)
       )
   })
   // Unhide Query Params section if > 0
@@ -244,7 +244,8 @@
         createKeyValuePair(
           "{{ .Params.id }}",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -254,7 +255,7 @@
     document
       .querySelector("#{{ .Params.id }} [data-request-auth]")
       .append(
-        createKeyValuePair("{{ .Params.id }}", authParam.key, authParam.value)
+        createKeyValuePair("{{ .Params.id }}", authParam.key, authParam.value, authParam.placeholder)
       )
   })
 
