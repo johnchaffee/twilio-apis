@@ -14,7 +14,7 @@
 
   <meta name="description" content="Read, Update and Delete messages with the Twilio Messaging API.
 LIST  You may optionally query by To, From and DateSent.
-Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent=2022-08-25 . You can also specify an inequality, such as DateSent&gt;=YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&gt;=2022-08-25T22:00:00 to read messages sent on or after a specific time." />
+Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent&gt; YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&gt; 2022-08-25T22:00:00 to read messages sent on or after a specific time." />
 
     <title>Read, Update, Delete | Twilio API Explorer</title>
 
@@ -42,7 +42,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="Read, Update and Delete messages with the Twilio Messaging API.
 LIST  You may optionally query by To, From and DateSent.
-Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent=2022-08-25 . You can also specify an inequality, such as DateSent&gt;=YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&gt;=2022-08-25T22:00:00 to read messages sent on or after a specific time." />
+Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent&gt; YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&gt; 2022-08-25T22:00:00 to read messages sent on or after a specific time." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/messages/crud/" />
 
@@ -53,7 +53,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
 <meta name="twitter:title" content="Read, Update, Delete" />
   <meta name="twitter:description" content="Read, Update and Delete messages with the Twilio Messaging API.
 LIST  You may optionally query by To, From and DateSent.
-Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent=2022-08-25 . You can also specify an inequality, such as DateSent&gt;=YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&gt;=2022-08-25T22:00:00 to read messages sent on or after a specific time." />
+Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent&gt; YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&gt; 2022-08-25T22:00:00 to read messages sent on or after a specific time." />
 
 
   <script type="application/ld+json">
@@ -64,8 +64,8 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       "name": "Read, Update, Delete",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messages/crud/",
       "headline": "Read, Update, Delete",
-      "description": "Read, Update and Delete messages with the Twilio Messaging API.\nLIST  You may optionally query by To, From and DateSent.\nSpecify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent=2022-08-25 . You can also specify an inequality, such as DateSent\u003e=YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent\u003e=2022-08-25T22:00:00 to read messages sent on or after a specific time.",
-      "wordCount" : "1715",
+      "description": "Read, Update and Delete messages with the Twilio Messaging API.\nLIST  You may optionally query by To, From and DateSent.\nSpecify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent\u003e YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent\u003e 2022-08-25T22:00:00 to read messages sent on or after a specific time.",
+      "wordCount" : "1710",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -160,8 +160,9 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  defer
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
   crossorigin="anonymous"
 ></script>
 <script await src="https://johnchaffee.wiki/twilio-apis//api-explorer.js"></script>
@@ -1995,13 +1996,15 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
 
 
   <dialog id="newEnvVarDialog">
-    <form method="dialog" class="newEnvVarDialog">
+    <h3>Update Environment Variable</h3>
+    <form method="dialog">
       <div class="input-group my-2" data-key-value-pair>
         <input
           modal-data-key
           type="text"
           data-key
           class="form-control"
+          style="min-width:100px"
           placeholder="Key"
           value=""
         />
@@ -2010,6 +2013,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           type="text"
           data-value
           class="form-control"
+          style="min-width:330px"
           placeholder="Value"
           value=""
         />
@@ -2043,7 +2047,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>You may optionally query by <code>To</code>, <code>From</code> and <code>DateSent</code>.</p>
-<p>Specify a date as <code>YYYY-MM-DD</code> in GMT to read only messages sent on this date, such as <code>DateSent=2022-08-25</code> . You can also specify an inequality, such as <code>DateSent&gt;=YYYY-MM-DD</code> to read messages sent on or after midnight on a date or <code>DateSent&gt;=2022-08-25T22:00:00</code> to read messages sent on or after a specific time. Use <code>DateSent&lt;=</code>, to find messages sent before a specific date or time.</p>
+<p>Specify a date as <code>YYYY-MM-DD</code> in GMT to read only messages sent on this date, such as <code>DateSent</code> <code>2022-08-25</code> . You can also specify an inequality, such as <code>DateSent&gt;</code> <code>YYYY-MM-DD</code> to read messages sent on or after midnight on a date or <code>DateSent&gt;</code> <code>2022-08-25T22:00:00</code> to read messages sent on or after a specific time. Use <code>DateSent&lt;</code>, to find messages sent before a specific date or time.</p>
 <div class="p-4" id="list">
   <script await src="../params/crud/list.js"></script>
   <script>
@@ -2189,6 +2193,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         type="text"
         data-key
         class="form-control"
+        style="min-width: 100px"
         placeholder="Key"
         value=""
       />
@@ -2196,6 +2201,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         type="text"
         data-value
         class="form-control"
+        style="min-width: 330px"
         placeholder="Value"
         value=""
       />
@@ -2376,23 +2382,6 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       console.log("PARAMS:", params)
       console.log("DATA:", data)
 
-      myRequest = {
-        url,
-        method,
-      }
-      if (Object.entries(auth).length > 0) {
-        myRequest.auth = {}
-        myRequest.auth.username = auth.username
-        myRequest.auth.password = auth.password.slice(0, 5) + "*****"
-      }
-      if (Object.entries(path).length > 0) {
-        myRequest.path_params = path
-      }
-      if (Object.entries(params).length > 0) {
-        myRequest.query_params = params
-      }
-      console.log("MY REQUEST", myRequest)
-
       
       document
         .querySelector("#list [data-response-section]")
@@ -2412,6 +2401,24 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           console.log(
             `.querySelector("#list [data-response-section]")`
           )
+          myRequest = {
+            url,
+            method,
+            auth,
+          }
+          if (auth.password) {
+            myRequest.auth.password = "**********"
+          }
+          if (Object.entries(path).length > 0) {
+            myRequest.path_params = path
+          }
+          if (Object.entries(params).length > 0) {
+            myRequest.query_params = params
+            if (params.StatusCallback) {
+              myRequest.query_params.StatusCallback = "**********"
+            }
+          }
+          console.log("MY REQUEST", myRequest)
           document
             .querySelector("#list [data-response-section]")
             .classList.remove("d-none")
@@ -2586,6 +2593,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         type="text"
         data-key
         class="form-control"
+        style="min-width: 100px"
         placeholder="Key"
         value=""
       />
@@ -2593,6 +2601,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         type="text"
         data-value
         class="form-control"
+        style="min-width: 330px"
         placeholder="Value"
         value=""
       />
@@ -2773,23 +2782,6 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       console.log("PARAMS:", params)
       console.log("DATA:", data)
 
-      myRequest = {
-        url,
-        method,
-      }
-      if (Object.entries(auth).length > 0) {
-        myRequest.auth = {}
-        myRequest.auth.username = auth.username
-        myRequest.auth.password = auth.password.slice(0, 5) + "*****"
-      }
-      if (Object.entries(path).length > 0) {
-        myRequest.path_params = path
-      }
-      if (Object.entries(params).length > 0) {
-        myRequest.query_params = params
-      }
-      console.log("MY REQUEST", myRequest)
-
       
       document
         .querySelector("#read [data-response-section]")
@@ -2809,6 +2801,24 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           console.log(
             `.querySelector("#read [data-response-section]")`
           )
+          myRequest = {
+            url,
+            method,
+            auth,
+          }
+          if (auth.password) {
+            myRequest.auth.password = "**********"
+          }
+          if (Object.entries(path).length > 0) {
+            myRequest.path_params = path
+          }
+          if (Object.entries(params).length > 0) {
+            myRequest.query_params = params
+            if (params.StatusCallback) {
+              myRequest.query_params.StatusCallback = "**********"
+            }
+          }
+          console.log("MY REQUEST", myRequest)
           document
             .querySelector("#read [data-response-section]")
             .classList.remove("d-none")
@@ -2984,6 +2994,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         type="text"
         data-key
         class="form-control"
+        style="min-width: 100px"
         placeholder="Key"
         value=""
       />
@@ -2991,6 +3002,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         type="text"
         data-value
         class="form-control"
+        style="min-width: 330px"
         placeholder="Value"
         value=""
       />
@@ -3171,23 +3183,6 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       console.log("PARAMS:", params)
       console.log("DATA:", data)
 
-      myRequest = {
-        url,
-        method,
-      }
-      if (Object.entries(auth).length > 0) {
-        myRequest.auth = {}
-        myRequest.auth.username = auth.username
-        myRequest.auth.password = auth.password.slice(0, 5) + "*****"
-      }
-      if (Object.entries(path).length > 0) {
-        myRequest.path_params = path
-      }
-      if (Object.entries(params).length > 0) {
-        myRequest.query_params = params
-      }
-      console.log("MY REQUEST", myRequest)
-
       
       document
         .querySelector("#update [data-response-section]")
@@ -3207,6 +3202,24 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           console.log(
             `.querySelector("#update [data-response-section]")`
           )
+          myRequest = {
+            url,
+            method,
+            auth,
+          }
+          if (auth.password) {
+            myRequest.auth.password = "**********"
+          }
+          if (Object.entries(path).length > 0) {
+            myRequest.path_params = path
+          }
+          if (Object.entries(params).length > 0) {
+            myRequest.query_params = params
+            if (params.StatusCallback) {
+              myRequest.query_params.StatusCallback = "**********"
+            }
+          }
+          console.log("MY REQUEST", myRequest)
           document
             .querySelector("#update [data-response-section]")
             .classList.remove("d-none")
@@ -3381,6 +3394,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         type="text"
         data-key
         class="form-control"
+        style="min-width: 100px"
         placeholder="Key"
         value=""
       />
@@ -3388,6 +3402,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         type="text"
         data-value
         class="form-control"
+        style="min-width: 330px"
         placeholder="Value"
         value=""
       />
@@ -3568,23 +3583,6 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       console.log("PARAMS:", params)
       console.log("DATA:", data)
 
-      myRequest = {
-        url,
-        method,
-      }
-      if (Object.entries(auth).length > 0) {
-        myRequest.auth = {}
-        myRequest.auth.username = auth.username
-        myRequest.auth.password = auth.password.slice(0, 5) + "*****"
-      }
-      if (Object.entries(path).length > 0) {
-        myRequest.path_params = path
-      }
-      if (Object.entries(params).length > 0) {
-        myRequest.query_params = params
-      }
-      console.log("MY REQUEST", myRequest)
-
       
       document
         .querySelector("#delete [data-response-section]")
@@ -3604,6 +3602,24 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           console.log(
             `.querySelector("#delete [data-response-section]")`
           )
+          myRequest = {
+            url,
+            method,
+            auth,
+          }
+          if (auth.password) {
+            myRequest.auth.password = "**********"
+          }
+          if (Object.entries(path).length > 0) {
+            myRequest.path_params = path
+          }
+          if (Object.entries(params).length > 0) {
+            myRequest.query_params = params
+            if (params.StatusCallback) {
+              myRequest.query_params.StatusCallback = "**********"
+            }
+          }
+          console.log("MY REQUEST", myRequest)
           document
             .querySelector("#delete [data-response-section]")
             .classList.remove("d-none")

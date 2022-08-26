@@ -3,13 +3,12 @@ apiParams = {
   method: "GET",
   pathParams: [],
   queryParams: [
-    { key: "PhoneNumber", value: "+18336451195" },
     { key: "Geography.IsoCountry", value: "US" },
     { key: "Type", value: "" },
   ],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

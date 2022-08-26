@@ -65,7 +65,7 @@ SEND &amp; WAIT  Send an HTTP request to a Studio Flow, which sends an outgoing 
       "url" : "https://johnchaffee.wiki/twilio-apis/api/studio/studio/",
       "headline": "Studio Flow",
       "description": "Send an HTTP request with customer parameters to a Studio Flow.\nSEND \u0026 WAIT  Send an HTTP request to a Studio Flow, which sends an outgoing message to the recipient and Waits for a Reply to generate an auto-response.\n  console.log(\u0022API PARAMS: ..\\\/params\\\/studio.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request    Response Status:        ✎  ✕      document .",
-      "wordCount" : "442",
+      "wordCount" : "440",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -160,8 +160,9 @@ SEND &amp; WAIT  Send an HTTP request to a Studio Flow, which sends an outgoing 
     
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  defer
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
   crossorigin="anonymous"
 ></script>
 <script await src="https://johnchaffee.wiki/twilio-apis//api-explorer.js"></script>
@@ -1995,13 +1996,15 @@ SEND &amp; WAIT  Send an HTTP request to a Studio Flow, which sends an outgoing 
 
 
   <dialog id="newEnvVarDialog">
-    <form method="dialog" class="newEnvVarDialog">
+    <h3>Update Environment Variable</h3>
+    <form method="dialog">
       <div class="input-group my-2" data-key-value-pair>
         <input
           modal-data-key
           type="text"
           data-key
           class="form-control"
+          style="min-width:100px"
           placeholder="Key"
           value=""
         />
@@ -2010,6 +2013,7 @@ SEND &amp; WAIT  Send an HTTP request to a Studio Flow, which sends an outgoing 
           type="text"
           data-value
           class="form-control"
+          style="min-width:330px"
           placeholder="Value"
           value=""
         />
@@ -2188,6 +2192,7 @@ SEND &amp; WAIT  Send an HTTP request to a Studio Flow, which sends an outgoing 
         type="text"
         data-key
         class="form-control"
+        style="min-width: 100px"
         placeholder="Key"
         value=""
       />
@@ -2195,6 +2200,7 @@ SEND &amp; WAIT  Send an HTTP request to a Studio Flow, which sends an outgoing 
         type="text"
         data-value
         class="form-control"
+        style="min-width: 330px"
         placeholder="Value"
         value=""
       />
@@ -2375,23 +2381,6 @@ SEND &amp; WAIT  Send an HTTP request to a Studio Flow, which sends an outgoing 
       console.log("PARAMS:", params)
       console.log("DATA:", data)
 
-      myRequest = {
-        url,
-        method,
-      }
-      if (Object.entries(auth).length > 0) {
-        myRequest.auth = {}
-        myRequest.auth.username = auth.username
-        myRequest.auth.password = auth.password.slice(0, 5) + "*****"
-      }
-      if (Object.entries(path).length > 0) {
-        myRequest.path_params = path
-      }
-      if (Object.entries(params).length > 0) {
-        myRequest.query_params = params
-      }
-      console.log("MY REQUEST", myRequest)
-
       
       document
         .querySelector("#studio [data-response-section]")
@@ -2411,6 +2400,24 @@ SEND &amp; WAIT  Send an HTTP request to a Studio Flow, which sends an outgoing 
           console.log(
             `.querySelector("#studio [data-response-section]")`
           )
+          myRequest = {
+            url,
+            method,
+            auth,
+          }
+          if (auth.password) {
+            myRequest.auth.password = "**********"
+          }
+          if (Object.entries(path).length > 0) {
+            myRequest.path_params = path
+          }
+          if (Object.entries(params).length > 0) {
+            myRequest.query_params = params
+            if (params.StatusCallback) {
+              myRequest.query_params.StatusCallback = "**********"
+            }
+          }
+          console.log("MY REQUEST", myRequest)
           document
             .querySelector("#studio [data-response-section]")
             .classList.remove("d-none")

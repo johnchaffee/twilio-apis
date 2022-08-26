@@ -2,14 +2,14 @@ apiParams = {
   url: "https://messaging.twilio.com/v1/Services/{{MessagingServiceSid}}/Compliance/Usa2p",
   method: "GET",
   pathParams: [
-    { key: "MessagingServiceSid", value: "{{MessagingServiceSid}}" },
+    { key: "MessagingServiceSid", value: "" },
   ],
   queryParams: [],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
   ],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

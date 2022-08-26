@@ -5,11 +5,11 @@ apiParams = {
   queryParams: [
     { key: "Geography.IsoCountry", value: "US" },
     { key: "Type", value: "local" },
-    { key: "PageSize", value: "5" },
+    { key: "PageSize", value: "" },
   ],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

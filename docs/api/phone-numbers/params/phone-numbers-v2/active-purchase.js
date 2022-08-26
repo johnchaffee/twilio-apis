@@ -5,7 +5,7 @@ apiParams = {
   queryParams: [{ key: "PhoneNumber", value: "+14155551234" }],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

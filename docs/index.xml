@@ -129,7 +129,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
       <guid>https://johnchaffee.wiki/twilio-apis/api/messages/crud/</guid>
       <description>Read, Update and Delete messages with the Twilio Messaging API.
 LIST  You may optionally query by To, From and DateSent.
-Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent=2022-08-25 . You can also specify an inequality, such as DateSent&amp;gt;=YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&amp;gt;=2022-08-25T22:00:00 to read messages sent on or after a specific time.</description>
+Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent&amp;gt; YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&amp;gt; 2022-08-25T22:00:00 to read messages sent on or after a specific time.</description>
     </item>
     
     <item>

@@ -5,9 +5,9 @@ apiParams = {
   queryParams: [
     {
       key: "HostedNumberOrderSids",
-      value: "{{HostedNumberSid}}",
+      value: "",
     },
-    { key: "AddressSid", value: "{{AddressSid}}" },
+    { key: "AddressSid", value: "" },
     { key: "ContactTitle", value: "President" },
     { key: "ContactPhoneNumber", value: "+12063996576" },
     { key: "Email", value: "owner@example.com" },
@@ -18,7 +18,7 @@ apiParams = {
   ],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

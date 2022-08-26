@@ -1,13 +1,13 @@
 apiParams = {
   url: "https://preview.twilio.com/Numbers/ActiveNumbers/{{PhoneNumberSid}}",
   method: "POST",
-  pathParams: [{ key: "PhoneNumberSid", value: "{{PhoneNumberSid}}" }],
+  pathParams: [{ key: "PhoneNumberSid", value: "" }],
   queryParams: [
-    { key: "AccountSid", value: "{{SubAccountSid}}" },
+    { key: "AccountSid", value: "" },
   ],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

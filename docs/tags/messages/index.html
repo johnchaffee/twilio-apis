@@ -116,8 +116,9 @@
     
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  defer
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
   crossorigin="anonymous"
 ></script>
 <script await src="https://johnchaffee.wiki/twilio-apis//api-explorer.js"></script>
@@ -1972,7 +1973,7 @@ SMS    console.log("API PARAMS: ..\/params\/send\/sms.js", apiParams)  GET POST 
       <section class="gdoc-markdown">
         Read, Update and Delete messages with the Twilio Messaging API.
 LIST  You may optionally query by To, From and DateSent.
-Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent=2022-08-25 . You can also specify an inequality, such as DateSent&gt;=YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&gt;=2022-08-25T22:00:00 to read messages sent on or after a specific time.
+Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent&gt; YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&gt; 2022-08-25T22:00:00 to read messages sent on or after a specific time.
       </section>
 
       <div class="gdoc-post__readmore">

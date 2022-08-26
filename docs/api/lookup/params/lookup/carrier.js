@@ -5,7 +5,7 @@ apiParams = {
   queryParams: [{ key: "Type", value: "carrier" }],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

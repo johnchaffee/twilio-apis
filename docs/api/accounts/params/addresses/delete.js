@@ -2,13 +2,13 @@ apiParams = {
   url: "https://api.twilio.com/2010-04-01/Accounts/{{AccountSid}}/Addresses/{{AddressSid}}.json",
   method: "DELETE",
   pathParams: [
-    { key: "AccountSid", value: "{{AccountSid}}" },
-    { key: "AddressSid", value: "{{AddressSid}}" },
+    { key: "AccountSid", value: "" },
+    { key: "AddressSid", value: "" },
   ],
   queryParams: [],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }

@@ -1,11 +1,11 @@
 apiParams = {
   url: "https://preview.twilio.com/HostedNumbers/HostedNumberOrders/{{HostedNumberSid}}",
   method: "GET",
-  pathParams: [{ key: "HostedNumberSid", value: "{{HostedNumberSid}}" }],
+  pathParams: [{ key: "HostedNumberSid", value: "" }],
   queryParams: [],
   headerParams: [],
   authParams: [
-    { key: "username", value: "{{AccountSid}}" },
-    { key: "password", value: "{{AuthToken}}" },
+    { key: "username", value: "" },
+    { key: "password", value: "" },
   ],
 }
