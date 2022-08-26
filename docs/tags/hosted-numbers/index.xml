@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/tags/hosted-numbers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hosted Numbers</title>
-      <link>https://johnchaffee.wiki/twilio-apis/api/numbers/hosted-numbers/</link>
+      <link>https://johnchaffee.wiki/twilio-apis/api/phone-numbers/hosted-numbers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://johnchaffee.wiki/twilio-apis/api/numbers/hosted-numbers/</guid>
-      <description>How to create and manage Hosted Numbers.
+      <guid>https://johnchaffee.wiki/twilio-apis/api/phone-numbers/hosted-numbers/</guid>
+      <description>Create and manage Hosted Numbers.
 CREATE  Create a Hosted Numbers Order request.
-  console.log(&#34;API PARAMS: ..\/..\/..\/api-params\/hosted-numbers\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+  console.log(&#34;API PARAMS: ..\/params\/hosted-numbers\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
   </channel>
