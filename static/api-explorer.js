@@ -1,5 +1,6 @@
 let apiParams
 let updatedKey
+let updatedValue
 let closest
 
 function updateResponseStatus(id, status) {
@@ -59,7 +60,7 @@ function createKeyValuePair(id, key, value, placeholder) {
     if (typeof newEnvVarDialog.showModal === "function") {
       console.log("NEW ENV VAR DIALOG", newEnvVarDialog)
       updatedKey = closest.querySelector("[data-key]").value
-      console.log("UPDATED KEY", updatedKey)
+      console.log("UPDATEDKEY", updatedKey)
       newEnvVarDialog.querySelector("[data-key]").value = updatedKey
       newEnvVarDialog.querySelector("[data-value]").value =
         localStorage.getItem(updatedKey)
@@ -88,10 +89,16 @@ function createKeyValuePair(id, key, value, placeholder) {
           newEnvVarDialog.querySelector("[data-key]").value !== "" &&
           newEnvVarDialog.querySelector("[data-value]").value !== ""
         ) {
-          localStorage.setItem(
-            updatedKey,
-            newEnvVarDialog.querySelector("[data-value]").value
-          )
+          updatedValue = newEnvVarDialog.querySelector("[data-value]").value
+          // store the updatedValue for the updatedKey
+          localStorage.setItem(updatedKey, updatedValue)
+          // Update the value of all matching keys that are already loaded in browser
+          document.querySelectorAll("[data-key]").forEach((item) => {
+            if (item.value === updatedKey) {
+              item.parentElement.querySelector("[data-value]").value =
+              updatedValue
+            }
+          })
           // window.location = window.location.href
         }
       }
