@@ -3,7 +3,7 @@ apiParams = {
   method: "POST",
   pathParams: [],
   queryParams: [
-    { key: "FriendlyName", value: "My First Verify Service" },
+    { key: "FriendlyName", value: "", placeholder: "My First Verify Service" },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },

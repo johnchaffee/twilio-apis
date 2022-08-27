@@ -3,7 +3,7 @@ apiParams = {
   method: "POST",
   pathParams: [],
   queryParams: [
-    { key: "FriendlyName", value: "My Messaging Service" },
+    { key: "FriendlyName", value: "", placeholder: "My Messaging Service" },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },

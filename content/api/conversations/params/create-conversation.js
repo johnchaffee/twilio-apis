@@ -3,7 +3,7 @@ apiParams = {
   method: "POST",
   pathParams: [],
   queryParams: [
-    { key: "FriendlyName", value: "My Conversation" },
+    { key: "FriendlyName", value: "", placeholder: "My Conversation" },
     { key: "Timers.Inactive", value: "", placeholder: "PT10M, PT1H" },
     { key: "Timers.Closed", value: "", placeholder: "PT1H, PT4H" },
   ],

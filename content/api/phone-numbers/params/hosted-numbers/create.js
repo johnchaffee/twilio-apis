@@ -5,7 +5,7 @@ apiParams = {
   queryParams: [
     { key: "PhoneNumber", value: "" },
     { key: "SmsCapability", value: "true" },
-    { key: "FriendlyName", value: "My Hosted Phone Number" },
+    { key: "FriendlyName", value: "", placeholder: "My Hosted Phone Number" },
     { key: "StatusCallbackUrl", value: "" },
     { key: "StatusCallbackMethod", value: "POST" },
   ],

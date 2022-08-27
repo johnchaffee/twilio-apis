@@ -4,7 +4,7 @@ apiParams = {
   pathParams: [
     { key: "MessagingServiceSid", value: "" },
   ],
-  queryParams: [{ key: "FriendlyName", value: "My Messaging Service" }],
+  queryParams: [{ key: "FriendlyName", value: "", placeholder: "My Messaging Service" }],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
   ],
