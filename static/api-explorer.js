@@ -64,6 +64,8 @@ function createKeyValuePair(id, key, value, placeholder) {
       newEnvVarDialog.querySelector("[data-key]").value = updatedKey
       newEnvVarDialog.querySelector("[data-value]").value =
         localStorage.getItem(updatedKey)
+      newEnvVarDialog.querySelector("[data-value]").placeholder =
+        closest.querySelector("[data-value]").placeholder
       newEnvVarDialog.showModal()
 
       // Enter key listener -> Listen for the "Enter" key in newEnvVar modal
@@ -96,7 +98,7 @@ function createKeyValuePair(id, key, value, placeholder) {
           document.querySelectorAll("[data-key]").forEach((item) => {
             if (item.value === updatedKey) {
               item.parentElement.querySelector("[data-value]").value =
-              updatedValue
+                updatedValue
             }
           })
           // window.location = window.location.href
