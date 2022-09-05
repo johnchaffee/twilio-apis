@@ -1,6 +1,6 @@
 ---
 title: "Studio"
-draft: false
+draft: true
 # weight: 700
 tags:
 # geekdocCollapseSection: true
