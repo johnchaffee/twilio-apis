@@ -13,7 +13,7 @@
 
 
   <meta name="description" content="Send messages with the Twilio Messaging API.
-SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request    Response Status:        &#9998;  &#10005;      document ." />
+SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
 
     <title>Send Message | Twilio API Explorer</title>
 
@@ -40,7 +40,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   />
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="Send messages with the Twilio Messaging API.
-SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        ✎  ✕      document ." />
+SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/messages/send/" />
 
@@ -50,7 +50,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Send Message" />
   <meta name="twitter:description" content="Send messages with the Twilio Messaging API.
-SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        ✎  ✕      document ." />
+SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 
 
   <script type="application/ld+json">
@@ -61,8 +61,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       "name": "Send Message",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messages/send/",
       "headline": "Send Message",
-      "description": "Send messages with the Twilio Messaging API.\nSMS    console.log(\u0022API PARAMS: ..\\\/params\\\/send\\\/sms.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request    Response Status:        ✎  ✕      document .",
-      "wordCount" : "2462",
+      "description": "Send messages with the Twilio Messaging API.\nSMS    console.log(\u0022API PARAMS: ..\\\/params\\\/send\\\/sms.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
+      "wordCount" : "2570",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1478,96 +1478,6 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
               
                 <span class="flex">
                   <a
-                    href="/twilio-apis/api/studio/"
-                    class="gdoc-nav__entry"
-                  >
-                    Studio
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-              
-  
-
-
-  <ul class="gdoc-nav__list">
-    
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/twilio-apis/api/studio/studio/"
-                    class="gdoc-nav__entry"
-                  >
-                    Studio Flow
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-  </ul>
-
-            
-          </li>
-        
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
                     href="/twilio-apis/api/verify/"
                     class="gdoc-nav__entry"
                   >
@@ -2160,13 +2070,15 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="sms-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="sms-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -2240,7 +2152,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#sms [data-query-params]")
       .append(
-        createKeyValuePair("sms", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "sms",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -2255,7 +2172,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#sms [data-request-path]")
       .append(
-        createKeyValuePair("sms", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "sms",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -2273,7 +2195,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         createKeyValuePair(
           "sms",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -2283,7 +2206,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#sms [data-request-auth]")
       .append(
-        createKeyValuePair("sms", authParam.key, authParam.value)
+        createKeyValuePair(
+          "sms",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -2404,10 +2332,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -2560,13 +2490,15 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="scheduled-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="scheduled-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -2640,7 +2572,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#scheduled [data-query-params]")
       .append(
-        createKeyValuePair("scheduled", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "scheduled",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -2655,7 +2592,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#scheduled [data-request-path]")
       .append(
-        createKeyValuePair("scheduled", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "scheduled",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -2673,7 +2615,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         createKeyValuePair(
           "scheduled",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -2683,7 +2626,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#scheduled [data-request-auth]")
       .append(
-        createKeyValuePair("scheduled", authParam.key, authParam.value)
+        createKeyValuePair(
+          "scheduled",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -2804,10 +2752,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -2960,13 +2910,15 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="mms-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="mms-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3040,7 +2992,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#mms [data-query-params]")
       .append(
-        createKeyValuePair("mms", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "mms",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3055,7 +3012,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#mms [data-request-path]")
       .append(
-        createKeyValuePair("mms", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "mms",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3073,7 +3035,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         createKeyValuePair(
           "mms",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3083,7 +3046,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#mms [data-request-auth]")
       .append(
-        createKeyValuePair("mms", authParam.key, authParam.value)
+        createKeyValuePair(
+          "mms",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -3204,10 +3172,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -3361,13 +3331,15 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="whatsapp-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="whatsapp-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3441,7 +3413,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#whatsapp [data-query-params]")
       .append(
-        createKeyValuePair("whatsapp", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "whatsapp",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3456,7 +3433,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#whatsapp [data-request-path]")
       .append(
-        createKeyValuePair("whatsapp", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "whatsapp",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3474,7 +3456,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         createKeyValuePair(
           "whatsapp",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3484,7 +3467,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#whatsapp [data-request-auth]")
       .append(
-        createKeyValuePair("whatsapp", authParam.key, authParam.value)
+        createKeyValuePair(
+          "whatsapp",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -3605,10 +3593,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -3762,13 +3752,15 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="facebook-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="facebook-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3842,7 +3834,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#facebook [data-query-params]")
       .append(
-        createKeyValuePair("facebook", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "facebook",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3857,7 +3854,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#facebook [data-request-path]")
       .append(
-        createKeyValuePair("facebook", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "facebook",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3875,7 +3877,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         createKeyValuePair(
           "facebook",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3885,7 +3888,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#facebook [data-request-auth]")
       .append(
-        createKeyValuePair("facebook", authParam.key, authParam.value)
+        createKeyValuePair(
+          "facebook",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -4006,10 +4014,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -4162,13 +4172,15 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="google-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="google-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -4242,7 +4254,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#google [data-query-params]")
       .append(
-        createKeyValuePair("google", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "google",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -4257,7 +4274,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#google [data-request-path]")
       .append(
-        createKeyValuePair("google", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "google",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -4275,7 +4297,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         createKeyValuePair(
           "google",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -4285,7 +4308,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     document
       .querySelector("#google [data-request-auth]")
       .append(
-        createKeyValuePair("google", authParam.key, authParam.value)
+        createKeyValuePair(
+          "google",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -4406,10 +4434,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"

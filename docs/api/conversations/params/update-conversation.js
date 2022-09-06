@@ -3,17 +3,17 @@ apiParams = {
   method: "POST",
   pathParams: [{ key: "ConversationSid", value: "" }],
   queryParams: [
-    { key: "FriendlyName", value: "Update Conversation Name" },
-    { key: "State", value: "inactive" },
-    { key: "Timers.Inactive", value: "PT10M" },
-    { key: "Timers.Closed", value: "PT1H" },
-    { key: "Attributes", value: `{"foo":"bar"}` },
+    { key: "FriendlyName", value: "", placeholder: "New Name" },
+    { key: "State", value: "", placeholder: "active, inactive, close" },
+    { key: "Timers.Inactive", value: "", placeholder: "PT10M" },
+    { key: "Timers.Closed", value: "", placeholder: "PT1H" },
+    { key: "Attributes", value: "", placeholder: `{"foo":"bar"}` },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
   ],
   authParams: [
-    { key: "username", value: "" },
-    { key: "password", value: "" },
+    { key: "username", value: "", placeholder: "Enter AccountSID or API Key SID" },
+    { key: "password", value: "", placeholder: "Enter AuthToken or API Key Secret" },
   ],
 }

@@ -14,7 +14,7 @@
 
   <meta name="description" content="Phone Numbers API lets you search for available numbers, purchase and manage numbers.
 ACTIVE  List all active phone numbers.
-  console.log(&#34;API PARAMS: ..\/params\/phone-numbers\/incoming.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request    Response Status:        &#9998;  &#10005;      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/phone-numbers\/incoming.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
 
     <title>Numbers v1 | Twilio API Explorer</title>
 
@@ -42,7 +42,7 @@ ACTIVE  List all active phone numbers.
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="Phone Numbers API lets you search for available numbers, purchase and manage numbers.
 ACTIVE  List all active phone numbers.
-  console.log(&#34;API PARAMS: ..\/params\/phone-numbers\/incoming.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        ✎  ✕      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/phone-numbers\/incoming.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/phone-numbers/phone-numbers-v1/" />
 
@@ -53,7 +53,7 @@ ACTIVE  List all active phone numbers.
 <meta name="twitter:title" content="Numbers v1" />
   <meta name="twitter:description" content="Phone Numbers API lets you search for available numbers, purchase and manage numbers.
 ACTIVE  List all active phone numbers.
-  console.log(&#34;API PARAMS: ..\/params\/phone-numbers\/incoming.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        ✎  ✕      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/phone-numbers\/incoming.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 
 
   <script type="application/ld+json">
@@ -64,8 +64,8 @@ ACTIVE  List all active phone numbers.
       "name": "Numbers v1",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/phone-numbers/phone-numbers-v1/",
       "headline": "Numbers v1",
-      "description": "Phone Numbers API lets you search for available numbers, purchase and manage numbers.\nACTIVE  List all active phone numbers.\n  console.log(\u0022API PARAMS: ..\\\/params\\\/phone-numbers\\\/incoming.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request    Response Status:        ✎  ✕      document .",
-      "wordCount" : "2057",
+      "description": "Phone Numbers API lets you search for available numbers, purchase and manage numbers.\nACTIVE  List all active phone numbers.\n  console.log(\u0022API PARAMS: ..\\\/params\\\/phone-numbers\\\/incoming.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
+      "wordCount" : "2147",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1481,96 +1481,6 @@ ACTIVE  List all active phone numbers.
               
                 <span class="flex">
                   <a
-                    href="/twilio-apis/api/studio/"
-                    class="gdoc-nav__entry"
-                  >
-                    Studio
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-              
-  
-
-
-  <ul class="gdoc-nav__list">
-    
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/twilio-apis/api/studio/studio/"
-                    class="gdoc-nav__entry"
-                  >
-                    Studio Flow
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-  </ul>
-
-            
-          </li>
-        
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
                     href="/twilio-apis/api/verify/"
                     class="gdoc-nav__entry"
                   >
@@ -2168,13 +2078,15 @@ ACTIVE  List all active phone numbers.
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="active-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="active-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -2248,7 +2160,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#active [data-query-params]")
       .append(
-        createKeyValuePair("active", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "active",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -2263,7 +2180,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#active [data-request-path]")
       .append(
-        createKeyValuePair("active", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "active",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -2281,7 +2203,8 @@ ACTIVE  List all active phone numbers.
         createKeyValuePair(
           "active",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -2291,7 +2214,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#active [data-request-auth]")
       .append(
-        createKeyValuePair("active", authParam.key, authParam.value)
+        createKeyValuePair(
+          "active",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -2412,10 +2340,12 @@ ACTIVE  List all active phone numbers.
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -2569,13 +2499,15 @@ ACTIVE  List all active phone numbers.
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="country-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="country-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -2649,7 +2581,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#country [data-query-params]")
       .append(
-        createKeyValuePair("country", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "country",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -2664,7 +2601,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#country [data-request-path]")
       .append(
-        createKeyValuePair("country", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "country",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -2682,7 +2624,8 @@ ACTIVE  List all active phone numbers.
         createKeyValuePair(
           "country",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -2692,7 +2635,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#country [data-request-auth]")
       .append(
-        createKeyValuePair("country", authParam.key, authParam.value)
+        createKeyValuePair(
+          "country",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -2813,10 +2761,12 @@ ACTIVE  List all active phone numbers.
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -2970,13 +2920,15 @@ ACTIVE  List all active phone numbers.
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="local-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="local-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3050,7 +3002,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#local [data-query-params]")
       .append(
-        createKeyValuePair("local", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "local",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3065,7 +3022,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#local [data-request-path]")
       .append(
-        createKeyValuePair("local", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "local",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3083,7 +3045,8 @@ ACTIVE  List all active phone numbers.
         createKeyValuePair(
           "local",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3093,7 +3056,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#local [data-request-auth]")
       .append(
-        createKeyValuePair("local", authParam.key, authParam.value)
+        createKeyValuePair(
+          "local",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -3214,10 +3182,12 @@ ACTIVE  List all active phone numbers.
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -3371,13 +3341,15 @@ ACTIVE  List all active phone numbers.
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="tollfree-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="tollfree-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3451,7 +3423,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#tollfree [data-query-params]")
       .append(
-        createKeyValuePair("tollfree", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "tollfree",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3466,7 +3443,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#tollfree [data-request-path]")
       .append(
-        createKeyValuePair("tollfree", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "tollfree",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3484,7 +3466,8 @@ ACTIVE  List all active phone numbers.
         createKeyValuePair(
           "tollfree",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3494,7 +3477,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#tollfree [data-request-auth]")
       .append(
-        createKeyValuePair("tollfree", authParam.key, authParam.value)
+        createKeyValuePair(
+          "tollfree",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -3615,10 +3603,12 @@ ACTIVE  List all active phone numbers.
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -3772,13 +3762,15 @@ ACTIVE  List all active phone numbers.
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="mobile-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="mobile-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3852,7 +3844,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#mobile [data-query-params]")
       .append(
-        createKeyValuePair("mobile", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "mobile",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3867,7 +3864,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#mobile [data-request-path]")
       .append(
-        createKeyValuePair("mobile", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "mobile",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3885,7 +3887,8 @@ ACTIVE  List all active phone numbers.
         createKeyValuePair(
           "mobile",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3895,7 +3898,12 @@ ACTIVE  List all active phone numbers.
     document
       .querySelector("#mobile [data-request-auth]")
       .append(
-        createKeyValuePair("mobile", authParam.key, authParam.value)
+        createKeyValuePair(
+          "mobile",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -4016,10 +4024,12 @@ ACTIVE  List all active phone numbers.
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"

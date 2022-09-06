@@ -13,7 +13,7 @@
       <guid>https://johnchaffee.wiki/twilio-apis/api/accounts/accounts/</guid>
       <description>Manage Accounts and Subaccounts.
 CREATE  Create a new Account instance resource as a subaccount of the one used to make the request
-  console.log(&#34;API PARAMS: ..\/params\/accounts\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+  console.log(&#34;API PARAMS: ..\/params\/accounts\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
   </channel>

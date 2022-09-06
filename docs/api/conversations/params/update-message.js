@@ -6,14 +6,14 @@ apiParams = {
     { key: "MessageSid", value: "" },
   ],
   queryParams: [
-    { key: "DateUpdated", value: "2019-05-15T13:37:35Z" },
-    { key: "Attributes", value: `{"flag":true}` },
+    { key: "DateUpdated", value: "", placeholder: "2019-05-15T13:37:35Z" },
+    { key: "Attributes", value: "", placeholder: `{"flag":true}` },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
   ],
   authParams: [
-    { key: "username", value: "" },
-    { key: "password", value: "" },
+    { key: "username", value: "", placeholder: "Enter AccountSID or API Key SID" },
+    { key: "password", value: "", placeholder: "Enter AuthToken or API Key Secret" },
   ],
 }

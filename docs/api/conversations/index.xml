@@ -12,7 +12,7 @@
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/conversations/conversations/</guid>
       <description>Create and manage conversations.
-Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/conversations/participants/</guid>
       <description>Add/remove participants to/from a conversation.
-Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-participant.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-participant.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/conversations/messages/</guid>
       <description>Add messages to a conversation.
-Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/conversations/participant-conversations/</guid>
       <description>Fetch conversations by participant.
-Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-conversations.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-conversations.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
   </channel>

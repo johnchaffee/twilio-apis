@@ -13,7 +13,7 @@
 
 
   <meta name="description" content="Add messages to a conversation.
-Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request    Response Status:        &#9998;  &#10005;      document ." />
+Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
 
     <title>Messages | Twilio API Explorer</title>
 
@@ -40,7 +40,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
   />
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="Add messages to a conversation.
-Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        ✎  ✕      document ." />
+Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/conversations/messages/" />
 
@@ -50,7 +50,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Messages" />
   <meta name="twitter:description" content="Add messages to a conversation.
-Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        ✎  ✕      document ." />
+Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 
 
   <script type="application/ld+json">
@@ -61,8 +61,8 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
       "name": "Messages",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/conversations/messages/",
       "headline": "Messages",
-      "description": "Add messages to a conversation.\nCreate    console.log(\u0022API PARAMS: ..\\\/params\\\/create-message.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request    Response Status:        ✎  ✕      document .",
-      "wordCount" : "2015",
+      "description": "Add messages to a conversation.\nCreate    console.log(\u0022API PARAMS: ..\\\/params\\\/create-message.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
+      "wordCount" : "2105",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1478,96 +1478,6 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
               
                 <span class="flex">
                   <a
-                    href="/twilio-apis/api/studio/"
-                    class="gdoc-nav__entry"
-                  >
-                    Studio
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-              
-  
-
-
-  <ul class="gdoc-nav__list">
-    
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/twilio-apis/api/studio/studio/"
-                    class="gdoc-nav__entry"
-                  >
-                    Studio Flow
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-  </ul>
-
-            
-          </li>
-        
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
                     href="/twilio-apis/api/verify/"
                     class="gdoc-nav__entry"
                   >
@@ -2160,13 +2070,15 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="create-message-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="create-message-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -2240,7 +2152,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#create-message [data-query-params]")
       .append(
-        createKeyValuePair("create-message", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "create-message",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -2255,7 +2172,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#create-message [data-request-path]")
       .append(
-        createKeyValuePair("create-message", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "create-message",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -2273,7 +2195,8 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         createKeyValuePair(
           "create-message",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -2283,7 +2206,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#create-message [data-request-auth]")
       .append(
-        createKeyValuePair("create-message", authParam.key, authParam.value)
+        createKeyValuePair(
+          "create-message",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -2404,10 +2332,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -2560,13 +2490,15 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="list-messages-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="list-messages-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -2640,7 +2572,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#list-messages [data-query-params]")
       .append(
-        createKeyValuePair("list-messages", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "list-messages",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -2655,7 +2592,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#list-messages [data-request-path]")
       .append(
-        createKeyValuePair("list-messages", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "list-messages",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -2673,7 +2615,8 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         createKeyValuePair(
           "list-messages",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -2683,7 +2626,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#list-messages [data-request-auth]")
       .append(
-        createKeyValuePair("list-messages", authParam.key, authParam.value)
+        createKeyValuePair(
+          "list-messages",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -2804,10 +2752,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -2960,13 +2910,15 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="fetch-message-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="fetch-message-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3040,7 +2992,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#fetch-message [data-query-params]")
       .append(
-        createKeyValuePair("fetch-message", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "fetch-message",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3055,7 +3012,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#fetch-message [data-request-path]")
       .append(
-        createKeyValuePair("fetch-message", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "fetch-message",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3073,7 +3035,8 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         createKeyValuePair(
           "fetch-message",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3083,7 +3046,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#fetch-message [data-request-auth]")
       .append(
-        createKeyValuePair("fetch-message", authParam.key, authParam.value)
+        createKeyValuePair(
+          "fetch-message",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -3204,10 +3172,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -3360,13 +3330,15 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="update-message-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="update-message-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3440,7 +3412,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#update-message [data-query-params]")
       .append(
-        createKeyValuePair("update-message", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "update-message",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3455,7 +3432,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#update-message [data-request-path]")
       .append(
-        createKeyValuePair("update-message", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "update-message",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3473,7 +3455,8 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         createKeyValuePair(
           "update-message",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3483,7 +3466,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#update-message [data-request-auth]")
       .append(
-        createKeyValuePair("update-message", authParam.key, authParam.value)
+        createKeyValuePair(
+          "update-message",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -3604,10 +3592,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -3760,13 +3750,15 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="delete-message-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="delete-message-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3840,7 +3832,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#delete-message [data-query-params]")
       .append(
-        createKeyValuePair("delete-message", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "delete-message",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3855,7 +3852,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#delete-message [data-request-path]")
       .append(
-        createKeyValuePair("delete-message", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "delete-message",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3873,7 +3875,8 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         createKeyValuePair(
           "delete-message",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3883,7 +3886,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     document
       .querySelector("#delete-message [data-request-auth]")
       .append(
-        createKeyValuePair("delete-message", authParam.key, authParam.value)
+        createKeyValuePair(
+          "delete-message",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -4004,10 +4012,12 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"

@@ -65,7 +65,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messages/crud/",
       "headline": "Read, Update, Delete",
       "description": "Read, Update and Delete messages with the Twilio Messaging API.\nLIST  You may optionally query by To, From and DateSent.\nSpecify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent\u003e YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent\u003e 2022-08-25T22:00:00 to read messages sent on or after a specific time.",
-      "wordCount" : "1710",
+      "wordCount" : "1782",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1481,96 +1481,6 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
               
                 <span class="flex">
                   <a
-                    href="/twilio-apis/api/studio/"
-                    class="gdoc-nav__entry"
-                  >
-                    Studio
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-              
-  
-
-
-  <ul class="gdoc-nav__list">
-    
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/twilio-apis/api/studio/studio/"
-                    class="gdoc-nav__entry"
-                  >
-                    Studio Flow
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-  </ul>
-
-            
-          </li>
-        
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
                     href="/twilio-apis/api/verify/"
                     class="gdoc-nav__entry"
                   >
@@ -2165,13 +2075,15 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="list-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="list-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -2245,7 +2157,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     document
       .querySelector("#list [data-query-params]")
       .append(
-        createKeyValuePair("list", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "list",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -2260,7 +2177,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     document
       .querySelector("#list [data-request-path]")
       .append(
-        createKeyValuePair("list", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "list",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -2278,7 +2200,8 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         createKeyValuePair(
           "list",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -2288,7 +2211,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     document
       .querySelector("#list [data-request-auth]")
       .append(
-        createKeyValuePair("list", authParam.key, authParam.value)
+        createKeyValuePair(
+          "list",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -2409,10 +2337,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -2565,13 +2495,15 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="read-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="read-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -2645,7 +2577,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     document
       .querySelector("#read [data-query-params]")
       .append(
-        createKeyValuePair("read", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "read",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -2660,7 +2597,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     document
       .querySelector("#read [data-request-path]")
       .append(
-        createKeyValuePair("read", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "read",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -2678,7 +2620,8 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         createKeyValuePair(
           "read",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -2688,7 +2631,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     document
       .querySelector("#read [data-request-auth]")
       .append(
-        createKeyValuePair("read", authParam.key, authParam.value)
+        createKeyValuePair(
+          "read",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -2809,10 +2757,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -2966,13 +2916,15 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="update-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="update-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3046,7 +2998,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     document
       .querySelector("#update [data-query-params]")
       .append(
-        createKeyValuePair("update", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "update",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3061,7 +3018,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     document
       .querySelector("#update [data-request-path]")
       .append(
-        createKeyValuePair("update", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "update",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3079,7 +3041,8 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         createKeyValuePair(
           "update",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3089,7 +3052,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     document
       .querySelector("#update [data-request-auth]")
       .append(
-        createKeyValuePair("update", authParam.key, authParam.value)
+        createKeyValuePair(
+          "update",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -3210,10 +3178,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -3366,13 +3336,15 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="delete-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="delete-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3446,7 +3418,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     document
       .querySelector("#delete [data-query-params]")
       .append(
-        createKeyValuePair("delete", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "delete",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3461,7 +3438,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     document
       .querySelector("#delete [data-request-path]")
       .append(
-        createKeyValuePair("delete", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "delete",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3479,7 +3461,8 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         createKeyValuePair(
           "delete",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3489,7 +3472,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     document
       .querySelector("#delete [data-request-auth]")
       .append(
-        createKeyValuePair("delete", authParam.key, authParam.value)
+        createKeyValuePair(
+          "delete",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -3610,10 +3598,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"

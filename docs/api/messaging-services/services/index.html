@@ -12,7 +12,7 @@
 <meta name="generator" content="Hugo 0.96.0" />
 
 
-  <meta name="description" content="CREATE    console.log(&#34;API PARAMS: ..\/params\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request    Response Status:        &#9998;  &#10005;      document .querySelector(&#34;#create [data-add-query-param-btn]&#34;" />
+  <meta name="description" content="CREATE    console.log(&#34;API PARAMS: ..\/params\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
 
     <title>Services | Twilio API Explorer</title>
 
@@ -38,7 +38,7 @@
     content="Services"
   />
   <meta property="og:site_name" content="Twilio API Explorer" />
-  <meta property="og:description" content="CREATE    console.log(&#34;API PARAMS: ..\/params\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        ✎  ✕      document .querySelector(&#34;#create [data-add-query-param-btn]&#34;" />
+  <meta property="og:description" content="CREATE    console.log(&#34;API PARAMS: ..\/params\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/messaging-services/services/" />
 
@@ -47,7 +47,7 @@
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Services" />
-  <meta name="twitter:description" content="CREATE    console.log(&#34;API PARAMS: ..\/params\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        ✎  ✕      document .querySelector(&#34;#create [data-add-query-param-btn]&#34;" />
+  <meta name="twitter:description" content="CREATE    console.log(&#34;API PARAMS: ..\/params\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 
 
   <script type="application/ld+json">
@@ -58,8 +58,8 @@
       "name": "Services",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messaging-services/services/",
       "headline": "Services",
-      "description": "CREATE    console.log(\u0022API PARAMS: ..\\\/params\\\/create.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request    Response Status:        ✎  ✕      document .querySelector(\u0022#create [data-add-query-param-btn]\u0022",
-      "wordCount" : "2010",
+      "description": "CREATE    console.log(\u0022API PARAMS: ..\\\/params\\\/create.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
+      "wordCount" : "2100",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1475,96 +1475,6 @@
               
                 <span class="flex">
                   <a
-                    href="/twilio-apis/api/studio/"
-                    class="gdoc-nav__entry"
-                  >
-                    Studio
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-              
-  
-
-
-  <ul class="gdoc-nav__list">
-    
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/twilio-apis/api/studio/studio/"
-                    class="gdoc-nav__entry"
-                  >
-                    Studio Flow
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-  </ul>
-
-            
-          </li>
-        
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
                     href="/twilio-apis/api/verify/"
                     class="gdoc-nav__entry"
                   >
@@ -2156,13 +2066,15 @@
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="create-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="create-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -2236,7 +2148,12 @@
     document
       .querySelector("#create [data-query-params]")
       .append(
-        createKeyValuePair("create", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "create",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -2251,7 +2168,12 @@
     document
       .querySelector("#create [data-request-path]")
       .append(
-        createKeyValuePair("create", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "create",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -2269,7 +2191,8 @@
         createKeyValuePair(
           "create",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -2279,7 +2202,12 @@
     document
       .querySelector("#create [data-request-auth]")
       .append(
-        createKeyValuePair("create", authParam.key, authParam.value)
+        createKeyValuePair(
+          "create",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -2400,10 +2328,12 @@
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -2556,13 +2486,15 @@
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="list-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="list-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -2636,7 +2568,12 @@
     document
       .querySelector("#list [data-query-params]")
       .append(
-        createKeyValuePair("list", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "list",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -2651,7 +2588,12 @@
     document
       .querySelector("#list [data-request-path]")
       .append(
-        createKeyValuePair("list", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "list",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -2669,7 +2611,8 @@
         createKeyValuePair(
           "list",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -2679,7 +2622,12 @@
     document
       .querySelector("#list [data-request-auth]")
       .append(
-        createKeyValuePair("list", authParam.key, authParam.value)
+        createKeyValuePair(
+          "list",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -2800,10 +2748,12 @@
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -2956,13 +2906,15 @@
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="get-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="get-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3036,7 +2988,12 @@
     document
       .querySelector("#get [data-query-params]")
       .append(
-        createKeyValuePair("get", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "get",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3051,7 +3008,12 @@
     document
       .querySelector("#get [data-request-path]")
       .append(
-        createKeyValuePair("get", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "get",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3069,7 +3031,8 @@
         createKeyValuePair(
           "get",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3079,7 +3042,12 @@
     document
       .querySelector("#get [data-request-auth]")
       .append(
-        createKeyValuePair("get", authParam.key, authParam.value)
+        createKeyValuePair(
+          "get",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -3200,10 +3168,12 @@
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -3356,13 +3326,15 @@
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="update-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="update-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3436,7 +3408,12 @@
     document
       .querySelector("#update [data-query-params]")
       .append(
-        createKeyValuePair("update", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "update",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3451,7 +3428,12 @@
     document
       .querySelector("#update [data-request-path]")
       .append(
-        createKeyValuePair("update", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "update",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3469,7 +3451,8 @@
         createKeyValuePair(
           "update",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3479,7 +3462,12 @@
     document
       .querySelector("#update [data-request-auth]")
       .append(
-        createKeyValuePair("update", authParam.key, authParam.value)
+        createKeyValuePair(
+          "update",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -3600,10 +3588,12 @@
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -3756,13 +3746,15 @@
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="delete-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="delete-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3836,7 +3828,12 @@
     document
       .querySelector("#delete [data-query-params]")
       .append(
-        createKeyValuePair("delete", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "delete",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3851,7 +3848,12 @@
     document
       .querySelector("#delete [data-request-path]")
       .append(
-        createKeyValuePair("delete", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "delete",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3869,7 +3871,8 @@
         createKeyValuePair(
           "delete",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3879,7 +3882,12 @@
     document
       .querySelector("#delete [data-request-auth]")
       .append(
-        createKeyValuePair("delete", authParam.key, authParam.value)
+        createKeyValuePair(
+          "delete",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -4000,10 +4008,12 @@
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"

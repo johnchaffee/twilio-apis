@@ -12,7 +12,7 @@
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messages/send/</guid>
       <description>Send messages with the Twilio Messaging API.
-SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       <guid>https://johnchaffee.wiki/twilio-apis/api/messages/feedback/</guid>
       <description>Provide feedback to Twilio on the deliverability of messages through different messaging channels.
 PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
-  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messages/test/</guid>
       <description>Send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.
-SUCCESS    console.log(&#34;API PARAMS: ..\/params\/test\/success.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request    Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+SUCCESS    console.log(&#34;API PARAMS: ..\/params\/test\/success.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
   </channel>

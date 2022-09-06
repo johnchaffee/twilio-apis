@@ -3,12 +3,19 @@ apiParams = {
   method: "GET",
   pathParams: [],
   queryParams: [
-    { key: "Geography.IsoCountry", value: "US" },
-    { key: "Type", value: "" },
+    { key: "Type", value: "", placeholder: "local,mobile,tollfree,shortcode" },
   ],
   headerParams: [],
   authParams: [
-    { key: "username", value: "" },
-    { key: "password", value: "" },
+    {
+      key: "username",
+      value: "",
+      placeholder: "Enter AccountSID or API Key SID",
+    },
+    {
+      key: "password",
+      value: "",
+      placeholder: "Enter AuthToken or API Key Secret",
+    },
   ],
 }

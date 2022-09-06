@@ -14,7 +14,7 @@
 
   <meta name="description" content="Manage Accounts and Subaccounts.
 CREATE  Create a new Account instance resource as a subaccount of the one used to make the request
-  console.log(&#34;API PARAMS: ..\/params\/accounts\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request    Response Status:        &#9998;  &#10005;      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/accounts\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
 
     <title>Accounts | Twilio API Explorer</title>
 
@@ -42,7 +42,7 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="Manage Accounts and Subaccounts.
 CREATE  Create a new Account instance resource as a subaccount of the one used to make the request
-  console.log(&#34;API PARAMS: ..\/params\/accounts\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        ✎  ✕      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/accounts\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/accounts/accounts/" />
 
@@ -53,7 +53,7 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
 <meta name="twitter:title" content="Accounts" />
   <meta name="twitter:description" content="Manage Accounts and Subaccounts.
 CREATE  Create a new Account instance resource as a subaccount of the one used to make the request
-  console.log(&#34;API PARAMS: ..\/params\/accounts\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request    Response Status:        ✎  ✕      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/accounts\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 
 
   <script type="application/ld+json">
@@ -64,8 +64,8 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
       "name": "Accounts",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/accounts/accounts/",
       "headline": "Accounts",
-      "description": "Manage Accounts and Subaccounts.\nCREATE  Create a new Account instance resource as a subaccount of the one used to make the request\n  console.log(\u0022API PARAMS: ..\\\/params\\\/accounts\\\/create.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request    Response Status:        ✎  ✕      document .",
-      "wordCount" : "2450",
+      "description": "Manage Accounts and Subaccounts.\nCREATE  Create a new Account instance resource as a subaccount of the one used to make the request\n  console.log(\u0022API PARAMS: ..\\\/params\\\/accounts\\\/create.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
+      "wordCount" : "2558",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1481,96 +1481,6 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
               
                 <span class="flex">
                   <a
-                    href="/twilio-apis/api/studio/"
-                    class="gdoc-nav__entry"
-                  >
-                    Studio
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-              
-  
-
-
-  <ul class="gdoc-nav__list">
-    
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/twilio-apis/api/studio/studio/"
-                    class="gdoc-nav__entry"
-                  >
-                    Studio Flow
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-  </ul>
-
-            
-          </li>
-        
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
                     href="/twilio-apis/api/verify/"
                     class="gdoc-nav__entry"
                   >
@@ -2164,13 +2074,15 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="create-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="create-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -2244,7 +2156,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#create [data-query-params]")
       .append(
-        createKeyValuePair("create", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "create",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -2259,7 +2176,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#create [data-request-path]")
       .append(
-        createKeyValuePair("create", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "create",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -2277,7 +2199,8 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
         createKeyValuePair(
           "create",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -2287,7 +2210,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#create [data-request-auth]")
       .append(
-        createKeyValuePair("create", authParam.key, authParam.value)
+        createKeyValuePair(
+          "create",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -2408,10 +2336,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -2565,13 +2495,15 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="list-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="list-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -2645,7 +2577,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#list [data-query-params]")
       .append(
-        createKeyValuePair("list", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "list",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -2660,7 +2597,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#list [data-request-path]")
       .append(
-        createKeyValuePair("list", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "list",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -2678,7 +2620,8 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
         createKeyValuePair(
           "list",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -2688,7 +2631,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#list [data-request-auth]")
       .append(
-        createKeyValuePair("list", authParam.key, authParam.value)
+        createKeyValuePair(
+          "list",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -2809,10 +2757,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -2966,13 +2916,15 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="fetch-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="fetch-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3046,7 +2998,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#fetch [data-query-params]")
       .append(
-        createKeyValuePair("fetch", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "fetch",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3061,7 +3018,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#fetch [data-request-path]")
       .append(
-        createKeyValuePair("fetch", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "fetch",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3079,7 +3041,8 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
         createKeyValuePair(
           "fetch",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3089,7 +3052,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#fetch [data-request-auth]")
       .append(
-        createKeyValuePair("fetch", authParam.key, authParam.value)
+        createKeyValuePair(
+          "fetch",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -3210,10 +3178,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -3367,13 +3337,15 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="suspend-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="suspend-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3447,7 +3419,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#suspend [data-query-params]")
       .append(
-        createKeyValuePair("suspend", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "suspend",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3462,7 +3439,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#suspend [data-request-path]")
       .append(
-        createKeyValuePair("suspend", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "suspend",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3480,7 +3462,8 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
         createKeyValuePair(
           "suspend",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3490,7 +3473,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#suspend [data-request-auth]")
       .append(
-        createKeyValuePair("suspend", authParam.key, authParam.value)
+        createKeyValuePair(
+          "suspend",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -3611,10 +3599,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -3768,13 +3758,15 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="activate-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="activate-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -3848,7 +3840,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#activate [data-query-params]")
       .append(
-        createKeyValuePair("activate", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "activate",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -3863,7 +3860,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#activate [data-request-path]")
       .append(
-        createKeyValuePair("activate", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "activate",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -3881,7 +3883,8 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
         createKeyValuePair(
           "activate",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -3891,7 +3894,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#activate [data-request-auth]")
       .append(
-        createKeyValuePair("activate", authParam.key, authParam.value)
+        createKeyValuePair(
+          "activate",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -4012,10 +4020,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"
@@ -4169,13 +4179,15 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <h3>Request</h3>
-    <div>
-      <pre><code 
-        class="language-js"
-        id="close-json-request-body"
-        data-json-request-body
-      ></code></pre>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="close-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
     </div>
     <h3>Response</h3>
     <div class="d-flex my-2">
@@ -4249,7 +4261,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#close [data-query-params]")
       .append(
-        createKeyValuePair("close", queryParam.key, queryParam.value)
+        createKeyValuePair(
+          "close",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
       )
   })
   
@@ -4264,7 +4281,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#close [data-request-path]")
       .append(
-        createKeyValuePair("close", pathParam.key, pathParam.value)
+        createKeyValuePair(
+          "close",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
       )
   })
   
@@ -4282,7 +4304,8 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
         createKeyValuePair(
           "close",
           headerParam.key,
-          headerParam.value
+          headerParam.value,
+          headerParam.placeholder
         )
       )
   })
@@ -4292,7 +4315,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
     document
       .querySelector("#close [data-request-auth]")
       .append(
-        createKeyValuePair("close", authParam.key, authParam.value)
+        createKeyValuePair(
+          "close",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
       )
   })
 
@@ -4413,10 +4441,12 @@ CREATE  Create a new Account instance resource as a subaccount of the one used t
           if (auth.password) {
             myRequest.auth.password = "**********"
           }
-          if (Object.entries(path).length > 0) {
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
             myRequest.path_params = path
           }
-          if (Object.entries(params).length > 0) {
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
             myRequest.query_params = params
             if (params.StatusCallback) {
               myRequest.query_params.StatusCallback = "**********"

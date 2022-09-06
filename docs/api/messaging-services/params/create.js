@@ -3,13 +3,13 @@ apiParams = {
   method: "POST",
   pathParams: [],
   queryParams: [
-    { key: "FriendlyName", value: "My Messaging Service" },
+    { key: "FriendlyName", value: "", placeholder: "My Messaging Service" },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
   ],
   authParams: [
-    { key: "username", value: "" },
-    { key: "password", value: "" },
+    { key: "username", value: "", placeholder: "Enter AccountSID or API Key SID" },
+    { key: "password", value: "", placeholder: "Enter AuthToken or API Key Secret" },
   ],
 }
