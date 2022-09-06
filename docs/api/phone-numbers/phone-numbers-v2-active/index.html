@@ -65,7 +65,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
       "url" : "https://johnchaffee.wiki/twilio-apis/api/phone-numbers/phone-numbers-v2-active/",
       "headline": "Numbers v2 - Active",
       "description": "The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.\nLIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography, and Type (e.g. local, mobile, tollfree, shortcode.)\n  console.log(\u0022API PARAMS: ..\\\/params\\\/phone-numbers-v2\\\/active-list.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "2557",
+      "wordCount" : "2653",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1968,7 +1968,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -1983,7 +1983,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2156,6 +2156,26 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#active-list [data-method]").value
+  this_submit = document.querySelector("#active-list [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#active-list [data-query-params]")
@@ -2256,19 +2276,13 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
         document.querySelector("#active-list [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "active-list",
-          document.querySelector("#active-list [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "active-list",
+        document.querySelector("#active-list [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "active-list",
-          document.querySelector("#active-list [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2388,7 +2402,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2403,7 +2417,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2576,6 +2590,26 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#active-get [data-method]").value
+  this_submit = document.querySelector("#active-get [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#active-get [data-query-params]")
@@ -2676,19 +2710,13 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
         document.querySelector("#active-get [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "active-get",
-          document.querySelector("#active-get [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "active-get",
+        document.querySelector("#active-get [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "active-get",
-          document.querySelector("#active-get [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2808,7 +2836,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2823,7 +2851,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2996,6 +3024,26 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#active-purchase [data-method]").value
+  this_submit = document.querySelector("#active-purchase [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#active-purchase [data-query-params]")
@@ -3096,19 +3144,13 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
         document.querySelector("#active-purchase [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "active-purchase",
-          document.querySelector("#active-purchase [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "active-purchase",
+        document.querySelector("#active-purchase [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "active-purchase",
-          document.querySelector("#active-purchase [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3228,7 +3270,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3243,7 +3285,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3416,6 +3458,26 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#active-config [data-method]").value
+  this_submit = document.querySelector("#active-config [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#active-config [data-query-params]")
@@ -3516,19 +3578,13 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
         document.querySelector("#active-config [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "active-config",
-          document.querySelector("#active-config [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "active-config",
+        document.querySelector("#active-config [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "active-config",
-          document.querySelector("#active-config [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3648,7 +3704,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3663,7 +3719,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3836,6 +3892,26 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#active-transfer [data-method]").value
+  this_submit = document.querySelector("#active-transfer [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#active-transfer [data-query-params]")
@@ -3936,19 +4012,13 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
         document.querySelector("#active-transfer [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "active-transfer",
-          document.querySelector("#active-transfer [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "active-transfer",
+        document.querySelector("#active-transfer [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "active-transfer",
-          document.querySelector("#active-transfer [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -4068,7 +4138,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -4083,7 +4153,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -4256,6 +4326,26 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#active-delete [data-method]").value
+  this_submit = document.querySelector("#active-delete [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#active-delete [data-query-params]")
@@ -4356,19 +4446,13 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
         document.querySelector("#active-delete [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "active-delete",
-          document.querySelector("#active-delete [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "active-delete",
+        document.querySelector("#active-delete [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "active-delete",
-          document.querySelector("#active-delete [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs

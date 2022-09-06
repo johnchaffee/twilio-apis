@@ -62,7 +62,7 @@ Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-co
       "url" : "https://johnchaffee.wiki/twilio-apis/api/conversations/participant-conversations/",
       "headline": "Participant Conversations",
       "description": "Fetch conversations by participant.\nFetch SMS Conversations    console.log(\u0022API PARAMS: ..\\\/params\\\/fetch-sms-conversations.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "848",
+      "wordCount" : "880",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1960,7 +1960,7 @@ Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-co
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -1975,7 +1975,7 @@ Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-co
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2148,6 +2148,26 @@ Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-co
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#fetch-sms-conversations [data-method]").value
+  this_submit = document.querySelector("#fetch-sms-conversations [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#fetch-sms-conversations [data-query-params]")
@@ -2248,19 +2268,13 @@ Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-co
         document.querySelector("#fetch-sms-conversations [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "fetch-sms-conversations",
-          document.querySelector("#fetch-sms-conversations [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "fetch-sms-conversations",
+        document.querySelector("#fetch-sms-conversations [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "fetch-sms-conversations",
-          document.querySelector("#fetch-sms-conversations [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2380,7 +2394,7 @@ Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-co
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2395,7 +2409,7 @@ Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-co
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2568,6 +2582,26 @@ Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-co
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#fetch-chat-conversations [data-method]").value
+  this_submit = document.querySelector("#fetch-chat-conversations [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#fetch-chat-conversations [data-query-params]")
@@ -2668,19 +2702,13 @@ Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-co
         document.querySelector("#fetch-chat-conversations [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "fetch-chat-conversations",
-          document.querySelector("#fetch-chat-conversations [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "fetch-chat-conversations",
+        document.querySelector("#fetch-chat-conversations [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "fetch-chat-conversations",
-          document.querySelector("#fetch-chat-conversations [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs

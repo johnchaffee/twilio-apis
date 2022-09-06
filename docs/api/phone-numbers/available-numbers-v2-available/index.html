@@ -65,7 +65,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
       "url" : "https://johnchaffee.wiki/twilio-apis/api/phone-numbers/available-numbers-v2-available/",
       "headline": "Numbers v2 - Available",
       "description": "The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.\nTYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)\n  console.log(\u0022API PARAMS: ..\\\/params\\\/phone-numbers-v2\\\/available-type.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "1307",
+      "wordCount" : "1355",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1968,7 +1968,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -1983,7 +1983,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2156,6 +2156,26 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#available-type [data-method]").value
+  this_submit = document.querySelector("#available-type [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#available-type [data-query-params]")
@@ -2256,19 +2276,13 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
         document.querySelector("#available-type [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "available-type",
-          document.querySelector("#available-type [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "available-type",
+        document.querySelector("#available-type [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "available-type",
-          document.querySelector("#available-type [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2389,7 +2403,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2404,7 +2418,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2577,6 +2591,26 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#available-use-case [data-method]").value
+  this_submit = document.querySelector("#available-use-case [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#available-use-case [data-query-params]")
@@ -2677,19 +2711,13 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
         document.querySelector("#available-use-case [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "available-use-case",
-          document.querySelector("#available-use-case [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "available-use-case",
+        document.querySelector("#available-use-case [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "available-use-case",
-          document.querySelector("#available-use-case [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2809,7 +2837,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2824,7 +2852,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2997,6 +3025,26 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#available-capabilities [data-method]").value
+  this_submit = document.querySelector("#available-capabilities [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#available-capabilities [data-query-params]")
@@ -3097,19 +3145,13 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
         document.querySelector("#available-capabilities [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "available-capabilities",
-          document.querySelector("#available-capabilities [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "available-capabilities",
+        document.querySelector("#available-capabilities [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "available-capabilities",
-          document.querySelector("#available-capabilities [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs

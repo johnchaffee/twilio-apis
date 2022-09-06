@@ -59,7 +59,7 @@
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messaging-services/senders/",
       "headline": "Senders",
       "description": "LIST A2P    console.log(\u0022API PARAMS: ..\\\/params\\\/a2p.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "2109",
+      "wordCount" : "2189",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1956,7 +1956,7 @@
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -1971,7 +1971,7 @@
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2144,6 +2144,26 @@
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#create [data-method]").value
+  this_submit = document.querySelector("#create [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#create [data-query-params]")
@@ -2244,19 +2264,13 @@
         document.querySelector("#create [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "create",
-          document.querySelector("#create [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "create",
+        document.querySelector("#create [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "create",
-          document.querySelector("#create [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2376,7 +2390,7 @@
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2391,7 +2405,7 @@
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2564,6 +2578,26 @@
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#phone-numbers [data-method]").value
+  this_submit = document.querySelector("#phone-numbers [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#phone-numbers [data-query-params]")
@@ -2664,19 +2698,13 @@
         document.querySelector("#phone-numbers [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "phone-numbers",
-          document.querySelector("#phone-numbers [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "phone-numbers",
+        document.querySelector("#phone-numbers [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "phone-numbers",
-          document.querySelector("#phone-numbers [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2796,7 +2824,7 @@
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2811,7 +2839,7 @@
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2984,6 +3012,26 @@
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#add-phone-number [data-method]").value
+  this_submit = document.querySelector("#add-phone-number [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#add-phone-number [data-query-params]")
@@ -3084,19 +3132,13 @@
         document.querySelector("#add-phone-number [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "add-phone-number",
-          document.querySelector("#add-phone-number [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "add-phone-number",
+        document.querySelector("#add-phone-number [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "add-phone-number",
-          document.querySelector("#add-phone-number [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3216,7 +3258,7 @@
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3231,7 +3273,7 @@
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3404,6 +3446,26 @@
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#short-codes [data-method]").value
+  this_submit = document.querySelector("#short-codes [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#short-codes [data-query-params]")
@@ -3504,19 +3566,13 @@
         document.querySelector("#short-codes [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "short-codes",
-          document.querySelector("#short-codes [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "short-codes",
+        document.querySelector("#short-codes [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "short-codes",
-          document.querySelector("#short-codes [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3636,7 +3692,7 @@
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3651,7 +3707,7 @@
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3824,6 +3880,26 @@
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#alpha-senders [data-method]").value
+  this_submit = document.querySelector("#alpha-senders [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#alpha-senders [data-query-params]")
@@ -3924,19 +4000,13 @@
         document.querySelector("#alpha-senders [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "alpha-senders",
-          document.querySelector("#alpha-senders [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "alpha-senders",
+        document.querySelector("#alpha-senders [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "alpha-senders",
-          document.querySelector("#alpha-senders [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs

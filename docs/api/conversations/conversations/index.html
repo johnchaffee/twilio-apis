@@ -62,7 +62,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
       "url" : "https://johnchaffee.wiki/twilio-apis/api/conversations/conversations/",
       "headline": "Conversations",
       "description": "Create and manage conversations.\nCreate    console.log(\u0022API PARAMS: ..\\\/params\\\/create-conversation.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "2104",
+      "wordCount" : "2184",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1960,7 +1960,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -1975,7 +1975,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2148,6 +2148,26 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#create-conversation [data-method]").value
+  this_submit = document.querySelector("#create-conversation [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#create-conversation [data-query-params]")
@@ -2248,19 +2268,13 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
         document.querySelector("#create-conversation [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "create-conversation",
-          document.querySelector("#create-conversation [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "create-conversation",
+        document.querySelector("#create-conversation [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "create-conversation",
-          document.querySelector("#create-conversation [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2380,7 +2394,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2395,7 +2409,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2568,6 +2582,26 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#list-conversations [data-method]").value
+  this_submit = document.querySelector("#list-conversations [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#list-conversations [data-query-params]")
@@ -2668,19 +2702,13 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
         document.querySelector("#list-conversations [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "list-conversations",
-          document.querySelector("#list-conversations [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "list-conversations",
+        document.querySelector("#list-conversations [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "list-conversations",
-          document.querySelector("#list-conversations [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2800,7 +2828,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2815,7 +2843,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2988,6 +3016,26 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#fetch-conversation [data-method]").value
+  this_submit = document.querySelector("#fetch-conversation [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#fetch-conversation [data-query-params]")
@@ -3088,19 +3136,13 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
         document.querySelector("#fetch-conversation [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "fetch-conversation",
-          document.querySelector("#fetch-conversation [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "fetch-conversation",
+        document.querySelector("#fetch-conversation [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "fetch-conversation",
-          document.querySelector("#fetch-conversation [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3220,7 +3262,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3235,7 +3277,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3408,6 +3450,26 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#update-conversation [data-method]").value
+  this_submit = document.querySelector("#update-conversation [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#update-conversation [data-query-params]")
@@ -3508,19 +3570,13 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
         document.querySelector("#update-conversation [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "update-conversation",
-          document.querySelector("#update-conversation [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "update-conversation",
+        document.querySelector("#update-conversation [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "update-conversation",
-          document.querySelector("#update-conversation [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3640,7 +3696,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3655,7 +3711,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3828,6 +3884,26 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#delete-conversation [data-method]").value
+  this_submit = document.querySelector("#delete-conversation [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#delete-conversation [data-query-params]")
@@ -3928,19 +4004,13 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-conversation.js&#34;, 
         document.querySelector("#delete-conversation [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "delete-conversation",
-          document.querySelector("#delete-conversation [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "delete-conversation",
+        document.querySelector("#delete-conversation [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "delete-conversation",
-          document.querySelector("#delete-conversation [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs

@@ -62,7 +62,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
       "url" : "https://johnchaffee.wiki/twilio-apis/api/conversations/participants/",
       "headline": "Participants",
       "description": "Add\/remove participants to\/from a conversation.\nAdd SMS Participant    console.log(\u0022API PARAMS: ..\\\/params\\\/create-sms-participant.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "2529",
+      "wordCount" : "2625",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1960,7 +1960,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -1975,7 +1975,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2148,6 +2148,26 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#create-sms-participant [data-method]").value
+  this_submit = document.querySelector("#create-sms-participant [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#create-sms-participant [data-query-params]")
@@ -2248,19 +2268,13 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
         document.querySelector("#create-sms-participant [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "create-sms-participant",
-          document.querySelector("#create-sms-participant [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "create-sms-participant",
+        document.querySelector("#create-sms-participant [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "create-sms-participant",
-          document.querySelector("#create-sms-participant [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2380,7 +2394,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2395,7 +2409,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2568,6 +2582,26 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#create-chat-participant [data-method]").value
+  this_submit = document.querySelector("#create-chat-participant [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#create-chat-participant [data-query-params]")
@@ -2668,19 +2702,13 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
         document.querySelector("#create-chat-participant [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "create-chat-participant",
-          document.querySelector("#create-chat-participant [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "create-chat-participant",
+        document.querySelector("#create-chat-participant [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "create-chat-participant",
-          document.querySelector("#create-chat-participant [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2800,7 +2828,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2815,7 +2843,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2988,6 +3016,26 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#list-participants [data-method]").value
+  this_submit = document.querySelector("#list-participants [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#list-participants [data-query-params]")
@@ -3088,19 +3136,13 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
         document.querySelector("#list-participants [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "list-participants",
-          document.querySelector("#list-participants [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "list-participants",
+        document.querySelector("#list-participants [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "list-participants",
-          document.querySelector("#list-participants [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3220,7 +3262,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3235,7 +3277,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3408,6 +3450,26 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#fetch-participant [data-method]").value
+  this_submit = document.querySelector("#fetch-participant [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#fetch-participant [data-query-params]")
@@ -3508,19 +3570,13 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
         document.querySelector("#fetch-participant [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "fetch-participant",
-          document.querySelector("#fetch-participant [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "fetch-participant",
+        document.querySelector("#fetch-participant [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "fetch-participant",
-          document.querySelector("#fetch-participant [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3640,7 +3696,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3655,7 +3711,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3828,6 +3884,26 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#update-participant [data-method]").value
+  this_submit = document.querySelector("#update-participant [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#update-participant [data-query-params]")
@@ -3928,19 +4004,13 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
         document.querySelector("#update-participant [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "update-participant",
-          document.querySelector("#update-participant [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "update-participant",
+        document.querySelector("#update-participant [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "update-participant",
-          document.querySelector("#update-participant [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -4060,7 +4130,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -4075,7 +4145,7 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -4248,6 +4318,26 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#delete-participant [data-method]").value
+  this_submit = document.querySelector("#delete-participant [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#delete-participant [data-query-params]")
@@ -4348,19 +4438,13 @@ Add SMS Participant    console.log(&#34;API PARAMS: ..\/params\/create-sms-parti
         document.querySelector("#delete-participant [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "delete-participant",
-          document.querySelector("#delete-participant [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "delete-participant",
+        document.querySelector("#delete-participant [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "delete-participant",
-          document.querySelector("#delete-participant [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs

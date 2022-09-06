@@ -65,7 +65,7 @@ CREATE  Create a Hosted Numbers Order request.
       "url" : "https://johnchaffee.wiki/twilio-apis/api/phone-numbers/hosted-numbers/",
       "headline": "Hosted Numbers",
       "description": "Create and manage Hosted Numbers.\nCREATE  Create a Hosted Numbers Order request.\n  console.log(\u0022API PARAMS: ..\\\/params\\\/hosted-numbers\\\/create.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "2175",
+      "wordCount" : "2255",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1964,7 +1964,7 @@ CREATE  Create a Hosted Numbers Order request.
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -1979,7 +1979,7 @@ CREATE  Create a Hosted Numbers Order request.
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2152,6 +2152,26 @@ CREATE  Create a Hosted Numbers Order request.
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#active [data-method]").value
+  this_submit = document.querySelector("#active [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#active [data-query-params]")
@@ -2252,19 +2272,13 @@ CREATE  Create a Hosted Numbers Order request.
         document.querySelector("#active [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "active",
-          document.querySelector("#active [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "active",
+        document.querySelector("#active [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "active",
-          document.querySelector("#active [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2385,7 +2399,7 @@ CREATE  Create a Hosted Numbers Order request.
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2400,7 +2414,7 @@ CREATE  Create a Hosted Numbers Order request.
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2573,6 +2587,26 @@ CREATE  Create a Hosted Numbers Order request.
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#country [data-method]").value
+  this_submit = document.querySelector("#country [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#country [data-query-params]")
@@ -2673,19 +2707,13 @@ CREATE  Create a Hosted Numbers Order request.
         document.querySelector("#country [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "country",
-          document.querySelector("#country [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "country",
+        document.querySelector("#country [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "country",
-          document.querySelector("#country [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2807,7 +2835,7 @@ CREATE  Create a Hosted Numbers Order request.
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2822,7 +2850,7 @@ CREATE  Create a Hosted Numbers Order request.
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2995,6 +3023,26 @@ CREATE  Create a Hosted Numbers Order request.
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#local [data-method]").value
+  this_submit = document.querySelector("#local [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#local [data-query-params]")
@@ -3095,19 +3143,13 @@ CREATE  Create a Hosted Numbers Order request.
         document.querySelector("#local [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "local",
-          document.querySelector("#local [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "local",
+        document.querySelector("#local [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "local",
-          document.querySelector("#local [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3233,7 +3275,7 @@ CREATE  Create a Hosted Numbers Order request.
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3248,7 +3290,7 @@ CREATE  Create a Hosted Numbers Order request.
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3421,6 +3463,26 @@ CREATE  Create a Hosted Numbers Order request.
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#tollfree [data-method]").value
+  this_submit = document.querySelector("#tollfree [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#tollfree [data-query-params]")
@@ -3521,19 +3583,13 @@ CREATE  Create a Hosted Numbers Order request.
         document.querySelector("#tollfree [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "tollfree",
-          document.querySelector("#tollfree [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "tollfree",
+        document.querySelector("#tollfree [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "tollfree",
-          document.querySelector("#tollfree [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3654,7 +3710,7 @@ CREATE  Create a Hosted Numbers Order request.
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3669,7 +3725,7 @@ CREATE  Create a Hosted Numbers Order request.
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3842,6 +3898,26 @@ CREATE  Create a Hosted Numbers Order request.
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#delete [data-method]").value
+  this_submit = document.querySelector("#delete [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#delete [data-query-params]")
@@ -3942,19 +4018,13 @@ CREATE  Create a Hosted Numbers Order request.
         document.querySelector("#delete [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "delete",
-          document.querySelector("#delete [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "delete",
+        document.querySelector("#delete [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "delete",
-          document.querySelector("#delete [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs

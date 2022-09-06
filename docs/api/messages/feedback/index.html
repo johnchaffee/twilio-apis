@@ -65,7 +65,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messages/feedback/",
       "headline": "Feedback",
       "description": "Provide feedback to Twilio on the deliverability of messages through different messaging channels.\nPROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.\n  console.log(\u0022API PARAMS: ..\\\/params\\\/feedback\\\/create.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "876",
+      "wordCount" : "908",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1964,7 +1964,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -1979,7 +1979,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2152,6 +2152,26 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#create [data-method]").value
+  this_submit = document.querySelector("#create [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#create [data-query-params]")
@@ -2252,19 +2272,13 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
         document.querySelector("#create [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "create",
-          document.querySelector("#create [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "create",
+        document.querySelector("#create [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "create",
-          document.querySelector("#create [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2385,7 +2399,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2400,7 +2414,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2573,6 +2587,26 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#confirm [data-method]").value
+  this_submit = document.querySelector("#confirm [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#confirm [data-query-params]")
@@ -2673,19 +2707,13 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
         document.querySelector("#confirm [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "confirm",
-          document.querySelector("#confirm [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "confirm",
+        document.querySelector("#confirm [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "confirm",
-          document.querySelector("#confirm [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs

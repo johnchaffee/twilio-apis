@@ -62,7 +62,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messages/send/",
       "headline": "Send Message",
       "description": "Send messages with the Twilio Messaging API.\nSMS    console.log(\u0022API PARAMS: ..\\\/params\\\/send\\\/sms.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "2570",
+      "wordCount" : "2666",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1960,7 +1960,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -1975,7 +1975,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2148,6 +2148,26 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#sms [data-method]").value
+  this_submit = document.querySelector("#sms [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#sms [data-query-params]")
@@ -2248,19 +2268,13 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         document.querySelector("#sms [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "sms",
-          document.querySelector("#sms [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "sms",
+        document.querySelector("#sms [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "sms",
-          document.querySelector("#sms [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2380,7 +2394,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2395,7 +2409,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2568,6 +2582,26 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#scheduled [data-method]").value
+  this_submit = document.querySelector("#scheduled [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#scheduled [data-query-params]")
@@ -2668,19 +2702,13 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         document.querySelector("#scheduled [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "scheduled",
-          document.querySelector("#scheduled [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "scheduled",
+        document.querySelector("#scheduled [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "scheduled",
-          document.querySelector("#scheduled [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2800,7 +2828,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2815,7 +2843,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2988,6 +3016,26 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#mms [data-method]").value
+  this_submit = document.querySelector("#mms [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#mms [data-query-params]")
@@ -3088,19 +3136,13 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         document.querySelector("#mms [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "mms",
-          document.querySelector("#mms [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "mms",
+        document.querySelector("#mms [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "mms",
-          document.querySelector("#mms [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3221,7 +3263,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3236,7 +3278,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3409,6 +3451,26 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#whatsapp [data-method]").value
+  this_submit = document.querySelector("#whatsapp [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#whatsapp [data-query-params]")
@@ -3509,19 +3571,13 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         document.querySelector("#whatsapp [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "whatsapp",
-          document.querySelector("#whatsapp [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "whatsapp",
+        document.querySelector("#whatsapp [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "whatsapp",
-          document.querySelector("#whatsapp [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3642,7 +3698,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3657,7 +3713,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3830,6 +3886,26 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#facebook [data-method]").value
+  this_submit = document.querySelector("#facebook [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#facebook [data-query-params]")
@@ -3930,19 +4006,13 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         document.querySelector("#facebook [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "facebook",
-          document.querySelector("#facebook [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "facebook",
+        document.querySelector("#facebook [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "facebook",
-          document.querySelector("#facebook [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -4062,7 +4132,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -4077,7 +4147,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -4250,6 +4320,26 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#google [data-method]").value
+  this_submit = document.querySelector("#google [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#google [data-query-params]")
@@ -4350,19 +4440,13 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         document.querySelector("#google [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "google",
-          document.querySelector("#google [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "google",
+        document.querySelector("#google [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "google",
-          document.querySelector("#google [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs

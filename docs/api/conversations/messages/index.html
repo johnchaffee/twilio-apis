@@ -62,7 +62,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
       "url" : "https://johnchaffee.wiki/twilio-apis/api/conversations/messages/",
       "headline": "Messages",
       "description": "Add messages to a conversation.\nCreate    console.log(\u0022API PARAMS: ..\\\/params\\\/create-message.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "2105",
+      "wordCount" : "2185",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1960,7 +1960,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -1975,7 +1975,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2148,6 +2148,26 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#create-message [data-method]").value
+  this_submit = document.querySelector("#create-message [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#create-message [data-query-params]")
@@ -2248,19 +2268,13 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         document.querySelector("#create-message [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "create-message",
-          document.querySelector("#create-message [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "create-message",
+        document.querySelector("#create-message [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "create-message",
-          document.querySelector("#create-message [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2380,7 +2394,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2395,7 +2409,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2568,6 +2582,26 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#list-messages [data-method]").value
+  this_submit = document.querySelector("#list-messages [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#list-messages [data-query-params]")
@@ -2668,19 +2702,13 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         document.querySelector("#list-messages [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "list-messages",
-          document.querySelector("#list-messages [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "list-messages",
+        document.querySelector("#list-messages [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "list-messages",
-          document.querySelector("#list-messages [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2800,7 +2828,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2815,7 +2843,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2988,6 +3016,26 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#fetch-message [data-method]").value
+  this_submit = document.querySelector("#fetch-message [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#fetch-message [data-query-params]")
@@ -3088,19 +3136,13 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         document.querySelector("#fetch-message [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "fetch-message",
-          document.querySelector("#fetch-message [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "fetch-message",
+        document.querySelector("#fetch-message [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "fetch-message",
-          document.querySelector("#fetch-message [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3220,7 +3262,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3235,7 +3277,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3408,6 +3450,26 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#update-message [data-method]").value
+  this_submit = document.querySelector("#update-message [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#update-message [data-query-params]")
@@ -3508,19 +3570,13 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         document.querySelector("#update-message [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "update-message",
-          document.querySelector("#update-message [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "update-message",
+        document.querySelector("#update-message [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "update-message",
-          document.querySelector("#update-message [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3640,7 +3696,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3655,7 +3711,7 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3828,6 +3884,26 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#delete-message [data-method]").value
+  this_submit = document.querySelector("#delete-message [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#delete-message [data-query-params]")
@@ -3928,19 +4004,13 @@ Create    console.log(&#34;API PARAMS: ..\/params\/create-message.js&#34;, apiPa
         document.querySelector("#delete-message [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "delete-message",
-          document.querySelector("#delete-message [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "delete-message",
+        document.querySelector("#delete-message [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "delete-message",
-          document.querySelector("#delete-message [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs

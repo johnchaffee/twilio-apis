@@ -65,7 +65,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messages/crud/",
       "headline": "Read, Update, Delete",
       "description": "Read, Update and Delete messages with the Twilio Messaging API.\nLIST  You may optionally query by To, From and DateSent.\nSpecify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent\u003e YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent\u003e 2022-08-25T22:00:00 to read messages sent on or after a specific time.",
-      "wordCount" : "1782",
+      "wordCount" : "1846",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1965,7 +1965,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -1980,7 +1980,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2153,6 +2153,26 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#list [data-method]").value
+  this_submit = document.querySelector("#list [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#list [data-query-params]")
@@ -2253,19 +2273,13 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         document.querySelector("#list [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "list",
-          document.querySelector("#list [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "list",
+        document.querySelector("#list [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "list",
-          document.querySelector("#list [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2385,7 +2399,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2400,7 +2414,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2573,6 +2587,26 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#read [data-method]").value
+  this_submit = document.querySelector("#read [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#read [data-query-params]")
@@ -2673,19 +2707,13 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         document.querySelector("#read [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "read",
-          document.querySelector("#read [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "read",
+        document.querySelector("#read [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "read",
-          document.querySelector("#read [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2806,7 +2834,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2821,7 +2849,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2994,6 +3022,26 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#update [data-method]").value
+  this_submit = document.querySelector("#update [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#update [data-query-params]")
@@ -3094,19 +3142,13 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         document.querySelector("#update [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "update",
-          document.querySelector("#update [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "update",
+        document.querySelector("#update [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "update",
-          document.querySelector("#update [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -3226,7 +3268,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -3241,7 +3283,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -3414,6 +3456,26 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#delete [data-method]").value
+  this_submit = document.querySelector("#delete [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#delete [data-query-params]")
@@ -3514,19 +3576,13 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         document.querySelector("#delete [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "delete",
-          document.querySelector("#delete [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "delete",
+        document.querySelector("#delete [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "delete",
-          document.querySelector("#delete [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs

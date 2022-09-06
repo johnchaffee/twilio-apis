@@ -1,7 +1,9 @@
-let apiParams
-let updatedKey
-let updatedValue
-let closest
+// let apiParams
+// let updatedKey
+// let updatedValue
+// let closest
+// let this_submit
+// let this_method
 
 function updateResponseStatus(id, status) {
   console.log(`updateResponseStatus: .querySelector(#${id} [data-status])`)

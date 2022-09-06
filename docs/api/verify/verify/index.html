@@ -68,7 +68,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
       "url" : "https://johnchaffee.wiki/twilio-apis/api/verify/verify/",
       "headline": "Verify",
       "description": "Sending and verifying One-Time-Passcodes (OTPs) with Twilio Verify.\nSend OTP, Check OTP.\nSEND OTP  Channel options include sms, whatsapp, call, and email.\n  console.log(\u0022API PARAMS: ..\\\/params\\\/send.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "862",
+      "wordCount" : "894",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -1968,7 +1968,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -1983,7 +1983,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2156,6 +2156,26 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#send [data-method]").value
+  this_submit = document.querySelector("#send [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#send [data-query-params]")
@@ -2256,19 +2276,13 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
         document.querySelector("#send [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "send",
-          document.querySelector("#send [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "send",
+        document.querySelector("#send [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "send",
-          document.querySelector("#send [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
@@ -2388,7 +2402,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
   </script>
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -2403,7 +2417,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -2576,6 +2590,26 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
     apiParams?.method || "GET"
 
   
+  this_method = document.querySelector("#check [data-method]").value
+  this_submit = document.querySelector("#check [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
   apiParams.queryParams?.forEach((queryParam) => {
     document
       .querySelector("#check [data-query-params]")
@@ -2676,19 +2710,13 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
         document.querySelector("#check [data-request-headers]")
       )
 
-      
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "check",
-          document.querySelector("#check [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "check",
+        document.querySelector("#check [data-query-params]")
+      )
+
       
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "check",
-          document.querySelector("#check [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
