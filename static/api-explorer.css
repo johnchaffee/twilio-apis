@@ -29,6 +29,21 @@
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
+.btn-success {
+  color: #fff;
+  background-color: #198754;
+  border-color: #198754;
+}
+.btn-warning {
+  color: #000;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
 .btn-outline-danger {
   color: #dc3545;
   border-color: #dc3545;

@@ -19,7 +19,7 @@
 
   <form data-form>
     <div class="input-group mb-4">
-      <select class="form-select flex-grow-0 w-auto" data-method>
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
@@ -34,7 +34,7 @@
         placeholder="https://example.com"
         value=""
       />
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -207,6 +207,26 @@
   // Set method param
   document.querySelector("#{{ .Params.id }} [data-method]").value =
     apiParams?.method || "GET"
+
+  // Change Submit button label and color
+  this_method = document.querySelector("#{{ .Params.id }} [data-method]").value
+  this_submit = document.querySelector("#{{ .Params.id }} [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      // Must be GET
+      this_submit.classList.add("btn-success")
+  }
 
   // Append query params key value pairs
   apiParams.queryParams?.forEach((queryParam) => {
