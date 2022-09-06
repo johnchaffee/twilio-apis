@@ -309,19 +309,13 @@
         document.querySelector("#{{ .Params.id }} [data-request-headers]")
       )
 
-      // GET request -> leave query params as is
-      if (method === "GET") {
-        params = keyValuePairsToObjects(
-          "{{ .Params.id }}",
-          document.querySelector("#{{ .Params.id }} [data-query-params]")
-        )
-      }
+      params = keyValuePairsToObjects(
+        "{{ .Params.id }}",
+        document.querySelector("#{{ .Params.id }} [data-query-params]")
+      )
+
       // POST request -> convert query strings to url encoded body data
       if (method === "POST") {
-        params = keyValuePairsToObjects(
-          "{{ .Params.id }}",
-          document.querySelector("#{{ .Params.id }} [data-query-params]")
-        )
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
