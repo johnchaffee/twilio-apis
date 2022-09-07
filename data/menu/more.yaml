@@ -1,13 +1,13 @@
 ---
 more:
-  - name: Settings
-    ref: "/settings"
+  - name: Environment Variables
+    ref: "/environment-variables"
     icon: "gdoc_brightness_light"
-  - name: Twilio
-    ref: "https://twilio.com"
-    external: true
-    icon: "gdoc_bookmark"
-  - name: Github repo
+  - name: Github Repo
     ref: "https://github.com/johnchaffee/twilio-apis"
     external: true
     icon: "gdoc_github"
+  - name: Twilio Docs
+    ref: "https://twilio.com/docs"
+    external: true
+    icon: "gdoc_bookmark"
