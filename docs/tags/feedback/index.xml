@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>feedback on Twilio API Explorer</title>
+    <link>https://johnchaffee.wiki/twilio-apis/tags/feedback/</link>
+    <description>Recent content in feedback on Twilio API Explorer</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/tags/feedback/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feedback</title>
+      <link>https://johnchaffee.wiki/twilio-apis/api/messages/feedback/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/api/messages/feedback/</guid>
+      <description>Provide feedback to Twilio on the deliverability of messages through different messaging channels.
+PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
+  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+    </item>
+    
+  </channel>
+</rss>

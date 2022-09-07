@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>accounts on Twilio API Explorer</title>
+    <link>https://johnchaffee.wiki/twilio-apis/tags/accounts/</link>
+    <description>Recent content in accounts on Twilio API Explorer</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://johnchaffee.wiki/twilio-apis/tags/accounts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accounts</title>
+      <link>https://johnchaffee.wiki/twilio-apis/api/accounts/accounts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/api/accounts/accounts/</guid>
+      <description>Manage Accounts and Subaccounts.
+LIST  Show all accounts.
+  console.log(&#34;API PARAMS: ..\/params\/accounts\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+    </item>
+    
+  </channel>
+</rss>
