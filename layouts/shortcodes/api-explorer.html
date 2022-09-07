@@ -1,4 +1,4 @@
-<div class="p-4" id="{{ .Params.id }}">
+<div class="p-2" id="{{ .Params.id }}">
   <!-- Load queryParams and headerParams from file -->
   <script await src="{{ .Params.file }}"></script>
   <script>
@@ -18,7 +18,7 @@
   </pre> -->
 
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -54,20 +54,6 @@
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="{{ .Params.id }}-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#{{ .Params.id }}-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="{{ .Params.id }}-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#{{ .Params.id }}-request-auth"
@@ -79,6 +65,20 @@
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="{{ .Params.id }}-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#{{ .Params.id }}-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -88,11 +88,11 @@
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -140,7 +140,7 @@
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -155,7 +155,7 @@
   </div>
   <!-- The Remove button '&minus;' at end of each row -->
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
