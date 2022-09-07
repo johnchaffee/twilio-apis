@@ -12,11 +12,6 @@ Manage Accounts and Subaccounts.
 
 {{< tabs "accounts" >}}
 
-{{< tab "CREATE" >}}
-Create a new Account instance resource as a subaccount of the one used to make the request
-{{< api-explorer id=`create` file=`../params/accounts/create.js` >}}
-{{< /tab >}}
-
 {{< tab "LIST" >}}
 Show all accounts.
 {{< api-explorer id=`list` file=`../params/accounts/list.js` >}}
@@ -25,6 +20,11 @@ Show all accounts.
 {{< tab "FETCH" >}}
 Fetch an Account.
 {{< api-explorer id=`fetch` file=`../params/accounts/fetch.js` >}}
+{{< /tab >}}
+
+{{< tab "CREATE" >}}
+Create a new Account instance resource as a subaccount of the one used to make the request
+{{< api-explorer id=`create` file=`../params/accounts/create.js` >}}
 {{< /tab >}}
 
 {{< tab "SUSPEND" >}}

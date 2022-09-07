@@ -8,19 +8,19 @@ apiParams = {
       value: "",
       placeholder: "active, suspended, closed",
     },
-    { key: "PageSize", value: "" },
+    { key: "PageSize", value: "", placeholder: "10" },
   ],
   headerParams: [],
   authParams: [
     {
       key: "username",
       value: "",
-      placeholder: "Enter AccountSID or API Key SID",
+      placeholder: "Account SID or API Key SID",
     },
     {
       key: "password",
       value: "",
-      placeholder: "Enter AuthToken or API Key Secret",
+      placeholder: "AuthToken or API Key Secret",
     },
   ],
 }

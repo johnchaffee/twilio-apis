@@ -12,11 +12,6 @@ Create and manage addresses.
 
 {{< tabs "addresses" >}}
 
-{{< tab "CREATE" >}}
-Create an Address.
-{{< api-explorer id=`create` file=`../params/addresses/create.js` >}}
-{{< /tab >}}
-
 {{< tab "LIST" >}}
 Show all addresses.
 {{< api-explorer id=`list` file=`../params/addresses/list.js` >}}
@@ -30,6 +25,11 @@ Fetch an Address.
 {{< tab "PHONE NUMBERS" >}}
 List Dependent Phone Number Subresources.
 {{< api-explorer id=`pns` file=`../params/addresses/pns.js` >}}
+{{< /tab >}}
+
+{{< tab "CREATE" >}}
+Create an Address.
+{{< api-explorer id=`create` file=`../params/addresses/create.js` >}}
 {{< /tab >}}
 
 {{< tab "UPDATE" >}}

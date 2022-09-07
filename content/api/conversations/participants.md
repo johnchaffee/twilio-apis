@@ -14,20 +14,20 @@ Add/remove participants to/from a conversation.
 
 {{< tabs "participants" >}}
 
-{{< tab "Add SMS Participant" >}}
-{{< api-explorer id=`create-sms-participant` file=`../params/create-sms-participant.js` >}}
-{{< /tab >}}
-
-{{< tab "Add Chat Participant" >}}
-{{< api-explorer id=`create-chat-participant` file=`../params/create-chat-participant.js` >}}
-{{< /tab >}}
-
 {{< tab "List" >}}
 {{< api-explorer id=`list-participants` file=`../params/list-participants.js` >}}
 {{< /tab >}}
 
 {{< tab "Fetch" >}}
 {{< api-explorer id=`fetch-participant` file=`../params/fetch-participant.js` >}}
+{{< /tab >}}
+
+{{< tab "Add SMS Participant" >}}
+{{< api-explorer id=`create-sms-participant` file=`../params/create-sms-participant.js` >}}
+{{< /tab >}}
+
+{{< tab "Add Chat Participant" >}}
+{{< api-explorer id=`create-chat-participant` file=`../params/create-chat-participant.js` >}}
 {{< /tab >}}
 
 {{< tab "Update" >}}

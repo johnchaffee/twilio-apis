@@ -20,8 +20,8 @@ Specify a date as `YYYY-MM-DD` in GMT to read only messages sent on this date, s
 {{< api-explorer id=`list` file=`../params/crud/list.js` >}}
 {{< /tab >}}
 
-{{< tab "READ" >}}
-{{< api-explorer id=`read` file=`../params/crud/read.js` >}}
+{{< tab "FETCH" >}}
+{{< api-explorer id=`fetch` file=`../params/crud/fetch.js` >}}
 {{< /tab >}}
 
 {{< tab "UPDATE" >}}

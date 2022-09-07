@@ -3,7 +3,7 @@ apiParams = {
   method: "POST",
   pathParams: [{ key: "FlowSid", value: "FW98082bd07750171d807dc5c38896ef1d" }],
   queryParams: [
-    { key: "To", value: "" },
+    { key: "To", value: "", placeholder: "+1234567890" },
     { key: "From", value: "+14158741967" },
     {
       key: "Parameters",
@@ -17,12 +17,12 @@ apiParams = {
     {
       key: "username",
       value: "",
-      placeholder: "Enter AccountSID or API Key SID",
+      placeholder: "Account SID or API Key SID",
     },
     {
       key: "password",
       value: "",
-      placeholder: "Enter AuthToken or API Key Secret",
+      placeholder: "AuthToken or API Key Secret",
     },
   ],
 }

@@ -1,14 +1,14 @@
 apiParams = {
   url: "https://preview.twilio.com/HostedNumbers/HostedNumberOrders/{{HostedNumberSid}}",
   method: "POST",
-  pathParams: [{ key: "HostedNumberSid", value: "" }],
+  pathParams: [{ key: "HostedNumberSid", value: "", placeholder: "HRabc123abc123abc123abc123abc123" }],
   queryParams: [
-    { key: "VerificationType", value: "phone-call" },
-    { key: "Status", value: "pending-verification" },
+    { key: "VerificationType", value: "", placeholder: "phone-call" },
+    { key: "Status", value: "", placeholder: "pending-verification" },
   ],
   headerParams: [],
   authParams: [
-    { key: "username", value: "", placeholder: "Enter AccountSID or API Key SID" },
-    { key: "password", value: "", placeholder: "Enter AuthToken or API Key Secret" },
+    { key: "username", value: "", placeholder: "Account SID or API Key SID" },
+    { key: "password", value: "", placeholder: "AuthToken or API Key Secret" },
   ],
 }

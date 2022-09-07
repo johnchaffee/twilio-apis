@@ -1,11 +1,11 @@
 apiParams = {
   url: "https://lookups.twilio.com/v2/PhoneNumbers/{{Number}}",
   method: "GET",
-  pathParams: [{ key: "Number", value: "(206) 399-6576" }],
-  queryParams: [{ key: "Fields", value: "line_type_intelligence" }],
+  pathParams: [{ key: "Number", value: "", placeholder: "+1234567890" }],
+  queryParams: [{ key: "Fields", value: "line_type_intelligence", placeholder: "line_type_intelligence" }],
   headerParams: [],
   authParams: [
-    { key: "username", value: "", placeholder: "Enter AccountSID or API Key SID" },
-    { key: "password", value: "", placeholder: "Enter AuthToken or API Key Secret" },
+    { key: "username", value: "", placeholder: "Account SID or API Key SID" },
+    { key: "password", value: "", placeholder: "AuthToken or API Key Secret" },
   ],
 }

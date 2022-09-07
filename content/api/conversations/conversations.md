@@ -14,16 +14,16 @@ Create and manage conversations.
 
 {{< tabs "conversations" >}}
 
-{{< tab "Create" >}}
-{{< api-explorer id=`create-conversation` file=`../params/create-conversation.js` >}}
-{{< /tab >}}
-
 {{< tab "List" >}}
 {{< api-explorer id=`list-conversations` file=`../params/list-conversations.js` >}}
 {{< /tab >}}
 
 {{< tab "Fetch" >}}
 {{< api-explorer id=`fetch-conversation` file=`../params/fetch-conversation.js` >}}
+{{< /tab >}}
+
+{{< tab "Create" >}}
+{{< api-explorer id=`create-conversation` file=`../params/create-conversation.js` >}}
 {{< /tab >}}
 
 {{< tab "Update" >}}

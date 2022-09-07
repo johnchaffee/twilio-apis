@@ -1,14 +1,15 @@
 apiParams = {
-  url: "https://messaging.twilio.com/v1/Services/{{MessagingServiceSid}}/PhoneNumbers",
-  method: "POST",
+  url: "https://messaging.twilio.com/v1/Services/{{MessagingServiceSid}}/PhoneNumbers/{{PhoneNumberSid}}",
+  method: "DELETE",
   pathParams: [
     {
       key: "MessagingServiceSid",
       value: "",
       placeholder: "MGabc123abc123abc123abc123abc123",
     },
+    { key: "PhoneNumberSid", value: "", placeholder: "PNabc123abc123abc123abc123abc123" },
   ],
-  queryParams: [{ key: "PhoneNumberSid", value: "", placeholder: "PNabc123abc123abc123abc123abc123" }],
+  queryParams: [],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
   ],

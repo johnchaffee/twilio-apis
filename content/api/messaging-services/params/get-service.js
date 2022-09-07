@@ -1,8 +1,10 @@
 apiParams = {
-  url: "https://api.twilio.com/2010-04-01/Accounts/{{SubAccountSid}}.json",
-  method: "POST",
-  pathParams: [{ key: "SubAccountSid",  value: "", placeholder: "ACabc123abc123abc123abc123abc123" }],
-  queryParams: [{ key: "Status", value: "active", placeholder: "active" }],
+  url: "https://messaging.twilio.com/v1/Services/{{MessagingServiceSid}}",
+  method: "GET",
+  pathParams: [
+    { key: "MessagingServiceSid", value: "", placeholder: "MGabc123abc123abc123abc123abc123" },
+  ],
+  queryParams: [],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },
   ],

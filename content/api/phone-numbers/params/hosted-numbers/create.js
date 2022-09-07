@@ -3,15 +3,15 @@ apiParams = {
   method: "POST",
   pathParams: [],
   queryParams: [
-    { key: "PhoneNumber", value: "" },
-    { key: "SmsCapability", value: "true" },
+    { key: "PhoneNumber", value: "", placeholder: "+1234567890" },
+    { key: "SmsCapability", value: "", placeholder: "true" },
     { key: "FriendlyName", value: "", placeholder: "My Hosted Phone Number" },
-    { key: "StatusCallbackUrl", value: "" },
-    { key: "StatusCallbackMethod", value: "POST" },
+    { key: "StatusCallbackUrl", value: "", placeholder: "https://example.com" },
+    { key: "StatusCallbackMethod", value: "", placeholder: "POST" },
   ],
   headerParams: [],
   authParams: [
-    { key: "username", value: "", placeholder: "Enter AccountSID or API Key SID" },
-    { key: "password", value: "", placeholder: "Enter AuthToken or API Key Secret" },
+    { key: "username", value: "", placeholder: "Account SID or API Key SID" },
+    { key: "password", value: "", placeholder: "AuthToken or API Key Secret" },
   ],
 }

@@ -16,16 +16,16 @@ Create a Verification Service (once).
 
 {{< tabs "service" >}}
 
-{{< tab "CREATE" >}}
-{{< api-explorer id=`create` file=`../params/create.js` >}}
-{{< /tab >}}
-
 {{< tab "LIST" >}}
 {{< api-explorer id=`list` file=`../params/list.js` >}}
 {{< /tab >}}
 
-{{< tab "GET" >}}
-{{< api-explorer id=`get` file=`../params/get.js` >}}
+{{< tab "FETCH" >}}
+{{< api-explorer id=`fetch` file=`../params/fetch.js` >}}
+{{< /tab >}}
+
+{{< tab "CREATE" >}}
+{{< api-explorer id=`create` file=`../params/create.js` >}}
 {{< /tab >}}
 
 {{< tab "DELETE" >}}

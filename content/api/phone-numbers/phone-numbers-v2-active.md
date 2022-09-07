@@ -19,8 +19,8 @@ List all active phone numbers. Optionally filter by `PhoneNumber`, `Geography`, 
 {{< api-explorer id=`active-list` file=`../params/phone-numbers-v2/active-list.js` >}}
 {{< /tab >}}
 
-{{< tab "GET" >}}
-{{< api-explorer id=`active-get` file=`../params/phone-numbers-v2/active-get.js` >}}
+{{< tab "FETCH" >}}
+{{< api-explorer id=`active-fetch` file=`../params/phone-numbers-v2/active-fetch.js` >}}
 {{< /tab >}}
 
 {{< tab "PURCHASE" >}}

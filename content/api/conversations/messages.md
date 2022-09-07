@@ -14,16 +14,16 @@ Add messages to a conversation.
 
 {{< tabs "messages" >}}
 
-{{< tab "Create" >}}
-{{< api-explorer id=`create-message` file=`../params/create-message.js` >}}
-{{< /tab >}}
-
 {{< tab "List" >}}
 {{< api-explorer id=`list-messages` file=`../params/list-messages.js` >}}
 {{< /tab >}}
 
 {{< tab "Fetch" >}}
 {{< api-explorer id=`fetch-message` file=`../params/fetch-message.js` >}}
+{{< /tab >}}
+
+{{< tab "Create" >}}
+{{< api-explorer id=`create-message` file=`../params/create-message.js` >}}
 {{< /tab >}}
 
 {{< tab "Update" >}}
