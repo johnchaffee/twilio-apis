@@ -49,6 +49,18 @@ ACTIVE  List all active phone numbers.
     </item>
     
     <item>
+      <title>Open API</title>
+      <link>https://johnchaffee.wiki/twilio-apis/oai/oai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/oai/oai/</guid>
+      <description>Twilio&amp;rsquo;s OpenAPI Specification     The twilio-oai repository contains OpenAPI documents for Twilio&amp;rsquo;s API.
+Files can be found in the json/ and yaml/ directories.
+What is OpenAPI?     From the OpenAPI Specification:
+ The OpenAPI Specification (OAS) defines a standard, programming language-agnostic interface document for HTTP APIs, which allows both humans and computers to discover and understand the capabilities of a service without requiring access to source code, additional documentation, or inspection of network traffic.</description>
+    </item>
+    
+    <item>
       <title>Send Message</title>
       <link>https://johnchaffee.wiki/twilio-apis/api/messages/send/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -132,6 +144,17 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     </item>
     
     <item>
+      <title>Swagger UI</title>
+      <link>https://johnchaffee.wiki/twilio-apis/oai/swagger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/oai/swagger/</guid>
+      <description>The twilio-swagger repo renders Twilio Open API Specs in Swagger UI.
+Requirements      Twilio Account TWILIO_ACCOUNT_SID and TWILIO_AUTH_TOKEN - for authentication Twilio Phone Number - for sending messages  Swagger Docs     Click one of the links below to view the Swagger Doc.
+   Swagger Doc Description     Twilio API Send messages and manage accounts and phone numbers   Twilio Lookups v2 API Validate Phone Number formats and types   Twilio Verify API Send and validate one-time-passcodes   Twilio Messaging Services API Manage Messaging Services and Number Pools   Twilio Conversations API Manage 2-way human-to-human conversations    Instructions      View the Quick Start Video Open one of the Swagger UI Docs above Click the Authorize button on the top right and enter your TWILIO_ACCOUNT_SID and TWILIO_AUTH_TOKEN as the username and password.</description>
+    </item>
+    
+    <item>
       <title>Feedback</title>
       <link>https://johnchaffee.wiki/twilio-apis/api/messages/feedback/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -161,6 +184,17 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-messages.js&#34;, apiParam
       <description>The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
 LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography, and Type (e.g. local, mobile, tollfree, shortcode.)
   console.log(&#34;API PARAMS: ..\/params\/phone-numbers-v2\/active-list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+    </item>
+    
+    <item>
+      <title>Postman Collections</title>
+      <link>https://johnchaffee.wiki/twilio-apis/oai/postman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/oai/postman/</guid>
+      <description>twilio-postman     The twilio-postman repo includes Twilio APIs as downloadable Postman Collections.
+Requirements      Twilio Account Postman app  Instructions      Download a Postman Collection below. Import the collection to Postman. Set your Environment Variables.  1. Download Postman Collection     Click one of the links below to download the Postman Collection.
+   Postman Collection Description     Twilio - API Send messages and manage accounts and phone numbers   Twilio - Lookups Validate Phone Number formats and types   Twilio - Verify Send and validate one-time-passcodes   Twilio - Messaging Services Manage Messaging Services and Number Pools   Twilio - Conversations Manage 2-way human-to-human conversations    2.</description>
     </item>
     
     <item>

@@ -10,6 +10,8 @@
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/phone-numbers/phone-numbers-v1/</loc>
   </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/oai/oai/</loc>
+  </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/messages/send/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/messaging-services/services/</loc>
@@ -26,11 +28,15 @@
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/messaging-services/senders/</loc>
   </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/oai/swagger/</loc>
+  </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/messages/feedback/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/conversations/messages/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/phone-numbers/phone-numbers-v2-active/</loc>
+  </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/oai/postman/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/phone-numbers/hosted-numbers/</loc>
   </url><url>
@@ -70,7 +76,7 @@
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/messaging-services/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/open-api/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/oai/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/phone-numbers/</loc>
   </url><url>
@@ -79,8 +85,6 @@
     <loc>https://johnchaffee.wiki/twilio-apis/tags/postman/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/preferences/</loc>
-  </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/sdk/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/verify/service/</loc>
   </url><url>
