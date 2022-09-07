@@ -13,7 +13,7 @@
 
 
   <meta name="description" content="Send messages with the Twilio Messaging API.
-SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
+SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
 
     <title>Send Message | Twilio API Explorer</title>
 
@@ -40,7 +40,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   />
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="Send messages with the Twilio Messaging API.
-SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/messages/send/" />
 
@@ -50,7 +50,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Send Message" />
   <meta name="twitter:description" content="Send messages with the Twilio Messaging API.
-SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 
 
   <script type="application/ld+json">
@@ -61,7 +61,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       "name": "Send Message",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messages/send/",
       "headline": "Send Message",
-      "description": "Send messages with the Twilio Messaging API.\nSMS    console.log(\u0022API PARAMS: ..\\\/params\\\/send\\\/sms.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
+      "description": "Send messages with the Twilio Messaging API.\nSMS    console.log(\u0022API PARAMS: ..\\\/params\\\/send\\\/sms.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
       "wordCount" : "2230",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -1905,7 +1905,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   <dialog id="newEnvVarDialog">
     <h3>Update Environment Variable</h3>
     <form method="dialog">
-      <div class="input-group my-2" data-key-value-pair>
+      <div class="input-group my-1" data-key-value-pair>
         <input
           modal-data-key
           type="text"
@@ -1953,13 +1953,13 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       SMS
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="sms">
+      <div class="p-2" id="sms">
   <script await src="../params/send/sms.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/send\/sms.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -1995,20 +1995,6 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="sms-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#sms-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="sms-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#sms-request-auth"
@@ -2020,6 +2006,20 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="sms-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#sms-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2029,11 +2029,11 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2081,7 +2081,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2095,12 +2095,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2108,7 +2108,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -2387,13 +2387,13 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       MMS
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="mms">
+      <div class="p-2" id="mms">
   <script await src="../params/send/mms.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/send\/mms.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2429,20 +2429,6 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="mms-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#mms-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="mms-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#mms-request-auth"
@@ -2454,6 +2440,20 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="mms-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#mms-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2463,11 +2463,11 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2515,7 +2515,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2529,12 +2529,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2542,7 +2542,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -2821,13 +2821,13 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       SCHEDULED
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="scheduled">
+      <div class="p-2" id="scheduled">
   <script await src="../params/send/scheduled.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/send\/scheduled.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2863,20 +2863,6 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="scheduled-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#scheduled-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="scheduled-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#scheduled-request-auth"
@@ -2888,6 +2874,20 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="scheduled-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#scheduled-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2897,11 +2897,11 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2949,7 +2949,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2963,12 +2963,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2976,7 +2976,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -3256,13 +3256,13 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>The mobile customer must send a WhatsApp message to <code>+14155238886</code> with a message body of  <code>join route-suit</code> to opt-in to receiving WhatsApp messages.</p>
-<div class="p-4" id="whatsapp">
+<div class="p-2" id="whatsapp">
   <script await src="../params/send/whatsapp.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/send\/whatsapp.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -3298,20 +3298,6 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="whatsapp-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#whatsapp-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="whatsapp-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#whatsapp-request-auth"
@@ -3323,6 +3309,20 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="whatsapp-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#whatsapp-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -3332,11 +3332,11 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -3384,7 +3384,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -3398,12 +3398,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -3411,7 +3411,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -3691,13 +3691,13 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>The mobile customer must initiate a conversation with the business by sending a Facebook Messenger message to Owl-Taxis at <code>https://www.facebook.com/Owl-Taxis-100633889146611</code>.</p>
-<div class="p-4" id="facebook">
+<div class="p-2" id="facebook">
   <script await src="../params/send/facebook.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/send\/facebook.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -3733,20 +3733,6 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="facebook-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#facebook-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="facebook-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#facebook-request-auth"
@@ -3758,6 +3744,20 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="facebook-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#facebook-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -3767,11 +3767,11 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -3819,7 +3819,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -3833,12 +3833,12 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -3846,7 +3846,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />

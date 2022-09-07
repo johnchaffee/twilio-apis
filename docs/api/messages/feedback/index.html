@@ -14,7 +14,7 @@
 
   <meta name="description" content="Provide feedback to Twilio on the deliverability of messages through different messaging channels.
 PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
-  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
 
     <title>Feedback | Twilio API Explorer</title>
 
@@ -42,7 +42,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="Provide feedback to Twilio on the deliverability of messages through different messaging channels.
 PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
-  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/messages/feedback/" />
 
@@ -53,7 +53,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
 <meta name="twitter:title" content="Feedback" />
   <meta name="twitter:description" content="Provide feedback to Twilio on the deliverability of messages through different messaging channels.
 PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
-  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 
 
   <script type="application/ld+json">
@@ -64,7 +64,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
       "name": "Feedback",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messages/feedback/",
       "headline": "Feedback",
-      "description": "Provide feedback to Twilio on the deliverability of messages through different messaging channels.\nPROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.\n  console.log(\u0022API PARAMS: ..\\\/params\\\/feedback\\\/create.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
+      "description": "Provide feedback to Twilio on the deliverability of messages through different messaging channels.\nPROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.\n  console.log(\u0022API PARAMS: ..\\\/params\\\/feedback\\\/create.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
       "wordCount" : "908",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -1908,7 +1908,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
   <dialog id="newEnvVarDialog">
     <h3>Update Environment Variable</h3>
     <form method="dialog">
-      <div class="input-group my-2" data-key-value-pair>
+      <div class="input-group my-1" data-key-value-pair>
         <input
           modal-data-key
           type="text"
@@ -1957,13 +1957,13 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>Send an SMS for which to provide feedback with <code>ProvideFeedback=true</code> param.</p>
-<div class="p-4" id="create">
+<div class="p-2" id="create">
   <script await src="../params/feedback/create.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/feedback\/create.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -1999,20 +1999,6 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="create-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#create-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="create-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#create-request-auth"
@@ -2024,6 +2010,20 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="create-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#create-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2033,11 +2033,11 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2085,7 +2085,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2099,12 +2099,12 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2112,7 +2112,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -2392,13 +2392,13 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>Send Delivery Confirmation Feedack with with <code>MessageSid</code> + <code>Outcome=confirmed</code> params.</p>
-<div class="p-4" id="confirm">
+<div class="p-2" id="confirm">
   <script await src="../params/feedback/confirm.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/feedback\/confirm.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2434,20 +2434,6 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="confirm-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#confirm-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="confirm-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#confirm-request-auth"
@@ -2459,6 +2445,20 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="confirm-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#confirm-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2468,11 +2468,11 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2520,7 +2520,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2534,12 +2534,12 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2547,7 +2547,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />

@@ -12,7 +12,7 @@
 <meta name="generator" content="Hugo 0.96.0" />
 
 
-  <meta name="description" content="LIST    console.log(&#34;API PARAMS: ..\/params\/list-services.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
+  <meta name="description" content="LIST    console.log(&#34;API PARAMS: ..\/params\/list-services.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
 
     <title>Services | Twilio API Explorer</title>
 
@@ -38,7 +38,7 @@
     content="Services"
   />
   <meta property="og:site_name" content="Twilio API Explorer" />
-  <meta property="og:description" content="LIST    console.log(&#34;API PARAMS: ..\/params\/list-services.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+  <meta property="og:description" content="LIST    console.log(&#34;API PARAMS: ..\/params\/list-services.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/messaging-services/services/" />
 
@@ -47,7 +47,7 @@
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Services" />
-  <meta name="twitter:description" content="LIST    console.log(&#34;API PARAMS: ..\/params\/list-services.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+  <meta name="twitter:description" content="LIST    console.log(&#34;API PARAMS: ..\/params\/list-services.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 
 
   <script type="application/ld+json">
@@ -58,7 +58,7 @@
       "name": "Services",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messaging-services/services/",
       "headline": "Services",
-      "description": "LIST    console.log(\u0022API PARAMS: ..\\\/params\\\/list-services.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
+      "description": "LIST    console.log(\u0022API PARAMS: ..\\\/params\\\/list-services.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
       "wordCount" : "2180",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -1902,7 +1902,7 @@
   <dialog id="newEnvVarDialog">
     <h3>Update Environment Variable</h3>
     <form method="dialog">
-      <div class="input-group my-2" data-key-value-pair>
+      <div class="input-group my-1" data-key-value-pair>
         <input
           modal-data-key
           type="text"
@@ -1949,13 +1949,13 @@
       LIST
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="list-services">
+      <div class="p-2" id="list-services">
   <script await src="../params/list-services.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/list-services.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -1991,20 +1991,6 @@
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="list-services-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#list-services-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="list-services-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#list-services-request-auth"
@@ -2016,6 +2002,20 @@
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="list-services-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#list-services-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2025,11 +2025,11 @@
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2077,7 +2077,7 @@
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2091,12 +2091,12 @@
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2104,7 +2104,7 @@
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -2383,13 +2383,13 @@
       FETCH
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="get-service">
+      <div class="p-2" id="get-service">
   <script await src="../params/get-service.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/get-service.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2425,20 +2425,6 @@
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="get-service-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#get-service-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="get-service-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#get-service-request-auth"
@@ -2450,6 +2436,20 @@
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="get-service-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#get-service-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2459,11 +2459,11 @@
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2511,7 +2511,7 @@
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2525,12 +2525,12 @@
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2538,7 +2538,7 @@
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -2817,13 +2817,13 @@
       CREATE
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="create-service">
+      <div class="p-2" id="create-service">
   <script await src="../params/create-service.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/create-service.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2859,20 +2859,6 @@
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="create-service-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#create-service-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="create-service-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#create-service-request-auth"
@@ -2884,6 +2870,20 @@
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="create-service-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#create-service-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2893,11 +2893,11 @@
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2945,7 +2945,7 @@
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2959,12 +2959,12 @@
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2972,7 +2972,7 @@
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -3251,13 +3251,13 @@
       UPDATE
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="update-service">
+      <div class="p-2" id="update-service">
   <script await src="../params/update-service.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/update-service.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -3293,20 +3293,6 @@
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="update-service-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#update-service-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="update-service-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#update-service-request-auth"
@@ -3318,6 +3304,20 @@
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="update-service-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#update-service-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -3327,11 +3327,11 @@
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -3379,7 +3379,7 @@
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -3393,12 +3393,12 @@
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -3406,7 +3406,7 @@
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -3685,13 +3685,13 @@
       DELETE
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="delete-service">
+      <div class="p-2" id="delete-service">
   <script await src="../params/delete-service.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/delete-service.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -3727,20 +3727,6 @@
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="delete-service-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#delete-service-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="delete-service-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#delete-service-request-auth"
@@ -3752,6 +3738,20 @@
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="delete-service-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#delete-service-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -3761,11 +3761,11 @@
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -3813,7 +3813,7 @@
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -3827,12 +3827,12 @@
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -3840,7 +3840,7 @@
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />

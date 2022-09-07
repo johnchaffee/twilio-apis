@@ -7,6 +7,7 @@ apiParams = {
   queryParams: [
     { key: "To", value: "", placeholder: "+1234567890" },
     { key: "Channel", value: "", placeholder: "sms, whatsapp, call, email" },
+    { key: "Locale", value: "", placeholder: "en, fr, de, es" },
   ],
   headerParams: [
     { key: "Content-Type", value: "application/x-www-form-urlencoded" },

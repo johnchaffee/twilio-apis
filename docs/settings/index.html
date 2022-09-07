@@ -1889,7 +1889,7 @@ Add Custom Environment Variable    Environment Variables    Edit  Delete      co
   <dialog id="newEnvVarDialog">
     <h3>Update Environment Variable</h3>
     <form method="dialog">
-      <div class="input-group my-2" data-key-value-pair>
+      <div class="input-group my-1" data-key-value-pair>
         <input
           modal-data-key
           type="text"
@@ -1923,7 +1923,7 @@ Add Custom Environment Variable    Environment Variables    Edit  Delete      co
   
 
   <form data-form>
-    <div id="envVarButtons" class="mb-4">
+    <div id="envVarButtons" class="mb-3">
       <div id="envVar">
         <button
           id="newEnvVarBtn"
@@ -1941,12 +1941,12 @@ Add Custom Environment Variable    Environment Variables    Edit  Delete      co
     </div>
   </form>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width:100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
         disabled
@@ -1955,7 +1955,7 @@ Add Custom Environment Variable    Environment Variables    Edit  Delete      co
         type="text"
         data-value
         class="form-control"
-        style="min-width:330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
         disabled

@@ -13,7 +13,7 @@
       <guid>https://johnchaffee.wiki/twilio-apis/api/accounts/addresses/</guid>
       <description>Create and manage addresses.
 LIST  Show all addresses.
-  console.log(&#34;API PARAMS: ..\/params\/addresses\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+  console.log(&#34;API PARAMS: ..\/params\/addresses\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
   </channel>

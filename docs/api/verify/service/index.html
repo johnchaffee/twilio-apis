@@ -14,7 +14,7 @@
 
   <meta name="description" content="Create and manage Twilio Verify services.
 Create a Verification Service (once).
-LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
+LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
 
     <title>Service | Twilio API Explorer</title>
 
@@ -42,7 +42,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="Create and manage Twilio Verify services.
 Create a Verification Service (once).
-LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/verify/service/" />
 
@@ -53,7 +53,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
 <meta name="twitter:title" content="Service" />
   <meta name="twitter:description" content="Create and manage Twilio Verify services.
 Create a Verification Service (once).
-LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 
 
   <script type="application/ld+json">
@@ -64,7 +64,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       "name": "Service",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/verify/service/",
       "headline": "Service",
-      "description": "Create and manage Twilio Verify services.\nCreate a Verification Service (once).\nLIST    console.log(\u0022API PARAMS: ..\\\/params\\\/list.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
+      "description": "Create and manage Twilio Verify services.\nCreate a Verification Service (once).\nLIST    console.log(\u0022API PARAMS: ..\\\/params\\\/list.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
       "wordCount" : "1755",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -1908,7 +1908,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
   <dialog id="newEnvVarDialog">
     <h3>Update Environment Variable</h3>
     <form method="dialog">
-      <div class="input-group my-2" data-key-value-pair>
+      <div class="input-group my-1" data-key-value-pair>
         <input
           modal-data-key
           type="text"
@@ -1957,13 +1957,13 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       LIST
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="list">
+      <div class="p-2" id="list">
   <script await src="../params/list.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/list.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -1999,20 +1999,6 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="list-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#list-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="list-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#list-request-auth"
@@ -2024,6 +2010,20 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="list-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#list-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2033,11 +2033,11 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2085,7 +2085,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2099,12 +2099,12 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2112,7 +2112,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -2391,13 +2391,13 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       FETCH
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="fetch">
+      <div class="p-2" id="fetch">
   <script await src="../params/fetch.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/fetch.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2433,20 +2433,6 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="fetch-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#fetch-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="fetch-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#fetch-request-auth"
@@ -2458,6 +2444,20 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="fetch-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#fetch-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2467,11 +2467,11 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2519,7 +2519,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2533,12 +2533,12 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2546,7 +2546,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -2825,13 +2825,13 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       CREATE
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="create">
+      <div class="p-2" id="create">
   <script await src="../params/create.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/create.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2867,20 +2867,6 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="create-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#create-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="create-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#create-request-auth"
@@ -2892,6 +2878,20 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="create-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#create-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2901,11 +2901,11 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2953,7 +2953,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2967,12 +2967,12 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2980,7 +2980,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -3259,13 +3259,13 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       DELETE
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="delete">
+      <div class="p-2" id="delete">
   <script await src="../params/delete.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/delete.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -3301,20 +3301,6 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="delete-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#delete-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="delete-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#delete-request-auth"
@@ -3326,6 +3312,20 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="delete-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#delete-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -3335,11 +3335,11 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -3387,7 +3387,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -3401,12 +3401,12 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -3414,7 +3414,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />

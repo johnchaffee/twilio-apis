@@ -1908,7 +1908,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   <dialog id="newEnvVarDialog">
     <h3>Update Environment Variable</h3>
     <form method="dialog">
-      <div class="input-group my-2" data-key-value-pair>
+      <div class="input-group my-1" data-key-value-pair>
         <input
           modal-data-key
           type="text"
@@ -1958,13 +1958,13 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>You may optionally query by <code>To</code>, <code>From</code> and <code>DateSent</code>.</p>
 <p>Specify a date as <code>YYYY-MM-DD</code> in GMT to read only messages sent on this date, such as <code>DateSent</code> <code>2022-08-25</code> . You can also specify an inequality, such as <code>DateSent&gt;</code> <code>YYYY-MM-DD</code> to read messages sent on or after midnight on a date or <code>DateSent&gt;</code> <code>2022-08-25T22:00:00</code> to read messages sent on or after a specific time. Use <code>DateSent&lt;</code>, to find messages sent before a specific date or time.</p>
-<div class="p-4" id="list">
+<div class="p-2" id="list">
   <script await src="../params/crud/list.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/crud\/list.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2000,20 +2000,6 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="list-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#list-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="list-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#list-request-auth"
@@ -2025,6 +2011,20 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="list-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#list-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2034,11 +2034,11 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2086,7 +2086,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2100,12 +2100,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2113,7 +2113,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -2392,13 +2392,13 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       FETCH
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="fetch">
+      <div class="p-2" id="fetch">
   <script await src="../params/crud/fetch.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/crud\/fetch.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2434,20 +2434,6 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="fetch-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#fetch-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="fetch-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#fetch-request-auth"
@@ -2459,6 +2445,20 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="fetch-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#fetch-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2468,11 +2468,11 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2520,7 +2520,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2534,12 +2534,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2547,7 +2547,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -2827,13 +2827,13 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>To redact a message-body from a post-flight message, post an empty body to the message instance resource.</p>
-<div class="p-4" id="update">
+<div class="p-2" id="update">
   <script await src="../params/crud/update.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/crud\/update.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2869,20 +2869,6 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="update-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#update-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="update-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#update-request-auth"
@@ -2894,6 +2880,20 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="update-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#update-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2903,11 +2903,11 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2955,7 +2955,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2969,12 +2969,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2982,7 +2982,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -3261,13 +3261,13 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       DELETE
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="delete">
+      <div class="p-2" id="delete">
   <script await src="../params/crud/delete.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/crud\/delete.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -3303,20 +3303,6 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="delete-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#delete-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="delete-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#delete-request-auth"
@@ -3328,6 +3314,20 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="delete-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#delete-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -3337,11 +3337,11 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -3389,7 +3389,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -3403,12 +3403,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -3416,7 +3416,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />

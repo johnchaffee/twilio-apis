@@ -14,7 +14,7 @@
 
   <meta name="description" content="The Lookup v2 API provides a way to retrieve additional information about a phone number.
 NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
-  console.log(&#34;API PARAMS: ..\/params\/lookup-v2\/number.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/lookup-v2\/number.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
 
     <title>Lookup v2 | Twilio API Explorer</title>
 
@@ -42,7 +42,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
   <meta property="og:site_name" content="Twilio API Explorer" />
   <meta property="og:description" content="The Lookup v2 API provides a way to retrieve additional information about a phone number.
 NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
-  console.log(&#34;API PARAMS: ..\/params\/lookup-v2\/number.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/lookup-v2\/number.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/lookup/lookup-v2/" />
 
@@ -53,7 +53,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
 <meta name="twitter:title" content="Lookup v2" />
   <meta name="twitter:description" content="The Lookup v2 API provides a way to retrieve additional information about a phone number.
 NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
-  console.log(&#34;API PARAMS: ..\/params\/lookup-v2\/number.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/lookup-v2\/number.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 
 
   <script type="application/ld+json">
@@ -64,7 +64,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       "name": "Lookup v2",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/lookup/lookup-v2/",
       "headline": "Lookup v2",
-      "description": "The Lookup v2 API provides a way to retrieve additional information about a phone number.\nNUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).\n  console.log(\u0022API PARAMS: ..\\\/params\\\/lookup-v2\\\/number.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
+      "description": "The Lookup v2 API provides a way to retrieve additional information about a phone number.\nNUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).\n  console.log(\u0022API PARAMS: ..\\\/params\\\/lookup-v2\\\/number.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
       "wordCount" : "1824",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -1908,7 +1908,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
   <dialog id="newEnvVarDialog">
     <h3>Update Environment Variable</h3>
     <form method="dialog">
-      <div class="input-group my-2" data-key-value-pair>
+      <div class="input-group my-1" data-key-value-pair>
         <input
           modal-data-key
           type="text"
@@ -1961,13 +1961,13 @@ NUMBER  Performs basic phone number validation and conversion from regional form
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>Performs basic phone number validation and conversion from <strong>regional formatting</strong> to <strong>E.164</strong> (free).</p>
-<div class="p-4" id="number">
+<div class="p-2" id="number">
   <script await src="../params/lookup-v2/number.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/lookup-v2\/number.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2003,20 +2003,6 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="number-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#number-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="number-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#number-request-auth"
@@ -2028,6 +2014,20 @@ NUMBER  Performs basic phone number validation and conversion from regional form
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="number-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#number-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2037,11 +2037,11 @@ NUMBER  Performs basic phone number validation and conversion from regional form
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2089,7 +2089,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2103,12 +2103,12 @@ NUMBER  Performs basic phone number validation and conversion from regional form
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2116,7 +2116,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -2396,13 +2396,13 @@ NUMBER  Performs basic phone number validation and conversion from regional form
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>Provides carrier info and type (<code>mobile</code>, <code>landline</code> or <code>voip</code>). Costs $0.005 per lookup.</p>
-<div class="p-4" id="line-type">
+<div class="p-2" id="line-type">
   <script await src="../params/lookup-v2/line-type.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/lookup-v2\/line-type.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2438,20 +2438,6 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="line-type-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#line-type-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="line-type-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#line-type-request-auth"
@@ -2463,6 +2449,20 @@ NUMBER  Performs basic phone number validation and conversion from regional form
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="line-type-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#line-type-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2472,11 +2472,11 @@ NUMBER  Performs basic phone number validation and conversion from regional form
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2524,7 +2524,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2538,12 +2538,12 @@ NUMBER  Performs basic phone number validation and conversion from regional form
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2551,7 +2551,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -2831,13 +2831,13 @@ NUMBER  Performs basic phone number validation and conversion from regional form
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>Provides Caller Name and type (<code>BUSINESS</code> or <code>CONSUMER</code>). Currently available only in the US and costs $0.01 per lookup.</p>
-<div class="p-4" id="caller-name">
+<div class="p-2" id="caller-name">
   <script await src="../params/lookup-v2/caller-name.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/lookup-v2\/caller-name.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2873,20 +2873,6 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="caller-name-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#caller-name-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="caller-name-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#caller-name-request-auth"
@@ -2898,6 +2884,20 @@ NUMBER  Performs basic phone number validation and conversion from regional form
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="caller-name-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#caller-name-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2907,11 +2907,11 @@ NUMBER  Performs basic phone number validation and conversion from regional form
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2959,7 +2959,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2973,12 +2973,12 @@ NUMBER  Performs basic phone number validation and conversion from regional form
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2986,7 +2986,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -3266,13 +3266,13 @@ NUMBER  Performs basic phone number validation and conversion from regional form
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>A comma-separated list of fields to return. Possible values are <code>caller_name</code>, <code>sim_swap</code>, <code>call_forwarding</code>, <code>live_activity</code>, <code>enhanced_line_type</code> or <code>line_type_intelligence</code>.</p>
-<div class="p-4" id="multiple">
+<div class="p-2" id="multiple">
   <script await src="../params/lookup-v2/multiple.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/lookup-v2\/multiple.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -3308,20 +3308,6 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="multiple-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#multiple-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="multiple-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#multiple-request-auth"
@@ -3333,6 +3319,20 @@ NUMBER  Performs basic phone number validation and conversion from regional form
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="multiple-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#multiple-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -3342,11 +3342,11 @@ NUMBER  Performs basic phone number validation and conversion from regional form
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -3394,7 +3394,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -3408,12 +3408,12 @@ NUMBER  Performs basic phone number validation and conversion from regional form
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -3421,7 +3421,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />

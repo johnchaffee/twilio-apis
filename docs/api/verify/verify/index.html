@@ -15,7 +15,7 @@
   <meta name="description" content="Sending and verifying One-Time-Passcodes (OTPs) with Twilio Verify.
 Send OTP, Check OTP.
 SEND OTP  Channel options include sms, whatsapp, call, and email.
-  console.log(&#34;API PARAMS: ..\/params\/send.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/send.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
 
     <title>Verify | Twilio API Explorer</title>
 
@@ -44,7 +44,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
   <meta property="og:description" content="Sending and verifying One-Time-Passcodes (OTPs) with Twilio Verify.
 Send OTP, Check OTP.
 SEND OTP  Channel options include sms, whatsapp, call, and email.
-  console.log(&#34;API PARAMS: ..\/params\/send.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/send.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/verify/verify/" />
 
@@ -56,7 +56,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
   <meta name="twitter:description" content="Sending and verifying One-Time-Passcodes (OTPs) with Twilio Verify.
 Send OTP, Check OTP.
 SEND OTP  Channel options include sms, whatsapp, call, and email.
-  console.log(&#34;API PARAMS: ..\/params\/send.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+  console.log(&#34;API PARAMS: ..\/params\/send.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
 
 
   <script type="application/ld+json">
@@ -67,7 +67,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
       "name": "Verify",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/verify/verify/",
       "headline": "Verify",
-      "description": "Sending and verifying One-Time-Passcodes (OTPs) with Twilio Verify.\nSend OTP, Check OTP.\nSEND OTP  Channel options include sms, whatsapp, call, and email.\n  console.log(\u0022API PARAMS: ..\\\/params\\\/send.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Headers   Auth    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
+      "description": "Sending and verifying One-Time-Passcodes (OTPs) with Twilio Verify.\nSend OTP, Check OTP.\nSEND OTP  Channel options include sms, whatsapp, call, and email.\n  console.log(\u0022API PARAMS: ..\\\/params\\\/send.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
       "wordCount" : "894",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -1911,7 +1911,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
   <dialog id="newEnvVarDialog">
     <h3>Update Environment Variable</h3>
     <form method="dialog">
-      <div class="input-group my-2" data-key-value-pair>
+      <div class="input-group my-1" data-key-value-pair>
         <input
           modal-data-key
           type="text"
@@ -1961,13 +1961,13 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <p>Channel options include <code>sms</code>, <code>whatsapp</code>, <code>call</code>, and <code>email</code>.</p>
-<div class="p-4" id="send">
+<div class="p-2" id="send">
   <script await src="../params/send.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/send.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2003,20 +2003,6 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="send-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#send-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="send-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#send-request-auth"
@@ -2028,6 +2014,20 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="send-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#send-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2037,11 +2037,11 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2089,7 +2089,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2103,12 +2103,12 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2116,7 +2116,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
@@ -2395,13 +2395,13 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
       CHECK OTP
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-4" id="check">
+      <div class="p-2" id="check">
   <script await src="../params/check.js"></script>
   <script>
     console.log("API PARAMS: ..\/params\/check.js", apiParams)
   </script>
   <form data-form>
-    <div class="input-group mb-4">
+    <div class="input-group mb-3">
       <select class="form-select flex-grow-0 w-auto d-none" data-method>
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -2437,20 +2437,6 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
       <li class="nav-item" role="presentation">
         <button
           class="nav-link"
-          id="check-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#check-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
           id="check-request-auth-tab"
           data-bs-toggle="tab"
           data-bs-target="#check-request-auth"
@@ -2462,6 +2448,20 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
           Auth
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="check-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#check-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
       <div
@@ -2471,11 +2471,11 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
         aria-labelledby="query-params-tab"
       >
         <div class="d-none" data-request-path-section>
-          <div class="my-2"><b>Path Params</b></div>
+          <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
         </div>
         <div class="d-none" data-query-params-section>
-          <div class="my-2"><b>Query Params</b></div>
+          <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
           <button
             data-add-query-param-btn
@@ -2523,7 +2523,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
       </div>
     </div>
     <h3>Response</h3>
-    <div class="d-flex my-2">
+    <div class="d-flex my-1">
       <div class="me-3">Status: <span data-status></span></div>
     </div>
     <div class="">
@@ -2537,12 +2537,12 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
     </div>
   </div>
   <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
+    <div class="input-group my-1" data-key-value-pair>
       <input
         type="text"
         data-key
         class="form-control"
-        style="min-width: 100px"
+        style="flex: 1"
         placeholder="Key"
         value=""
       />
@@ -2550,7 +2550,7 @@ SEND OTP  Channel options include sms, whatsapp, call, and email.
         type="text"
         data-value
         class="form-control"
-        style="min-width: 330px"
+        style="flex: 2"
         placeholder="Value"
         value=""
       />
