@@ -7,7 +7,7 @@ tags:
 geekdocBreadcrumb: true
 ---
 
-# Twilio's OpenAPI Specification
+## Twilio's OpenAPI Specification
 
 The [twilio-oai](https://github.com/twilio/twilio-oai) repository contains [OpenAPI](https://www.openapis.org/) documents for [Twilio's API](https://docs.twilio.com).
 

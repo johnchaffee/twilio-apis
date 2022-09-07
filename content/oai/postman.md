@@ -7,8 +7,6 @@ tags:
 geekdocBreadcrumb: true
 ---
 
-# twilio-postman
-
 The [twilio-postman](https://github.com/johnchaffee/twilio-postman) repo includes Twilio APIs as downloadable Postman Collections.
 
 ## Requirements
