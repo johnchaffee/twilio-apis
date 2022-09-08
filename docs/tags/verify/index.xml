@@ -12,7 +12,6 @@
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/verify/service/</guid>
       <description>Create and manage Twilio Verify services.
-Create a Verification Service (once).
 LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
@@ -23,9 +22,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/verify/verify/</guid>
       <description>Sending and verifying One-Time-Passcodes (OTPs) with Twilio Verify.
-Send OTP, Check OTP.
-SEND OTP  Channel options include sms, whatsapp, call, and email.
-  console.log(&#34;API PARAMS: ..\/params\/send.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+SEND OTP    console.log(&#34;API PARAMS: ..\/params\/send.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
     </item>
     
   </channel>
