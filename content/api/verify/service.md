@@ -12,8 +12,6 @@ tags:
 
 Create and manage Twilio Verify services.
 
-Create a Verification Service (once).
-
 {{< tabs "service" >}}
 
 {{< tab "LIST" >}}

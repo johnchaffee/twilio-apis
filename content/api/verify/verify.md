@@ -12,12 +12,9 @@ tags:
 
 Sending and verifying One-Time-Passcodes (OTPs) with Twilio Verify.
 
-Send OTP, Check OTP.
-
 {{< tabs "verify" >}}
 
 {{< tab "SEND OTP" >}}
-Channel options include `sms`, `whatsapp`, `call`, and `email`.
 {{< api-explorer id=`send` file=`../params/send.js` >}}
 {{< /tab >}}
 
