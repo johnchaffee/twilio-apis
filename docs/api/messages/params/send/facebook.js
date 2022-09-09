@@ -5,9 +5,9 @@ apiParams = {
     { key: "AccountSid", value: "", placeholder: "ACabc123abc123abc123abc123abc123" },
   ],
   queryParams: [
-    { key: "To", value: "", placeholder: "messenger:1234567890123456" },
-    { key: "From", value: "", placeholder: "messenger:1234567890123456" },
-    { key: "Body", value: "Hello from Facebook Messenger" },
+    { key: "To", value: "messenger:1234567890123456", placeholder: "messenger:1234567890123456" },
+    { key: "From", value: "messenger:1234567890123456", placeholder: "messenger:1234567890123456" },
+    { key: "Body", value: "Hello from Facebook Messenger", placeholder: "Hello from Facebook Messenger" },
     { key: "StatusCallback", value: "", placeholder: "https://example.com" },
     { key: "MessagingServiceSid", value: "", placeholder: "MGabc123abc123abc123abc123abc123" },
   ],
