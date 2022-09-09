@@ -191,7 +191,7 @@ curl -X GET 'https://video.twilio.com/v1/Rooms/RMcc96b00a73e53d4453fba0f5939ef0b
 
 # Fetch a Room Participant
 curl -G 'https://video.twilio.com/v1/Rooms/Jhhh/Participants/Marian3' \
--u 'SK5d60bd8a002cb8649c0a72614231ec38:tzxD8Z4tsmYiMknKPRczFWO1DTvtS8Kl'
+-u 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_api_key_secret'
 
 # List connected participants
 curl -G 'https://video.twilio.com/v1/Rooms/DailyStandup/Participants/' \
