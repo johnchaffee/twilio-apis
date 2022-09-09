@@ -5,8 +5,8 @@ apiParams = {
     { key: "AccountSid", value: "", placeholder: "ACabc123abc123abc123abc123abc123" },
   ],
   queryParams: [
-    { key: "To", value: "whatsapp:+1234567890", placeholder: "whatsapp:+1234567890" },
-    { key: "From", value: "whatsapp:+14155238886", placeholder: "whatsapp:+14155238886" },
+    { key: "To", value: "", placeholder: "whatsapp:+1234567890" },
+    { key: "From", value: "", placeholder: "whatsapp:+14155238886" },
     { key: "Body", value: "Your appointment is coming up on Sept 21 at 3PM", placeholder: "Hello World!" },
     { key: "StatusCallback", value: "", placeholder: "https://example.com" },
     { key: "MessagingServiceSid", value: "", placeholder: "MGabc123abc123abc123abc123abc123" },
