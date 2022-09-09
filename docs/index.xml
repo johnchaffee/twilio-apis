@@ -49,18 +49,6 @@ ACTIVE  List all active phone numbers.
     </item>
     
     <item>
-      <title>Open API</title>
-      <link>https://johnchaffee.wiki/twilio-apis/oai/oai/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://johnchaffee.wiki/twilio-apis/oai/oai/</guid>
-      <description>Twilio&amp;rsquo;s OpenAPI Specification     The twilio-oai repository contains OpenAPI documents for Twilio&amp;rsquo;s API.
-Files can be found in the json/ and yaml/ directories.
-What is OpenAPI?     From the OpenAPI Specification:
- The OpenAPI Specification (OAS) defines a standard, programming language-agnostic interface document for HTTP APIs, which allows both humans and computers to discover and understand the capabilities of a service without requiring access to source code, additional documentation, or inspection of network traffic.</description>
-    </item>
-    
-    <item>
       <title>Send Message</title>
       <link>https://johnchaffee.wiki/twilio-apis/api/messages/send/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -77,6 +65,18 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messaging-services/services/</guid>
       <description>LIST    console.log(&#34;API PARAMS: ..\/params\/list-services.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+    </item>
+    
+    <item>
+      <title>Twilio OpenAPI</title>
+      <link>https://johnchaffee.wiki/twilio-apis/oai/oai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnchaffee.wiki/twilio-apis/oai/oai/</guid>
+      <description>Twilio&amp;rsquo;s OpenAPI Specification     The twilio-oai repository contains OpenAPI documents for Twilio&amp;rsquo;s API.
+Files can be found in the json/ and yaml/ directories.
+What is OpenAPI?     From the OpenAPI Specification:
+ The OpenAPI Specification (OAS) defines a standard, programming language-agnostic interface document for HTTP APIs, which allows both humans and computers to discover and understand the capabilities of a service without requiring access to source code, additional documentation, or inspection of network traffic.</description>
     </item>
     
     <item>
