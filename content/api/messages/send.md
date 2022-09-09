@@ -20,10 +20,6 @@ Send messages with the Twilio Messaging API.
 {{< api-explorer id=`mms` file=`../params/send/mms.js` >}}
 {{< /tab >}}
 
-{{< tab "SCHEDULED" >}}
-{{< api-explorer id=`scheduled` file=`../params/send/scheduled.js` >}}
-{{< /tab >}}
-
 {{< tab "WHATSAPP" >}}
 The mobile customer must send a WhatsApp message to `+14155238886` with a message body of  `join route-suit` to opt-in to receiving WhatsApp messages.
 {{< api-explorer id=`whatsapp` file=`../params/send/whatsapp.js` >}}
@@ -32,6 +28,10 @@ The mobile customer must send a WhatsApp message to `+14155238886` with a messag
 {{< tab "FACEBOOK" >}}
 The mobile customer must initiate a conversation with the business by sending a Facebook Messenger message to Owl-Taxis at `https://www.facebook.com/Owl-Taxis-100633889146611`.
 {{< api-explorer id=`facebook` file=`../params/send/facebook.js` >}}
+{{< /tab >}}
+
+{{< tab "SCHEDULED" >}}
+{{< api-explorer id=`scheduled` file=`../params/send/scheduled.js` >}}
 {{< /tab >}}
 
 {{< /tabs >}}

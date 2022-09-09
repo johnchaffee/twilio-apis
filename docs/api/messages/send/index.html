@@ -2924,440 +2924,6 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       
     />
     <label for="tabs-send-2" class="gdoc-tabs__label">
-      SCHEDULED
-    </label>
-    <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="p-2" id="scheduled">
-  <script await src="../params/send/scheduled.js"></script>
-  <script>
-    console.log("API PARAMS: ..\/params\/send\/scheduled.js", apiParams)
-  </script>
-  <form data-form>
-    <div class="input-group mb-3">
-      <select class="form-select flex-grow-0 w-auto d-none" data-method>
-        <option value="GET">GET</option>
-        <option value="POST">POST</option>
-        <option value="PUT">PUT</option>
-        <option value="PATCH">PATCH</option>
-        <option value="DELETE">DELETE</option>
-      </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
-      <button type="submit" class="btn">Send</button>
-    </div>
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="scheduled-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#scheduled-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
-          Params
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="scheduled-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#scheduled-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
-          Auth
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="scheduled-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#scheduled-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
-          Headers
-        </button>
-      </li>
-    </ul>
-    <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="scheduled-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
-        <div class="d-none" data-request-path-section>
-          <div class="my-1"><b>Path Params</b></div>
-          <div data-request-path></div>
-        </div>
-        <div class="d-none" data-query-params-section>
-          <div class="my-1"><b>Query Params</b></div>
-          <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
-            &plus;
-          </button>
-        </div>
-      </div>
-      <div
-        class="tab-pane fade"
-        id="scheduled-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
-        <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
-          &plus;
-        </button>
-      </div>
-      <div
-        class="tab-pane fade"
-        id="scheduled-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
-        <div data-request-auth></div>
-      </div>
-    </div>
-  </form>
-  <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
-      <h3>Request</h3>
-      <div>
-        <pre><code 
-      class="language-js"
-      id="scheduled-json-request-body"
-      data-json-request-body
-    ></code></pre>
-      </div>
-    </div>
-    <h3>Response</h3>
-    <div class="d-flex my-1">
-      <div class="me-3">Status: <span data-status></span></div>
-    </div>
-    <div class="">
-      <div>
-        <pre><code
-          class="language-js"
-          id="scheduled-json-response-body"
-          data-json-response-body
-        ></code></pre>
-      </div>
-    </div>
-  </div>
-  <template data-key-value-template>
-    <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
-      <button type="button" data-update-btn class="btn btn-outline-success">
-        &#9998;
-      </button>
-      <button type="button" data-remove-btn class="btn btn-outline-danger">
-        &#10005;
-      </button>
-    </div>
-  </template>
-</div>
-<script>
-  
-  document
-    .querySelector("#scheduled [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#scheduled [data-query-params]")
-        .append(createKeyValuePair("scheduled"))
-    })
-
-  
-  document
-    .querySelector("#scheduled [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#scheduled [data-request-headers]")
-        .append(createKeyValuePair("scheduled"))
-    })
-
-  
-  document.querySelector("#scheduled [data-url]").value = apiParams.url
-
-  
-  document.querySelector("#scheduled [data-method]").value =
-    apiParams?.method || "GET"
-
-  
-  this_method = document.querySelector("#scheduled [data-method]").value
-  this_submit = document.querySelector("#scheduled [type=submit]")
-  this_submit.textContent = this_method
-
-  switch (this_method) {
-    case "POST":
-      this_submit.classList.add("btn-primary")
-      break
-    case "PUT":
-      this_submit.classList.add("btn-warning")
-      break
-    case "DELETE":
-      this_submit.classList.add("btn-danger")
-      break
-    default:
-      
-      this_submit.classList.add("btn-success")
-  }
-
-  
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#scheduled [data-query-params]")
-      .append(
-        createKeyValuePair(
-          "scheduled",
-          queryParam.key,
-          queryParam.value,
-          queryParam.placeholder
-        )
-      )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#scheduled [data-query-params-section]")
-      .classList.remove("d-none")
-  }
-
-  
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#scheduled [data-request-path]")
-      .append(
-        createKeyValuePair(
-          "scheduled",
-          pathParam.key,
-          pathParam.value,
-          pathParam.placeholder
-        )
-      )
-  })
-  
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#scheduled [data-request-path-section]")
-      .classList.remove("d-none")
-  }
-
-  
-  apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#scheduled [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "scheduled",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
-      )
-  })
-
-  
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#scheduled [data-request-auth]")
-      .append(
-        createKeyValuePair(
-          "scheduled",
-          authParam.key,
-          authParam.value,
-          authParam.placeholder
-        )
-      )
-  })
-
-  
-  document
-    .querySelector("#scheduled [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
-
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
-
-      method = document.querySelector("#scheduled [data-method]").value
-
-      auth = keyValuePairsToObjects(
-        "scheduled",
-        document.querySelector("#scheduled [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "scheduled",
-        document.querySelector("#scheduled [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "scheduled",
-        document.querySelector("#scheduled [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "scheduled",
-        document.querySelector("#scheduled [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
-        qs = new URLSearchParams(params).toString()
-        console.log("QS:", qs)
-        data = qs
-      }
-
-      
-      url = document.querySelector("#scheduled [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
-      console.log("DATA:", data)
-
-      
-      document
-        .querySelector("#scheduled [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#scheduled [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
-          }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#scheduled [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("scheduled", response.status)
-          updateResponseBody("scheduled", response.data)
-          updateRequestBody("scheduled", myRequest)
-        })
-        .then(() => {
-          document.querySelector("#scheduled [data-json-response-body]")
-          document.querySelector("#scheduled [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
-    })
-</script>
-
-    </div>
-  
-    <input
-      type="radio"
-      class="gdoc-tabs__control hidden"
-      name="tabs-send"
-      id="tabs-send-3"
-      
-    />
-    <label for="tabs-send-3" class="gdoc-tabs__label">
       WHATSAPP
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
@@ -3789,10 +3355,10 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       type="radio"
       class="gdoc-tabs__control hidden"
       name="tabs-send"
-      id="tabs-send-4"
+      id="tabs-send-3"
       
     />
-    <label for="tabs-send-4" class="gdoc-tabs__label">
+    <label for="tabs-send-3" class="gdoc-tabs__label">
       FACEBOOK
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
@@ -4212,6 +3778,440 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         .then(() => {
           document.querySelector("#facebook [data-json-response-body]")
           document.querySelector("#facebook [data-json-request-body]")
+          console.log(`Prism.highlightAll()`)
+          Prism.highlightAll()
+        })
+    })
+</script>
+
+    </div>
+  
+    <input
+      type="radio"
+      class="gdoc-tabs__control hidden"
+      name="tabs-send"
+      id="tabs-send-4"
+      
+    />
+    <label for="tabs-send-4" class="gdoc-tabs__label">
+      SCHEDULED
+    </label>
+    <div class="gdoc-markdown--nested gdoc-tabs__content">
+      <div class="p-2" id="scheduled">
+  <script await src="../params/send/scheduled.js"></script>
+  <script>
+    console.log("API PARAMS: ..\/params\/send\/scheduled.js", apiParams)
+  </script>
+  <form data-form>
+    <div class="input-group mb-3">
+      <select class="form-select flex-grow-0 w-auto d-none" data-method>
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="PATCH">PATCH</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+      <input
+        data-url
+        required
+        class="form-control mono-url"
+        type="url"
+        placeholder="https://example.com"
+        value=""
+      />
+      <button type="submit" class="btn">Send</button>
+    </div>
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="scheduled-query-params-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#scheduled-query-params"
+          type="button"
+          role="tab"
+          aria-controls="query-params"
+          aria-selected="true"
+        >
+          Params
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="scheduled-request-auth-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#scheduled-request-auth"
+          type="button"
+          role="tab"
+          aria-controls="request-auth"
+          aria-selected="false"
+        >
+          Auth
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="scheduled-request-headers-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#scheduled-request-headers"
+          type="button"
+          role="tab"
+          aria-controls="request-headers"
+          aria-selected="false"
+        >
+          Headers
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content p-3 border-top-0 border">
+      <div
+        class="tab-pane fade show active"
+        id="scheduled-query-params"
+        role="tabpanel"
+        aria-labelledby="query-params-tab"
+      >
+        <div class="d-none" data-request-path-section>
+          <div class="my-1"><b>Path Params</b></div>
+          <div data-request-path></div>
+        </div>
+        <div class="d-none" data-query-params-section>
+          <div class="my-1"><b>Query Params</b></div>
+          <div data-query-params></div>
+          <button
+            data-add-query-param-btn
+            class="mt-2 btn btn-outline-success"
+            type="button"
+          >
+            &plus;
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="scheduled-request-headers"
+        role="tabpanel"
+        aria-labelledby="request-headers-tab"
+      >
+        <div data-request-headers></div>
+        <button
+          data-add-request-header-btn
+          class="mt-2 btn btn-outline-success"
+          type="button"
+        >
+          &plus;
+        </button>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="scheduled-request-auth"
+        role="tabpanel"
+        aria-labelledby="request-auth-tab"
+      >
+        <div data-request-auth></div>
+      </div>
+    </div>
+  </form>
+  <div class="mt-4 d-none" data-response-section>
+    <div class="d-none">
+      <h3>Request</h3>
+      <div>
+        <pre><code 
+      class="language-js"
+      id="scheduled-json-request-body"
+      data-json-request-body
+    ></code></pre>
+      </div>
+    </div>
+    <h3>Response</h3>
+    <div class="d-flex my-1">
+      <div class="me-3">Status: <span data-status></span></div>
+    </div>
+    <div class="">
+      <div>
+        <pre><code
+          class="language-js"
+          id="scheduled-json-response-body"
+          data-json-response-body
+        ></code></pre>
+      </div>
+    </div>
+  </div>
+  <template data-key-value-template>
+    <div class="input-group my-1" data-key-value-pair>
+      <input
+        type="text"
+        data-key
+        class="form-control"
+        style="flex: 1"
+        placeholder="Key"
+        value=""
+      />
+      <input
+        type="text"
+        data-value
+        class="form-control"
+        style="flex: 2"
+        placeholder="Value"
+        value=""
+      />
+      <button type="button" data-update-btn class="btn btn-outline-success">
+        &#9998;
+      </button>
+      <button type="button" data-remove-btn class="btn btn-outline-danger">
+        &#10005;
+      </button>
+    </div>
+  </template>
+</div>
+<script>
+  
+  document
+    .querySelector("#scheduled [data-add-query-param-btn]")
+    .addEventListener("click", () => {
+      document
+        .querySelector("#scheduled [data-query-params]")
+        .append(createKeyValuePair("scheduled"))
+    })
+
+  
+  document
+    .querySelector("#scheduled [data-add-request-header-btn]")
+    .addEventListener("click", () => {
+      document
+        .querySelector("#scheduled [data-request-headers]")
+        .append(createKeyValuePair("scheduled"))
+    })
+
+  
+  document.querySelector("#scheduled [data-url]").value = apiParams.url
+
+  
+  document.querySelector("#scheduled [data-method]").value =
+    apiParams?.method || "GET"
+
+  
+  this_method = document.querySelector("#scheduled [data-method]").value
+  this_submit = document.querySelector("#scheduled [type=submit]")
+  this_submit.textContent = this_method
+
+  switch (this_method) {
+    case "POST":
+      this_submit.classList.add("btn-primary")
+      break
+    case "PUT":
+      this_submit.classList.add("btn-warning")
+      break
+    case "DELETE":
+      this_submit.classList.add("btn-danger")
+      break
+    default:
+      
+      this_submit.classList.add("btn-success")
+  }
+
+  
+  apiParams.queryParams?.forEach((queryParam) => {
+    document
+      .querySelector("#scheduled [data-query-params]")
+      .append(
+        createKeyValuePair(
+          "scheduled",
+          queryParam.key,
+          queryParam.value,
+          queryParam.placeholder
+        )
+      )
+  })
+  
+  if (apiParams.queryParams?.length > 0) {
+    document
+      .querySelector("#scheduled [data-query-params-section]")
+      .classList.remove("d-none")
+  }
+
+  
+  apiParams.pathParams?.forEach((pathParam) => {
+    document
+      .querySelector("#scheduled [data-request-path]")
+      .append(
+        createKeyValuePair(
+          "scheduled",
+          pathParam.key,
+          pathParam.value,
+          pathParam.placeholder
+        )
+      )
+  })
+  
+  if (apiParams.pathParams?.length > 0) {
+    document
+      .querySelector("#scheduled [data-request-path-section]")
+      .classList.remove("d-none")
+  }
+
+  
+  apiParams.headerParams?.forEach((headerParam) => {
+    document
+      .querySelector("#scheduled [data-request-headers]")
+      .append(
+        createKeyValuePair(
+          "scheduled",
+          headerParam.key,
+          headerParam.value,
+          headerParam.placeholder
+        )
+      )
+  })
+
+  
+  apiParams.authParams?.forEach((authParam) => {
+    document
+      .querySelector("#scheduled [data-request-auth]")
+      .append(
+        createKeyValuePair(
+          "scheduled",
+          authParam.key,
+          authParam.value,
+          authParam.placeholder
+        )
+      )
+  })
+
+  
+  document
+    .querySelector("#scheduled [data-form]")
+    .addEventListener("submit", (e) => {
+      e.preventDefault()
+
+      let url
+      let method
+      let auth
+      let path
+      let headers
+      let params
+      let qs
+      let data
+      let myRequest
+
+      method = document.querySelector("#scheduled [data-method]").value
+
+      auth = keyValuePairsToObjects(
+        "scheduled",
+        document.querySelector("#scheduled [data-request-auth]")
+      )
+
+      path = keyValuePairsToObjects(
+        "scheduled",
+        document.querySelector("#scheduled [data-request-path]")
+      )
+
+      headers = keyValuePairsToObjects(
+        "scheduled",
+        document.querySelector("#scheduled [data-request-headers]")
+      )
+
+      params = keyValuePairsToObjects(
+        "scheduled",
+        document.querySelector("#scheduled [data-query-params]")
+      )
+
+      
+      if (method === "POST") {
+        qs = new URLSearchParams(params).toString()
+        console.log("QS:", qs)
+        data = qs
+      }
+
+      
+      url = document.querySelector("#scheduled [data-url]").value
+      console.log("URL BEFORE:", url)
+      let urlSplit = url.split("/")
+      console.log("URL SPLIT BEFORE:", urlSplit)
+      let count = 0
+      let urlEnvVar
+      let urlKey
+      let urlVal
+      urlSplit.forEach((word) => {
+        if (word.match(/\{\{\w+}}/)) {
+          urlEnvVar = word.match(/\{\{\w+}}/).toString()
+          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+          Object.entries(path).forEach((entry) => {
+            const [key, value] = entry
+            console.log(`${key}: ${value}`)
+            if (key == urlKey) {
+              console.log("key == urlKey")
+              urlVal = value
+              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
+            }
+          })
+        }
+        count += 1
+      })
+      console.log("URL SPLIT AFTER", urlSplit)
+      url = urlSplit.join("/")
+      console.log("URL AFTER", url)
+      console.log("METHOD:", method)
+      console.log("AUTH:", auth)
+      console.log("PATH:", path)
+      Object.entries(path).forEach((entry) => {
+        const [key, value] = entry
+        console.log(`${key}: ${value}`)
+      })
+      console.log("HEADERS:", headers)
+      console.log("PARAMS:", params)
+      console.log("DATA:", data)
+
+      
+      document
+        .querySelector("#scheduled [data-response-section]")
+        .classList.add("d-none")
+
+      axios({
+        url,
+        method,
+        auth,
+        params,
+        headers,
+        data,
+      })
+        .catch((e) => e.response)
+        .then((response) => {
+          console.log("RESPONSE:", response)
+          console.log(
+            `.querySelector("#scheduled [data-response-section]")`
+          )
+          myRequest = {
+            url,
+            method,
+            auth,
+          }
+          if (auth.password) {
+            myRequest.auth.password = "**********"
+          }
+          if (path && Object.entries(path).length > 0) {
+            console.log("Object.entries(path)", Object.entries(path))
+            myRequest.path_params = path
+          }
+          if (params && Object.entries(params).length > 0) {
+            console.log("Object.entries(params)", Object.entries(params))
+            myRequest.query_params = params
+            if (params.StatusCallback) {
+              myRequest.query_params.StatusCallback = "**********"
+            }
+          }
+          console.log("MY REQUEST", myRequest)
+          document
+            .querySelector("#scheduled [data-response-section]")
+            .classList.remove("d-none")
+          updateResponseStatus("scheduled", response.status)
+          updateResponseBody("scheduled", response.data)
+          updateRequestBody("scheduled", myRequest)
+        })
+        .then(() => {
+          document.querySelector("#scheduled [data-json-response-body]")
+          document.querySelector("#scheduled [data-json-request-body]")
           console.log(`Prism.highlightAll()`)
           Prism.highlightAll()
         })
