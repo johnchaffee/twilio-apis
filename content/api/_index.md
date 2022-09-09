@@ -1,5 +1,5 @@
 ---
-title: "API Explorer"
+title: "API Demo"
 draft: false
 # weight: 300
 tags:

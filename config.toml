@@ -1,5 +1,5 @@
 baseURL = "https://johnchaffee.wiki/twilio-apis/"
-title = "Twilio API Explorer"
+title = "Twilio API Demo"
 theme = "hugo-geekdoc"
 publishDir = "docs"
 
