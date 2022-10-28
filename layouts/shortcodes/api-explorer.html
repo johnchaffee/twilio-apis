@@ -26,67 +26,35 @@
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="{{ .Params.id }}-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#{{ .Params.id }}-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="{{ .Params.id }}-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#{{ .Params.id }}-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="{{ .Params.id }}-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#{{ .Params.id }}-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="{{ .Params.id }}-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#{{ .Params.id }}-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="{{ .Params.id }}-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#{{ .Params.id }}-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="{{ .Params.id }}-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#{{ .Params.id }}-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="{{ .Params.id }}-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="{{ .Params.id }}-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -94,42 +62,29 @@
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="{{ .Params.id }}-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="{{ .Params.id }}-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="{{ .Params.id }}-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="{{ .Params.id }}-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="{{ .Params.id }}-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -156,22 +111,8 @@
   <!-- The Remove button '&minus;' at end of each row -->
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -184,29 +125,24 @@
 
 <script>
   // Add query params Add button click listener
-  document
-    .querySelector("#{{ .Params.id }} [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#{{ .Params.id }} [data-query-params]")
-        .append(createKeyValuePair("{{ .Params.id }}"))
-    })
+  document.querySelector("#{{ .Params.id }} [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#{{ .Params.id }} [data-query-params]").append(
+      createKeyValuePair("{{ .Params.id }}")
+    )
+  })
 
   // Add header params Add button click listener
-  document
-    .querySelector("#{{ .Params.id }} [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#{{ .Params.id }} [data-request-headers]")
-        .append(createKeyValuePair("{{ .Params.id }}"))
-    })
+  document.querySelector("#{{ .Params.id }} [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#{{ .Params.id }} [data-request-headers]").append(
+      createKeyValuePair("{{ .Params.id }}")
+    )
+  })
 
   // Set url param
   document.querySelector("#{{ .Params.id }} [data-url]").value = apiParams.url
 
   // Set method param
-  document.querySelector("#{{ .Params.id }} [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#{{ .Params.id }} [data-method]").value = apiParams?.method || "GET"
 
   // Change Submit button label and color
   this_method = document.querySelector("#{{ .Params.id }} [data-method]").value
@@ -228,31 +164,27 @@
       this_submit.classList.add("btn-success")
   }
 
-  // Append query params key value pairs
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#{{ .Params.id }} [data-query-params]")
-      .append(
+  // If Query Params, unhide & append key value pairs
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#{{ .Params.id }} [data-params-section]").classList.remove("d-none")
+    document.querySelector("#{{ .Params.id }} [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#{{ .Params.id }} [data-query-params]").append(
         createKeyValuePair(
           "{{ .Params.id }}",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  // Unhide Path Params section if > 0
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#{{ .Params.id }} [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
-  // Append path params key value pairs
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#{{ .Params.id }} [data-request-path]")
-      .append(
+  // If Path Params, unhide & append key value pairs
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#{{ .Params.id }} [data-params-section]").classList.remove("d-none")
+    document.querySelector("#{{ .Params.id }} [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#{{ .Params.id }} [data-request-path]").append(
         createKeyValuePair(
           "{{ .Params.id }}",
           pathParam.key,
@@ -260,33 +192,39 @@
           pathParam.placeholder
         )
       )
-  })
-  // Unhide Query Params section if > 0
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#{{ .Params.id }} [data-request-path-section]")
-      .classList.remove("d-none")
+    })
+  }
+
+  // If JSON Params, unhide & set textContent
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#{{ .Params.id }} [data-json-body]").textContent = jsonString
+      document.querySelector("#{{ .Params.id }} [data-params-section]").classList.remove("d-none")
+      document.querySelector("#{{ .Params.id }} [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   // Append header params key value pairs
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#{{ .Params.id }} [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "{{ .Params.id }}",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#{{ .Params.id }} [data-request-headers]").append(
+      createKeyValuePair(
+        "{{ .Params.id }}",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
-  // Append auth params key value pairs
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#{{ .Params.id }} [data-request-auth]")
-      .append(
+  // If Auth Params, unhide & append key value pairs
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#{{ .Params.id }} [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#{{ .Params.id }} [data-request-auth]").append(
         createKeyValuePair(
           "{{ .Params.id }}",
           authParam.key,
@@ -294,143 +232,152 @@
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   // Form Submit listener
-  document
-    .querySelector("#{{ .Params.id }} [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#{{ .Params.id }} [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#{{ .Params.id }} [data-method]").value
+    // Set variable values from query selectors
+    method = document.querySelector("#{{ .Params.id }} [data-method]").value
+    auth = keyValuePairsToObjects("{{ .Params.id }}", document.querySelector("#{{ .Params.id }} [data-request-auth]"))
+    path = keyValuePairsToObjects("{{ .Params.id }}", document.querySelector("#{{ .Params.id }} [data-request-path]"))
+    headers = keyValuePairsToObjects("{{ .Params.id }}", document.querySelector("#{{ .Params.id }} [data-request-headers]"))
+    params = keyValuePairsToObjects("{{ .Params.id }}", document.querySelector("#{{ .Params.id }} [data-query-params]"))
+    jsonBody = document.querySelector("#{{ .Params.id }} .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "{{ .Params.id }}",
-        document.querySelector("#{{ .Params.id }} [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "{{ .Params.id }}",
-        document.querySelector("#{{ .Params.id }} [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "{{ .Params.id }}",
-        document.querySelector("#{{ .Params.id }} [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "{{ .Params.id }}",
-        document.querySelector("#{{ .Params.id }} [data-query-params]")
-      )
-
-      // POST request -> convert query strings to url encoded body data
-      if (method === "POST") {
+    // If POST or PUT, format data object as query string or json body based on content type
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      // Replace all path environment variables in url
-      url = document.querySelector("#{{ .Params.id }} [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      // Hide previous Response if it existed
-      document
-        .querySelector("#{{ .Params.id }} [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#{{ .Params.id }} [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    // Replace all path environment variables in url
+    url = document.querySelector("#{{ .Params.id }} [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#{{ .Params.id }} [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("{{ .Params.id }}", response.status)
-          updateResponseBody("{{ .Params.id }}", response.data)
-          updateRequestBody("{{ .Params.id }}", myRequest)
         })
-        .then(() => {
-          document.querySelector("#{{ .Params.id }} [data-json-response-body]")
-          document.querySelector("#{{ .Params.id }} [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    // If Auth object is empty, set to null so it's not used to authenticate via Axios
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    // Hide previous Response if it existed
+    document.querySelector("#{{ .Params.id }} [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#{{ .Params.id }} [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          // auth,
+          headers,
+        }
+        // Set MyRequest variables
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        // If data string starts with '{', convert it to a JSON object for MyRequest.data
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        // Mask sensitive fields in MyRequest
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#{{ .Params.id }} [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("{{ .Params.id }}", response?.status || 403)
+        updateResponseBody("{{ .Params.id }}", response?.data || undefined)
+        updateRequestBody("{{ .Params.id }}", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#{{ .Params.id }} [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#{{ .Params.id }} [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="{{ .Site.BaseURL }}/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#{{ .Params.id }}-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  // editor.setReadOnly(true);
+  // editor.getValue();
 </script>
