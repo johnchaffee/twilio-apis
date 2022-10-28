@@ -12,7 +12,7 @@
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/verify/service/</guid>
       <description>Create and manage Twilio Verify services.
-LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+LIST GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; FETCH GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CREATE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; DELETE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; </description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/verify/verify/</guid>
       <description>Sending and verifying One-Time-Passcodes (OTPs) with Twilio Verify.
-SEND OTP    console.log(&#34;API PARAMS: ..\/params\/send.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+SEND OTP GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CHECK OTP GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; </description>
     </item>
     
   </channel>

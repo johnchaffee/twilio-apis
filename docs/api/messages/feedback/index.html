@@ -9,12 +9,13 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.96.0" />
+<meta name="generator" content="Hugo 0.104.3" />
 
 
   <meta name="description" content="Provide feedback to Twilio on the deliverability of messages through different messaging channels.
-PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
-  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
+PROVIDE FEEDABACK Send an SMS for which to provide feedback with ProvideFeedback=true param.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; CONFIRM FEEDBACK Send Delivery Confirmation Feedack with with MessageSid &#43; Outcome=confirmed params.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; " />
 
     <title>Feedback | Twilio API Demo</title>
 
@@ -41,8 +42,9 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
   />
   <meta property="og:site_name" content="Twilio API Demo" />
   <meta property="og:description" content="Provide feedback to Twilio on the deliverability of messages through different messaging channels.
-PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
-  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+PROVIDE FEEDABACK Send an SMS for which to provide feedback with ProvideFeedback=true param.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ CONFIRM FEEDBACK Send Delivery Confirmation Feedack with with MessageSid &#43; Outcome=confirmed params.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/messages/feedback/" />
 
@@ -52,8 +54,9 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Feedback" />
   <meta name="twitter:description" content="Provide feedback to Twilio on the deliverability of messages through different messaging channels.
-PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
-  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+PROVIDE FEEDABACK Send an SMS for which to provide feedback with ProvideFeedback=true param.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ CONFIRM FEEDBACK Send Delivery Confirmation Feedack with with MessageSid &#43; Outcome=confirmed params.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ " />
 
 
   <script type="application/ld+json">
@@ -64,8 +67,8 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
       "name": "Feedback",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messages/feedback/",
       "headline": "Feedback",
-      "description": "Provide feedback to Twilio on the deliverability of messages through different messaging channels.\nPROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.\n  console.log(\u0022API PARAMS: ..\\\/params\\\/feedback\\\/create.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "908",
+      "description": "Provide feedback to Twilio on the deliverability of messages through different messaging channels.\nPROVIDE FEEDABACK Send an SMS for which to provide feedback with ProvideFeedback=true param.\nGET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params \u002b JSON Body \u002b Request Response Status: ✎ ✕ CONFIRM FEEDBACK Send Delivery Confirmation Feedack with with MessageSid \u002b Outcome=confirmed params.\nGET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params \u002b JSON Body \u002b Request Response Status: ✎ ✕ ",
+      "wordCount" : "82",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -301,7 +304,34 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
 </header>
 
 
-
+      <dialog id="newEnvVarDialog">
+        <h3>Update Environment Variable</h3>
+        <form method="dialog">
+          <div class="input-group my-1" data-key-value-pair>
+            <input
+              modal-data-key
+              type="text"
+              data-key
+              class="form-control"
+              style="min-width:100px"
+              placeholder="Key"
+              value=""
+            />
+            <input
+              modal-data-value
+              type="text"
+              data-value
+              class="form-control"
+              style="min-width:330px"
+              placeholder="Value"
+              value=""
+            />
+          </div>
+          <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+          <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+        </form>
+      </dialog>
+      
       <main class="container flex flex-even">
         
           <aside class="gdoc-nav">
@@ -2011,34 +2041,6 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
 </div>
 
 
-  <dialog id="newEnvVarDialog">
-    <h3>Update Environment Variable</h3>
-    <form method="dialog">
-      <div class="input-group my-1" data-key-value-pair>
-        <input
-          modal-data-key
-          type="text"
-          data-key
-          class="form-control"
-          style="min-width:100px"
-          placeholder="Key"
-          value=""
-        />
-        <input
-          modal-data-value
-          type="text"
-          data-value
-          class="form-control"
-          style="min-width:330px"
-          placeholder="Value"
-          value=""
-        />
-      </div>
-      <button class="btn btn-outline-danger" value="cancel">Cancel</button>
-      <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
-    </form>
-  </dialog>
-
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
@@ -2077,67 +2079,35 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="create-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#create-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="create-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#create-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="create-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#create-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="create-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#create-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="create-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#create-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="create-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#create-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="create-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="create-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -2145,42 +2115,29 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="create-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="create-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="create-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="create-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="create-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -2206,22 +2163,8 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -2233,29 +2176,24 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
 </div>
 <script>
   
-  document
-    .querySelector("#create [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#create [data-query-params]")
-        .append(createKeyValuePair("create"))
-    })
+  document.querySelector("#create [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#create [data-query-params]").append(
+      createKeyValuePair("create")
+    )
+  })
 
   
-  document
-    .querySelector("#create [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#create [data-request-headers]")
-        .append(createKeyValuePair("create"))
-    })
+  document.querySelector("#create [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#create [data-request-headers]").append(
+      createKeyValuePair("create")
+    )
+  })
 
   
   document.querySelector("#create [data-url]").value = apiParams.url
 
   
-  document.querySelector("#create [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#create [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#create [data-method]").value
@@ -2278,30 +2216,26 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#create [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#create [data-params-section]").classList.remove("d-none")
+    document.querySelector("#create [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#create [data-query-params]").append(
         createKeyValuePair(
           "create",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#create [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#create [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#create [data-params-section]").classList.remove("d-none")
+    document.querySelector("#create [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#create [data-request-path]").append(
         createKeyValuePair(
           "create",
           pathParam.key,
@@ -2309,33 +2243,39 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#create [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#create [data-json-body]").textContent = jsonString
+      document.querySelector("#create [data-params-section]").classList.remove("d-none")
+      document.querySelector("#create [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#create [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "create",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#create [data-request-headers]").append(
+      createKeyValuePair(
+        "create",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#create [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#create [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#create [data-request-auth]").append(
         createKeyValuePair(
           "create",
           authParam.key,
@@ -2343,145 +2283,154 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#create [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#create [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#create [data-method]").value
+    
+    method = document.querySelector("#create [data-method]").value
+    auth = keyValuePairsToObjects("create", document.querySelector("#create [data-request-auth]"))
+    path = keyValuePairsToObjects("create", document.querySelector("#create [data-request-path]"))
+    headers = keyValuePairsToObjects("create", document.querySelector("#create [data-request-headers]"))
+    params = keyValuePairsToObjects("create", document.querySelector("#create [data-query-params]"))
+    jsonBody = document.querySelector("#create .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "create",
-        document.querySelector("#create [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "create",
-        document.querySelector("#create [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "create",
-        document.querySelector("#create [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "create",
-        document.querySelector("#create [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#create [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#create [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#create [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#create [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#create [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("create", response.status)
-          updateResponseBody("create", response.data)
-          updateRequestBody("create", myRequest)
         })
-        .then(() => {
-          document.querySelector("#create [data-json-response-body]")
-          document.querySelector("#create [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#create [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#create [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#create [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("create", response?.status || 403)
+        updateResponseBody("create", response?.data || undefined)
+        updateRequestBody("create", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#create [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#create [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#create-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -2512,67 +2461,35 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="confirm-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#confirm-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="confirm-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#confirm-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="confirm-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#confirm-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="confirm-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#confirm-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="confirm-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#confirm-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="confirm-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#confirm-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="confirm-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="confirm-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -2580,42 +2497,29 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="confirm-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="confirm-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="confirm-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="confirm-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="confirm-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -2641,22 +2545,8 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -2668,29 +2558,24 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
 </div>
 <script>
   
-  document
-    .querySelector("#confirm [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#confirm [data-query-params]")
-        .append(createKeyValuePair("confirm"))
-    })
+  document.querySelector("#confirm [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#confirm [data-query-params]").append(
+      createKeyValuePair("confirm")
+    )
+  })
 
   
-  document
-    .querySelector("#confirm [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#confirm [data-request-headers]")
-        .append(createKeyValuePair("confirm"))
-    })
+  document.querySelector("#confirm [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#confirm [data-request-headers]").append(
+      createKeyValuePair("confirm")
+    )
+  })
 
   
   document.querySelector("#confirm [data-url]").value = apiParams.url
 
   
-  document.querySelector("#confirm [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#confirm [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#confirm [data-method]").value
@@ -2713,30 +2598,26 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#confirm [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#confirm [data-params-section]").classList.remove("d-none")
+    document.querySelector("#confirm [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#confirm [data-query-params]").append(
         createKeyValuePair(
           "confirm",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#confirm [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#confirm [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#confirm [data-params-section]").classList.remove("d-none")
+    document.querySelector("#confirm [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#confirm [data-request-path]").append(
         createKeyValuePair(
           "confirm",
           pathParam.key,
@@ -2744,33 +2625,39 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#confirm [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#confirm [data-json-body]").textContent = jsonString
+      document.querySelector("#confirm [data-params-section]").classList.remove("d-none")
+      document.querySelector("#confirm [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#confirm [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "confirm",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#confirm [data-request-headers]").append(
+      createKeyValuePair(
+        "confirm",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#confirm [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#confirm [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#confirm [data-request-auth]").append(
         createKeyValuePair(
           "confirm",
           authParam.key,
@@ -2778,145 +2665,154 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#confirm [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#confirm [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#confirm [data-method]").value
+    
+    method = document.querySelector("#confirm [data-method]").value
+    auth = keyValuePairsToObjects("confirm", document.querySelector("#confirm [data-request-auth]"))
+    path = keyValuePairsToObjects("confirm", document.querySelector("#confirm [data-request-path]"))
+    headers = keyValuePairsToObjects("confirm", document.querySelector("#confirm [data-request-headers]"))
+    params = keyValuePairsToObjects("confirm", document.querySelector("#confirm [data-query-params]"))
+    jsonBody = document.querySelector("#confirm .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "confirm",
-        document.querySelector("#confirm [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "confirm",
-        document.querySelector("#confirm [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "confirm",
-        document.querySelector("#confirm [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "confirm",
-        document.querySelector("#confirm [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#confirm [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#confirm [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#confirm [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#confirm [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#confirm [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("confirm", response.status)
-          updateResponseBody("confirm", response.data)
-          updateRequestBody("confirm", myRequest)
         })
-        .then(() => {
-          document.querySelector("#confirm [data-json-response-body]")
-          document.querySelector("#confirm [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#confirm [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#confirm [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#confirm [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("confirm", response?.status || 403)
+        updateResponseBody("confirm", response?.data || undefined)
+        updateRequestBody("confirm", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#confirm [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#confirm [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#confirm-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>

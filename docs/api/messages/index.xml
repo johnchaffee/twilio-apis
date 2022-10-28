@@ -12,7 +12,7 @@
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messages/send/</guid>
       <description>Send messages with the Twilio Messaging API.
-SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+SMS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; MMS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; WHATSAPP The mobile customer must send a WhatsApp message to +14155238886 with a message body of join route-suit to opt-in to receiving WhatsApp messages.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messages/crud/</guid>
       <description>Read, Update and Delete messages with the Twilio Messaging API.
-LIST  You may optionally query by To, From and DateSent.
+LIST You may optionally query by To, From and DateSent.
 Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent&amp;gt; YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&amp;gt; 2022-08-25T22:00:00 to read messages sent on or after a specific time.</description>
     </item>
     
@@ -33,8 +33,9 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messages/feedback/</guid>
       <description>Provide feedback to Twilio on the deliverability of messages through different messaging channels.
-PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
-  console.log(&#34;API PARAMS: ..\/params\/feedback\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+PROVIDE FEEDABACK Send an SMS for which to provide feedback with ProvideFeedback=true param.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CONFIRM FEEDBACK Send Delivery Confirmation Feedack with with MessageSid + Outcome=confirmed params.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; </description>
     </item>
     
     <item>
@@ -44,7 +45,8 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messages/test/</guid>
       <description>Send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.
-SUCCESS    console.log(&#34;API PARAMS: ..\/params\/test\/success.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+SUCCESS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; UNSUBSCRIBED Error Code 21610 - The To phone number is blocked (opted-out) for your account.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; INVALID TO Error Code 21212 - The To phone number is invalid.</description>
     </item>
     
   </channel>

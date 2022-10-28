@@ -9,11 +9,11 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.96.0" />
+<meta name="generator" content="Hugo 0.104.3" />
 
 
   <meta name="description" content="Read, Update and Delete messages with the Twilio Messaging API.
-LIST  You may optionally query by To, From and DateSent.
+LIST You may optionally query by To, From and DateSent.
 Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent&gt; YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&gt; 2022-08-25T22:00:00 to read messages sent on or after a specific time." />
 
     <title>Read, Update, Delete | Twilio API Demo</title>
@@ -41,7 +41,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   />
   <meta property="og:site_name" content="Twilio API Demo" />
   <meta property="og:description" content="Read, Update and Delete messages with the Twilio Messaging API.
-LIST  You may optionally query by To, From and DateSent.
+LIST You may optionally query by To, From and DateSent.
 Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent&gt; YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&gt; 2022-08-25T22:00:00 to read messages sent on or after a specific time." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/messages/crud/" />
@@ -52,7 +52,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Read, Update, Delete" />
   <meta name="twitter:description" content="Read, Update and Delete messages with the Twilio Messaging API.
-LIST  You may optionally query by To, From and DateSent.
+LIST You may optionally query by To, From and DateSent.
 Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent&gt; YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&gt; 2022-08-25T22:00:00 to read messages sent on or after a specific time." />
 
 
@@ -64,8 +64,8 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
       "name": "Read, Update, Delete",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messages/crud/",
       "headline": "Read, Update, Delete",
-      "description": "Read, Update and Delete messages with the Twilio Messaging API.\nLIST  You may optionally query by To, From and DateSent.\nSpecify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent\u003e YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent\u003e 2022-08-25T22:00:00 to read messages sent on or after a specific time.",
-      "wordCount" : "1846",
+      "description": "Read, Update and Delete messages with the Twilio Messaging API.\nLIST You may optionally query by To, From and DateSent.\nSpecify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent\u003e YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent\u003e 2022-08-25T22:00:00 to read messages sent on or after a specific time.",
+      "wordCount" : "194",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -301,7 +301,34 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
 </header>
 
 
-
+      <dialog id="newEnvVarDialog">
+        <h3>Update Environment Variable</h3>
+        <form method="dialog">
+          <div class="input-group my-1" data-key-value-pair>
+            <input
+              modal-data-key
+              type="text"
+              data-key
+              class="form-control"
+              style="min-width:100px"
+              placeholder="Key"
+              value=""
+            />
+            <input
+              modal-data-value
+              type="text"
+              data-value
+              class="form-control"
+              style="min-width:330px"
+              placeholder="Value"
+              value=""
+            />
+          </div>
+          <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+          <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+        </form>
+      </dialog>
+      
       <main class="container flex flex-even">
         
           <aside class="gdoc-nav">
@@ -2011,34 +2038,6 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
 </div>
 
 
-  <dialog id="newEnvVarDialog">
-    <h3>Update Environment Variable</h3>
-    <form method="dialog">
-      <div class="input-group my-1" data-key-value-pair>
-        <input
-          modal-data-key
-          type="text"
-          data-key
-          class="form-control"
-          style="min-width:100px"
-          placeholder="Key"
-          value=""
-        />
-        <input
-          modal-data-value
-          type="text"
-          data-value
-          class="form-control"
-          style="min-width:330px"
-          placeholder="Value"
-          value=""
-        />
-      </div>
-      <button class="btn btn-outline-danger" value="cancel">Cancel</button>
-      <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
-    </form>
-  </dialog>
-
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
@@ -2078,67 +2077,35 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="list-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#list-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="list-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#list-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="list-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#list-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="list-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#list-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="list-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#list-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="list-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#list-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="list-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="list-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -2146,42 +2113,29 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="list-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="list-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="list-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="list-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="list-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -2207,22 +2161,8 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -2234,29 +2174,24 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
 </div>
 <script>
   
-  document
-    .querySelector("#list [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#list [data-query-params]")
-        .append(createKeyValuePair("list"))
-    })
+  document.querySelector("#list [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#list [data-query-params]").append(
+      createKeyValuePair("list")
+    )
+  })
 
   
-  document
-    .querySelector("#list [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#list [data-request-headers]")
-        .append(createKeyValuePair("list"))
-    })
+  document.querySelector("#list [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#list [data-request-headers]").append(
+      createKeyValuePair("list")
+    )
+  })
 
   
   document.querySelector("#list [data-url]").value = apiParams.url
 
   
-  document.querySelector("#list [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#list [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#list [data-method]").value
@@ -2279,30 +2214,26 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#list [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#list [data-params-section]").classList.remove("d-none")
+    document.querySelector("#list [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#list [data-query-params]").append(
         createKeyValuePair(
           "list",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#list [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#list [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#list [data-params-section]").classList.remove("d-none")
+    document.querySelector("#list [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#list [data-request-path]").append(
         createKeyValuePair(
           "list",
           pathParam.key,
@@ -2310,33 +2241,39 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#list [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#list [data-json-body]").textContent = jsonString
+      document.querySelector("#list [data-params-section]").classList.remove("d-none")
+      document.querySelector("#list [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#list [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "list",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#list [data-request-headers]").append(
+      createKeyValuePair(
+        "list",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#list [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#list [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#list [data-request-auth]").append(
         createKeyValuePair(
           "list",
           authParam.key,
@@ -2344,145 +2281,154 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#list [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#list [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#list [data-method]").value
+    
+    method = document.querySelector("#list [data-method]").value
+    auth = keyValuePairsToObjects("list", document.querySelector("#list [data-request-auth]"))
+    path = keyValuePairsToObjects("list", document.querySelector("#list [data-request-path]"))
+    headers = keyValuePairsToObjects("list", document.querySelector("#list [data-request-headers]"))
+    params = keyValuePairsToObjects("list", document.querySelector("#list [data-query-params]"))
+    jsonBody = document.querySelector("#list .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "list",
-        document.querySelector("#list [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "list",
-        document.querySelector("#list [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "list",
-        document.querySelector("#list [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "list",
-        document.querySelector("#list [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#list [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#list [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#list [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#list [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#list [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("list", response.status)
-          updateResponseBody("list", response.data)
-          updateRequestBody("list", myRequest)
         })
-        .then(() => {
-          document.querySelector("#list [data-json-response-body]")
-          document.querySelector("#list [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#list [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#list [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#list [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("list", response?.status || 403)
+        updateResponseBody("list", response?.data || undefined)
+        updateRequestBody("list", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#list [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#list [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#list-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -2512,67 +2458,35 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="fetch-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#fetch-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="fetch-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#fetch-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="fetch-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#fetch-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="fetch-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#fetch-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="fetch-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#fetch-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="fetch-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#fetch-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="fetch-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="fetch-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -2580,42 +2494,29 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="fetch-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="fetch-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="fetch-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="fetch-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="fetch-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -2641,22 +2542,8 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -2668,29 +2555,24 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
 </div>
 <script>
   
-  document
-    .querySelector("#fetch [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#fetch [data-query-params]")
-        .append(createKeyValuePair("fetch"))
-    })
+  document.querySelector("#fetch [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#fetch [data-query-params]").append(
+      createKeyValuePair("fetch")
+    )
+  })
 
   
-  document
-    .querySelector("#fetch [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#fetch [data-request-headers]")
-        .append(createKeyValuePair("fetch"))
-    })
+  document.querySelector("#fetch [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#fetch [data-request-headers]").append(
+      createKeyValuePair("fetch")
+    )
+  })
 
   
   document.querySelector("#fetch [data-url]").value = apiParams.url
 
   
-  document.querySelector("#fetch [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#fetch [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#fetch [data-method]").value
@@ -2713,30 +2595,26 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#fetch [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#fetch [data-params-section]").classList.remove("d-none")
+    document.querySelector("#fetch [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#fetch [data-query-params]").append(
         createKeyValuePair(
           "fetch",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#fetch [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#fetch [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#fetch [data-params-section]").classList.remove("d-none")
+    document.querySelector("#fetch [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#fetch [data-request-path]").append(
         createKeyValuePair(
           "fetch",
           pathParam.key,
@@ -2744,33 +2622,39 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#fetch [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#fetch [data-json-body]").textContent = jsonString
+      document.querySelector("#fetch [data-params-section]").classList.remove("d-none")
+      document.querySelector("#fetch [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#fetch [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "fetch",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#fetch [data-request-headers]").append(
+      createKeyValuePair(
+        "fetch",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#fetch [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#fetch [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#fetch [data-request-auth]").append(
         createKeyValuePair(
           "fetch",
           authParam.key,
@@ -2778,145 +2662,154 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#fetch [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#fetch [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#fetch [data-method]").value
+    
+    method = document.querySelector("#fetch [data-method]").value
+    auth = keyValuePairsToObjects("fetch", document.querySelector("#fetch [data-request-auth]"))
+    path = keyValuePairsToObjects("fetch", document.querySelector("#fetch [data-request-path]"))
+    headers = keyValuePairsToObjects("fetch", document.querySelector("#fetch [data-request-headers]"))
+    params = keyValuePairsToObjects("fetch", document.querySelector("#fetch [data-query-params]"))
+    jsonBody = document.querySelector("#fetch .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "fetch",
-        document.querySelector("#fetch [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "fetch",
-        document.querySelector("#fetch [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "fetch",
-        document.querySelector("#fetch [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "fetch",
-        document.querySelector("#fetch [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#fetch [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#fetch [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#fetch [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#fetch [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#fetch [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("fetch", response.status)
-          updateResponseBody("fetch", response.data)
-          updateRequestBody("fetch", myRequest)
         })
-        .then(() => {
-          document.querySelector("#fetch [data-json-response-body]")
-          document.querySelector("#fetch [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#fetch [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#fetch [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#fetch [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("fetch", response?.status || 403)
+        updateResponseBody("fetch", response?.data || undefined)
+        updateRequestBody("fetch", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#fetch [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#fetch [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#fetch-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -2947,67 +2840,35 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="update-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#update-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="update-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#update-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="update-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#update-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="update-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#update-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="update-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#update-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="update-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#update-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="update-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="update-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -3015,42 +2876,29 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="update-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="update-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="update-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="update-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="update-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -3076,22 +2924,8 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -3103,29 +2937,24 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
 </div>
 <script>
   
-  document
-    .querySelector("#update [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#update [data-query-params]")
-        .append(createKeyValuePair("update"))
-    })
+  document.querySelector("#update [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#update [data-query-params]").append(
+      createKeyValuePair("update")
+    )
+  })
 
   
-  document
-    .querySelector("#update [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#update [data-request-headers]")
-        .append(createKeyValuePair("update"))
-    })
+  document.querySelector("#update [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#update [data-request-headers]").append(
+      createKeyValuePair("update")
+    )
+  })
 
   
   document.querySelector("#update [data-url]").value = apiParams.url
 
   
-  document.querySelector("#update [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#update [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#update [data-method]").value
@@ -3148,30 +2977,26 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#update [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#update [data-params-section]").classList.remove("d-none")
+    document.querySelector("#update [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#update [data-query-params]").append(
         createKeyValuePair(
           "update",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#update [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#update [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#update [data-params-section]").classList.remove("d-none")
+    document.querySelector("#update [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#update [data-request-path]").append(
         createKeyValuePair(
           "update",
           pathParam.key,
@@ -3179,33 +3004,39 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#update [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#update [data-json-body]").textContent = jsonString
+      document.querySelector("#update [data-params-section]").classList.remove("d-none")
+      document.querySelector("#update [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#update [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "update",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#update [data-request-headers]").append(
+      createKeyValuePair(
+        "update",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#update [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#update [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#update [data-request-auth]").append(
         createKeyValuePair(
           "update",
           authParam.key,
@@ -3213,145 +3044,154 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#update [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#update [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#update [data-method]").value
+    
+    method = document.querySelector("#update [data-method]").value
+    auth = keyValuePairsToObjects("update", document.querySelector("#update [data-request-auth]"))
+    path = keyValuePairsToObjects("update", document.querySelector("#update [data-request-path]"))
+    headers = keyValuePairsToObjects("update", document.querySelector("#update [data-request-headers]"))
+    params = keyValuePairsToObjects("update", document.querySelector("#update [data-query-params]"))
+    jsonBody = document.querySelector("#update .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "update",
-        document.querySelector("#update [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "update",
-        document.querySelector("#update [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "update",
-        document.querySelector("#update [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "update",
-        document.querySelector("#update [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#update [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#update [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#update [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#update [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#update [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("update", response.status)
-          updateResponseBody("update", response.data)
-          updateRequestBody("update", myRequest)
         })
-        .then(() => {
-          document.querySelector("#update [data-json-response-body]")
-          document.querySelector("#update [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#update [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#update [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#update [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("update", response?.status || 403)
+        updateResponseBody("update", response?.data || undefined)
+        updateRequestBody("update", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#update [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#update [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#update-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -3381,67 +3221,35 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="delete-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#delete-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="delete-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#delete-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="delete-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#delete-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="delete-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#delete-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="delete-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#delete-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="delete-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#delete-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="delete-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="delete-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -3449,42 +3257,29 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="delete-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="delete-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="delete-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="delete-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="delete-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -3510,22 +3305,8 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -3537,29 +3318,24 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
 </div>
 <script>
   
-  document
-    .querySelector("#delete [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#delete [data-query-params]")
-        .append(createKeyValuePair("delete"))
-    })
+  document.querySelector("#delete [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#delete [data-query-params]").append(
+      createKeyValuePair("delete")
+    )
+  })
 
   
-  document
-    .querySelector("#delete [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#delete [data-request-headers]")
-        .append(createKeyValuePair("delete"))
-    })
+  document.querySelector("#delete [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#delete [data-request-headers]").append(
+      createKeyValuePair("delete")
+    )
+  })
 
   
   document.querySelector("#delete [data-url]").value = apiParams.url
 
   
-  document.querySelector("#delete [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#delete [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#delete [data-method]").value
@@ -3582,30 +3358,26 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#delete [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#delete [data-params-section]").classList.remove("d-none")
+    document.querySelector("#delete [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#delete [data-query-params]").append(
         createKeyValuePair(
           "delete",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#delete [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#delete [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#delete [data-params-section]").classList.remove("d-none")
+    document.querySelector("#delete [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#delete [data-request-path]").append(
         createKeyValuePair(
           "delete",
           pathParam.key,
@@ -3613,33 +3385,39 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#delete [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#delete [data-json-body]").textContent = jsonString
+      document.querySelector("#delete [data-params-section]").classList.remove("d-none")
+      document.querySelector("#delete [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#delete [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "delete",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#delete [data-request-headers]").append(
+      createKeyValuePair(
+        "delete",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#delete [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#delete [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#delete [data-request-auth]").append(
         createKeyValuePair(
           "delete",
           authParam.key,
@@ -3647,145 +3425,154 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#delete [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#delete [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#delete [data-method]").value
+    
+    method = document.querySelector("#delete [data-method]").value
+    auth = keyValuePairsToObjects("delete", document.querySelector("#delete [data-request-auth]"))
+    path = keyValuePairsToObjects("delete", document.querySelector("#delete [data-request-path]"))
+    headers = keyValuePairsToObjects("delete", document.querySelector("#delete [data-request-headers]"))
+    params = keyValuePairsToObjects("delete", document.querySelector("#delete [data-query-params]"))
+    jsonBody = document.querySelector("#delete .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "delete",
-        document.querySelector("#delete [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "delete",
-        document.querySelector("#delete [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "delete",
-        document.querySelector("#delete [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "delete",
-        document.querySelector("#delete [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#delete [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#delete [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#delete [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#delete [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#delete [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("delete", response.status)
-          updateResponseBody("delete", response.data)
-          updateRequestBody("delete", myRequest)
         })
-        .then(() => {
-          document.querySelector("#delete [data-json-response-body]")
-          document.querySelector("#delete [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#delete [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#delete [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#delete [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("delete", response?.status || 403)
+        updateResponseBody("delete", response?.data || undefined)
+        updateRequestBody("delete", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#delete [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#delete [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#delete-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>

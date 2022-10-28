@@ -9,12 +9,12 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.96.0" />
+<meta name="generator" content="Hugo 0.104.3" />
 
 
   <meta name="description" content="The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
-TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
-  console.log(&#34;API PARAMS: ..\/params\/phone-numbers-v2\/available-type.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
+TYPE Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; USE CASE Search for available phone numbers by use case (e.g. twilio.use-case.conversations.sms, twilio.use-case.marketing.sms, twilio.use-case.notifications.sms, twilio.use-case.verifications.sms, twilio." />
 
     <title>Numbers v2 - Available | Twilio API Demo</title>
 
@@ -41,8 +41,8 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   />
   <meta property="og:site_name" content="Twilio API Demo" />
   <meta property="og:description" content="The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
-TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
-  console.log(&#34;API PARAMS: ..\/params\/phone-numbers-v2\/available-type.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+TYPE Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ USE CASE Search for available phone numbers by use case (e.g. twilio.use-case.conversations.sms, twilio.use-case.marketing.sms, twilio.use-case.notifications.sms, twilio.use-case.verifications.sms, twilio." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/phone-numbers/available-numbers-v2-available/" />
 
@@ -52,8 +52,8 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Numbers v2 - Available" />
   <meta name="twitter:description" content="The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
-TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
-  console.log(&#34;API PARAMS: ..\/params\/phone-numbers-v2\/available-type.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+TYPE Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ USE CASE Search for available phone numbers by use case (e.g. twilio.use-case.conversations.sms, twilio.use-case.marketing.sms, twilio.use-case.notifications.sms, twilio.use-case.verifications.sms, twilio." />
 
 
   <script type="application/ld+json">
@@ -64,8 +64,8 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
       "name": "Numbers v2 - Available",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/phone-numbers/available-numbers-v2-available/",
       "headline": "Numbers v2 - Available",
-      "description": "The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.\nTYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)\n  console.log(\u0022API PARAMS: ..\\\/params\\\/phone-numbers-v2\\\/available-type.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "1355",
+      "description": "The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.\nTYPE Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)\nGET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params \u002b JSON Body \u002b Request Response Status: ✎ ✕ USE CASE Search for available phone numbers by use case (e.g. twilio.use-case.conversations.sms, twilio.use-case.marketing.sms, twilio.use-case.notifications.sms, twilio.use-case.verifications.sms, twilio.",
+      "wordCount" : "116",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -301,7 +301,34 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
 </header>
 
 
-
+      <dialog id="newEnvVarDialog">
+        <h3>Update Environment Variable</h3>
+        <form method="dialog">
+          <div class="input-group my-1" data-key-value-pair>
+            <input
+              modal-data-key
+              type="text"
+              data-key
+              class="form-control"
+              style="min-width:100px"
+              placeholder="Key"
+              value=""
+            />
+            <input
+              modal-data-value
+              type="text"
+              data-value
+              class="form-control"
+              style="min-width:330px"
+              placeholder="Value"
+              value=""
+            />
+          </div>
+          <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+          <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+        </form>
+      </dialog>
+      
       <main class="container flex flex-even">
         
           <aside class="gdoc-nav">
@@ -2011,34 +2038,6 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
 </div>
 
 
-  <dialog id="newEnvVarDialog">
-    <h3>Update Environment Variable</h3>
-    <form method="dialog">
-      <div class="input-group my-1" data-key-value-pair>
-        <input
-          modal-data-key
-          type="text"
-          data-key
-          class="form-control"
-          style="min-width:100px"
-          placeholder="Key"
-          value=""
-        />
-        <input
-          modal-data-value
-          type="text"
-          data-value
-          class="form-control"
-          style="min-width:330px"
-          placeholder="Value"
-          value=""
-        />
-      </div>
-      <button class="btn btn-outline-danger" value="cancel">Cancel</button>
-      <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
-    </form>
-  </dialog>
-
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
@@ -2081,67 +2080,35 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="available-type-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#available-type-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="available-type-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#available-type-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="available-type-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#available-type-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="available-type-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#available-type-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="available-type-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#available-type-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="available-type-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#available-type-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="available-type-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="available-type-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -2149,42 +2116,29 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="available-type-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="available-type-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="available-type-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="available-type-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="available-type-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -2210,22 +2164,8 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -2237,29 +2177,24 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
 </div>
 <script>
   
-  document
-    .querySelector("#available-type [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#available-type [data-query-params]")
-        .append(createKeyValuePair("available-type"))
-    })
+  document.querySelector("#available-type [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#available-type [data-query-params]").append(
+      createKeyValuePair("available-type")
+    )
+  })
 
   
-  document
-    .querySelector("#available-type [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#available-type [data-request-headers]")
-        .append(createKeyValuePair("available-type"))
-    })
+  document.querySelector("#available-type [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#available-type [data-request-headers]").append(
+      createKeyValuePair("available-type")
+    )
+  })
 
   
   document.querySelector("#available-type [data-url]").value = apiParams.url
 
   
-  document.querySelector("#available-type [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#available-type [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#available-type [data-method]").value
@@ -2282,30 +2217,26 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#available-type [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#available-type [data-params-section]").classList.remove("d-none")
+    document.querySelector("#available-type [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#available-type [data-query-params]").append(
         createKeyValuePair(
           "available-type",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#available-type [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#available-type [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#available-type [data-params-section]").classList.remove("d-none")
+    document.querySelector("#available-type [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#available-type [data-request-path]").append(
         createKeyValuePair(
           "available-type",
           pathParam.key,
@@ -2313,33 +2244,39 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#available-type [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#available-type [data-json-body]").textContent = jsonString
+      document.querySelector("#available-type [data-params-section]").classList.remove("d-none")
+      document.querySelector("#available-type [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#available-type [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "available-type",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#available-type [data-request-headers]").append(
+      createKeyValuePair(
+        "available-type",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#available-type [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#available-type [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#available-type [data-request-auth]").append(
         createKeyValuePair(
           "available-type",
           authParam.key,
@@ -2347,145 +2284,154 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#available-type [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#available-type [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#available-type [data-method]").value
+    
+    method = document.querySelector("#available-type [data-method]").value
+    auth = keyValuePairsToObjects("available-type", document.querySelector("#available-type [data-request-auth]"))
+    path = keyValuePairsToObjects("available-type", document.querySelector("#available-type [data-request-path]"))
+    headers = keyValuePairsToObjects("available-type", document.querySelector("#available-type [data-request-headers]"))
+    params = keyValuePairsToObjects("available-type", document.querySelector("#available-type [data-query-params]"))
+    jsonBody = document.querySelector("#available-type .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "available-type",
-        document.querySelector("#available-type [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "available-type",
-        document.querySelector("#available-type [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "available-type",
-        document.querySelector("#available-type [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "available-type",
-        document.querySelector("#available-type [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#available-type [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#available-type [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#available-type [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#available-type [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#available-type [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("available-type", response.status)
-          updateResponseBody("available-type", response.data)
-          updateRequestBody("available-type", myRequest)
         })
-        .then(() => {
-          document.querySelector("#available-type [data-json-response-body]")
-          document.querySelector("#available-type [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#available-type [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#available-type [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#available-type [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("available-type", response?.status || 403)
+        updateResponseBody("available-type", response?.data || undefined)
+        updateRequestBody("available-type", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#available-type [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#available-type [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#available-type-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -2516,67 +2462,35 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="available-use-case-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#available-use-case-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="available-use-case-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#available-use-case-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="available-use-case-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#available-use-case-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="available-use-case-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#available-use-case-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="available-use-case-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#available-use-case-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="available-use-case-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#available-use-case-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="available-use-case-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="available-use-case-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -2584,42 +2498,29 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="available-use-case-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="available-use-case-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="available-use-case-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="available-use-case-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="available-use-case-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -2645,22 +2546,8 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -2672,29 +2559,24 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
 </div>
 <script>
   
-  document
-    .querySelector("#available-use-case [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#available-use-case [data-query-params]")
-        .append(createKeyValuePair("available-use-case"))
-    })
+  document.querySelector("#available-use-case [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#available-use-case [data-query-params]").append(
+      createKeyValuePair("available-use-case")
+    )
+  })
 
   
-  document
-    .querySelector("#available-use-case [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#available-use-case [data-request-headers]")
-        .append(createKeyValuePair("available-use-case"))
-    })
+  document.querySelector("#available-use-case [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#available-use-case [data-request-headers]").append(
+      createKeyValuePair("available-use-case")
+    )
+  })
 
   
   document.querySelector("#available-use-case [data-url]").value = apiParams.url
 
   
-  document.querySelector("#available-use-case [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#available-use-case [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#available-use-case [data-method]").value
@@ -2717,30 +2599,26 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#available-use-case [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#available-use-case [data-params-section]").classList.remove("d-none")
+    document.querySelector("#available-use-case [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#available-use-case [data-query-params]").append(
         createKeyValuePair(
           "available-use-case",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#available-use-case [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#available-use-case [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#available-use-case [data-params-section]").classList.remove("d-none")
+    document.querySelector("#available-use-case [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#available-use-case [data-request-path]").append(
         createKeyValuePair(
           "available-use-case",
           pathParam.key,
@@ -2748,33 +2626,39 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#available-use-case [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#available-use-case [data-json-body]").textContent = jsonString
+      document.querySelector("#available-use-case [data-params-section]").classList.remove("d-none")
+      document.querySelector("#available-use-case [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#available-use-case [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "available-use-case",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#available-use-case [data-request-headers]").append(
+      createKeyValuePair(
+        "available-use-case",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#available-use-case [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#available-use-case [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#available-use-case [data-request-auth]").append(
         createKeyValuePair(
           "available-use-case",
           authParam.key,
@@ -2782,145 +2666,154 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#available-use-case [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#available-use-case [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#available-use-case [data-method]").value
+    
+    method = document.querySelector("#available-use-case [data-method]").value
+    auth = keyValuePairsToObjects("available-use-case", document.querySelector("#available-use-case [data-request-auth]"))
+    path = keyValuePairsToObjects("available-use-case", document.querySelector("#available-use-case [data-request-path]"))
+    headers = keyValuePairsToObjects("available-use-case", document.querySelector("#available-use-case [data-request-headers]"))
+    params = keyValuePairsToObjects("available-use-case", document.querySelector("#available-use-case [data-query-params]"))
+    jsonBody = document.querySelector("#available-use-case .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "available-use-case",
-        document.querySelector("#available-use-case [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "available-use-case",
-        document.querySelector("#available-use-case [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "available-use-case",
-        document.querySelector("#available-use-case [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "available-use-case",
-        document.querySelector("#available-use-case [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#available-use-case [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#available-use-case [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#available-use-case [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#available-use-case [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#available-use-case [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("available-use-case", response.status)
-          updateResponseBody("available-use-case", response.data)
-          updateRequestBody("available-use-case", myRequest)
         })
-        .then(() => {
-          document.querySelector("#available-use-case [data-json-response-body]")
-          document.querySelector("#available-use-case [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#available-use-case [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#available-use-case [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#available-use-case [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("available-use-case", response?.status || 403)
+        updateResponseBody("available-use-case", response?.data || undefined)
+        updateRequestBody("available-use-case", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#available-use-case [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#available-use-case [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#available-use-case-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -2950,67 +2843,35 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="available-capabilities-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#available-capabilities-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="available-capabilities-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#available-capabilities-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="available-capabilities-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#available-capabilities-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="available-capabilities-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#available-capabilities-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="available-capabilities-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#available-capabilities-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="available-capabilities-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#available-capabilities-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="available-capabilities-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="available-capabilities-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -3018,42 +2879,29 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="available-capabilities-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="available-capabilities-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="available-capabilities-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="available-capabilities-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="available-capabilities-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -3079,22 +2927,8 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -3106,29 +2940,24 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
 </div>
 <script>
   
-  document
-    .querySelector("#available-capabilities [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#available-capabilities [data-query-params]")
-        .append(createKeyValuePair("available-capabilities"))
-    })
+  document.querySelector("#available-capabilities [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#available-capabilities [data-query-params]").append(
+      createKeyValuePair("available-capabilities")
+    )
+  })
 
   
-  document
-    .querySelector("#available-capabilities [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#available-capabilities [data-request-headers]")
-        .append(createKeyValuePair("available-capabilities"))
-    })
+  document.querySelector("#available-capabilities [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#available-capabilities [data-request-headers]").append(
+      createKeyValuePair("available-capabilities")
+    )
+  })
 
   
   document.querySelector("#available-capabilities [data-url]").value = apiParams.url
 
   
-  document.querySelector("#available-capabilities [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#available-capabilities [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#available-capabilities [data-method]").value
@@ -3151,30 +2980,26 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#available-capabilities [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#available-capabilities [data-params-section]").classList.remove("d-none")
+    document.querySelector("#available-capabilities [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#available-capabilities [data-query-params]").append(
         createKeyValuePair(
           "available-capabilities",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#available-capabilities [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#available-capabilities [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#available-capabilities [data-params-section]").classList.remove("d-none")
+    document.querySelector("#available-capabilities [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#available-capabilities [data-request-path]").append(
         createKeyValuePair(
           "available-capabilities",
           pathParam.key,
@@ -3182,33 +3007,39 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#available-capabilities [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#available-capabilities [data-json-body]").textContent = jsonString
+      document.querySelector("#available-capabilities [data-params-section]").classList.remove("d-none")
+      document.querySelector("#available-capabilities [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#available-capabilities [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "available-capabilities",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#available-capabilities [data-request-headers]").append(
+      createKeyValuePair(
+        "available-capabilities",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#available-capabilities [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#available-capabilities [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#available-capabilities [data-request-auth]").append(
         createKeyValuePair(
           "available-capabilities",
           authParam.key,
@@ -3216,145 +3047,154 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#available-capabilities [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#available-capabilities [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#available-capabilities [data-method]").value
+    
+    method = document.querySelector("#available-capabilities [data-method]").value
+    auth = keyValuePairsToObjects("available-capabilities", document.querySelector("#available-capabilities [data-request-auth]"))
+    path = keyValuePairsToObjects("available-capabilities", document.querySelector("#available-capabilities [data-request-path]"))
+    headers = keyValuePairsToObjects("available-capabilities", document.querySelector("#available-capabilities [data-request-headers]"))
+    params = keyValuePairsToObjects("available-capabilities", document.querySelector("#available-capabilities [data-query-params]"))
+    jsonBody = document.querySelector("#available-capabilities .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "available-capabilities",
-        document.querySelector("#available-capabilities [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "available-capabilities",
-        document.querySelector("#available-capabilities [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "available-capabilities",
-        document.querySelector("#available-capabilities [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "available-capabilities",
-        document.querySelector("#available-capabilities [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#available-capabilities [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#available-capabilities [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#available-capabilities [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#available-capabilities [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#available-capabilities [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("available-capabilities", response.status)
-          updateResponseBody("available-capabilities", response.data)
-          updateRequestBody("available-capabilities", myRequest)
         })
-        .then(() => {
-          document.querySelector("#available-capabilities [data-json-response-body]")
-          document.querySelector("#available-capabilities [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#available-capabilities [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#available-capabilities [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#available-capabilities [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("available-capabilities", response?.status || 403)
+        updateResponseBody("available-capabilities", response?.data || undefined)
+        updateRequestBody("available-capabilities", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#available-capabilities [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#available-capabilities [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#available-capabilities-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>

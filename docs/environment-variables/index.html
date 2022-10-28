@@ -9,11 +9,11 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.96.0" />
+<meta name="generator" content="Hugo 0.104.3" />
 
 
   <meta name="description" content="Enter key/value environment variables to use in Postman API requests.
-Add Custom Environment Variable    Environment Variables    Edit  Delete      const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.keys(localStorage).sort(function (a, b) { return a.toLowerCase().localeCompare(b.toLowerCase()) }) let envVars = [] let envObj = {} keys.forEach((key) = { envObj = {} envObj.key = key envObj.value = localStorage[key] envVars." />
+Add Custom Environment Variable Environment Variables Edit Delete " />
 
     <title>Environment Variables | Twilio API Demo</title>
 
@@ -40,7 +40,7 @@ Add Custom Environment Variable    Environment Variables    Edit  Delete      co
   />
   <meta property="og:site_name" content="Twilio API Demo" />
   <meta property="og:description" content="Enter key/value environment variables to use in Postman API requests.
-Add Custom Environment Variable    Environment Variables    Edit  Delete      const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.keys(localStorage).sort(function (a, b) { return a.toLowerCase().localeCompare(b.toLowerCase()) }) let envVars = [] let envObj = {} keys.forEach((key) = { envObj = {} envObj.key = key envObj.value = localStorage[key] envVars." />
+Add Custom Environment Variable Environment Variables Edit Delete " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/environment-variables/" />
 
@@ -50,7 +50,7 @@ Add Custom Environment Variable    Environment Variables    Edit  Delete      co
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Environment Variables" />
   <meta name="twitter:description" content="Enter key/value environment variables to use in Postman API requests.
-Add Custom Environment Variable    Environment Variables    Edit  Delete      const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.keys(localStorage).sort(function (a, b) { return a.toLowerCase().localeCompare(b.toLowerCase()) }) let envVars = [] let envObj = {} keys.forEach((key) = { envObj = {} envObj.key = key envObj.value = localStorage[key] envVars." />
+Add Custom Environment Variable Environment Variables Edit Delete " />
 
 
   <script type="application/ld+json">
@@ -61,8 +61,8 @@ Add Custom Environment Variable    Environment Variables    Edit  Delete      co
       "name": "Environment Variables",
       "url" : "https://johnchaffee.wiki/twilio-apis/environment-variables/",
       "headline": "Environment Variables",
-      "description": "Enter key\/value environment variables to use in Postman API requests.\nAdd Custom Environment Variable    Environment Variables    Edit  Delete      const newEnvVarDialog = document.getElementById(\u0022newEnvVarDialog\u0022) let keyElement = newEnvVarDialog.querySelector(\u0022[modal-data-key]\u0022) let valueElement = newEnvVarDialog.querySelector(\u0022[modal-data-value]\u0022) const keys = Object.keys(localStorage).sort(function (a, b) { return a.toLowerCase().localeCompare(b.toLowerCase()) }) let envVars = [] let envObj = {} keys.forEach((key) = { envObj = {} envObj.key = key envObj.value = localStorage[key] envVars.",
-      "wordCount" : "139",
+      "description": "Enter key\/value environment variables to use in Postman API requests.\nAdd Custom Environment Variable Environment Variables Edit Delete ",
+      "wordCount" : "18",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -298,7 +298,34 @@ Add Custom Environment Variable    Environment Variables    Edit  Delete      co
 </header>
 
 
-
+      <dialog id="newEnvVarDialog">
+        <h3>Update Environment Variable</h3>
+        <form method="dialog">
+          <div class="input-group my-1" data-key-value-pair>
+            <input
+              modal-data-key
+              type="text"
+              data-key
+              class="form-control"
+              style="min-width:100px"
+              placeholder="Key"
+              value=""
+            />
+            <input
+              modal-data-value
+              type="text"
+              data-value
+              class="form-control"
+              style="min-width:330px"
+              placeholder="Value"
+              value=""
+            />
+          </div>
+          <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+          <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+        </form>
+      </dialog>
+      
       <main class="container flex flex-even">
         
           <aside class="gdoc-nav">
@@ -1991,34 +2018,6 @@ Add Custom Environment Variable    Environment Variables    Edit  Delete      co
   
 </div>
 
-
-  <dialog id="newEnvVarDialog">
-    <h3>Update Environment Variable</h3>
-    <form method="dialog">
-      <div class="input-group my-1" data-key-value-pair>
-        <input
-          modal-data-key
-          type="text"
-          data-key
-          class="form-control"
-          style="min-width:100px"
-          placeholder="Key"
-          value=""
-        />
-        <input
-          modal-data-value
-          type="text"
-          data-value
-          class="form-control"
-          style="min-width:330px"
-          placeholder="Value"
-          value=""
-        />
-      </div>
-      <button class="btn btn-outline-danger" value="cancel">Cancel</button>
-      <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
-    </form>
-  </dialog>
 
   <article
     class="gdoc-markdown gdoc-markdown__align--left"

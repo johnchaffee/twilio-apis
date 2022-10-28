@@ -9,11 +9,11 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.96.0" />
+<meta name="generator" content="Hugo 0.104.3" />
 
 
   <meta name="description" content="Send messages with the Twilio Messaging API.
-SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
+SMS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; MMS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; WHATSAPP The mobile customer must send a WhatsApp message to &#43;14155238886 with a message body of join route-suit to opt-in to receiving WhatsApp messages." />
 
     <title>Send Message | Twilio API Demo</title>
 
@@ -40,7 +40,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   />
   <meta property="og:site_name" content="Twilio API Demo" />
   <meta property="og:description" content="Send messages with the Twilio Messaging API.
-SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+SMS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ MMS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ WHATSAPP The mobile customer must send a WhatsApp message to &#43;14155238886 with a message body of join route-suit to opt-in to receiving WhatsApp messages." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/messages/send/" />
 
@@ -50,7 +50,7 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Send Message" />
   <meta name="twitter:description" content="Send messages with the Twilio Messaging API.
-SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+SMS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ MMS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ WHATSAPP The mobile customer must send a WhatsApp message to &#43;14155238886 with a message body of join route-suit to opt-in to receiving WhatsApp messages." />
 
 
   <script type="application/ld+json">
@@ -61,8 +61,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
       "name": "Send Message",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/messages/send/",
       "headline": "Send Message",
-      "description": "Send messages with the Twilio Messaging API.\nSMS    console.log(\u0022API PARAMS: ..\\\/params\\\/send\\\/sms.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "2230",
+      "description": "Send messages with the Twilio Messaging API.\nSMS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params \u002b JSON Body \u002b Request Response Status: ✎ ✕ MMS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params \u002b JSON Body \u002b Request Response Status: ✎ ✕ WHATSAPP The mobile customer must send a WhatsApp message to \u002b14155238886 with a message body of join route-suit to opt-in to receiving WhatsApp messages.",
+      "wordCount" : "165",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -298,7 +298,34 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
 </header>
 
 
-
+      <dialog id="newEnvVarDialog">
+        <h3>Update Environment Variable</h3>
+        <form method="dialog">
+          <div class="input-group my-1" data-key-value-pair>
+            <input
+              modal-data-key
+              type="text"
+              data-key
+              class="form-control"
+              style="min-width:100px"
+              placeholder="Key"
+              value=""
+            />
+            <input
+              modal-data-value
+              type="text"
+              data-value
+              class="form-control"
+              style="min-width:330px"
+              placeholder="Value"
+              value=""
+            />
+          </div>
+          <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+          <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+        </form>
+      </dialog>
+      
       <main class="container flex flex-even">
         
           <aside class="gdoc-nav">
@@ -2008,34 +2035,6 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
 </div>
 
 
-  <dialog id="newEnvVarDialog">
-    <h3>Update Environment Variable</h3>
-    <form method="dialog">
-      <div class="input-group my-1" data-key-value-pair>
-        <input
-          modal-data-key
-          type="text"
-          data-key
-          class="form-control"
-          style="min-width:100px"
-          placeholder="Key"
-          value=""
-        />
-        <input
-          modal-data-value
-          type="text"
-          data-value
-          class="form-control"
-          style="min-width:330px"
-          placeholder="Value"
-          value=""
-        />
-      </div>
-      <button class="btn btn-outline-danger" value="cancel">Cancel</button>
-      <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
-    </form>
-  </dialog>
-
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
@@ -2073,67 +2072,35 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="sms-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#sms-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="sms-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#sms-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="sms-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#sms-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="sms-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#sms-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="sms-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#sms-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="sms-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#sms-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="sms-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="sms-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -2141,42 +2108,29 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="sms-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="sms-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="sms-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="sms-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="sms-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -2202,22 +2156,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -2229,29 +2169,24 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
 </div>
 <script>
   
-  document
-    .querySelector("#sms [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#sms [data-query-params]")
-        .append(createKeyValuePair("sms"))
-    })
+  document.querySelector("#sms [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#sms [data-query-params]").append(
+      createKeyValuePair("sms")
+    )
+  })
 
   
-  document
-    .querySelector("#sms [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#sms [data-request-headers]")
-        .append(createKeyValuePair("sms"))
-    })
+  document.querySelector("#sms [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#sms [data-request-headers]").append(
+      createKeyValuePair("sms")
+    )
+  })
 
   
   document.querySelector("#sms [data-url]").value = apiParams.url
 
   
-  document.querySelector("#sms [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#sms [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#sms [data-method]").value
@@ -2274,30 +2209,26 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#sms [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#sms [data-params-section]").classList.remove("d-none")
+    document.querySelector("#sms [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#sms [data-query-params]").append(
         createKeyValuePair(
           "sms",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#sms [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#sms [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#sms [data-params-section]").classList.remove("d-none")
+    document.querySelector("#sms [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#sms [data-request-path]").append(
         createKeyValuePair(
           "sms",
           pathParam.key,
@@ -2305,33 +2236,39 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#sms [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#sms [data-json-body]").textContent = jsonString
+      document.querySelector("#sms [data-params-section]").classList.remove("d-none")
+      document.querySelector("#sms [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#sms [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "sms",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#sms [data-request-headers]").append(
+      createKeyValuePair(
+        "sms",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#sms [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#sms [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#sms [data-request-auth]").append(
         createKeyValuePair(
           "sms",
           authParam.key,
@@ -2339,145 +2276,154 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#sms [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#sms [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#sms [data-method]").value
+    
+    method = document.querySelector("#sms [data-method]").value
+    auth = keyValuePairsToObjects("sms", document.querySelector("#sms [data-request-auth]"))
+    path = keyValuePairsToObjects("sms", document.querySelector("#sms [data-request-path]"))
+    headers = keyValuePairsToObjects("sms", document.querySelector("#sms [data-request-headers]"))
+    params = keyValuePairsToObjects("sms", document.querySelector("#sms [data-query-params]"))
+    jsonBody = document.querySelector("#sms .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "sms",
-        document.querySelector("#sms [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "sms",
-        document.querySelector("#sms [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "sms",
-        document.querySelector("#sms [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "sms",
-        document.querySelector("#sms [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#sms [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#sms [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#sms [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#sms [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#sms [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("sms", response.status)
-          updateResponseBody("sms", response.data)
-          updateRequestBody("sms", myRequest)
         })
-        .then(() => {
-          document.querySelector("#sms [data-json-response-body]")
-          document.querySelector("#sms [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#sms [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#sms [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#sms [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("sms", response?.status || 403)
+        updateResponseBody("sms", response?.data || undefined)
+        updateRequestBody("sms", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#sms [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#sms [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#sms-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -2507,67 +2453,35 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="mms-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#mms-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="mms-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#mms-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="mms-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#mms-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="mms-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#mms-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="mms-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#mms-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="mms-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#mms-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="mms-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="mms-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -2575,42 +2489,29 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="mms-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="mms-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="mms-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="mms-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="mms-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -2636,22 +2537,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -2663,29 +2550,24 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
 </div>
 <script>
   
-  document
-    .querySelector("#mms [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#mms [data-query-params]")
-        .append(createKeyValuePair("mms"))
-    })
+  document.querySelector("#mms [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#mms [data-query-params]").append(
+      createKeyValuePair("mms")
+    )
+  })
 
   
-  document
-    .querySelector("#mms [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#mms [data-request-headers]")
-        .append(createKeyValuePair("mms"))
-    })
+  document.querySelector("#mms [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#mms [data-request-headers]").append(
+      createKeyValuePair("mms")
+    )
+  })
 
   
   document.querySelector("#mms [data-url]").value = apiParams.url
 
   
-  document.querySelector("#mms [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#mms [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#mms [data-method]").value
@@ -2708,30 +2590,26 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#mms [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#mms [data-params-section]").classList.remove("d-none")
+    document.querySelector("#mms [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#mms [data-query-params]").append(
         createKeyValuePair(
           "mms",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#mms [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#mms [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#mms [data-params-section]").classList.remove("d-none")
+    document.querySelector("#mms [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#mms [data-request-path]").append(
         createKeyValuePair(
           "mms",
           pathParam.key,
@@ -2739,33 +2617,39 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#mms [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#mms [data-json-body]").textContent = jsonString
+      document.querySelector("#mms [data-params-section]").classList.remove("d-none")
+      document.querySelector("#mms [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#mms [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "mms",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#mms [data-request-headers]").append(
+      createKeyValuePair(
+        "mms",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#mms [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#mms [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#mms [data-request-auth]").append(
         createKeyValuePair(
           "mms",
           authParam.key,
@@ -2773,145 +2657,154 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#mms [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#mms [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#mms [data-method]").value
+    
+    method = document.querySelector("#mms [data-method]").value
+    auth = keyValuePairsToObjects("mms", document.querySelector("#mms [data-request-auth]"))
+    path = keyValuePairsToObjects("mms", document.querySelector("#mms [data-request-path]"))
+    headers = keyValuePairsToObjects("mms", document.querySelector("#mms [data-request-headers]"))
+    params = keyValuePairsToObjects("mms", document.querySelector("#mms [data-query-params]"))
+    jsonBody = document.querySelector("#mms .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "mms",
-        document.querySelector("#mms [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "mms",
-        document.querySelector("#mms [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "mms",
-        document.querySelector("#mms [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "mms",
-        document.querySelector("#mms [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#mms [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#mms [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#mms [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#mms [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#mms [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("mms", response.status)
-          updateResponseBody("mms", response.data)
-          updateRequestBody("mms", myRequest)
         })
-        .then(() => {
-          document.querySelector("#mms [data-json-response-body]")
-          document.querySelector("#mms [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#mms [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#mms [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#mms [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("mms", response?.status || 403)
+        updateResponseBody("mms", response?.data || undefined)
+        updateRequestBody("mms", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#mms [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#mms [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#mms-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -2942,67 +2835,35 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="whatsapp-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#whatsapp-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="whatsapp-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#whatsapp-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="whatsapp-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#whatsapp-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="whatsapp-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#whatsapp-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="whatsapp-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#whatsapp-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="whatsapp-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#whatsapp-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="whatsapp-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="whatsapp-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -3010,42 +2871,29 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="whatsapp-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="whatsapp-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="whatsapp-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="whatsapp-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="whatsapp-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -3071,22 +2919,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -3098,29 +2932,24 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
 </div>
 <script>
   
-  document
-    .querySelector("#whatsapp [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#whatsapp [data-query-params]")
-        .append(createKeyValuePair("whatsapp"))
-    })
+  document.querySelector("#whatsapp [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#whatsapp [data-query-params]").append(
+      createKeyValuePair("whatsapp")
+    )
+  })
 
   
-  document
-    .querySelector("#whatsapp [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#whatsapp [data-request-headers]")
-        .append(createKeyValuePair("whatsapp"))
-    })
+  document.querySelector("#whatsapp [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#whatsapp [data-request-headers]").append(
+      createKeyValuePair("whatsapp")
+    )
+  })
 
   
   document.querySelector("#whatsapp [data-url]").value = apiParams.url
 
   
-  document.querySelector("#whatsapp [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#whatsapp [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#whatsapp [data-method]").value
@@ -3143,30 +2972,26 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#whatsapp [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#whatsapp [data-params-section]").classList.remove("d-none")
+    document.querySelector("#whatsapp [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#whatsapp [data-query-params]").append(
         createKeyValuePair(
           "whatsapp",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#whatsapp [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#whatsapp [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#whatsapp [data-params-section]").classList.remove("d-none")
+    document.querySelector("#whatsapp [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#whatsapp [data-request-path]").append(
         createKeyValuePair(
           "whatsapp",
           pathParam.key,
@@ -3174,33 +2999,39 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#whatsapp [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#whatsapp [data-json-body]").textContent = jsonString
+      document.querySelector("#whatsapp [data-params-section]").classList.remove("d-none")
+      document.querySelector("#whatsapp [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#whatsapp [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "whatsapp",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#whatsapp [data-request-headers]").append(
+      createKeyValuePair(
+        "whatsapp",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#whatsapp [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#whatsapp [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#whatsapp [data-request-auth]").append(
         createKeyValuePair(
           "whatsapp",
           authParam.key,
@@ -3208,145 +3039,154 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#whatsapp [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#whatsapp [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#whatsapp [data-method]").value
+    
+    method = document.querySelector("#whatsapp [data-method]").value
+    auth = keyValuePairsToObjects("whatsapp", document.querySelector("#whatsapp [data-request-auth]"))
+    path = keyValuePairsToObjects("whatsapp", document.querySelector("#whatsapp [data-request-path]"))
+    headers = keyValuePairsToObjects("whatsapp", document.querySelector("#whatsapp [data-request-headers]"))
+    params = keyValuePairsToObjects("whatsapp", document.querySelector("#whatsapp [data-query-params]"))
+    jsonBody = document.querySelector("#whatsapp .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "whatsapp",
-        document.querySelector("#whatsapp [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "whatsapp",
-        document.querySelector("#whatsapp [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "whatsapp",
-        document.querySelector("#whatsapp [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "whatsapp",
-        document.querySelector("#whatsapp [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#whatsapp [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#whatsapp [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#whatsapp [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#whatsapp [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#whatsapp [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("whatsapp", response.status)
-          updateResponseBody("whatsapp", response.data)
-          updateRequestBody("whatsapp", myRequest)
         })
-        .then(() => {
-          document.querySelector("#whatsapp [data-json-response-body]")
-          document.querySelector("#whatsapp [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#whatsapp [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#whatsapp [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#whatsapp [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("whatsapp", response?.status || 403)
+        updateResponseBody("whatsapp", response?.data || undefined)
+        updateRequestBody("whatsapp", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#whatsapp [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#whatsapp [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#whatsapp-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -3377,67 +3217,35 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="facebook-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#facebook-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="facebook-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#facebook-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="facebook-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#facebook-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="facebook-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#facebook-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="facebook-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#facebook-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="facebook-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#facebook-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="facebook-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="facebook-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -3445,42 +3253,29 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="facebook-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="facebook-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="facebook-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="facebook-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="facebook-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -3506,22 +3301,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -3533,29 +3314,24 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
 </div>
 <script>
   
-  document
-    .querySelector("#facebook [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#facebook [data-query-params]")
-        .append(createKeyValuePair("facebook"))
-    })
+  document.querySelector("#facebook [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#facebook [data-query-params]").append(
+      createKeyValuePair("facebook")
+    )
+  })
 
   
-  document
-    .querySelector("#facebook [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#facebook [data-request-headers]")
-        .append(createKeyValuePair("facebook"))
-    })
+  document.querySelector("#facebook [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#facebook [data-request-headers]").append(
+      createKeyValuePair("facebook")
+    )
+  })
 
   
   document.querySelector("#facebook [data-url]").value = apiParams.url
 
   
-  document.querySelector("#facebook [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#facebook [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#facebook [data-method]").value
@@ -3578,30 +3354,26 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#facebook [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#facebook [data-params-section]").classList.remove("d-none")
+    document.querySelector("#facebook [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#facebook [data-query-params]").append(
         createKeyValuePair(
           "facebook",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#facebook [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#facebook [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#facebook [data-params-section]").classList.remove("d-none")
+    document.querySelector("#facebook [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#facebook [data-request-path]").append(
         createKeyValuePair(
           "facebook",
           pathParam.key,
@@ -3609,33 +3381,39 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#facebook [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#facebook [data-json-body]").textContent = jsonString
+      document.querySelector("#facebook [data-params-section]").classList.remove("d-none")
+      document.querySelector("#facebook [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#facebook [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "facebook",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#facebook [data-request-headers]").append(
+      createKeyValuePair(
+        "facebook",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#facebook [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#facebook [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#facebook [data-request-auth]").append(
         createKeyValuePair(
           "facebook",
           authParam.key,
@@ -3643,145 +3421,154 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#facebook [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#facebook [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#facebook [data-method]").value
+    
+    method = document.querySelector("#facebook [data-method]").value
+    auth = keyValuePairsToObjects("facebook", document.querySelector("#facebook [data-request-auth]"))
+    path = keyValuePairsToObjects("facebook", document.querySelector("#facebook [data-request-path]"))
+    headers = keyValuePairsToObjects("facebook", document.querySelector("#facebook [data-request-headers]"))
+    params = keyValuePairsToObjects("facebook", document.querySelector("#facebook [data-query-params]"))
+    jsonBody = document.querySelector("#facebook .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "facebook",
-        document.querySelector("#facebook [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "facebook",
-        document.querySelector("#facebook [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "facebook",
-        document.querySelector("#facebook [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "facebook",
-        document.querySelector("#facebook [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#facebook [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#facebook [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#facebook [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#facebook [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#facebook [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("facebook", response.status)
-          updateResponseBody("facebook", response.data)
-          updateRequestBody("facebook", myRequest)
         })
-        .then(() => {
-          document.querySelector("#facebook [data-json-response-body]")
-          document.querySelector("#facebook [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#facebook [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#facebook [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#facebook [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("facebook", response?.status || 403)
+        updateResponseBody("facebook", response?.data || undefined)
+        updateRequestBody("facebook", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#facebook [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#facebook [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#facebook-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -3811,67 +3598,35 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="scheduled-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#scheduled-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="scheduled-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#scheduled-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="scheduled-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#scheduled-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="scheduled-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#scheduled-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="scheduled-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#scheduled-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="scheduled-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#scheduled-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="scheduled-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="scheduled-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -3879,42 +3634,29 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="scheduled-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="scheduled-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="scheduled-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="scheduled-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="scheduled-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -3940,22 +3682,8 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -3967,29 +3695,24 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
 </div>
 <script>
   
-  document
-    .querySelector("#scheduled [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#scheduled [data-query-params]")
-        .append(createKeyValuePair("scheduled"))
-    })
+  document.querySelector("#scheduled [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#scheduled [data-query-params]").append(
+      createKeyValuePair("scheduled")
+    )
+  })
 
   
-  document
-    .querySelector("#scheduled [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#scheduled [data-request-headers]")
-        .append(createKeyValuePair("scheduled"))
-    })
+  document.querySelector("#scheduled [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#scheduled [data-request-headers]").append(
+      createKeyValuePair("scheduled")
+    )
+  })
 
   
   document.querySelector("#scheduled [data-url]").value = apiParams.url
 
   
-  document.querySelector("#scheduled [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#scheduled [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#scheduled [data-method]").value
@@ -4012,30 +3735,26 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#scheduled [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#scheduled [data-params-section]").classList.remove("d-none")
+    document.querySelector("#scheduled [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#scheduled [data-query-params]").append(
         createKeyValuePair(
           "scheduled",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#scheduled [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#scheduled [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#scheduled [data-params-section]").classList.remove("d-none")
+    document.querySelector("#scheduled [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#scheduled [data-request-path]").append(
         createKeyValuePair(
           "scheduled",
           pathParam.key,
@@ -4043,33 +3762,39 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#scheduled [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#scheduled [data-json-body]").textContent = jsonString
+      document.querySelector("#scheduled [data-params-section]").classList.remove("d-none")
+      document.querySelector("#scheduled [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#scheduled [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "scheduled",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#scheduled [data-request-headers]").append(
+      createKeyValuePair(
+        "scheduled",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#scheduled [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#scheduled [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#scheduled [data-request-auth]").append(
         createKeyValuePair(
           "scheduled",
           authParam.key,
@@ -4077,145 +3802,154 @@ SMS    console.log(&#34;API PARAMS: ..\/params\/send\/sms.js&#34;, apiParams)  G
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#scheduled [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#scheduled [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#scheduled [data-method]").value
+    
+    method = document.querySelector("#scheduled [data-method]").value
+    auth = keyValuePairsToObjects("scheduled", document.querySelector("#scheduled [data-request-auth]"))
+    path = keyValuePairsToObjects("scheduled", document.querySelector("#scheduled [data-request-path]"))
+    headers = keyValuePairsToObjects("scheduled", document.querySelector("#scheduled [data-request-headers]"))
+    params = keyValuePairsToObjects("scheduled", document.querySelector("#scheduled [data-query-params]"))
+    jsonBody = document.querySelector("#scheduled .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "scheduled",
-        document.querySelector("#scheduled [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "scheduled",
-        document.querySelector("#scheduled [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "scheduled",
-        document.querySelector("#scheduled [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "scheduled",
-        document.querySelector("#scheduled [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#scheduled [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#scheduled [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#scheduled [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#scheduled [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#scheduled [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("scheduled", response.status)
-          updateResponseBody("scheduled", response.data)
-          updateRequestBody("scheduled", myRequest)
         })
-        .then(() => {
-          document.querySelector("#scheduled [data-json-response-body]")
-          document.querySelector("#scheduled [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#scheduled [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#scheduled [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#scheduled [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("scheduled", response?.status || 403)
+        updateResponseBody("scheduled", response?.data || undefined)
+        updateRequestBody("scheduled", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#scheduled [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#scheduled [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#scheduled-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>

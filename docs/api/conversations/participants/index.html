@@ -9,11 +9,11 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.96.0" />
+<meta name="generator" content="Hugo 0.104.3" />
 
 
   <meta name="description" content="Add/remove participants to/from a conversation.
-List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document ." />
+List GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Fetch GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Add SMS Participant GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Add Chat Participant GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Update GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Delete GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; " />
 
     <title>Participants | Twilio API Demo</title>
 
@@ -40,7 +40,7 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   />
   <meta property="og:site_name" content="Twilio API Demo" />
   <meta property="og:description" content="Add/remove participants to/from a conversation.
-List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+List GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ Fetch GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ Add SMS Participant GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ Add Chat Participant GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ Update GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ Delete GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://johnchaffee.wiki/twilio-apis/api/conversations/participants/" />
 
@@ -50,7 +50,7 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Participants" />
   <meta name="twitter:description" content="Add/remove participants to/from a conversation.
-List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &#43;     &#43;       Request     Response Status:        ✎  ✕      document ." />
+List GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ Fetch GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ Add SMS Participant GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ Add Chat Participant GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ Update GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ Delete GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &#43; JSON Body &#43; Request Response Status: ✎ ✕ " />
 
 
   <script type="application/ld+json">
@@ -61,8 +61,8 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
       "name": "Participants",
       "url" : "https://johnchaffee.wiki/twilio-apis/api/conversations/participants/",
       "headline": "Participants",
-      "description": "Add\/remove participants to\/from a conversation.\nList    console.log(\u0022API PARAMS: ..\\\/params\\\/list-participants.js\u0022, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  \u002b     \u002b       Request     Response Status:        ✎  ✕      document .",
-      "wordCount" : "2625",
+      "description": "Add\/remove participants to\/from a conversation.\nList GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params \u002b JSON Body \u002b Request Response Status: ✎ ✕ Fetch GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params \u002b JSON Body \u002b Request Response Status: ✎ ✕ Add SMS Participant GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params \u002b JSON Body \u002b Request Response Status: ✎ ✕ Add Chat Participant GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params \u002b JSON Body \u002b Request Response Status: ✎ ✕ Update GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params \u002b JSON Body \u002b Request Response Status: ✎ ✕ Delete GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params \u002b JSON Body \u002b Request Response Status: ✎ ✕ ",
+      "wordCount" : "147",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -298,7 +298,34 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
 </header>
 
 
-
+      <dialog id="newEnvVarDialog">
+        <h3>Update Environment Variable</h3>
+        <form method="dialog">
+          <div class="input-group my-1" data-key-value-pair>
+            <input
+              modal-data-key
+              type="text"
+              data-key
+              class="form-control"
+              style="min-width:100px"
+              placeholder="Key"
+              value=""
+            />
+            <input
+              modal-data-value
+              type="text"
+              data-value
+              class="form-control"
+              style="min-width:330px"
+              placeholder="Value"
+              value=""
+            />
+          </div>
+          <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+          <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+        </form>
+      </dialog>
+      
       <main class="container flex flex-even">
         
           <aside class="gdoc-nav">
@@ -2008,34 +2035,6 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
 </div>
 
 
-  <dialog id="newEnvVarDialog">
-    <h3>Update Environment Variable</h3>
-    <form method="dialog">
-      <div class="input-group my-1" data-key-value-pair>
-        <input
-          modal-data-key
-          type="text"
-          data-key
-          class="form-control"
-          style="min-width:100px"
-          placeholder="Key"
-          value=""
-        />
-        <input
-          modal-data-value
-          type="text"
-          data-value
-          class="form-control"
-          style="min-width:330px"
-          placeholder="Value"
-          value=""
-        />
-      </div>
-      <button class="btn btn-outline-danger" value="cancel">Cancel</button>
-      <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
-    </form>
-  </dialog>
-
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
@@ -2073,67 +2072,35 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="list-participants-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#list-participants-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="list-participants-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#list-participants-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="list-participants-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#list-participants-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="list-participants-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#list-participants-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="list-participants-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#list-participants-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="list-participants-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#list-participants-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="list-participants-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="list-participants-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -2141,42 +2108,29 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="list-participants-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="list-participants-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="list-participants-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="list-participants-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="list-participants-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -2202,22 +2156,8 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -2229,29 +2169,24 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
 </div>
 <script>
   
-  document
-    .querySelector("#list-participants [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#list-participants [data-query-params]")
-        .append(createKeyValuePair("list-participants"))
-    })
+  document.querySelector("#list-participants [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#list-participants [data-query-params]").append(
+      createKeyValuePair("list-participants")
+    )
+  })
 
   
-  document
-    .querySelector("#list-participants [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#list-participants [data-request-headers]")
-        .append(createKeyValuePair("list-participants"))
-    })
+  document.querySelector("#list-participants [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#list-participants [data-request-headers]").append(
+      createKeyValuePair("list-participants")
+    )
+  })
 
   
   document.querySelector("#list-participants [data-url]").value = apiParams.url
 
   
-  document.querySelector("#list-participants [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#list-participants [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#list-participants [data-method]").value
@@ -2274,30 +2209,26 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#list-participants [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#list-participants [data-params-section]").classList.remove("d-none")
+    document.querySelector("#list-participants [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#list-participants [data-query-params]").append(
         createKeyValuePair(
           "list-participants",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#list-participants [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#list-participants [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#list-participants [data-params-section]").classList.remove("d-none")
+    document.querySelector("#list-participants [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#list-participants [data-request-path]").append(
         createKeyValuePair(
           "list-participants",
           pathParam.key,
@@ -2305,33 +2236,39 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#list-participants [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#list-participants [data-json-body]").textContent = jsonString
+      document.querySelector("#list-participants [data-params-section]").classList.remove("d-none")
+      document.querySelector("#list-participants [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#list-participants [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "list-participants",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#list-participants [data-request-headers]").append(
+      createKeyValuePair(
+        "list-participants",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#list-participants [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#list-participants [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#list-participants [data-request-auth]").append(
         createKeyValuePair(
           "list-participants",
           authParam.key,
@@ -2339,145 +2276,154 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#list-participants [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#list-participants [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#list-participants [data-method]").value
+    
+    method = document.querySelector("#list-participants [data-method]").value
+    auth = keyValuePairsToObjects("list-participants", document.querySelector("#list-participants [data-request-auth]"))
+    path = keyValuePairsToObjects("list-participants", document.querySelector("#list-participants [data-request-path]"))
+    headers = keyValuePairsToObjects("list-participants", document.querySelector("#list-participants [data-request-headers]"))
+    params = keyValuePairsToObjects("list-participants", document.querySelector("#list-participants [data-query-params]"))
+    jsonBody = document.querySelector("#list-participants .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "list-participants",
-        document.querySelector("#list-participants [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "list-participants",
-        document.querySelector("#list-participants [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "list-participants",
-        document.querySelector("#list-participants [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "list-participants",
-        document.querySelector("#list-participants [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#list-participants [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#list-participants [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#list-participants [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#list-participants [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#list-participants [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("list-participants", response.status)
-          updateResponseBody("list-participants", response.data)
-          updateRequestBody("list-participants", myRequest)
         })
-        .then(() => {
-          document.querySelector("#list-participants [data-json-response-body]")
-          document.querySelector("#list-participants [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#list-participants [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#list-participants [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#list-participants [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("list-participants", response?.status || 403)
+        updateResponseBody("list-participants", response?.data || undefined)
+        updateRequestBody("list-participants", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#list-participants [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#list-participants [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#list-participants-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -2507,67 +2453,35 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="fetch-participant-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#fetch-participant-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="fetch-participant-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#fetch-participant-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="fetch-participant-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#fetch-participant-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="fetch-participant-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#fetch-participant-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="fetch-participant-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#fetch-participant-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="fetch-participant-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#fetch-participant-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="fetch-participant-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="fetch-participant-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -2575,42 +2489,29 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="fetch-participant-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="fetch-participant-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="fetch-participant-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="fetch-participant-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="fetch-participant-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -2636,22 +2537,8 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -2663,29 +2550,24 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
 </div>
 <script>
   
-  document
-    .querySelector("#fetch-participant [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#fetch-participant [data-query-params]")
-        .append(createKeyValuePair("fetch-participant"))
-    })
+  document.querySelector("#fetch-participant [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#fetch-participant [data-query-params]").append(
+      createKeyValuePair("fetch-participant")
+    )
+  })
 
   
-  document
-    .querySelector("#fetch-participant [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#fetch-participant [data-request-headers]")
-        .append(createKeyValuePair("fetch-participant"))
-    })
+  document.querySelector("#fetch-participant [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#fetch-participant [data-request-headers]").append(
+      createKeyValuePair("fetch-participant")
+    )
+  })
 
   
   document.querySelector("#fetch-participant [data-url]").value = apiParams.url
 
   
-  document.querySelector("#fetch-participant [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#fetch-participant [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#fetch-participant [data-method]").value
@@ -2708,30 +2590,26 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#fetch-participant [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#fetch-participant [data-params-section]").classList.remove("d-none")
+    document.querySelector("#fetch-participant [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#fetch-participant [data-query-params]").append(
         createKeyValuePair(
           "fetch-participant",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#fetch-participant [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#fetch-participant [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#fetch-participant [data-params-section]").classList.remove("d-none")
+    document.querySelector("#fetch-participant [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#fetch-participant [data-request-path]").append(
         createKeyValuePair(
           "fetch-participant",
           pathParam.key,
@@ -2739,33 +2617,39 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#fetch-participant [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#fetch-participant [data-json-body]").textContent = jsonString
+      document.querySelector("#fetch-participant [data-params-section]").classList.remove("d-none")
+      document.querySelector("#fetch-participant [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#fetch-participant [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "fetch-participant",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#fetch-participant [data-request-headers]").append(
+      createKeyValuePair(
+        "fetch-participant",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#fetch-participant [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#fetch-participant [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#fetch-participant [data-request-auth]").append(
         createKeyValuePair(
           "fetch-participant",
           authParam.key,
@@ -2773,145 +2657,154 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#fetch-participant [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#fetch-participant [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#fetch-participant [data-method]").value
+    
+    method = document.querySelector("#fetch-participant [data-method]").value
+    auth = keyValuePairsToObjects("fetch-participant", document.querySelector("#fetch-participant [data-request-auth]"))
+    path = keyValuePairsToObjects("fetch-participant", document.querySelector("#fetch-participant [data-request-path]"))
+    headers = keyValuePairsToObjects("fetch-participant", document.querySelector("#fetch-participant [data-request-headers]"))
+    params = keyValuePairsToObjects("fetch-participant", document.querySelector("#fetch-participant [data-query-params]"))
+    jsonBody = document.querySelector("#fetch-participant .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "fetch-participant",
-        document.querySelector("#fetch-participant [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "fetch-participant",
-        document.querySelector("#fetch-participant [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "fetch-participant",
-        document.querySelector("#fetch-participant [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "fetch-participant",
-        document.querySelector("#fetch-participant [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#fetch-participant [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#fetch-participant [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#fetch-participant [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#fetch-participant [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#fetch-participant [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("fetch-participant", response.status)
-          updateResponseBody("fetch-participant", response.data)
-          updateRequestBody("fetch-participant", myRequest)
         })
-        .then(() => {
-          document.querySelector("#fetch-participant [data-json-response-body]")
-          document.querySelector("#fetch-participant [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#fetch-participant [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#fetch-participant [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#fetch-participant [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("fetch-participant", response?.status || 403)
+        updateResponseBody("fetch-participant", response?.data || undefined)
+        updateRequestBody("fetch-participant", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#fetch-participant [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#fetch-participant [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#fetch-participant-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -2941,67 +2834,35 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="create-sms-participant-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#create-sms-participant-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="create-sms-participant-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#create-sms-participant-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="create-sms-participant-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#create-sms-participant-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="create-sms-participant-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#create-sms-participant-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="create-sms-participant-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#create-sms-participant-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="create-sms-participant-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#create-sms-participant-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="create-sms-participant-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="create-sms-participant-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -3009,42 +2870,29 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="create-sms-participant-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="create-sms-participant-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="create-sms-participant-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="create-sms-participant-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="create-sms-participant-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -3070,22 +2918,8 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -3097,29 +2931,24 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
 </div>
 <script>
   
-  document
-    .querySelector("#create-sms-participant [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#create-sms-participant [data-query-params]")
-        .append(createKeyValuePair("create-sms-participant"))
-    })
+  document.querySelector("#create-sms-participant [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#create-sms-participant [data-query-params]").append(
+      createKeyValuePair("create-sms-participant")
+    )
+  })
 
   
-  document
-    .querySelector("#create-sms-participant [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#create-sms-participant [data-request-headers]")
-        .append(createKeyValuePair("create-sms-participant"))
-    })
+  document.querySelector("#create-sms-participant [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#create-sms-participant [data-request-headers]").append(
+      createKeyValuePair("create-sms-participant")
+    )
+  })
 
   
   document.querySelector("#create-sms-participant [data-url]").value = apiParams.url
 
   
-  document.querySelector("#create-sms-participant [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#create-sms-participant [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#create-sms-participant [data-method]").value
@@ -3142,30 +2971,26 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#create-sms-participant [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#create-sms-participant [data-params-section]").classList.remove("d-none")
+    document.querySelector("#create-sms-participant [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#create-sms-participant [data-query-params]").append(
         createKeyValuePair(
           "create-sms-participant",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#create-sms-participant [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#create-sms-participant [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#create-sms-participant [data-params-section]").classList.remove("d-none")
+    document.querySelector("#create-sms-participant [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#create-sms-participant [data-request-path]").append(
         createKeyValuePair(
           "create-sms-participant",
           pathParam.key,
@@ -3173,33 +2998,39 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#create-sms-participant [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#create-sms-participant [data-json-body]").textContent = jsonString
+      document.querySelector("#create-sms-participant [data-params-section]").classList.remove("d-none")
+      document.querySelector("#create-sms-participant [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#create-sms-participant [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "create-sms-participant",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#create-sms-participant [data-request-headers]").append(
+      createKeyValuePair(
+        "create-sms-participant",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#create-sms-participant [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#create-sms-participant [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#create-sms-participant [data-request-auth]").append(
         createKeyValuePair(
           "create-sms-participant",
           authParam.key,
@@ -3207,145 +3038,154 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#create-sms-participant [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#create-sms-participant [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#create-sms-participant [data-method]").value
+    
+    method = document.querySelector("#create-sms-participant [data-method]").value
+    auth = keyValuePairsToObjects("create-sms-participant", document.querySelector("#create-sms-participant [data-request-auth]"))
+    path = keyValuePairsToObjects("create-sms-participant", document.querySelector("#create-sms-participant [data-request-path]"))
+    headers = keyValuePairsToObjects("create-sms-participant", document.querySelector("#create-sms-participant [data-request-headers]"))
+    params = keyValuePairsToObjects("create-sms-participant", document.querySelector("#create-sms-participant [data-query-params]"))
+    jsonBody = document.querySelector("#create-sms-participant .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "create-sms-participant",
-        document.querySelector("#create-sms-participant [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "create-sms-participant",
-        document.querySelector("#create-sms-participant [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "create-sms-participant",
-        document.querySelector("#create-sms-participant [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "create-sms-participant",
-        document.querySelector("#create-sms-participant [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#create-sms-participant [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#create-sms-participant [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#create-sms-participant [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#create-sms-participant [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#create-sms-participant [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("create-sms-participant", response.status)
-          updateResponseBody("create-sms-participant", response.data)
-          updateRequestBody("create-sms-participant", myRequest)
         })
-        .then(() => {
-          document.querySelector("#create-sms-participant [data-json-response-body]")
-          document.querySelector("#create-sms-participant [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#create-sms-participant [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#create-sms-participant [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#create-sms-participant [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("create-sms-participant", response?.status || 403)
+        updateResponseBody("create-sms-participant", response?.data || undefined)
+        updateRequestBody("create-sms-participant", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#create-sms-participant [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#create-sms-participant [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#create-sms-participant-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -3375,67 +3215,35 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="create-chat-participant-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#create-chat-participant-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="create-chat-participant-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#create-chat-participant-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="create-chat-participant-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#create-chat-participant-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="create-chat-participant-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#create-chat-participant-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="create-chat-participant-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#create-chat-participant-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="create-chat-participant-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#create-chat-participant-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="create-chat-participant-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="create-chat-participant-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -3443,42 +3251,29 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="create-chat-participant-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="create-chat-participant-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="create-chat-participant-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="create-chat-participant-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="create-chat-participant-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -3504,22 +3299,8 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -3531,29 +3312,24 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
 </div>
 <script>
   
-  document
-    .querySelector("#create-chat-participant [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#create-chat-participant [data-query-params]")
-        .append(createKeyValuePair("create-chat-participant"))
-    })
+  document.querySelector("#create-chat-participant [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#create-chat-participant [data-query-params]").append(
+      createKeyValuePair("create-chat-participant")
+    )
+  })
 
   
-  document
-    .querySelector("#create-chat-participant [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#create-chat-participant [data-request-headers]")
-        .append(createKeyValuePair("create-chat-participant"))
-    })
+  document.querySelector("#create-chat-participant [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#create-chat-participant [data-request-headers]").append(
+      createKeyValuePair("create-chat-participant")
+    )
+  })
 
   
   document.querySelector("#create-chat-participant [data-url]").value = apiParams.url
 
   
-  document.querySelector("#create-chat-participant [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#create-chat-participant [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#create-chat-participant [data-method]").value
@@ -3576,30 +3352,26 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#create-chat-participant [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#create-chat-participant [data-params-section]").classList.remove("d-none")
+    document.querySelector("#create-chat-participant [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#create-chat-participant [data-query-params]").append(
         createKeyValuePair(
           "create-chat-participant",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#create-chat-participant [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#create-chat-participant [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#create-chat-participant [data-params-section]").classList.remove("d-none")
+    document.querySelector("#create-chat-participant [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#create-chat-participant [data-request-path]").append(
         createKeyValuePair(
           "create-chat-participant",
           pathParam.key,
@@ -3607,33 +3379,39 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#create-chat-participant [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#create-chat-participant [data-json-body]").textContent = jsonString
+      document.querySelector("#create-chat-participant [data-params-section]").classList.remove("d-none")
+      document.querySelector("#create-chat-participant [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#create-chat-participant [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "create-chat-participant",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#create-chat-participant [data-request-headers]").append(
+      createKeyValuePair(
+        "create-chat-participant",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#create-chat-participant [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#create-chat-participant [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#create-chat-participant [data-request-auth]").append(
         createKeyValuePair(
           "create-chat-participant",
           authParam.key,
@@ -3641,145 +3419,154 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#create-chat-participant [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#create-chat-participant [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#create-chat-participant [data-method]").value
+    
+    method = document.querySelector("#create-chat-participant [data-method]").value
+    auth = keyValuePairsToObjects("create-chat-participant", document.querySelector("#create-chat-participant [data-request-auth]"))
+    path = keyValuePairsToObjects("create-chat-participant", document.querySelector("#create-chat-participant [data-request-path]"))
+    headers = keyValuePairsToObjects("create-chat-participant", document.querySelector("#create-chat-participant [data-request-headers]"))
+    params = keyValuePairsToObjects("create-chat-participant", document.querySelector("#create-chat-participant [data-query-params]"))
+    jsonBody = document.querySelector("#create-chat-participant .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "create-chat-participant",
-        document.querySelector("#create-chat-participant [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "create-chat-participant",
-        document.querySelector("#create-chat-participant [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "create-chat-participant",
-        document.querySelector("#create-chat-participant [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "create-chat-participant",
-        document.querySelector("#create-chat-participant [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#create-chat-participant [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#create-chat-participant [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#create-chat-participant [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#create-chat-participant [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#create-chat-participant [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("create-chat-participant", response.status)
-          updateResponseBody("create-chat-participant", response.data)
-          updateRequestBody("create-chat-participant", myRequest)
         })
-        .then(() => {
-          document.querySelector("#create-chat-participant [data-json-response-body]")
-          document.querySelector("#create-chat-participant [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#create-chat-participant [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#create-chat-participant [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#create-chat-participant [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("create-chat-participant", response?.status || 403)
+        updateResponseBody("create-chat-participant", response?.data || undefined)
+        updateRequestBody("create-chat-participant", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#create-chat-participant [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#create-chat-participant [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#create-chat-participant-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -3809,67 +3596,35 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="update-participant-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#update-participant-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="update-participant-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#update-participant-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="update-participant-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#update-participant-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="update-participant-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#update-participant-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="update-participant-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#update-participant-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="update-participant-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#update-participant-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="update-participant-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="update-participant-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -3877,42 +3632,29 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="update-participant-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="update-participant-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="update-participant-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="update-participant-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="update-participant-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -3938,22 +3680,8 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -3965,29 +3693,24 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
 </div>
 <script>
   
-  document
-    .querySelector("#update-participant [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#update-participant [data-query-params]")
-        .append(createKeyValuePair("update-participant"))
-    })
+  document.querySelector("#update-participant [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#update-participant [data-query-params]").append(
+      createKeyValuePair("update-participant")
+    )
+  })
 
   
-  document
-    .querySelector("#update-participant [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#update-participant [data-request-headers]")
-        .append(createKeyValuePair("update-participant"))
-    })
+  document.querySelector("#update-participant [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#update-participant [data-request-headers]").append(
+      createKeyValuePair("update-participant")
+    )
+  })
 
   
   document.querySelector("#update-participant [data-url]").value = apiParams.url
 
   
-  document.querySelector("#update-participant [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#update-participant [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#update-participant [data-method]").value
@@ -4010,30 +3733,26 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#update-participant [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#update-participant [data-params-section]").classList.remove("d-none")
+    document.querySelector("#update-participant [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#update-participant [data-query-params]").append(
         createKeyValuePair(
           "update-participant",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#update-participant [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#update-participant [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#update-participant [data-params-section]").classList.remove("d-none")
+    document.querySelector("#update-participant [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#update-participant [data-request-path]").append(
         createKeyValuePair(
           "update-participant",
           pathParam.key,
@@ -4041,33 +3760,39 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#update-participant [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#update-participant [data-json-body]").textContent = jsonString
+      document.querySelector("#update-participant [data-params-section]").classList.remove("d-none")
+      document.querySelector("#update-participant [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#update-participant [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "update-participant",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#update-participant [data-request-headers]").append(
+      createKeyValuePair(
+        "update-participant",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#update-participant [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#update-participant [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#update-participant [data-request-auth]").append(
         createKeyValuePair(
           "update-participant",
           authParam.key,
@@ -4075,145 +3800,154 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#update-participant [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#update-participant [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#update-participant [data-method]").value
+    
+    method = document.querySelector("#update-participant [data-method]").value
+    auth = keyValuePairsToObjects("update-participant", document.querySelector("#update-participant [data-request-auth]"))
+    path = keyValuePairsToObjects("update-participant", document.querySelector("#update-participant [data-request-path]"))
+    headers = keyValuePairsToObjects("update-participant", document.querySelector("#update-participant [data-request-headers]"))
+    params = keyValuePairsToObjects("update-participant", document.querySelector("#update-participant [data-query-params]"))
+    jsonBody = document.querySelector("#update-participant .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "update-participant",
-        document.querySelector("#update-participant [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "update-participant",
-        document.querySelector("#update-participant [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "update-participant",
-        document.querySelector("#update-participant [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "update-participant",
-        document.querySelector("#update-participant [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#update-participant [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#update-participant [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#update-participant [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#update-participant [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#update-participant [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("update-participant", response.status)
-          updateResponseBody("update-participant", response.data)
-          updateRequestBody("update-participant", myRequest)
         })
-        .then(() => {
-          document.querySelector("#update-participant [data-json-response-body]")
-          document.querySelector("#update-participant [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#update-participant [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#update-participant [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#update-participant [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("update-participant", response?.status || 403)
+        updateResponseBody("update-participant", response?.data || undefined)
+        updateRequestBody("update-participant", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#update-participant [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#update-participant [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#update-participant-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>
@@ -4243,67 +3977,35 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
         <option value="PATCH">PATCH</option>
         <option value="DELETE">DELETE</option>
       </select>
-      <input
-        data-url
-        required
-        class="form-control mono-url"
-        type="url"
-        placeholder="https://example.com"
-        value=""
-      />
+      <input data-url required class="form-control mono-url" type="url" placeholder="https://example.com" value="" />
       <button type="submit" class="btn">Send</button>
     </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="delete-participant-query-params-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#delete-participant-query-params"
-          type="button"
-          role="tab"
-          aria-controls="query-params"
-          aria-selected="true"
-        >
+      <li class="nav-item d-none" role="presentation" data-params-section>
+        <button class="nav-link active" id="delete-participant-query-params-tab" data-bs-toggle="tab"
+          data-bs-target="#delete-participant-query-params" type="button" role="tab" aria-controls="query-params"
+          aria-selected="true">
           Params
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="delete-participant-request-auth-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#delete-participant-request-auth"
-          type="button"
-          role="tab"
-          aria-controls="request-auth"
-          aria-selected="false"
-        >
+      <li class="nav-item d-none" role="presentation" data-auth-params-section>
+        <button class="nav-link" id="delete-participant-request-auth-tab" data-bs-toggle="tab"
+          data-bs-target="#delete-participant-request-auth" type="button" role="tab" aria-controls="request-auth"
+          aria-selected="false">
           Auth
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="delete-participant-request-headers-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#delete-participant-request-headers"
-          type="button"
-          role="tab"
-          aria-controls="request-headers"
-          aria-selected="false"
-        >
+        <button class="nav-link" id="delete-participant-request-headers-tab" data-bs-toggle="tab"
+          data-bs-target="#delete-participant-request-headers" type="button" role="tab" aria-controls="request-headers"
+          aria-selected="false">
           Headers
         </button>
       </li>
     </ul>
     <div class="tab-content p-3 border-top-0 border">
-      <div
-        class="tab-pane fade show active"
-        id="delete-participant-query-params"
-        role="tabpanel"
-        aria-labelledby="query-params-tab"
-      >
+      <div class="tab-pane fade show active" id="delete-participant-query-params" role="tabpanel"
+        aria-labelledby="query-params-tab">
         <div class="d-none" data-request-path-section>
           <div class="my-1"><b>Path Params</b></div>
           <div data-request-path></div>
@@ -4311,42 +4013,29 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
         <div class="d-none" data-query-params-section>
           <div class="my-1"><b>Query Params</b></div>
           <div data-query-params></div>
-          <button
-            data-add-query-param-btn
-            class="mt-2 btn btn-outline-success"
-            type="button"
-          >
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">
             &plus;
           </button>
         </div>
+        <div class="d-none" data-json-body-section>
+          <div class="my-1"><b>JSON Body</b></div>
+          <div id="delete-participant-ace" class="ace-editor" data-json-body></div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="delete-participant-request-headers"
-        role="tabpanel"
-        aria-labelledby="request-headers-tab"
-      >
+      <div class="tab-pane fade" id="delete-participant-request-headers" role="tabpanel"
+        aria-labelledby="request-headers-tab">
         <div data-request-headers></div>
-        <button
-          data-add-request-header-btn
-          class="mt-2 btn btn-outline-success"
-          type="button"
-        >
+        <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">
           &plus;
         </button>
       </div>
-      <div
-        class="tab-pane fade"
-        id="delete-participant-request-auth"
-        role="tabpanel"
-        aria-labelledby="request-auth-tab"
-      >
+      <div class="tab-pane fade" id="delete-participant-request-auth" role="tabpanel" aria-labelledby="request-auth-tab">
         <div data-request-auth></div>
       </div>
     </div>
   </form>
   <div class="mt-4 d-none" data-response-section>
-    <div class="d-none">
+    <div class="">
       <h3>Request</h3>
       <div>
         <pre><code 
@@ -4372,22 +4061,8 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   </div>
   <template data-key-value-template>
     <div class="input-group my-1" data-key-value-pair>
-      <input
-        type="text"
-        data-key
-        class="form-control"
-        style="flex: 1"
-        placeholder="Key"
-        value=""
-      />
-      <input
-        type="text"
-        data-value
-        class="form-control"
-        style="flex: 2"
-        placeholder="Value"
-        value=""
-      />
+      <input type="text" data-key class="form-control" style="flex: 1" placeholder="Key" value="" />
+      <input type="text" data-value class="form-control" style="flex: 2" placeholder="Value" value="" />
       <button type="button" data-update-btn class="btn btn-outline-success">
         &#9998;
       </button>
@@ -4399,29 +4074,24 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
 </div>
 <script>
   
-  document
-    .querySelector("#delete-participant [data-add-query-param-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#delete-participant [data-query-params]")
-        .append(createKeyValuePair("delete-participant"))
-    })
+  document.querySelector("#delete-participant [data-add-query-param-btn]").addEventListener("click", () => {
+    document.querySelector("#delete-participant [data-query-params]").append(
+      createKeyValuePair("delete-participant")
+    )
+  })
 
   
-  document
-    .querySelector("#delete-participant [data-add-request-header-btn]")
-    .addEventListener("click", () => {
-      document
-        .querySelector("#delete-participant [data-request-headers]")
-        .append(createKeyValuePair("delete-participant"))
-    })
+  document.querySelector("#delete-participant [data-add-request-header-btn]").addEventListener("click", () => {
+    document.querySelector("#delete-participant [data-request-headers]").append(
+      createKeyValuePair("delete-participant")
+    )
+  })
 
   
   document.querySelector("#delete-participant [data-url]").value = apiParams.url
 
   
-  document.querySelector("#delete-participant [data-method]").value =
-    apiParams?.method || "GET"
+  document.querySelector("#delete-participant [data-method]").value = apiParams?.method || "GET"
 
   
   this_method = document.querySelector("#delete-participant [data-method]").value
@@ -4444,30 +4114,26 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
   }
 
   
-  apiParams.queryParams?.forEach((queryParam) => {
-    document
-      .querySelector("#delete-participant [data-query-params]")
-      .append(
+  if (apiParams.queryParams?.length > 0) {
+    document.querySelector("#delete-participant [data-params-section]").classList.remove("d-none")
+    document.querySelector("#delete-participant [data-query-params-section]").classList.remove("d-none")
+    apiParams.queryParams?.forEach((queryParam) => {
+      document.querySelector("#delete-participant [data-query-params]").append(
         createKeyValuePair(
           "delete-participant",
           queryParam.key,
           queryParam.value,
-          queryParam.placeholder
-        )
+          queryParam.placeholder)
       )
-  })
-  
-  if (apiParams.queryParams?.length > 0) {
-    document
-      .querySelector("#delete-participant [data-query-params-section]")
-      .classList.remove("d-none")
+    })
   }
 
   
-  apiParams.pathParams?.forEach((pathParam) => {
-    document
-      .querySelector("#delete-participant [data-request-path]")
-      .append(
+  if (apiParams.pathParams?.length > 0) {
+    document.querySelector("#delete-participant [data-params-section]").classList.remove("d-none")
+    document.querySelector("#delete-participant [data-request-path-section]").classList.remove("d-none")
+    apiParams.pathParams?.forEach((pathParam) => {
+      document.querySelector("#delete-participant [data-request-path]").append(
         createKeyValuePair(
           "delete-participant",
           pathParam.key,
@@ -4475,33 +4141,39 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
           pathParam.placeholder
         )
       )
-  })
+    })
+  }
+
   
-  if (apiParams.pathParams?.length > 0) {
-    document
-      .querySelector("#delete-participant [data-request-path-section]")
-      .classList.remove("d-none")
+  if (typeof apiParams.jsonParams != "undefined") {
+    console.log("JSON PARAMS:", apiParams.jsonParams)
+    jsonString = JSON.stringify(apiParams.jsonParams, null, 2)
+    console.log(jsonString)
+    console.log(jsonString.length)
+    if (jsonString.length > 2) {
+      document.querySelector("#delete-participant [data-json-body]").textContent = jsonString
+      document.querySelector("#delete-participant [data-params-section]").classList.remove("d-none")
+      document.querySelector("#delete-participant [data-json-body-section]").classList.remove("d-none")
+    }
   }
 
   
   apiParams.headerParams?.forEach((headerParam) => {
-    document
-      .querySelector("#delete-participant [data-request-headers]")
-      .append(
-        createKeyValuePair(
-          "delete-participant",
-          headerParam.key,
-          headerParam.value,
-          headerParam.placeholder
-        )
+    document.querySelector("#delete-participant [data-request-headers]").append(
+      createKeyValuePair(
+        "delete-participant",
+        headerParam.key,
+        headerParam.value,
+        headerParam.placeholder
       )
+    )
   })
 
   
-  apiParams.authParams?.forEach((authParam) => {
-    document
-      .querySelector("#delete-participant [data-request-auth]")
-      .append(
+  if (apiParams.authParams?.length > 0) {
+    document.querySelector("#delete-participant [data-auth-params-section]").classList.remove("d-none")
+    apiParams.authParams?.forEach((authParam) => {
+      document.querySelector("#delete-participant [data-request-auth]").append(
         createKeyValuePair(
           "delete-participant",
           authParam.key,
@@ -4509,145 +4181,154 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
           authParam.placeholder
         )
       )
-  })
+    })
+  }
 
   
-  document
-    .querySelector("#delete-participant [data-form]")
-    .addEventListener("submit", (e) => {
-      e.preventDefault()
+  document.querySelector("#delete-participant [data-form]").addEventListener("submit", (e) => {
+    e.preventDefault()
 
-      let url
-      let method
-      let auth
-      let path
-      let headers
-      let params
-      let qs
-      let data
-      let myRequest
+    let url
+    let method
+    let auth
+    let path
+    let headers
+    let params
+    let qs
+    let data
+    let myRequest
 
-      method = document.querySelector("#delete-participant [data-method]").value
+    
+    method = document.querySelector("#delete-participant [data-method]").value
+    auth = keyValuePairsToObjects("delete-participant", document.querySelector("#delete-participant [data-request-auth]"))
+    path = keyValuePairsToObjects("delete-participant", document.querySelector("#delete-participant [data-request-path]"))
+    headers = keyValuePairsToObjects("delete-participant", document.querySelector("#delete-participant [data-request-headers]"))
+    params = keyValuePairsToObjects("delete-participant", document.querySelector("#delete-participant [data-query-params]"))
+    jsonBody = document.querySelector("#delete-participant .ace_content").textContent
+    console.log("JSON BODY:", jsonBody)
 
-      auth = keyValuePairsToObjects(
-        "delete-participant",
-        document.querySelector("#delete-participant [data-request-auth]")
-      )
-
-      path = keyValuePairsToObjects(
-        "delete-participant",
-        document.querySelector("#delete-participant [data-request-path]")
-      )
-
-      headers = keyValuePairsToObjects(
-        "delete-participant",
-        document.querySelector("#delete-participant [data-request-headers]")
-      )
-
-      params = keyValuePairsToObjects(
-        "delete-participant",
-        document.querySelector("#delete-participant [data-query-params]")
-      )
-
-      
-      if (method === "POST") {
+    
+    if (method === "POST" || method === "PUT") {
+      console.log("METHOD POST || PUT")
+      console.log("HEADERS[CONTENT-TYPE]:", headers["Content-Type"])
+      if (headers["Content-Type"] && headers["Content-Type"] === "application/json") {
+        console.log("APPLICATION/JSON")
+        data = jsonBody
+      } else {
+        console.log("APPLICATION/X-WWW-FORM-URLENCODED")
         qs = new URLSearchParams(params).toString()
         console.log("QS:", qs)
         data = qs
       }
-
-      
-      url = document.querySelector("#delete-participant [data-url]").value
-      console.log("URL BEFORE:", url)
-      let urlSplit = url.split("/")
-      console.log("URL SPLIT BEFORE:", urlSplit)
-      let count = 0
-      let urlEnvVar
-      let urlKey
-      let urlVal
-      urlSplit.forEach((word) => {
-        if (word.match(/\{\{\w+}}/)) {
-          urlEnvVar = word.match(/\{\{\w+}}/).toString()
-          urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
-          Object.entries(path).forEach((entry) => {
-            const [key, value] = entry
-            console.log(`${key}: ${value}`)
-            if (key == urlKey) {
-              console.log("key == urlKey")
-              urlVal = value
-              urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
-            }
-          })
-        }
-        count += 1
-      })
-      console.log("URL SPLIT AFTER", urlSplit)
-      url = urlSplit.join("/")
-      console.log("URL AFTER", url)
-      console.log("METHOD:", method)
-      console.log("AUTH:", auth)
-      console.log("PATH:", path)
-      Object.entries(path).forEach((entry) => {
-        const [key, value] = entry
-        console.log(`${key}: ${value}`)
-      })
-      console.log("HEADERS:", headers)
-      console.log("PARAMS:", params)
       console.log("DATA:", data)
+    }
 
-      
-      document
-        .querySelector("#delete-participant [data-response-section]")
-        .classList.add("d-none")
-
-      axios({
-        url,
-        method,
-        auth,
-        params,
-        headers,
-        data,
-      })
-        .catch((e) => e.response)
-        .then((response) => {
-          console.log("RESPONSE:", response)
-          console.log(
-            `.querySelector("#delete-participant [data-response-section]")`
-          )
-          myRequest = {
-            url,
-            method,
-            auth,
+    
+    url = document.querySelector("#delete-participant [data-url]").value
+    console.log("URL BEFORE:", url)
+    let urlSplit = url.split("/")
+    console.log("URL SPLIT BEFORE:", urlSplit)
+    let count = 0
+    let urlEnvVar
+    let urlKey
+    let urlVal
+    urlSplit.forEach((word) => {
+      if (word.match(/\{\{\w+}}/)) {
+        urlEnvVar = word.match(/\{\{\w+}}/).toString()
+        urlKey = urlEnvVar.replaceAll(/[{}]/g, "")
+        Object.entries(path).forEach((entry) => {
+          const [key, value] = entry
+          console.log(`${key}: ${value}`)
+          if (key == urlKey) {
+            console.log("key == urlKey")
+            urlVal = value
+            urlSplit[count] = word.replace(/\{\{\w+}}/, urlVal)
           }
-          if (auth.password) {
-            myRequest.auth.password = "**********"
-          }
-          if (path && Object.entries(path).length > 0) {
-            console.log("Object.entries(path)", Object.entries(path))
-            myRequest.path_params = path
-          }
-          if (params && Object.entries(params).length > 0) {
-            console.log("Object.entries(params)", Object.entries(params))
-            myRequest.query_params = params
-            if (params.StatusCallback) {
-              myRequest.query_params.StatusCallback = "**********"
-            }
-          }
-          console.log("MY REQUEST", myRequest)
-          document
-            .querySelector("#delete-participant [data-response-section]")
-            .classList.remove("d-none")
-          updateResponseStatus("delete-participant", response.status)
-          updateResponseBody("delete-participant", response.data)
-          updateRequestBody("delete-participant", myRequest)
         })
-        .then(() => {
-          document.querySelector("#delete-participant [data-json-response-body]")
-          document.querySelector("#delete-participant [data-json-request-body]")
-          console.log(`Prism.highlightAll()`)
-          Prism.highlightAll()
-        })
+      }
+      count += 1
     })
+    console.log("URL SPLIT AFTER", urlSplit)
+    url = urlSplit.join("/")
+    console.log("URL AFTER", url)
+    console.log("METHOD:", method)
+    console.log("AUTH:", auth)
+    authLength = JSON.stringify(auth, null, 2).length
+    console.log("AUTH LENGTH:", authLength)
+    
+    if (authLength == 2) {
+      auth = null
+      console.log("AUTH NULL:", auth)
+    }
+    console.log("PATH:", path)
+    Object.entries(path).forEach((entry) => {
+      const [key, value] = entry
+      console.log(`${key}: ${value}`)
+    })
+    console.log("HEADERS:", headers)
+    console.log("PARAMS:", params)
+    console.log("DATA:", data)
+
+    
+    document.querySelector("#delete-participant [data-response-section]").classList.add("d-none")
+    console.log(`Hide "#delete-participant [data-response-section]"`)
+
+    axios({
+      url,
+      method,
+      auth,
+      params,
+      headers,
+      data,
+    })
+      .catch((e) => e.response)
+      .then((response) => {
+        console.log("RESPONSE:", response)
+        myRequest = {
+          url,
+          method,
+          
+          headers,
+        }
+        
+        if (path && Object.entries(path).length > 0) myRequest.path_params = path
+        if (params && Object.entries(params).length > 0) myRequest.query_params = params
+        
+        if (data && data[0] === '{') myRequest.data = JSON.parse(data)
+        if (auth) myRequest.auth = auth
+        
+        if (auth?.password) myRequest.auth.password = "**********"
+        if (headers?.api_key) myRequest.headers.api_key = "**********"
+        if (headers?.Authorization) myRequest.headers.Authorization = "Bearer **********"
+        if (params && params?.StatusCallback) myRequest.query_params.StatusCallback = "**********"
+        console.log("MY REQUEST", myRequest)
+
+        document.querySelector("#delete-participant [data-response-section]").classList.remove("d-none")
+        updateResponseStatus("delete-participant", response?.status || 403)
+        updateResponseBody("delete-participant", response?.data || undefined)
+        updateRequestBody("delete-participant", myRequest)
+      })
+      .then(() => {
+        console.log(`Prism.highlightElement()`)
+        Prism.highlightElement(document.querySelector("#delete-participant [data-json-request-body]"))
+        Prism.highlightElement(document.querySelector("#delete-participant [data-json-response-body]"))
+      })
+  })
+</script>
+<script src="https://johnchaffee.wiki/twilio-apis//ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  editor = ace.edit(document.querySelector("#delete-participant-ace"))
+  editor.setTheme("ace/theme/xcode")
+  editor.session.setMode("ace/mode/json")
+  editor.setOptions({
+    "maxLines": 50,
+    "highlightActiveLine": false,
+    "showLineNumbers": false,
+    "showGutter": false,
+    "fontSize": 14
+  })
+  
+  
 </script>
 
     </div>

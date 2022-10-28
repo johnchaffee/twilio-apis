@@ -12,8 +12,9 @@
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/phone-numbers/hosted-numbers/</guid>
       <description>Create and manage Hosted Numbers.
-CREATE  Create a Hosted Numbers Order request.
-  console.log(&#34;API PARAMS: ..\/params\/hosted-numbers\/create.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+CREATE Create a Hosted Numbers Order request.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; STATUS Check Hosted Numbers Order status.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; VERIFY Verify phone number ownership with an automated phone call.</description>
     </item>
     
   </channel>

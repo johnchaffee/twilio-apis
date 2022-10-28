@@ -44,9 +44,9 @@
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/messages/test/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/api/accounts/</loc>
-  </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/accounts/</loc>
+  </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/accounts/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/addresses/</loc>
   </url><url>
@@ -54,9 +54,9 @@
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/api/conversations/</loc>
-  </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/conversations/</loc>
+  </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/conversations/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/environment/</loc>
   </url><url>
@@ -66,17 +66,17 @@
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/hosted-numbers/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/api/lookup/</loc>
-  </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/lookup/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/api/messages/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/lookup/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/messages/</loc>
   </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/api/messaging-services/</loc>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/messages/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/messaging-services/</loc>
+  </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/api/messaging-services/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/oai/</loc>
   </url><url>
@@ -98,11 +98,11 @@
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/tags/variables/</loc>
   </url><url>
+    <loc>https://johnchaffee.wiki/twilio-apis/tags/verify/</loc>
+  </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/verify/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/api/verify/verify/</loc>
-  </url><url>
-    <loc>https://johnchaffee.wiki/twilio-apis/tags/verify/</loc>
   </url><url>
     <loc>https://johnchaffee.wiki/twilio-apis/webhook/event-streams/</loc>
   </url><url>

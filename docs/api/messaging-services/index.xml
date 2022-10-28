@@ -11,7 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messaging-services/services/</guid>
-      <description>LIST    console.log(&#34;API PARAMS: ..\/params\/list-services.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+      <description> LIST GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; FETCH GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CREATE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; UPDATE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; DELETE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; </description>
     </item>
     
     <item>
@@ -20,8 +20,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messaging-services/senders/</guid>
-      <description>LIST A2P  List A2P Use Cases associated with a Messaging Service
-  console.log(&#34;API PARAMS: ..\/params\/a2p.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+      <description>LIST A2P List A2P Use Cases associated with a Messaging Service
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; LIST PN List Phone Numbers in a Messaging Service Number Pool
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; LIST SC List Short Codes in a Messaging Service Number Pool</description>
     </item>
     
   </channel>

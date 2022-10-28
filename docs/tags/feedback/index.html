@@ -9,7 +9,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.96.0" />
+<meta name="generator" content="Hugo 0.104.3" />
 
 
 
@@ -257,7 +257,34 @@
 </header>
 
 
-
+      <dialog id="newEnvVarDialog">
+        <h3>Update Environment Variable</h3>
+        <form method="dialog">
+          <div class="input-group my-1" data-key-value-pair>
+            <input
+              modal-data-key
+              type="text"
+              data-key
+              class="form-control"
+              style="min-width:100px"
+              placeholder="Key"
+              value=""
+            />
+            <input
+              modal-data-value
+              type="text"
+              data-value
+              class="form-control"
+              style="min-width:330px"
+              placeholder="Value"
+              value=""
+            />
+          </div>
+          <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+          <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+        </form>
+      </dialog>
+      
       <main class="container flex flex-even">
         
           <aside class="gdoc-nav">
@@ -1914,20 +1941,12 @@
 
       <section class="gdoc-markdown">
         Provide feedback to Twilio on the deliverability of messages through different messaging channels.
-PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
-  console.log("API PARAMS: ..\/params\/feedback\/create.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+PROVIDE FEEDABACK Send an SMS for which to provide feedback with ProvideFeedback=true param.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; CONFIRM FEEDBACK Send Delivery Confirmation Feedack with with MessageSid + Outcome=confirmed params.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; 
       </section>
 
       <div class="gdoc-post__readmore">
-        
-          <a
-            class="flex-inline align-center fake-link"
-            title="Read full post"
-            href="/twilio-apis/api/messages/feedback/"
-          >
-            Read full post
-            <i class="gdoc-icon">gdoc_arrow_right_alt</i>
-          </a>
         
       </div>
 
@@ -1945,7 +1964,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">5 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 

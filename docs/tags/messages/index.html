@@ -9,7 +9,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.96.0" />
+<meta name="generator" content="Hugo 0.104.3" />
 
 
 
@@ -257,7 +257,34 @@
 </header>
 
 
-
+      <dialog id="newEnvVarDialog">
+        <h3>Update Environment Variable</h3>
+        <form method="dialog">
+          <div class="input-group my-1" data-key-value-pair>
+            <input
+              modal-data-key
+              type="text"
+              data-key
+              class="form-control"
+              style="min-width:100px"
+              placeholder="Key"
+              value=""
+            />
+            <input
+              modal-data-value
+              type="text"
+              data-value
+              class="form-control"
+              style="min-width:330px"
+              placeholder="Value"
+              value=""
+            />
+          </div>
+          <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+          <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+        </form>
+      </dialog>
+      
       <main class="container flex flex-even">
         
           <aside class="gdoc-nav">
@@ -1914,7 +1941,7 @@
 
       <section class="gdoc-markdown">
         Send messages with the Twilio Messaging API.
-SMS    console.log("API PARAMS: ..\/params\/send\/sms.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+SMS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; MMS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; WHATSAPP The mobile customer must send a WhatsApp message to +14155238886 with a message body of join route-suit to opt-in to receiving WhatsApp messages.
       </section>
 
       <div class="gdoc-post__readmore">
@@ -1944,7 +1971,7 @@ SMS    console.log("API PARAMS: ..\/params\/send\/sms.js", apiParams)  GET POST 
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">11 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 
@@ -1988,7 +2015,7 @@ SMS    console.log("API PARAMS: ..\/params\/send\/sms.js", apiParams)  GET POST 
 
       <section class="gdoc-markdown">
         Read, Update and Delete messages with the Twilio Messaging API.
-LIST  You may optionally query by To, From and DateSent.
+LIST You may optionally query by To, From and DateSent.
 Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, such as DateSent 2022-08-25 . You can also specify an inequality, such as DateSent&gt; YYYY-MM-DD to read messages sent on or after midnight on a date or DateSent&gt; 2022-08-25T22:00:00 to read messages sent on or after a specific time.
       </section>
 
@@ -2019,7 +2046,7 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">9 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 
@@ -2063,20 +2090,12 @@ Specify a date as YYYY-MM-DD in GMT to read only messages sent on this date, suc
 
       <section class="gdoc-markdown">
         Provide feedback to Twilio on the deliverability of messages through different messaging channels.
-PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedback=true param.
-  console.log("API PARAMS: ..\/params\/feedback\/create.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+PROVIDE FEEDABACK Send an SMS for which to provide feedback with ProvideFeedback=true param.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; CONFIRM FEEDBACK Send Delivery Confirmation Feedack with with MessageSid + Outcome=confirmed params.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; 
       </section>
 
       <div class="gdoc-post__readmore">
-        
-          <a
-            class="flex-inline align-center fake-link"
-            title="Read full post"
-            href="/twilio-apis/api/messages/feedback/"
-          >
-            Read full post
-            <i class="gdoc-icon">gdoc_arrow_right_alt</i>
-          </a>
         
       </div>
 
@@ -2094,7 +2113,7 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">5 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 
@@ -2158,7 +2177,8 @@ PROVIDE FEEDABACK  Send an SMS for which to provide feedback with ProvideFeedbac
 
       <section class="gdoc-markdown">
         Send messages with test credentials to simulate different responses. This API uses the test credentials and test phone numbers described here.
-SUCCESS    console.log("API PARAMS: ..\/params\/test\/success.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+SUCCESS GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; UNSUBSCRIBED Error Code 21610 - The To phone number is blocked (opted-out) for your account.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; INVALID TO Error Code 21212 - The To phone number is invalid.
       </section>
 
       <div class="gdoc-post__readmore">
@@ -2188,7 +2208,7 @@ SUCCESS    console.log("API PARAMS: ..\/params\/test\/success.js", apiParams)  G
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">11 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 

@@ -12,7 +12,7 @@
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/conversations/conversations/</guid>
       <description>Create and manage conversations.
-List    console.log(&#34;API PARAMS: ..\/params\/list-conversations.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+List GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Fetch GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Create GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Update GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Delete GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; </description>
     </item>
     
     <item>
@@ -22,8 +22,9 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-conversations.js&#34;, api
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/lookup/lookup-v1/</guid>
       <description>The Lookup API provides a way to retrieve additional information about a phone number.
-NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
-  console.log(&#34;API PARAMS: ..\/params\/lookup\/number.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+NUMBER Performs basic phone number validation and conversion from regional formatting to E.164 (free).
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CARRIER Provides carrier info and type (mobile, landline or voip). Costs $0.005 per lookup.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CALLER NAME Provides Caller Name and type (BUSINESS or CONSUMER).</description>
     </item>
     
     <item>
@@ -33,8 +34,9 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/phone-numbers/phone-numbers-v1/</guid>
       <description>Phone Numbers API lets you search for available numbers, purchase and manage numbers.
-ACTIVE  List all active phone numbers.
-  console.log(&#34;API PARAMS: ..\/params\/phone-numbers\/incoming.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+ACTIVE List all active phone numbers.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; TYPES List available phone number types by country.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; LOCAL List available local phone numbers by country.</description>
     </item>
     
     <item>
@@ -43,7 +45,7 @@ ACTIVE  List all active phone numbers.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messaging-services/services/</guid>
-      <description>LIST    console.log(&#34;API PARAMS: ..\/params\/list-services.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+      <description> LIST GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; FETCH GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CREATE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; UPDATE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; DELETE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; </description>
     </item>
     
     <item>
@@ -53,8 +55,9 @@ ACTIVE  List all active phone numbers.
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/lookup/lookup-v2/</guid>
       <description>The Lookup v2 API provides a way to retrieve additional information about a phone number.
-NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
-  console.log(&#34;API PARAMS: ..\/params\/lookup-v2\/number.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+NUMBER Performs basic phone number validation and conversion from regional formatting to E.164 (free).
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; LINE TYPE Provides carrier info and type (mobile, landline or voip). Costs $0.005 per lookup.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CALLER NAME Provides Caller Name and type (BUSINESS or CONSUMER).</description>
     </item>
     
     <item>
@@ -64,8 +67,8 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/phone-numbers/available-numbers-v2-available/</guid>
       <description>The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
-TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
-  console.log(&#34;API PARAMS: ..\/params\/phone-numbers-v2\/available-type.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+TYPE Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; USE CASE Search for available phone numbers by use case (e.g. twilio.use-case.conversations.sms, twilio.use-case.marketing.sms, twilio.use-case.notifications.sms, twilio.use-case.verifications.sms, twilio.</description>
     </item>
     
     <item>
@@ -75,7 +78,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/conversations/participants/</guid>
       <description>Add/remove participants to/from a conversation.
-List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+List GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Fetch GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Add SMS Participant GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Add Chat Participant GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Update GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Delete GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; </description>
     </item>
     
     <item>
@@ -84,8 +87,9 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/messaging-services/senders/</guid>
-      <description>LIST A2P  List A2P Use Cases associated with a Messaging Service
-  console.log(&#34;API PARAMS: ..\/params\/a2p.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+      <description>LIST A2P List A2P Use Cases associated with a Messaging Service
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; LIST PN List Phone Numbers in a Messaging Service Number Pool
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; LIST SC List Short Codes in a Messaging Service Number Pool</description>
     </item>
     
     <item>
@@ -95,7 +99,7 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-participants.js&#34;, apiP
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/conversations/messages/</guid>
       <description>Add messages to a conversation.
-List    console.log(&#34;API PARAMS: ..\/params\/list-messages.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+List GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Fetch GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Create GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Update GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Delete GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; </description>
     </item>
     
     <item>
@@ -105,8 +109,8 @@ List    console.log(&#34;API PARAMS: ..\/params\/list-messages.js&#34;, apiParam
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/phone-numbers/phone-numbers-v2-active/</guid>
       <description>The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
-LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography, and Type (e.g. local, mobile, tollfree, shortcode.)
-  console.log(&#34;API PARAMS: ..\/params\/phone-numbers-v2\/active-list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+LIST List all active phone numbers. Optionally filter by PhoneNumber, Geography, and Type (e.g. local, mobile, tollfree, shortcode.)
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; FETCH GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; PURCHASE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CONFIG GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; TRANSFER GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; DELETE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; </description>
     </item>
     
     <item>
@@ -116,7 +120,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/conversations/participant-conversations/</guid>
       <description>Fetch conversations by participant.
-Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-conversations.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+Fetch SMS Conversations GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; Fetch Chat Conversations GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; </description>
     </item>
     
     <item>
@@ -126,7 +130,7 @@ Fetch SMS Conversations    console.log(&#34;API PARAMS: ..\/params\/fetch-sms-co
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/verify/service/</guid>
       <description>Create and manage Twilio Verify services.
-LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+LIST GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; FETCH GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CREATE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; DELETE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; </description>
     </item>
     
     <item>
@@ -136,7 +140,7 @@ LIST    console.log(&#34;API PARAMS: ..\/params\/list.js&#34;, apiParams)  GET P
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/verify/verify/</guid>
       <description>Sending and verifying One-Time-Passcodes (OTPs) with Twilio Verify.
-SEND OTP    console.log(&#34;API PARAMS: ..\/params\/send.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+SEND OTP GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CHECK OTP GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; </description>
     </item>
     
   </channel>

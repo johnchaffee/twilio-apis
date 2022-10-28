@@ -12,8 +12,9 @@
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/lookup/lookup-v1/</guid>
       <description>The Lookup API provides a way to retrieve additional information about a phone number.
-NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
-  console.log(&#34;API PARAMS: ..\/params\/lookup\/number.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+NUMBER Performs basic phone number validation and conversion from regional formatting to E.164 (free).
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CARRIER Provides carrier info and type (mobile, landline or voip). Costs $0.005 per lookup.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CALLER NAME Provides Caller Name and type (BUSINESS or CONSUMER).</description>
     </item>
     
     <item>
@@ -23,8 +24,9 @@ NUMBER  Performs basic phone number validation and conversion from regional form
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/lookup/lookup-v2/</guid>
       <description>The Lookup v2 API provides a way to retrieve additional information about a phone number.
-NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
-  console.log(&#34;API PARAMS: ..\/params\/lookup-v2\/number.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+NUMBER Performs basic phone number validation and conversion from regional formatting to E.164 (free).
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; LINE TYPE Provides carrier info and type (mobile, landline or voip). Costs $0.005 per lookup.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CALLER NAME Provides Caller Name and type (BUSINESS or CONSUMER).</description>
     </item>
     
   </channel>

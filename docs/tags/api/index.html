@@ -9,7 +9,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.96.0" />
+<meta name="generator" content="Hugo 0.104.3" />
 
 
 
@@ -257,7 +257,34 @@
 </header>
 
 
-
+      <dialog id="newEnvVarDialog">
+        <h3>Update Environment Variable</h3>
+        <form method="dialog">
+          <div class="input-group my-1" data-key-value-pair>
+            <input
+              modal-data-key
+              type="text"
+              data-key
+              class="form-control"
+              style="min-width:100px"
+              placeholder="Key"
+              value=""
+            />
+            <input
+              modal-data-value
+              type="text"
+              data-value
+              class="form-control"
+              style="min-width:330px"
+              placeholder="Value"
+              value=""
+            />
+          </div>
+          <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+          <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+        </form>
+      </dialog>
+      
       <main class="container flex flex-even">
         
           <aside class="gdoc-nav">
@@ -1914,19 +1941,10 @@
 
       <section class="gdoc-markdown">
         Create and manage conversations.
-List    console.log("API PARAMS: ..\/params\/list-conversations.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+List GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Fetch GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Create GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Update GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Delete GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; 
       </section>
 
       <div class="gdoc-post__readmore">
-        
-          <a
-            class="flex-inline align-center fake-link"
-            title="Read full post"
-            href="/twilio-apis/api/conversations/conversations/"
-          >
-            Read full post
-            <i class="gdoc-icon">gdoc_arrow_right_alt</i>
-          </a>
         
       </div>
 
@@ -1944,7 +1962,7 @@ List    console.log("API PARAMS: ..\/params\/list-conversations.js", apiParams) 
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">11 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 
@@ -2028,8 +2046,9 @@ List    console.log("API PARAMS: ..\/params\/list-conversations.js", apiParams) 
 
       <section class="gdoc-markdown">
         The Lookup API provides a way to retrieve additional information about a phone number.
-NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
-  console.log("API PARAMS: ..\/params\/lookup\/number.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+NUMBER Performs basic phone number validation and conversion from regional formatting to E.164 (free).
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; CARRIER Provides carrier info and type (mobile, landline or voip). Costs $0.005 per lookup.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; CALLER NAME Provides Caller Name and type (BUSINESS or CONSUMER).
       </section>
 
       <div class="gdoc-post__readmore">
@@ -2059,7 +2078,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">7 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 
@@ -2143,8 +2162,9 @@ NUMBER  Performs basic phone number validation and conversion from regional form
 
       <section class="gdoc-markdown">
         Phone Numbers API lets you search for available numbers, purchase and manage numbers.
-ACTIVE  List all active phone numbers.
-  console.log("API PARAMS: ..\/params\/phone-numbers\/incoming.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+ACTIVE List all active phone numbers.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; TYPES List available phone number types by country.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; LOCAL List available local phone numbers by country.
       </section>
 
       <div class="gdoc-post__readmore">
@@ -2174,7 +2194,7 @@ ACTIVE  List all active phone numbers.
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">11 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 
@@ -2257,19 +2277,10 @@ ACTIVE  List all active phone numbers.
       </header>
 
       <section class="gdoc-markdown">
-        LIST    console.log("API PARAMS: ..\/params\/list-services.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+         LIST GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; FETCH GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; CREATE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; UPDATE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; DELETE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; 
       </section>
 
       <div class="gdoc-post__readmore">
-        
-          <a
-            class="flex-inline align-center fake-link"
-            title="Read full post"
-            href="/twilio-apis/api/messaging-services/services/"
-          >
-            Read full post
-            <i class="gdoc-icon">gdoc_arrow_right_alt</i>
-          </a>
         
       </div>
 
@@ -2287,7 +2298,7 @@ ACTIVE  List all active phone numbers.
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">11 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 
@@ -2371,8 +2382,9 @@ ACTIVE  List all active phone numbers.
 
       <section class="gdoc-markdown">
         The Lookup v2 API provides a way to retrieve additional information about a phone number.
-NUMBER  Performs basic phone number validation and conversion from regional formatting to E.164 (free).
-  console.log("API PARAMS: ..\/params\/lookup-v2\/number.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+NUMBER Performs basic phone number validation and conversion from regional formatting to E.164 (free).
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; LINE TYPE Provides carrier info and type (mobile, landline or voip). Costs $0.005 per lookup.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; CALLER NAME Provides Caller Name and type (BUSINESS or CONSUMER).
       </section>
 
       <div class="gdoc-post__readmore">
@@ -2402,7 +2414,7 @@ NUMBER  Performs basic phone number validation and conversion from regional form
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">9 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 
@@ -2486,8 +2498,8 @@ NUMBER  Performs basic phone number validation and conversion from regional form
 
       <section class="gdoc-markdown">
         The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
-TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
-  console.log("API PARAMS: ..\/params\/phone-numbers-v2\/available-type.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+TYPE Search for available phone numbers by type (e.g. local, mobile, tollfree, shortcode.)
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; USE CASE Search for available phone numbers by use case (e.g. twilio.use-case.conversations.sms, twilio.use-case.marketing.sms, twilio.use-case.notifications.sms, twilio.use-case.verifications.sms, twilio.
       </section>
 
       <div class="gdoc-post__readmore">
@@ -2517,7 +2529,7 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">7 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 
@@ -2601,19 +2613,10 @@ TYPE  Search for available phone numbers by type (e.g. local, mobile, tollfree, 
 
       <section class="gdoc-markdown">
         Add/remove participants to/from a conversation.
-List    console.log("API PARAMS: ..\/params\/list-participants.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+List GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Fetch GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Add SMS Participant GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Add Chat Participant GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Update GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Delete GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; 
       </section>
 
       <div class="gdoc-post__readmore">
-        
-          <a
-            class="flex-inline align-center fake-link"
-            title="Read full post"
-            href="/twilio-apis/api/conversations/participants/"
-          >
-            Read full post
-            <i class="gdoc-icon">gdoc_arrow_right_alt</i>
-          </a>
         
       </div>
 
@@ -2631,7 +2634,7 @@ List    console.log("API PARAMS: ..\/params\/list-participants.js", apiParams)  
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">13 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 
@@ -2714,8 +2717,9 @@ List    console.log("API PARAMS: ..\/params\/list-participants.js", apiParams)  
       </header>
 
       <section class="gdoc-markdown">
-        LIST A2P  List A2P Use Cases associated with a Messaging Service
-  console.log("API PARAMS: ..\/params\/a2p.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+        LIST A2P List A2P Use Cases associated with a Messaging Service
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; LIST PN List Phone Numbers in a Messaging Service Number Pool
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; LIST SC List Short Codes in a Messaging Service Number Pool
       </section>
 
       <div class="gdoc-post__readmore">
@@ -2745,7 +2749,7 @@ List    console.log("API PARAMS: ..\/params\/list-participants.js", apiParams)  
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">13 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 
@@ -2829,19 +2833,10 @@ List    console.log("API PARAMS: ..\/params\/list-participants.js", apiParams)  
 
       <section class="gdoc-markdown">
         Add messages to a conversation.
-List    console.log("API PARAMS: ..\/params\/list-messages.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+List GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Fetch GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Create GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Update GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; Delete GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; 
       </section>
 
       <div class="gdoc-post__readmore">
-        
-          <a
-            class="flex-inline align-center fake-link"
-            title="Read full post"
-            href="/twilio-apis/api/conversations/messages/"
-          >
-            Read full post
-            <i class="gdoc-icon">gdoc_arrow_right_alt</i>
-          </a>
         
       </div>
 
@@ -2859,7 +2854,7 @@ List    console.log("API PARAMS: ..\/params\/list-messages.js", apiParams)  GET 
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">11 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 
@@ -2943,20 +2938,11 @@ List    console.log("API PARAMS: ..\/params\/list-messages.js", apiParams)  GET 
 
       <section class="gdoc-markdown">
         The new Global Phone Numbers Catalog API lets you search for available numbers to purchase and to manage active numbers.
-LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography, and Type (e.g. local, mobile, tollfree, shortcode.)
-  console.log("API PARAMS: ..\/params\/phone-numbers-v2\/active-list.js", apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &plus;     &plus;       Request     Response Status:        &#9998;  &#10005;      document .
+LIST List all active phone numbers. Optionally filter by PhoneNumber, Geography, and Type (e.g. local, mobile, tollfree, shortcode.)
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; FETCH GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; PURCHASE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; CONFIG GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; TRANSFER GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; DELETE GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &plus; JSON Body &plus; Request Response Status: &#9998; &#10005; 
       </section>
 
       <div class="gdoc-post__readmore">
-        
-          <a
-            class="flex-inline align-center fake-link"
-            title="Read full post"
-            href="/twilio-apis/api/phone-numbers/phone-numbers-v2-active/"
-          >
-            Read full post
-            <i class="gdoc-icon">gdoc_arrow_right_alt</i>
-          </a>
         
       </div>
 
@@ -2974,7 +2960,7 @@ LIST  List all active phone numbers. Optionally filter by PhoneNumber, Geography
 
 <span class="flex align-center no-wrap">
   <svg class="gdoc-icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-  <span class="gdoc-post__tag">13 minutes to read</span>
+  <span class="gdoc-post__tag">One minute to read</span>
 </span>
 
 

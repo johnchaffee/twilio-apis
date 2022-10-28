@@ -12,8 +12,9 @@
       
       <guid>https://johnchaffee.wiki/twilio-apis/api/accounts/accounts/</guid>
       <description>Manage Accounts and Subaccounts.
-LIST  Show all accounts.
-  console.log(&#34;API PARAMS: ..\/params\/accounts\/list.js&#34;, apiParams)  GET POST PUT PATCH DELETE  Send  Params   Auth   Headers    Path Params   Query Params  &amp;plus;     &amp;plus;       Request     Response Status:        &amp;#9998;  &amp;#10005;      document .</description>
+LIST Show all accounts.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; FETCH Fetch an Account.
+GET POST PUT PATCH DELETE Send Params Auth Headers Path Params Query Params &amp;plus; JSON Body &amp;plus; Request Response Status: &amp;#9998; &amp;#10005; CREATE Create a new Account instance resource as a subaccount of the one used to make the request</description>
     </item>
     
   </channel>

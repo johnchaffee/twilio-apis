@@ -9,7 +9,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.96.0" />
+<meta name="generator" content="Hugo 0.104.3" />
 
 
 
@@ -257,7 +257,34 @@
 </header>
 
 
-
+      <dialog id="newEnvVarDialog">
+        <h3>Update Environment Variable</h3>
+        <form method="dialog">
+          <div class="input-group my-1" data-key-value-pair>
+            <input
+              modal-data-key
+              type="text"
+              data-key
+              class="form-control"
+              style="min-width:100px"
+              placeholder="Key"
+              value=""
+            />
+            <input
+              modal-data-value
+              type="text"
+              data-value
+              class="form-control"
+              style="min-width:330px"
+              placeholder="Value"
+              value=""
+            />
+          </div>
+          <button class="btn btn-outline-danger" value="cancel">Cancel</button>
+          <button id="saveBtn" class="btn btn-primary" value="save">Save</button>
+        </form>
+      </dialog>
+      
       <main class="container flex flex-even">
         
           <aside class="gdoc-nav">
@@ -1913,7 +1940,7 @@
       </header>
 
       <section class="gdoc-markdown">
-            API Demo      Accounts      Accounts      Addresses        Conversations      Conversations      Participants      Messages      Participant Conversations        Lookup      Lookup v1      Lookup v2        Messages      Send Message      Read, Update, Delete      Feedback      Test Credentials        Messaging Services      Services      Senders        Phone Numbers      Numbers v1      Numbers v2 - Available      Numbers v2 - Active      Hosted Numbers        Verify      Service      Verify          OpenAPI      Twilio OpenAPI      Swagger UI      Postman Collections        
+         API Demo Accounts Accounts Addresses Conversations Conversations Participants Messages Participant Conversations Lookup Lookup v1 Lookup v2 Messages Send Message Read, Update, Delete Feedback Test Credentials Messaging Services Services Senders Phone Numbers Numbers v1 Numbers v2 - Available Numbers v2 - Active Hosted Numbers Verify Service Verify OpenAPI Twilio OpenAPI Swagger UI Postman Collections 
       </section>
 
       <div class="gdoc-post__readmore">

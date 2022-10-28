@@ -12,7 +12,7 @@
       
       <guid>https://johnchaffee.wiki/twilio-apis/environment-variables/</guid>
       <description>Enter key/value environment variables to use in Postman API requests.
-Add Custom Environment Variable    Environment Variables    Edit  Delete      const newEnvVarDialog = document.getElementById(&#34;newEnvVarDialog&#34;) let keyElement = newEnvVarDialog.querySelector(&#34;[modal-data-key]&#34;) let valueElement = newEnvVarDialog.querySelector(&#34;[modal-data-value]&#34;) const keys = Object.keys(localStorage).sort(function (a, b) { return a.toLowerCase().localeCompare(b.toLowerCase()) }) let envVars = [] let envObj = {} keys.forEach((key) = { envObj = {} envObj.key = key envObj.value = localStorage[key] envVars.</description>
+Add Custom Environment Variable Environment Variables Edit Delete </description>
     </item>
     
   </channel>
